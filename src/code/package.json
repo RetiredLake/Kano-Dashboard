@@ -1,0 +1,13 @@
+{
+  "name": "kano-code-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "build": "vite build" },
+  "dependencies": {
+    "@kano/code": "3.0.1-alpha.51",
+    "@webcomponents/shadycss": "^1.9.1",
+    "@webcomponents/webcomponentsjs": "^2.2.8"
+  },
+  "devDependencies": { "vite": "^6.4.1" }
+}
