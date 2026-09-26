@@ -31,7 +31,7 @@ type LauncherApp = {
   id: string;
   name: string;
   href: string;
-  icon: "code" | "art";
+  icon: "code" | "art" | "minecraft";
 };
 
 const launcherPages: { id: string; apps: LauncherApp[] }[] = [
@@ -40,6 +40,7 @@ const launcherPages: { id: string; apps: LauncherApp[] }[] = [
     apps: [
       { id: "code", name: "Kano Code", href: "/code/", icon: "code" },
       { id: "art", name: "Make Art", href: "/art/", icon: "art" },
+      { id: "minecraft", name: "Hack Minecraft", href: "/hack-minecraft/", icon: "minecraft" },
     ],
   },
 ];
@@ -164,10 +165,12 @@ export default function DashboardClient({
           <h2 id="apps-heading" className="zone-title">Apps</h2>
           <div className="apps-grid" key={currentPage.id}>
             {currentPage.apps.map((app) => (
-              <a className="app-tile" href={app.href} target="_top" key={app.id}>
+              <a className={`app-tile app-tile-${app.icon}`} href={app.href} target="_top" key={app.id}>
                 <span className={`app-icon app-icon-${app.icon}`}>
                   {app.icon === "code" ? (
                     <KanoCodeMark />
+                  ) : app.icon === "minecraft" ? (
+                    <img src="/hack-minecraft/icon.png" alt="" />
                   ) : (
                     <img src="/dashboard/make-art-logo.png" alt="" />
                   )}

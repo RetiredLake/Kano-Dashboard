@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#53addb">
+    <meta name="description" content="Learn to code a block-built world with Hack Minecraft.">
+    <title>Hack Minecraft · Kano</title>
+    <link rel="icon" href="/hack-minecraft/icon.png" type="image/png">
+    <link rel="stylesheet" href="/hack-minecraft/style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back-link" href="/" target="_top" aria-label="Back to Kano dashboard">‹ <span>Dashboard</span></a>
+      <div class="app-title">
+        <img src="/hack-minecraft/icon.png" alt="">
+        <div><strong>Hack Minecraft</strong><span>Build a world with blocks and code</span></div>
+      </div>
+      <div class="top-actions">
+        <span class="world-status"><i></i> Browser world</span>
+        <button id="reset-world" class="quiet-button" type="button">Reset world</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="lesson-panel panel" aria-label="Lessons">
+        <div class="panel-heading"><span class="eyebrow">LEARN BY BUILDING</span><span id="progress-count" class="progress-count">0 / 4</span></div>
+        <div class="progress-track"><span id="progress-fill"></span></div>
+        <nav id="lesson-list" class="lesson-list" aria-label="Choose a lesson"></nav>
+        <div class="lesson-card">
+          <span id="lesson-kicker" class="lesson-kicker">LESSON 1</span>
+          <h1 id="lesson-title">Place your first block</h1>
+          <p id="lesson-description">Every world starts with one block. Add a block to your program, then make it.</p>
+          <ol id="lesson-steps"></ol>
+          <div class="lesson-actions">
+            <button id="check-lesson" class="primary-button" type="button">Check my build</button>
+            <button id="load-lesson" class="text-button" type="button">Load example program</button>
+          </div>
+          <p id="lesson-feedback" class="lesson-feedback" aria-live="polite"></p>
+        </div>
+        <p class="learning-note"><span aria-hidden="true">✦</span> Your blocks make real <b>MCPI Python</b> code.</p>
+      </aside>
+
+      <section class="world-column" aria-label="Minecraft browser world">
+        <div class="world-toolbar">
+          <div><span class="world-title">My World</span><span id="world-coordinates" class="world-coordinates">x 0 · y 1 · z 0</span></div>
+          <div class="toolbar-controls"><label for="selected-block">Block</label><select id="selected-block" aria-label="Selected block"></select><button id="clear-world" class="icon-button" type="button" title="Clear placed blocks" aria-label="Clear placed blocks">↻</button></div>
+        </div>
+        <div class="canvas-frame">
+          <canvas id="world-canvas" aria-label="Isometric block world. Click a tile to place the selected block."></canvas>
+          <div class="canvas-hint"><span class="cursor-icon">＋</span> Click the world to place a block</div>
+          <div id="chat-bubble" class="chat-bubble" aria-live="polite"></div>
+        </div>
+        <div class="world-footer"><span><b>◉</b> Local sandbox · changes stay in this browser</span><span id="api-call-count">0 API calls</span></div>
+      </section>
+
+      <aside class="code-panel panel" aria-label="Block program and code">
+        <div class="code-heading"><div><span class="eyebrow">YOUR PROGRAM</span><h2>Blocks</h2></div><button id="run-program" class="make-button" type="button"><span>▶</span> MAKE</button></div>
+        <div id="program-stack" class="program-stack" aria-label="Program blocks. Drop blocks here or add them from the palette."></div>
+        <div class="palette-heading"><span class="eyebrow">ADD A BLOCK</span><span>Click or drag into your program</span></div>
+        <div class="block-palette" aria-label="Block palette">
+          <button class="palette-block palette-world" data-add="set" type="button" draggable="true"><span>▦</span> Place block</button>
+          <button class="palette-block palette-world" data-add="fill" type="button" draggable="true"><span>▧</span> Fill an area</button>
+          <button class="palette-block palette-player" data-add="move" type="button" draggable="true"><span>➤</span> Move player</button>
+          <button class="palette-block palette-chat" data-add="chat" type="button" draggable="true"><span>“</span> Say in chat</button>
+          <button class="palette-block palette-loop" data-add="tower" type="button" draggable="true"><span>↻</span> Repeat upward</button>
+        </div>
+        <div class="code-preview">
+          <div class="preview-tabs" role="tablist" aria-label="Code views"><button id="python-tab" class="preview-tab is-selected" type="button" role="tab" aria-selected="true">Python</button><button id="api-tab" class="preview-tab" type="button" role="tab" aria-selected="false">Web API</button></div>
+          <pre id="code-output" class="code-output" role="tabpanel" aria-label="Generated Python code"></pre>
+          <div id="api-output" class="api-output" role="tabpanel" hidden><p><b>MCPI Web API</b> runs in this browser world. Use <code>window.mcpi</code> from JavaScript.</p><pre>mcpi.world.setBlock(x, y, z, 41)
+mcpi.world.getBlock(x, y, z)
+mcpi.player.setPos(x, y, z)
+mcpi.chat.post("Hello world")
+mcpi.dispatch("world.getBlock(0,1,0)")</pre><p class="api-footnote">World, player, chat, camera, checkpoint and event calls are included. See README for compatibility notes.</p></div>
+        </div>
+        <div class="api-status"><span id="api-pulse" class="api-pulse"></span><span id="api-status-label">Browser MCPI API ready</span><button id="help-button" type="button" title="About this web port">?</button></div>
+      </aside>
+    </main>
+
+    <dialog id="help-dialog" class="help-dialog">
+      <button id="close-help" class="close-dialog" type="button" aria-label="Close">×</button>
+      <span class="eyebrow">ABOUT THIS WEB PORT</span>
+      <h2>Make it with code.</h2>
+      <p>This is an original browser learning sandbox inspired by Kano Hack Minecraft. The isometric world and lessons are powered by a JavaScript MCPI API adapter. The blocks below generate familiar Python code so you can learn the ideas behind Pi Edition projects.</p>
+      <p>The browser exposes <code>window.mcpi</code> to JavaScript. Web pages cannot open the original Minecraft TCP port 4711, so this API works locally in the sandbox. The native Linux client is a separate MCPi-Reborn install and requires Minecraft game files obtained by the user.</p>
+      <button id="help-done" class="primary-button" type="button">Got it</button>
+    </dialog>
+    <script type="module" src="/hack-minecraft/app.js"></script>
+  </body>
+</html>

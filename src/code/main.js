@@ -29,6 +29,13 @@ async function startEditor() {
       import("@webcomponents/webcomponentsjs/webcomponents-bundle.js"),
     ]);
 
+    // Kano Code's sequencer expects the legacy Tone UMD global. Vite exposes
+    // that dependency as a module export, so publish it before loading Kano's
+    // editor modules that read window.Tone.
+    const toneModule = await import("tone/build/Tone.js");
+    window.Tone = window.Tone || toneModule.default || toneModule;
+    if (!window.Tone?.Transport) throw new Error("Tone.js did not initialize.");
+
     const [code, i18n, storageModule] = await Promise.all([
       import("@kano/code/index.js"),
       import("@kano/code/i18n.js"),
