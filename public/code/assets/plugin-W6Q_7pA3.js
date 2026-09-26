@@ -1,0 +1,1 @@
+function u(o,t){let n;return(...e)=>{const r=()=>{n=null,o(...e)};clearTimeout(n||void 0),n=window.setTimeout(r,t)}}class i{onInstall(t){}onInject(){}onDispose(){}onImport(){}onCreationImport(){}onExport(t){return t}onCreationExport(t){return t}}export{i as P,u as d};

@@ -144,7 +144,7 @@ img.invert {
   filter: invert(100%);
 }
 .kano-logo {
-  background-image: url("/assets/layout/with-kano.png");
+  background-image: url("/art/assets/layout/with-kano.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
@@ -166,7 +166,7 @@ img.invert {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .kano-logo {
-    background-image: url("/assets/layout/with-kano@2x.png");
+    background-image: url("/art/assets/layout/with-kano@2x.png");
   }
 }
 .kano-logo:hover {
@@ -216,13 +216,13 @@ img.invert {
   top: 150px;
 }
 .banner .modal-inner .cover {
-  background-image: url("/assets/challenges/images/world_covers/pixelhack.png");
+  background-image: url("/art/assets/challenges/images/world_covers/pixelhack.png");
   background-repeat: no-repeat;
   min-height: 200px;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .banner .modal-inner .cover {
-    background-image: url("/assets/challenges/images/world_covers/pixelhack@2x.png");
+    background-image: url("/art/assets/challenges/images/world_covers/pixelhack@2x.png");
   }
 }
 .banner .modal-inner .detail {
@@ -1219,25 +1219,25 @@ button.workspace-action-button.save:before,
 a.button.workspace-action-button.save:before,
 input[type='submit'].workspace-action-button.save:before,
 input[type='reset'].workspace-action-button.save:before {
-  background: url("../assets/button-icons/down.png") no-repeat;
+  background: url("/art/assets/button-icons/down.png") no-repeat;
 }
 button.workspace-action-button.share:before,
 a.button.workspace-action-button.share:before,
 input[type='submit'].workspace-action-button.share:before,
 input[type='reset'].workspace-action-button.share:before {
-  background: url("../assets/button-icons/share.png") no-repeat;
+  background: url("/art/assets/button-icons/share.png") no-repeat;
 }
 button.workspace-action-button.load:before,
 a.button.workspace-action-button.load:before,
 input[type='submit'].workspace-action-button.load:before,
 input[type='reset'].workspace-action-button.load:before {
-  background: url("../assets/button-icons/down.png") no-repeat;
+  background: url("/art/assets/button-icons/down.png") no-repeat;
 }
 button.workspace-action-button.reset:before,
 a.button.workspace-action-button.reset:before,
 input[type='submit'].workspace-action-button.reset:before,
 input[type='reset'].workspace-action-button.reset:before {
-  background: url("../assets/button-icons/reset.png") no-repeat;
+  background: url("/art/assets/button-icons/reset.png") no-repeat;
 }
 button.help,
 a.button.help,
@@ -1335,43 +1335,43 @@ input[type='reset'].disabled {
   margin-bottom: -10px;
 }
 .category-icon.category-icon-shapes {
-  background-image: url("/assets/category-icons/shapes.png");
+  background-image: url("/art/assets/category-icons/shapes.png");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .category-icon.category-icon-shapes {
-    background-image: url("/assets/category-icons/shapes@2x.png");
+    background-image: url("/art/assets/category-icons/shapes@2x.png");
   }
 }
 .category-icon.category-icon-colors {
-  background-image: url("/assets/category-icons/colors.png");
+  background-image: url("/art/assets/category-icons/colors.png");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .category-icon.category-icon-colors {
-    background-image: url("/assets/category-icons/colors@2x.png");
+    background-image: url("/art/assets/category-icons/colors@2x.png");
   }
 }
 .category-icon.category-icon-lines {
-  background-image: url("/assets/category-icons/lines.png");
+  background-image: url("/art/assets/category-icons/lines.png");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .category-icon.category-icon-lines {
-    background-image: url("/assets/category-icons/lines@2x.png");
+    background-image: url("/art/assets/category-icons/lines@2x.png");
   }
 }
 .category-icon.category-icon-general {
-  background-image: url("/assets/category-icons/general.png");
+  background-image: url("/art/assets/category-icons/general.png");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .category-icon.category-icon-general {
-    background-image: url("/assets/category-icons/general@2x.png");
+    background-image: url("/art/assets/category-icons/general@2x.png");
   }
 }
 .category-icon.category-icon-position {
-  background-image: url("/assets/category-icons/position.png");
+  background-image: url("/art/assets/category-icons/position.png");
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .category-icon.category-icon-position {
-    background-image: url("/assets/category-icons/position@2x.png");
+    background-image: url("/art/assets/category-icons/position@2x.png");
   }
 }
 .flexcenter {
@@ -1943,7 +1943,7 @@ display .error-display p {
   display: block;
   width: 34px;
   height: 34px;
-  background: #fff url("../assets/layout/spinner.gif") center center no-repeat;
+  background: #fff url("/art/assets/layout/spinner.gif") center center no-repeat;
   -webkit-background-size: 34px 34px;
   -moz-background-size: 34px 34px;
   background-size: 34px 34px;
@@ -2028,21 +2028,9 @@ kano-password-field .password-indicator {
   -moz-background-size: 30px 17px;
   background-size: 30px 17px;
 }
-kano-password-field .password-indicator.show-password {
-  background-image: url("/assets/auth/show-icon.png");
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  kano-password-field .password-indicator.show-password {
-    background-image: url("/assets/auth/show-icon@2x.png");
-  }
-}
+kano-password-field .password-indicator.show-password,
 kano-password-field .password-indicator.hide-password {
-  background-image: url("/assets/auth/hide-icon.png");
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  kano-password-field .password-indicator.hide-password {
-    background-image: url("/assets/auth/hide-icon@2x.png");
-  }
+  background-image: none;
 }
 kano-signup-form {
   text-align: left;
@@ -3275,7 +3263,7 @@ editor .teachers-guide a i {
   top: 150px;
 }
 .certificate .modal-inner .cover {
-  background-image: url("/assets/pixelhack/cert-modal.png");
+  background-image: url("/art/assets/pixelhack/cert-modal.png");
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
@@ -3648,7 +3636,7 @@ editor .teachers-guide a i {
   right: 0;
   bottom: false;
   left: false;
-  background: url("/assets/summercamp/final-call.png") no-repeat;
+  background: url("/art/assets/summercamp/final-call.png") no-repeat;
   -webkit-background-size: 150px 150px;
   -moz-background-size: 150px 150px;
   background-size: 150px 150px;
@@ -3657,7 +3645,7 @@ editor .teachers-guide a i {
 }
 .deco-leaves {
   display: block;
-  background-image: url("/assets/summercamp/header-leaves.png");
+  background-image: url("/art/assets/summercamp/header-leaves.png");
   -webkit-background-size: 1020px 20px;
   -moz-background-size: 1020px 20px;
   background-size: 1020px 20px;
@@ -3669,12 +3657,12 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .deco-leaves {
-    background-image: url("/assets/summercamp/header-leaves@2x.png");
+    background-image: url("/art/assets/summercamp/header-leaves@2x.png");
   }
 }
 .deco-big-branch {
   display: block;
-  background-image: url("/assets/summercamp/bigbranch.png");
+  background-image: url("/art/assets/summercamp/bigbranch.png");
   -webkit-background-size: 256px 162px;
   -moz-background-size: 256px 162px;
   background-size: 256px 162px;
@@ -3685,7 +3673,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .deco-big-branch {
-    background-image: url("/assets/summercamp/bigbranch@2x.png");
+    background-image: url("/art/assets/summercamp/bigbranch@2x.png");
   }
 }
 .kit-banner {
@@ -3733,13 +3721,13 @@ editor .teachers-guide a i {
   top: 150px;
 }
 .kit-banner .modal-inner .cover {
-  background-image: url("/assets/challenges/images/world_covers/pixelhack.png");
+  background-image: url("/art/assets/challenges/images/world_covers/pixelhack.png");
   background-repeat: no-repeat;
   min-height: 200px;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .kit-banner .modal-inner .cover {
-    background-image: url("/assets/challenges/images/world_covers/pixelhack@2x.png");
+    background-image: url("/art/assets/challenges/images/world_covers/pixelhack@2x.png");
   }
 }
 .kit-banner .modal-inner .detail {
@@ -3763,7 +3751,7 @@ editor .teachers-guide a i {
 }
 .summer-camp .countdown {
   padding: 80px 0;
-  background: url("/assets/summercamp/wood-asset.png") no-repeat;
+  background: url("/art/assets/summercamp/wood-asset.png") no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
@@ -3877,7 +3865,7 @@ editor .teachers-guide a i {
   height: 100px;
 }
 .summer-camp .calendar .day a .cover.unknown {
-  background-image: url("/assets/summercamp/ch_icons/question.png");
+  background-image: url("/art/assets/summercamp/ch_icons/question.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3885,11 +3873,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.unknown {
-    background-image: url("/assets/summercamp/ch_icons/question@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/question@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_campsign {
-  background-image: url("/assets/summercamp/ch_icons/campsign.png");
+  background-image: url("/art/assets/summercamp/ch_icons/campsign.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3897,11 +3885,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_campsign {
-    background-image: url("/assets/summercamp/ch_icons/campsign@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/campsign@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_location {
-  background-image: url("/assets/summercamp/ch_icons/location.png");
+  background-image: url("/art/assets/summercamp/ch_icons/location.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3909,11 +3897,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_location {
-    background-image: url("/assets/summercamp/ch_icons/location@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/location@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_setcamp {
-  background-image: url("/assets/summercamp/ch_icons/setcamp.png");
+  background-image: url("/art/assets/summercamp/ch_icons/setcamp.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3921,11 +3909,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_setcamp {
-    background-image: url("/assets/summercamp/ch_icons/setcamp@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/setcamp@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_flag {
-  background-image: url("/assets/summercamp/ch_icons/flag.png");
+  background-image: url("/art/assets/summercamp/ch_icons/flag.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3933,11 +3921,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_flag {
-    background-image: url("/assets/summercamp/ch_icons/flag@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/flag@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_badge {
-  background-image: url("/assets/summercamp/ch_icons/badge.png");
+  background-image: url("/art/assets/summercamp/ch_icons/badge.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3945,11 +3933,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_badge {
-    background-image: url("/assets/summercamp/ch_icons/badge@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/badge@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_fire {
-  background-image: url("/assets/summercamp/ch_icons/fire.png");
+  background-image: url("/art/assets/summercamp/ch_icons/fire.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3957,11 +3945,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_fire {
-    background-image: url("/assets/summercamp/ch_icons/fire@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/fire@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_ghost {
-  background-image: url("/assets/summercamp/ch_icons/ghost.png");
+  background-image: url("/art/assets/summercamp/ch_icons/ghost.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3969,11 +3957,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_ghost {
-    background-image: url("/assets/summercamp/ch_icons/ghost@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/ghost@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_backpack {
-  background-image: url("/assets/summercamp/ch_icons/backpack.png");
+  background-image: url("/art/assets/summercamp/ch_icons/backpack.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3981,11 +3969,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_backpack {
-    background-image: url("/assets/summercamp/ch_icons/backpack@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/backpack@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_compass {
-  background-image: url("/assets/summercamp/ch_icons/compass.png");
+  background-image: url("/art/assets/summercamp/ch_icons/compass.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -3993,11 +3981,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_compass {
-    background-image: url("/assets/summercamp/ch_icons/compass@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/compass@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_camera {
-  background-image: url("/assets/summercamp/ch_icons/camera.png");
+  background-image: url("/art/assets/summercamp/ch_icons/camera.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4005,11 +3993,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_camera {
-    background-image: url("/assets/summercamp/ch_icons/camera@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/camera@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_bear {
-  background-image: url("/assets/summercamp/ch_icons/bear.png");
+  background-image: url("/art/assets/summercamp/ch_icons/bear.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4017,11 +4005,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_bear {
-    background-image: url("/assets/summercamp/ch_icons/bear@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/bear@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_flashlight {
-  background-image: url("/assets/summercamp/ch_icons/flashlight.png");
+  background-image: url("/art/assets/summercamp/ch_icons/flashlight.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4029,11 +4017,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_flashlight {
-    background-image: url("/assets/summercamp/ch_icons/flashlight@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/flashlight@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_guitar {
-  background-image: url("/assets/summercamp/ch_icons/guitar.png");
+  background-image: url("/art/assets/summercamp/ch_icons/guitar.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4041,11 +4029,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_guitar {
-    background-image: url("/assets/summercamp/ch_icons/guitar@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/guitar@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_cinema {
-  background-image: url("/assets/summercamp/ch_icons/cinema.png");
+  background-image: url("/art/assets/summercamp/ch_icons/cinema.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4053,11 +4041,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_cinema {
-    background-image: url("/assets/summercamp/ch_icons/cinema@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/cinema@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_bow {
-  background-image: url("/assets/summercamp/ch_icons/bow.png");
+  background-image: url("/art/assets/summercamp/ch_icons/bow.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4065,11 +4053,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_bow {
-    background-image: url("/assets/summercamp/ch_icons/bow@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/bow@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_tennis {
-  background-image: url("/assets/summercamp/ch_icons/tennis.png");
+  background-image: url("/art/assets/summercamp/ch_icons/tennis.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4077,11 +4065,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_tennis {
-    background-image: url("/assets/summercamp/ch_icons/tennis@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/tennis@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_fishing {
-  background-image: url("/assets/summercamp/ch_icons/fishing.png");
+  background-image: url("/art/assets/summercamp/ch_icons/fishing.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4089,11 +4077,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_fishing {
-    background-image: url("/assets/summercamp/ch_icons/fishing@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/fishing@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_hiking {
-  background-image: url("/assets/summercamp/ch_icons/hiking.png");
+  background-image: url("/art/assets/summercamp/ch_icons/hiking.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4101,11 +4089,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_hiking {
-    background-image: url("/assets/summercamp/ch_icons/hiking@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/hiking@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_foraging {
-  background-image: url("/assets/summercamp/ch_icons/foraging.png");
+  background-image: url("/art/assets/summercamp/ch_icons/foraging.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4113,11 +4101,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_foraging {
-    background-image: url("/assets/summercamp/ch_icons/foraging@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/foraging@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_tree {
-  background-image: url("/assets/summercamp/ch_icons/tree.png");
+  background-image: url("/art/assets/summercamp/ch_icons/tree.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4125,11 +4113,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_tree {
-    background-image: url("/assets/summercamp/ch_icons/tree@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/tree@2x.png");
   }
 }
 .summer-camp .calendar .day a .cover.challenge_fireworks {
-  background-image: url("/assets/summercamp/ch_icons/fireworks.png");
+  background-image: url("/art/assets/summercamp/ch_icons/fireworks.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4137,7 +4125,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a .cover.challenge_fireworks {
-    background-image: url("/assets/summercamp/ch_icons/fireworks@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/fireworks@2x.png");
   }
 }
 .summer-camp .calendar .day a .img-cover {
@@ -4184,7 +4172,7 @@ editor .teachers-guide a i {
 }
 .summer-camp .calendar .day a.completed {
   border-color: #a6da3b;
-  background-image: url("/assets/summercamp/ch_icons/completed.png");
+  background-image: url("/art/assets/summercamp/ch_icons/completed.png");
   -webkit-background-size: 70px 70px;
   -moz-background-size: 70px 70px;
   background-size: 70px 70px;
@@ -4193,7 +4181,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .calendar .day a.completed {
-    background-image: url("/assets/summercamp/ch_icons/completed@2x.png");
+    background-image: url("/art/assets/summercamp/ch_icons/completed@2x.png");
   }
 }
 .summer-camp .calendar .day a.completed:hover {
@@ -4322,7 +4310,7 @@ editor .teachers-guide a i {
 .summer-camp .challenge-info .detail div.btn-container .see-on-world {
   background-color: #fff;
   color: #394d5b;
-  background-image: url("/assets/summercamp/kw.png");
+  background-image: url("/art/assets/summercamp/kw.png");
   -webkit-background-size: 20px 20px;
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
@@ -4341,7 +4329,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.btn-container .see-on-world {
-    background-image: url("/assets/summercamp/kw@2x.png");
+    background-image: url("/art/assets/summercamp/kw@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.btn-container .see-on-world:hover {
@@ -4397,7 +4385,7 @@ editor .teachers-guide a i {
   margin-top: 0;
 }
 .summer-camp .challenge-info .detail div.rewards-container .rewards-icons a.rew-wallpaper {
-  background-image: url("/assets/summercamp/wallpaper.png");
+  background-image: url("/art/assets/summercamp/wallpaper.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4405,11 +4393,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.rewards-container .rewards-icons a.rew-wallpaper {
-    background-image: url("/assets/summercamp/wallpaper@2x.png");
+    background-image: url("/art/assets/summercamp/wallpaper@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.rewards-container .rewards-icons a.rew-outfit {
-  background-image: url("/assets/summercamp/suit.png");
+  background-image: url("/art/assets/summercamp/suit.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4417,7 +4405,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.rewards-container .rewards-icons a.rew-outfit {
-    background-image: url("/assets/summercamp/suit@2x.png");
+    background-image: url("/art/assets/summercamp/suit@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container {
@@ -4444,7 +4432,7 @@ editor .teachers-guide a i {
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-easy,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-easy {
-  background-image: url("/assets/summercamp/off_easy.png");
+  background-image: url("/art/assets/summercamp/off_easy.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4453,12 +4441,12 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-easy,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-easy {
-    background-image: url("/assets/summercamp/off_easy@2x.png");
+    background-image: url("/art/assets/summercamp/off_easy@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-medium,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-medium {
-  background-image: url("/assets/summercamp/off_medium.png");
+  background-image: url("/art/assets/summercamp/off_medium.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4467,12 +4455,12 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-medium,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-medium {
-    background-image: url("/assets/summercamp/off_medium@2x.png");
+    background-image: url("/art/assets/summercamp/off_medium@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-hard,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-hard {
-  background-image: url("/assets/summercamp/off_hard.png");
+  background-image: url("/art/assets/summercamp/off_hard.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4481,12 +4469,12 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level span.l-hard,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons span.l-hard {
-    background-image: url("/assets/summercamp/off_hard@2x.png");
+    background-image: url("/art/assets/summercamp/off_hard@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-1"] span.l-easy,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-1"] span.l-easy {
-  background-image: url("/assets/summercamp/easy.png");
+  background-image: url("/art/assets/summercamp/easy.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4495,12 +4483,12 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-1"] span.l-easy,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-1"] span.l-easy {
-    background-image: url("/assets/summercamp/easy@2x.png");
+    background-image: url("/art/assets/summercamp/easy@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-2"] span.l-medium,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-2"] span.l-medium {
-  background-image: url("/assets/summercamp/medium.png");
+  background-image: url("/art/assets/summercamp/medium.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4509,12 +4497,12 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-2"] span.l-medium,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-2"] span.l-medium {
-    background-image: url("/assets/summercamp/medium@2x.png");
+    background-image: url("/art/assets/summercamp/medium@2x.png");
   }
 }
 .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-3"] span.l-hard,
 .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-3"] span.l-hard {
-  background-image: url("/assets/summercamp/hard.png");
+  background-image: url("/art/assets/summercamp/hard.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -4523,7 +4511,7 @@ editor .teachers-guide a i {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .challenge-info .detail div.diff-container .difficulty-level[data-level="l-3"] span.l-hard,
   .summer-camp .challenge-info .detail div.diff-container .share-buttons[data-level="l-3"] span.l-hard {
-    background-image: url("/assets/summercamp/hard@2x.png");
+    background-image: url("/art/assets/summercamp/hard@2x.png");
   }
 }
 .summer-camp .challenge-info .detail h4 {
@@ -4806,7 +4794,7 @@ editor .teachers-guide a i {
 }
 .summer-camp .summercamp-feedback.badge-screen .bottom .badge.locked {
   background: #efefef;
-  background-image: url("/assets/summercamp/summercamp_badge_locked.png");
+  background-image: url("/art/assets/summercamp/summercamp_badge_locked.png");
   -webkit-background-size: 325px 325px;
   -moz-background-size: 325px 325px;
   background-size: 325px 325px;
@@ -4815,11 +4803,11 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .summercamp-feedback.badge-screen .bottom .badge.locked {
-    background-image: url("/assets/summercamp/summercamp_badge_locked@2x.png");
+    background-image: url("/art/assets/summercamp/summercamp_badge_locked@2x.png");
   }
 }
 .summer-camp .summercamp-feedback.badge-screen .bottom .badge.unlocked {
-  background-image: url("/assets/summercamp/summercamp_badge_unlocked.png");
+  background-image: url("/art/assets/summercamp/summercamp_badge_unlocked.png");
   -webkit-background-size: 640px 400px;
   -moz-background-size: 640px 400px;
   background-size: 640px 400px;
@@ -4828,7 +4816,7 @@ editor .teachers-guide a i {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min--moz-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 1.5/1) {
   .summer-camp .summercamp-feedback.badge-screen .bottom .badge.unlocked {
-    background-image: url("/assets/summercamp/summercamp_badge_unlocked@2x.png");
+    background-image: url("/art/assets/summercamp/summercamp_badge_unlocked@2x.png");
   }
 }
 .summer-camp .summercamp-feedback.badge-screen .bottom .button {

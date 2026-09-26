@@ -1,4 +1,3 @@
-import { MakeArt } from "../../../kano-apps/make-art/index.js";
 import "./style.css";
 
 const config = {
@@ -19,19 +18,63 @@ const config = {
   },
 };
 
-const app = new MakeArt({ config });
-document.getElementById("make-art-app").appendChild(app.root);
+async function startMakeArt() {
+  const loading = document.getElementById("loading");
+  const appContainer = document.getElementById("make-art-app");
+  let settled = false;
 
-const loading = document.getElementById("loading");
-if (!app.ready || typeof app.ready.then !== "function") {
-  loading.textContent = "Make Art could not start. Refresh this page to try again.";
-  loading.classList.add("error");
-} else {
-  app.ready.then(() => {
-    loading.remove();
-  }).catch((error) => {
+  function reportFailure(error) {
     console.error("Make Art could not start", error);
-    loading.textContent = "Make Art could not start. Check your connection and refresh this page to try again.";
-    loading.classList.add("error");
-  });
+    showRuntimeError();
+  }
+
+  const startupTimer = window.setTimeout(() => {
+    if (settled) return;
+    settled = true;
+    reportFailure(new Error("The Make Art workspace did not finish initializing."));
+  }, 45000);
+
+  try {
+    if (!loading || !appContainer) throw new Error("The Make Art page is missing its workspace container.");
+
+    const { MakeArt } = await import("../../../kano-apps/make-art/index.js");
+    const app = new MakeArt({ config });
+    if (!app.root || !app.ready || typeof app.ready.then !== "function") {
+      throw new Error("The Make Art workspace did not expose its startup promise.");
+    }
+    appContainer.appendChild(app.root);
+    await app.ready;
+    if (settled) return;
+    settled = true;
+    window.clearTimeout(startupTimer);
+    loading.remove();
+  } catch (error) {
+    if (!settled) {
+      settled = true;
+      window.clearTimeout(startupTimer);
+    }
+    reportFailure(error);
+  }
 }
+
+function showRuntimeError() {
+  let message = document.getElementById("runtime-error");
+  if (!message) {
+    message = document.createElement("p");
+    message.id = "runtime-error";
+    message.setAttribute("role", "alert");
+    message.className = "runtime-error";
+    document.body.appendChild(message);
+  }
+  message.textContent = "Make Art hit an error. Refresh this page to try again.";
+  document.getElementById("loading")?.remove();
+}
+
+window.addEventListener("unhandledrejection", (event) => {
+  if (document.querySelector("#make-art-app #main")) {
+    console.error("Make Art runtime error", event.reason);
+    showRuntimeError();
+  }
+});
+
+void startMakeArt();
