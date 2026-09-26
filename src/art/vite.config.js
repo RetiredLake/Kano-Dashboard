@@ -8,7 +8,7 @@ export default defineConfig({
   base: "/art/",
   publicDir: "public",
   build: {
-    outDir: "../../dist/art",
+    outDir: "../../public/art",
     emptyOutDir: true,
     sourcemap: false,
   },

@@ -21,4 +21,17 @@ const config = {
 
 const app = new MakeArt({ config });
 document.getElementById("make-art-app").appendChild(app.root);
-document.getElementById("loading").remove();
+
+const loading = document.getElementById("loading");
+if (!app.ready || typeof app.ready.then !== "function") {
+  loading.textContent = "Make Art could not start. Refresh this page to try again.";
+  loading.classList.add("error");
+} else {
+  app.ready.then(() => {
+    loading.remove();
+  }).catch((error) => {
+    console.error("Make Art could not start", error);
+    loading.textContent = "Make Art could not start. Check your connection and refresh this page to try again.";
+    loading.classList.add("error");
+  });
+}

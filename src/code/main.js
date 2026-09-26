@@ -16,20 +16,35 @@ class BrowserEditorProfile extends code.DefaultEditorProfile {
 
 async function start() {
   const loading = document.getElementById("loading");
+
+  function showError(error) {
+    console.error("Kano Code could not start", error);
+    loading.textContent = "The editor could not load. Check your connection and refresh this page to try again.";
+    loading.classList.add("error");
+  }
+
   try {
     const language = i18n.getLang();
-    await i18n.load(language, { blockly: true, kanoCodePath: "/code/" });
+    await i18n.load(language, {
+      blockly: true,
+      kanoCodePath: "/code/",
+      modulesPath: "/code/blockly/",
+    });
 
     const editor = new code.Editor({ BLOCKLY_MEDIA: "/code/media/" });
     const profile = new BrowserEditorProfile();
     editor.registerProfile(profile);
-    editor.onDidInject(() => profile.storage.load());
+    editor.onDidInject(() => {
+      try {
+        profile.storage.load();
+        loading.remove();
+      } catch (error) {
+        showError(error);
+      }
+    });
     editor.inject(document.getElementById("editor-root"));
-    loading.remove();
   } catch (error) {
-    console.error("Kano Code could not start", error);
-    loading.textContent = "The editor could not load. Refresh this page to try again.";
-    loading.classList.add("error");
+    showError(error);
   }
 }
 

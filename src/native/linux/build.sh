@@ -7,10 +7,8 @@ OUT_DIR="${1:-$REPO_ROOT/artifacts/linux}"
 BUILD_DIR="$(mktemp -d)"
 trap 'rm -rf "$BUILD_DIR"' EXIT
 
-mkdir -p "$BUILD_DIR/web/assets" "$OUT_DIR"
+mkdir -p "$OUT_DIR"
 cp "$SCRIPT_DIR/launcher.js" "$BUILD_DIR/launcher.js"
-cp "$REPO_ROOT/dist/index.html" "$REPO_ROOT/dist/dashboard.css" "$REPO_ROOT/dist/dashboard.js" "$BUILD_DIR/web/"
-cp "$REPO_ROOT/dist/assets/dashboard-reference.png" "$BUILD_DIR/web/assets/"
 
 cat > "$BUILD_DIR/package.json" <<'EOF'
 {
@@ -18,7 +16,7 @@ cat > "$BUILD_DIR/package.json" <<'EOF'
   "version": "1.0.0",
   "private": true,
   "bin": "launcher.js",
-  "pkg": { "assets": ["web/**/*"] }
+  "pkg": {}
 }
 EOF
 

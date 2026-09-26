@@ -9,6 +9,7 @@ body { overflow: hidden; color: #263c46; font-family: Arial, sans-serif; backgro
 #make-art-app { height: calc(100% - 48px); min-height: 0; }
 #make-art-app #main { width: 100%; height: 100%; }
 #loading { position: fixed; z-index: 20; top: 4rem; left: 1rem; margin: 0; padding: .7rem 1rem; border-radius: .4rem; background: white; box-shadow: 0 2px 8px rgb(30 56 70 / 14%); font-size: 1rem; }
+#loading.error { max-width: min(42rem, calc(100vw - 2rem)); border-left: 4px solid #b3323f; color: #8e2631; line-height: 1.5; }
 @media (max-width: 520px) {
   .site-bar { height: 44px; padding: 0 .65rem; }
   .site-bar a { min-width: 0; font-size: 0; }

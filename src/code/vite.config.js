@@ -4,7 +4,7 @@ export default defineConfig({
   base: "/code/",
   publicDir: "public",
   build: {
-    outDir: "../../dist/code",
+    outDir: "../../public/code",
     emptyOutDir: true,
     sourcemap: false,
   },

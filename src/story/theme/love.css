@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #101b20;
+}
+
+body { color: #fff; font-family: Arial, sans-serif; }
+
+.game-stage {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background: #101b20;
+  line-height: 0;
+}
+
+.game-stage:fullscreen,
+.game-stage:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  background: #101b20;
+}
+
+#canvas, #loadingCanvas {
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
+  max-height: 100svh;
+  padding: 0;
+  border: 0;
+  object-fit: contain;
+}
+
+#canvas { visibility: hidden; }
+
+#launcher-link, #fullscreen-toggle {
+  position: absolute;
+  top: max(14px, env(safe-area-inset-top));
+  z-index: 10;
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 12px;
+  background: rgb(12 43 55 / 82%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 22%);
+  text-decoration: none;
+  backdrop-filter: blur(5px);
+  line-height: 1;
+}
+
+#launcher-link {
+  left: max(14px, env(safe-area-inset-left));
+  padding: 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#fullscreen-toggle {
+  right: max(14px, env(safe-area-inset-right));
+  width: 44px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#launcher-link:hover, #fullscreen-toggle:hover { background: rgb(20 74 92 / 94%); }
+#launcher-link:focus-visible, #fullscreen-toggle:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+
+.file-protocol-warning {
+  position: fixed;
+  inset: 76px 16px auto;
+  z-index: 20;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fff;
+  color: #193b4a;
+  font: 16px/1.5 Arial, sans-serif;
+}
+
+.file-protocol-warning h1 { margin: 0 0 8px; font-size: 20px; }
+.file-protocol-warning p { margin: 0; }
+
+@media (max-width: 520px) {
+  #launcher-link, #fullscreen-toggle { top: max(10px, env(safe-area-inset-top)); height: 42px; }
+  #launcher-link { left: max(10px, env(safe-area-inset-left)); padding: 0 12px; }
+  #fullscreen-toggle { right: max(10px, env(safe-area-inset-right)); width: 42px; }
+}
