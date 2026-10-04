@@ -134,7 +134,7 @@ CodePreview.advancedMode = {
                         && localStorage.advancedModeRun !== 'true' ) {
 
                         localStorage.advancedModeRun = true;
-                        location.href = '#advancedModeExplainDialog';
+                        location.hash = '#advancedModeExplainDialog';
                     }
 
                     CodePreview.advancedMode.activated = true;

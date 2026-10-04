@@ -129,7 +129,7 @@ Code.confirmDiscard = function () {
 
         // Find HTML element that contains heading of the dialog box
         heading.innerHTML = message;
-        window.location.href = '#discardDialog';
+        window.location.hash = '#discardDialog';
 
     } else {
         Code.discard();
@@ -143,7 +143,7 @@ Code.confirmDiscard = function () {
 Code.goToMenu = function() {
     IO.cache();
     //BlocklyStorage.migrateCacheToPlayground();
-    window.location.href = '#menu';
+    window.location.hash = '#menu';
     $('#menu').click(function(e) {
         if($(e.target).parents('#menucontainer').length == 0) {
             Code.closeMenu();
@@ -151,17 +151,17 @@ Code.goToMenu = function() {
     });
     $('#loadSource').click(function(e) {
         if($(e.target).parents('#loadSourceContainer').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
     $('#shareDialog').click(function(e) {
         if($(e.target).parents('#share').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
     $('#saveDialog').click(function(e) {
         if($(e.target).parents('#save').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
 };

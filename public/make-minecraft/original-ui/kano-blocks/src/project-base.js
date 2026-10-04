@@ -89,7 +89,7 @@ ProjectBase.prototype.showSplashMenu = function() {
         backend.call('play_intro', function() {});
         this.goToIntro(1);
     } else {
-        window.location.href = '#splashOther';
+        window.location.hash = '#splashOther';
     }
 };
 
@@ -144,11 +144,11 @@ ProjectBase.prototype.goToIntro = function(project) {
     Project.setLastVisited(project);
 
     if (project < this.level) {
-        location.href = '#replayProjectIntroDialog';
+        location.hash = '#replayProjectIntroDialog';
     } else if (project === this.challenge.count + 1) {
-        location.href = '#playgroundIntroDialog';
+        location.hash = '#playgroundIntroDialog';
     } else {
-        location.href = "#projectIntroDialog";
+        location.hash = "#projectIntroDialog";
     }
 
 };
@@ -172,7 +172,7 @@ ProjectBase.prototype.switch = function(project) {
 
     this.updateInformation(project);
     this.setLastVisited(project);
-    location.href = '#project' + project;
+    location.hash = '#project' + project;
 
     if (project > this.challenge.count) {
         project = 'playgroundunlockedtoolbox';
@@ -307,10 +307,10 @@ ProjectBase.prototype.changeLastUnlocked = function(newLevel) {
             code_msg;
 
         if (newLevel > self.challenge.count) {
-            window.location.href = '#congratulations';
+            window.location.hash = '#congratulations';
         } else {
             self.levelUpCaching(newLevel);
-            window.location.href = '#levelUp';
+            window.location.hash = '#levelUp';
         }
     });
 };

@@ -17,7 +17,7 @@ Signal.save = function() {
     }
 
     IO.screenshot.refreshElements();
-    location.href='#saveDialog';
+    location.hash='#saveDialog';
     IO.form.addListeners();
 };
 
@@ -31,7 +31,7 @@ Signal.load = function(filepath) {
         return;
     }
 
-    location.href='#loadSource';
+    location.hash='#loadSource';
 };
 
 Signal.share = function() {
@@ -40,7 +40,7 @@ Signal.share = function() {
     }
 
     IO.screenshot.refreshElements();
-    location.href='#shareDialog';
+    location.hash='#shareDialog';
     IO.form.addListeners();
 };
 

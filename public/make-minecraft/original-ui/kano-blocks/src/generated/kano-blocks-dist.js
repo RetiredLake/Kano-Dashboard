@@ -3831,14 +3831,14 @@ IO.shipBlocks = function() {
 
     backend.call('ship', filename, function(returnValue) {
         if (returnValue !== 0) {
-            window.location.href = '#loadFileFail';
+            window.location.hash = '#loadFileFail';
             AlertsMessages.error.displayMsg(Language.alert.shareFail);
         } else {
             AlertsMessages.success.displayMsg(Language.alert.share);
         }
     });
 
-    location.href = '#menu';
+    location.hash = '#menu';
 };
 
 /**
@@ -3892,7 +3892,7 @@ IO.load = {
                     Blockly.mainWorkspace.clear();
                     IO.load.inject.blocks.onWorkspace(challenge);
                 } else {
-                    window.location.href = '#loadMakeOrPlay';
+                    window.location.hash = '#loadMakeOrPlay';
                 }
             },
             onWorkspace : function(challenge) {
@@ -3916,7 +3916,7 @@ IO.load = {
 
                 count = Blockly.mainWorkspace.getAllBlocks().length;
                 if (count) {
-                    window.location.href = "#clearBlocksLoadStepsDialog";
+                    window.location.hash = "#clearBlocksLoadStepsDialog";
                 } else {
                     IO.tooltip.display(challenge);
                 }
@@ -3943,7 +3943,7 @@ IO.load = {
                             IO.load.inject.blocks.dialog(IO.loadedChallenge);
                         });
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             },
@@ -3962,7 +3962,7 @@ IO.load = {
                             IO.load.inject.advancedMode.onWorkspace(pythonString);
                         });
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             }
@@ -3979,7 +3979,7 @@ IO.load = {
                             IO.loadedChallenge = new Challenge(xmlString);
                             IO.load.inject.blocks.dialog(IO.loadedChallenge);
                         } else {
-                            location.href = '#menu';
+                            location.hash = '#menu';
                         }
                     });
 
@@ -3991,7 +3991,7 @@ IO.load = {
                     if (pythonString !== null) {
                         IO.load.inject.advancedMode.onWorkspace(code);
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             }
@@ -4159,7 +4159,7 @@ Code.confirmDiscard = function () {
 
         // Find HTML element that contains heading of the dialog box
         heading.innerHTML = message;
-        window.location.href = '#discardDialog';
+        window.location.hash = '#discardDialog';
 
     } else {
         Code.discard();
@@ -4173,7 +4173,7 @@ Code.confirmDiscard = function () {
 Code.goToMenu = function() {
     IO.cache();
     //BlocklyStorage.migrateCacheToPlayground();
-    window.location.href = '#menu';
+    window.location.hash = '#menu';
     $('#menu').click(function(e) {
         if($(e.target).parents('#menucontainer').length == 0) {
             Code.closeMenu();
@@ -4181,17 +4181,17 @@ Code.goToMenu = function() {
     });
     $('#loadSource').click(function(e) {
         if($(e.target).parents('#loadSourceContainer').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
     $('#shareDialog').click(function(e) {
         if($(e.target).parents('#share').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
     $('#saveDialog').click(function(e) {
         if($(e.target).parents('#save').length == 0) {
-            window.location.href = '#menu';
+            window.location.hash = '#menu';
         }
     });
 };
@@ -6159,7 +6159,7 @@ CodePreview.advancedMode = {
                         && localStorage.advancedModeRun !== 'true' ) {
 
                         localStorage.advancedModeRun = true;
-                        location.href = '#advancedModeExplainDialog';
+                        location.hash = '#advancedModeExplainDialog';
                     }
 
                     CodePreview.advancedMode.activated = true;
@@ -6439,7 +6439,7 @@ ProjectBase.prototype.showSplashMenu = function() {
         backend.call('play_intro', function() {});
         this.goToIntro(1);
     } else {
-        window.location.href = '#splashOther';
+        window.location.hash = '#splashOther';
     }
 };
 
@@ -6494,11 +6494,11 @@ ProjectBase.prototype.goToIntro = function(project) {
     Project.setLastVisited(project);
 
     if (project < this.level) {
-        location.href = '#replayProjectIntroDialog';
+        location.hash = '#replayProjectIntroDialog';
     } else if (project === this.challenge.count + 1) {
-        location.href = '#playgroundIntroDialog';
+        location.hash = '#playgroundIntroDialog';
     } else {
-        location.href = "#projectIntroDialog";
+        location.hash = "#projectIntroDialog";
     }
 
 };
@@ -6522,7 +6522,7 @@ ProjectBase.prototype.switch = function(project) {
 
     this.updateInformation(project);
     this.setLastVisited(project);
-    location.href = '#project' + project;
+    location.hash = '#project' + project;
 
     if (project > this.challenge.count) {
         project = 'playgroundunlockedtoolbox';
@@ -6657,10 +6657,10 @@ ProjectBase.prototype.changeLastUnlocked = function(newLevel) {
             code_msg;
 
         if (newLevel > self.challenge.count) {
-            window.location.href = '#congratulations';
+            window.location.hash = '#congratulations';
         } else {
             self.levelUpCaching(newLevel);
-            window.location.href = '#levelUp';
+            window.location.hash = '#levelUp';
         }
     });
 };
@@ -6730,7 +6730,7 @@ Signal.save = function() {
     }
 
     IO.screenshot.refreshElements();
-    location.href='#saveDialog';
+    location.hash='#saveDialog';
     IO.form.addListeners();
 };
 
@@ -6744,7 +6744,7 @@ Signal.load = function(filepath) {
         return;
     }
 
-    location.href='#loadSource';
+    location.hash='#loadSource';
 };
 
 Signal.share = function() {
@@ -6753,7 +6753,7 @@ Signal.share = function() {
     }
 
     IO.screenshot.refreshElements();
-    location.href='#shareDialog';
+    location.hash='#shareDialog';
     IO.form.addListeners();
 };
 

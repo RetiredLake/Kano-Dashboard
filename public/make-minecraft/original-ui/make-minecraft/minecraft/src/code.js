@@ -114,5 +114,5 @@ Minecraft.resetWorld = function() {
 };
 
 Minecraft.showResetOption = function() {
-    window.location.href = '#resetWorldDialog';
+    window.location.hash = '#resetWorldDialog';
 }

@@ -71,14 +71,14 @@ IO.shipBlocks = function() {
 
     backend.call('ship', filename, function(returnValue) {
         if (returnValue !== 0) {
-            window.location.href = '#loadFileFail';
+            window.location.hash = '#loadFileFail';
             AlertsMessages.error.displayMsg(Language.alert.shareFail);
         } else {
             AlertsMessages.success.displayMsg(Language.alert.share);
         }
     });
 
-    location.href = '#menu';
+    location.hash = '#menu';
 };
 
 /**
@@ -132,7 +132,7 @@ IO.load = {
                     Blockly.mainWorkspace.clear();
                     IO.load.inject.blocks.onWorkspace(challenge);
                 } else {
-                    window.location.href = '#loadMakeOrPlay';
+                    window.location.hash = '#loadMakeOrPlay';
                 }
             },
             onWorkspace : function(challenge) {
@@ -156,7 +156,7 @@ IO.load = {
 
                 count = Blockly.mainWorkspace.getAllBlocks().length;
                 if (count) {
-                    window.location.href = "#clearBlocksLoadStepsDialog";
+                    window.location.hash = "#clearBlocksLoadStepsDialog";
                 } else {
                     IO.tooltip.display(challenge);
                 }
@@ -183,7 +183,7 @@ IO.load = {
                             IO.load.inject.blocks.dialog(IO.loadedChallenge);
                         });
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             },
@@ -202,7 +202,7 @@ IO.load = {
                             IO.load.inject.advancedMode.onWorkspace(pythonString);
                         });
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             }
@@ -219,7 +219,7 @@ IO.load = {
                             IO.loadedChallenge = new Challenge(xmlString);
                             IO.load.inject.blocks.dialog(IO.loadedChallenge);
                         } else {
-                            location.href = '#menu';
+                            location.hash = '#menu';
                         }
                     });
 
@@ -231,7 +231,7 @@ IO.load = {
                     if (pythonString !== null) {
                         IO.load.inject.advancedMode.onWorkspace(code);
                     } else {
-                        location.href = '#menu';
+                        location.hash = '#menu';
                     }
                 });
             }
