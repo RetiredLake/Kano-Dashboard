@@ -95,3 +95,42 @@ mergeInto(LibraryManager.library, {
         }
     }
 });
+
+// Browser implementation of the original platform chat dialog.
+mergeInto(LibraryManager.library, {
+    mcShowChatDialog: function () {
+        window._mcChatStatus = -1;
+        window._mcChatResult = null;
+        if (document.pointerLockElement) document.exitPointerLock();
+        var dialog = document.createElement('dialog');
+        dialog.id = 'mc-chat';
+        var form = document.createElement('form');
+        var label = document.createElement('label'); label.textContent = 'Chat';
+        var input = document.createElement('input');
+        input.id = 'mc-chat-message'; input.type = 'text'; input.maxLength = 256;
+        label.appendChild(input); form.appendChild(label);
+        var send = document.createElement('button'); send.type = 'submit'; send.textContent = 'Send';
+        var cancel = document.createElement('button'); cancel.type = 'button'; cancel.textContent = 'Cancel';
+        form.appendChild(send); form.appendChild(cancel); dialog.appendChild(form);
+        function finish(message) {
+            window._mcChatResult = message;
+            window._mcChatStatus = message === null ? 0 : 1;
+            dialog.close(); dialog.remove();
+            Module.canvas.focus();
+        }
+        form.onsubmit = function (event) { event.preventDefault(); finish(input.value.trim()); };
+        cancel.onclick = function () { finish(null); };
+        dialog.addEventListener('cancel', function (event) { event.preventDefault(); finish(null); });
+        input.addEventListener('keydown', function (event) { event.stopPropagation(); });
+        input.addEventListener('keyup', function (event) { event.stopPropagation(); });
+        document.body.appendChild(dialog); dialog.showModal(); input.focus();
+    },
+    mcGetChatResult: function () {
+        var value = window._mcChatResult;
+        window._mcChatResult = null; window._mcChatStatus = -1;
+        if (value === null || value === undefined) return 0;
+        var length = lengthBytesUTF8(value) + 1;
+        var result = _malloc(length); stringToUTF8(value, result, length);
+        return result;
+    }
+});

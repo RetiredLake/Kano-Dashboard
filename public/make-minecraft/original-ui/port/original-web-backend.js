@@ -6,6 +6,21 @@
     level = Math.max(1, Math.min(14, level));
     var files = {};
     var lastError = 'No errors';
+    // The short Sites route gets copies of old workspace caches, never deletes
+    // or overwrites either profile. Progress itself already uses a stable key.
+    if (location.pathname === '/make-minecraft/minecraft/' || location.pathname === '/make-minecraft/minecraft/index.html') {
+        var oldBase = location.origin + '/make-minecraft/original-ui/make-minecraft/minecraft/index.html';
+        var newBase = location.origin + location.pathname;
+        for (var cached = 1; cached <= 14; cached++) {
+            var suffix = '#project' + cached;
+            if (localStorage.getItem(newBase + suffix) === null && localStorage.getItem(oldBase + suffix) !== null) {
+                localStorage.setItem(newBase + suffix, localStorage.getItem(oldBase + suffix));
+            }
+        }
+        if (localStorage.getItem(newBase + '#playground') === null && localStorage.getItem(oldBase + '#playground') !== null) {
+            localStorage.setItem(newBase + '#playground', localStorage.getItem(oldBase + '#playground'));
+        }
+    }
     var gameFrame, gameStage;
     var filePrefix = 'kano.make-minecraft.original-web.file:';
     function saved(name) { return files[name] === undefined ? localStorage.getItem(filePrefix + name) : files[name]; }
@@ -83,8 +98,9 @@
     function download(name, text) {
         var link = document.createElement('a');
         var url = URL.createObjectURL(new Blob([text], {type: 'text/plain'}));
-        link.href = url; link.download = name; link.click();
-        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        link.href = url; link.download = name;
+        document.body.appendChild(link); link.click(); link.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
     }
     function asset(name) {
         if (name.indexOf('make-minecraft/') === 0) name = '../../' + name;
@@ -145,6 +161,9 @@
             result = true; break;
         case '_get_errors': result = lastError; break;
         case 'get_xp': result = JSON.stringify(xp); break;
+        // The archived Challenge.setScreenshot deliberately discards this data.
+        // Its old file:// screenshot read must not abort browser exports.
+        case 'read_image': result = ''; break;
         case 'launch': launch(callback, args.length > 0); return;
         case 'reset_world':
             if (!gameFrame || !gameFrame.contentWindow.KanoMakeBackend) {
@@ -176,7 +195,7 @@
             };
             input.addEventListener('cancel', function () { if (callback) callback(''); });
             input.click(); return;
-        case 'exit': location.hash = 'splashOther'; break;
+        case 'exit': window.top.location.href = '/'; break;
         case 'launch_forum': window.open(args[0], '_blank', 'noopener'); break;
         case 'play_sound':
             new Audio(new URL(args[0], document.baseURI).href).play().catch(function () {});
