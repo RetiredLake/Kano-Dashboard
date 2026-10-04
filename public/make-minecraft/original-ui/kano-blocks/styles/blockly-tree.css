@@ -1,0 +1,206 @@
+/* -----------------------------------------------------------------------
+    LEFT MENU STYLES
+----------------------------------------------------------------------- */
+
+.blocklyTreeRoot {
+  padding-top: 0 !important;
+}
+
+.blocklyTreeRoot .blocklyTreeIcon {
+  display: none !important;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel {
+  padding: 0;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div {
+  display: block;
+  height: 44px;
+  color: #ffffff;
+  min-width: 80px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.blocklyTreeRoot > div > div:last-of-type .blocklyTreeLabel div {
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel span.blocks-tree-label {
+  font-family: Bariol;
+  font-weight: bold;
+  font-size: 16px;
+  float: left;
+  margin-left: 14px;
+  margin-top: 14px;
+}
+
+.blocklyTreeRoot .blocklyTreeSelected div > img.icon.toolbox-arrow {
+  -ms-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.blocklyTreeRoot .blocklyTreeSelected .blocklyTreeLabel div {
+  color: #fff !important;
+}
+
+
+/* -----------------------------------------------------------------------
+    CATEGORY SPECIFIC STYLES FOR LEFT MENU
+----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-logic {
+  background-color: #2EB1CC;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-logic:hover {
+  background-color: rgba(46, 177, 204, 0.8);
+}
+
+#flyout-logic {
+  fill: rgba(46, 177, 204, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-numbers {
+  background-color: #A5C445;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-numbers:hover {
+  background-color: rgba(165, 196, 69, 0.8);
+}
+
+#flyout-numbers {
+  fill: rgba(165, 196, 69, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-colour {
+  background-color: #D4446F;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-colour:hover {
+  background-color: rgba(212, 68, 111, 0.8);
+}
+
+#flyout-colour {
+  fill: rgba(212, 68, 111, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-start-ups {
+  background-color: #B49CE4;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-start-ups:hover {
+  background-color: rgba(180, 156, 228, 0.8);
+}
+
+#flyout-start-ups {
+  fill: rgba(180, 156, 228, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-setters {
+  background-color: #7ED175;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-setters:hover {
+  background-color: rgba(126, 209, 117, 0.8);
+}
+
+#flyout-setters {
+  fill: rgba(126, 209, 117, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-getters {
+  background-color: #D8C32E;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-getters:hover {
+  background-color: rgba(216, 195, 46, 0.8);
+}
+
+#flyout-getters {
+  fill: rgba(216, 195, 46, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-events {
+  background-color: #EB8734;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-events:hover {
+  background-color: rgba(235, 135, 52, 0.8);
+}
+
+#flyout-events {
+  fill: rgba(235, 135, 52, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-actions {
+  background-color: #E34647;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-actions:hover {
+  background-color: rgba(227, 70, 71, 0.8);
+}
+
+#flyout-actions {
+  fill: rgba(227, 70, 71, 0.2);
+}
+
+/* ----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-loops {
+  background-color: #c0419e;
+}
+
+.blocklyTreeRoot .blocklyTreeLabel div.blocks-tree-loops:hover {
+  background-color: rgba(192, 65, 158, 0.8);
+}
+
+#flyout-loops {
+  fill: rgba(192, 65, 158, 0.2);
+}
+
+/* -----------------------------------------------------------------------
+    LOCKED CATEGORY STYLES FOR LEFT MENU
+----------------------------------------------------------------------- */
+
+.blocklyTreeRoot .blocklyTreeLabel div.lockedCategory {
+  background-color: #e2e2e2;
+  color: #e2e2e2;
+  pointer-events: none;
+}
+
+.blocklyTreeRoot .blocklyTreeSelected div.lockedCategory {
+  color: #dfdfdf !important;
+}
+
+div.lockedCategory > .padlock {
+  position: absolute;
+  display: block;
+  margin: 10px 53px;
+}

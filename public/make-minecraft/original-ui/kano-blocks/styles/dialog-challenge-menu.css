@@ -1,0 +1,229 @@
+/**
+ * dialog-challenge-menu.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Challenge Menu styling
+ */
+
+div.dialog.challenge span.challengeMenuRow {
+    height: 100px;
+}
+
+div.dialog.challenge span.dialogItem {
+    height: 88px;
+    line-height: 44px;
+}
+
+div.dialog.challenge span.dialogItem.projectMenu {
+    width: 88px;
+}
+
+/**
+ * Inside Buttons
+ */
+div.dialog.challenge .dialogItem span.projectNumber,
+div.dialog.challenge .dialogItem span.bottom {
+    width: 100%;
+    height: 50%;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+div.dialog.challenge .dialogItem span.projectNumber {
+    vertical-align: middle;
+}
+
+div.dialog.challenge .dialogItem span.bottom {
+    bottom: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/* Icon Containers */
+
+div.dialog.challenge .dialogItem span.bottom span.indicator {
+    position: absolute;
+    width: 50%;
+}
+
+div.dialog.challenge .dialogItem span.bottom span.indicator.objective {
+    left: 0;
+}
+
+div.dialog.challenge .dialogItem span.bottom span.indicator.badge {
+    right: 0;
+}
+
+div.dialog.challenge .dialogItem span.bottom span.indicator.xp {
+    width: 100%;
+}
+
+div.dialog.challenge .dialogItem span.bottom span.indicator.xp .xpLabel {
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* Icon Display Logic */
+
+div.dialog.challenge .dialogItem.projectMenu:not(.objective) > span.bottom span.objective {
+    display: none;
+}
+
+div.dialog.challenge .dialogItem.projectMenu:not(.badge) > span.bottom span.badge {
+    display: none;
+}
+
+div.dialog.challenge .dialogItem.projectMenu:not(.completed) > span.bottom span.xp {
+    display: none;
+}
+
+/**
+ * Completed, Working, Locked and Playground buttons
+ */
+
+/* Completed */
+div.dialog.challenge .dialogItem.projectMenu.completed {
+    background-color: #7dc641;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.completed:hover {
+    background-color: #8dd651;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.completed > span.bottom {
+    background-color: #70a642;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.completed:hover > span.bottom {
+    background-color: #80b652;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.completed > span.bottom span.indicator:not(.xp) {
+    display: none;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.completed > span.bottom span.indicator.xp {
+    left: 0;
+    right: 0;
+}
+
+/* Locked */
+div.dialog.challenge .dialogItem.projectMenu.locked,
+div.dialog.challenge .dialogItem.projectMenu.locked:hover {
+    background-color: #e5e5e5;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.locked > span.bottom,
+div.dialog.challenge .dialogItem.projectMenu.locked:hover > span.bottom {
+    background-color: #d2d2d2;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.locked > span.bottom span.indicator.objective,
+div.dialog.challenge .dialogItem.projectMenu.locked:hover > span.bottom span.indicator.objective {
+    background-color: #c4c4c4;
+}
+
+/* Working */
+div.dialog.challenge .dialogItem.projectMenu.working {
+    background-color: #61c1e9;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.working:hover {
+    background-color: #71d1f9;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.working span.bottom {
+    background-color: #4ea5ca;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.working:hover > span.bottom {
+    background-color: #5eb5da;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.working span.bottom span.indicator.objective {
+    background-color: #55b4dc;
+}
+
+div.dialog.challenge .dialogItem.projectMenu.working:hover > span.bottom span.indicator.objective {
+    background-color: #65c4ec;
+}
+
+/* Playground */
+div.dialog.challenge .dialogItem.playground.locked {
+    background-color: #fe842b;
+}
+
+div.dialog.challenge .dialogItem.playground:hover {
+    background-color: #ff943b;
+}
+
+div.dialog.challenge .dialogItem.playground.locked > span.bottom {
+    background-color: #e67725;
+}
+
+div.dialog.challenge .dialogItem.playground.locked:hover > span.bottom {
+    background-color: #f68735;
+}
+
+div.dialog.challenge .dialogItem.playground.unlocked {
+    background-color: #fe842b;
+}
+
+div.dialog.challenge .dialogItem.playground.unlocked:hover {
+    background-color: #ff943b;
+}
+
+div.dialog.challenge .dialogItem.playground.unlocked > span.bottom {
+    background-color: #e67725;
+}
+
+div.dialog.challenge .dialogItem.playground.unlocked:hover > span.bottom {
+    background-color: #f68735;
+}
+
+/**
+ * Project name hover over
+ */
+
+div.dialog.challenge .dialogItem .text,
+div.dialog.challenge .dialogItem .text:after {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+div.dialog.challenge .dialogItem .text {
+    display: none;
+    bottom: 103px;
+    padding: 10px;
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #44423d;
+    z-index: 100;
+}
+
+div.dialog.challenge .dialogItem .text:after {
+    display: block;
+    content: "";
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #44423d;
+}
+
+div.dialog.challenge .dialogItem:hover .text {
+    display: block;
+}

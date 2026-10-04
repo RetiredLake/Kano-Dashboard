@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Make Minecraft</title>
+  <link rel="stylesheet" href="make-minecraft.css">
+  <script src="vendor/legacy-blockly/blockly_compressed.js"></script>
+  <script src="vendor/legacy-blockly/msg/js/en.js"></script>
+  <script src="vendor/legacy-blockly/blocks_compressed.js"></script>
+  <script src="vendor/legacy-blockly/python_compressed.js"></script>
+  <script src="vendor/legacy-blockly/legacy-compat.js"></script>
+  <script src="vendor/make-minecraft/generated/en_compressed.js"></script>
+  <script src="vendor/make-minecraft/generated/python_compressed.js"></script>
+  <script src="vendor/make-minecraft/generated/en.js"></script>
+  <script>
+    function ProjectBase() {}
+    ProjectBase.prototype.init = function () {};
+    ProjectBase.prototype.reload = function () {};
+    window.AlertsMessages = {
+      hint: { displayMsg: function (message) { window.KanoMakeUI && window.KanoMakeUI.showMessage(message); } }
+    };
+  </script>
+  <script src="vendor/make-minecraft/src/project.js"></script>
+  <script src="make-minecraft.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="make-minecraft.html" aria-label="Make Minecraft home">
+      <span class="brand-mark">K</span><span>MAKE <b>MINECRAFT</b></span>
+    </a>
+    <div class="challenge-heading">
+      <span id="challenge-number">CHALLENGE 1</span>
+      <strong id="challenge-title">LEARN TO CODE MINECRAFT</strong>
+    </div>
+    <div class="top-actions">
+      <button id="previous-level" class="icon-button" title="Previous challenge" aria-label="Previous challenge">‹</button>
+      <button id="next-level" class="icon-button" title="Next unlocked challenge" aria-label="Next challenge">›</button>
+      <button id="run-button" class="make-button" disabled><span class="bolt">ϟ</span> MAKE</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="lesson-panel">
+      <div class="lesson-tabs"><button class="tab active" data-panel="lesson">LESSON</button><button class="tab" data-panel="challenges">CHALLENGES</button></div>
+      <section id="lesson-panel-body" class="panel-body">
+        <p id="challenge-description" class="description"></p>
+        <div class="objective"><span>NEW BLOCKS</span><strong id="challenge-objective"></strong></div>
+        <div class="tip-card">
+          <div class="tip-top"><span id="tip-step">TIP 1 / 1</span><span id="tip-direction" aria-hidden="true">›</span></div>
+          <div id="tip-text" class="tip-text">Loading recovered Kano challenge…</div>
+          <div class="tip-controls"><button id="tip-previous" class="text-button">BACK</button><button id="tip-next" class="text-button">NEXT</button></div>
+        </div>
+        <div id="run-status" class="run-status" role="status">Waiting for Minecraft to start…</div>
+      </section>
+      <section id="challenges-panel" class="panel-body challenge-list" hidden>
+        <div id="challenge-items"></div>
+        <button id="reset-world" type="button">Reset Kano World</button>
+        <p id="reset-world-status" role="status" aria-live="polite"></p>
+        <p>Quit to the game title first. Your current Kano World is kept as a backup; other worlds and lesson progress are unchanged.</p>
+        <p class="progress-caption"><span id="progress-count">0 / 13</span> challenges complete</p>
+      </section>
+    </aside>
+
+    <section class="editor-pane" aria-label="Blockly workspace">
+      <div class="pane-heading"><span>BLOCKS</span><button id="code-toggle" class="text-button">VIEW CODE</button></div>
+      <div id="blocklyDiv" class="blockly-area"></div>
+      <pre id="code-preview" class="code-preview" hidden></pre>
+    </section>
+
+    <section class="game-pane" aria-label="Minecraft game">
+      <div id="game-loading" class="game-loading">Preparing Minecraft…</div>
+      <iframe id="game-frame" title="Minecraft Pocket Edition 0.6.1" allow="autoplay; fullscreen" loading="eager"></iframe>
+      <div id="native-game-status" class="native-game-status" role="status" aria-live="polite" hidden>
+        <strong id="native-game-title">CONNECT TO MINECRAFT</strong>
+        <p id="native-game-message">Start Minecraft and open a world. This editor will connect to the game on this computer.</p>
+        <span>Keep Minecraft running while lessons execute.</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="message-toast" class="message-toast" role="status" aria-live="polite"></div>
+</body>
+</html>

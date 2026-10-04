@@ -1,0 +1,9 @@
+{
+  "source_repository": "https://github.com/SanGraphic/MCPEweb",
+  "source_commit": "1de19a8ace98ec863276d686ef7f1a08aeb7d27c",
+  "archive": "web-build.zip",
+  "archive_sha256": "7644a9529c1b8321e7bb4aea61f7291248baf9304de7dcca74b2b29e46a11571",
+  "compiler": "Emscripten 5.0.1",
+  "integration": "Preserved original Kano editor, seed, Blockly generators/predicates, direct Pi API bridge",
+  "verification": "13 live-world lesson fixtures; reset backup and seed persisted after reload; normal gameplay block survived quit and reload"
+}

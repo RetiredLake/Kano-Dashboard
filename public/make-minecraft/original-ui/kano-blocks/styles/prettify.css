@@ -1,0 +1,90 @@
+.pln {
+    color: #a8a8a8;
+}
+
+@media screen {
+    .str {
+    }
+
+    .kwd {
+        color: #008;
+    }
+
+    .com {
+        color: #800;
+    }
+
+    .typ {
+        color: #606;
+    }
+
+    .lit {
+        color: #066;
+    }
+
+    .pun, .opn, .clo  {
+        color: #660;
+    }
+    .tag {
+        color: #008;
+    }
+
+    .atn {
+        color: #606;
+    }
+
+    .atv {
+        color: #080;
+    }
+
+    .dec, .var {
+        color: #606;
+    }
+
+    .fun {
+        color: red;
+    }
+}
+
+@media print, projection {
+    .kwd {
+        font-weight: bold;
+    }
+
+    .com {
+        font-style: italic;
+    }
+
+    .typ {
+        font-weight: bold;
+    }
+
+    .tag {
+        font-weight: bold;
+    }
+}
+
+pre.prettyprint {
+    padding: 2px;
+    border: 1px solid #888;
+}
+
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+    list-style-type: none;
+}
+
+li.L1,  li.L3,  li.L5,  li.L7,  li.L9 {
+    background: #eee;
+}
+
+.str, .kwd, .com, .typ, .lit, .pun, .opn, .clo, .tag, .atn, .atv, .dec, .var, .fun, .kwd, .com, .typ, .lit, .pun, .opn, .clo, .tag, .atn, .atv, pre.prettyprint, ol.linenums, li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8, li.L1, li.L3, li.L5, li.L7, li.L9 {
+    color: #5cb5da;
+    font-weight: bold;
+    -webkit-user-modify: read-only;
+    -moz-user-modify: read-only;
+}

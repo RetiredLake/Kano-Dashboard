@@ -1,0 +1,48 @@
+/**
+ * workspace.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Buttons in top right of screen
+ */
+
+div.topRight {
+    z-index: 5;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 20px;
+}
+
+div.topRight > button {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 44px;
+}
+
+div.topRight > button.close {
+    border-radius: 0 0 3px 0;
+    width: 44px;
+    background-color: #e57273;
+    color: #ac5556;
+}
+
+div.topRight > button.close:hover {
+    background-color: #f58283;
+}
+
+div.topRight > button.close img {
+    opacity: 1;
+}
+
+div.topRight > button.menu {
+    border-radius: 0 0 0 3px;
+    width: 110px;
+    background-color: #c45b5c;
+}
+
+div.topRight > button.menu:hover {
+    background-color: #e47b7c;
+}

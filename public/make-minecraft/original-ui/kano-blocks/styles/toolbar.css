@@ -1,0 +1,272 @@
+/* -----------------------------------------------------------------------
+   Bar at bottom of every project
+-----------------------------------------------------------------------*/
+div.toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: #44423d;
+    height: 70px;
+    z-index: 5;
+}
+
+div.toolbar button {
+    font-size: 16px;
+}
+
+/**
+ * The steps indication
+ *
+ * Includes the navigation buttons and the progress bar
+ */
+.toolbar .half.left .stepsNavigation {
+    float: none;
+    overflow: hidden;
+}
+
+/**
+ * Step navigation buttons
+ */
+.toolbar .stepsNavigation button.nextStep,
+.toolbar .stepsNavigation button.previousStep {
+    position: absolute;
+    padding: 10px 23px;
+    background: transparent;
+    margin: 0;
+}
+
+.toolbar .stepsNavigation button.nextStep {
+    right: 0;
+}
+
+.toolbar .stepsNavigation button.previousStep {
+    left: 0;
+}
+
+.toolbar .stepsNavigation button:disabled {
+    pointer-events: none;
+}
+
+.toolbar .stepsNavigation button:disabled img.icon {
+    opacity: 0.2;
+}
+
+/**
+ * Progress bar
+ */
+.toolbar .stepsNavigation .progressBar,
+.toolbar .stepsNavigation .progressBar > .progressDoneBar {
+    position: absolute;
+    top: 0;
+}
+
+.toolbar .stepsNavigation .progressBar,
+.toolbar .stepsNavigation .progressBar > .stepBlob.maxStepsIndicator {
+    background: #5e5b54;
+}
+
+.toolbar .stepsNavigation .progressBar {
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    height: 10px;
+    margin: 17px 13px 17px 0;
+    border-radius: 5px;
+}
+
+.toolbar .stepsNavigation .progressBar > .progressDoneBar {
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    background: #488fac;
+}
+
+.toolbar .stepsNavigation .progressBar .stepBlob {
+    position: absolute;
+
+    color: #ffffff;
+    font-weight: bold;
+
+    height: 30px;
+    min-width: 30px;
+    line-height: 30px;
+
+    right: 0;
+    margin-right: -15px;
+    top: 50%;
+    margin-top: -15px;
+    border-radius: 15px;
+}
+
+.toolbar .stepsNavigation .progressBar > .stepBlob.maxStepsIndicator img.icon {
+    position: relative;
+    vertical-align: middle;
+}
+
+.toolbar .stepsNavigation .progressBar > .stepBlob.maxStepsIndicator .maxSteps {
+    height: 100%;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.toolbar .stepsNavigation .progressBar.complete > .progressDoneBar {
+    background: #ffbf91;
+}
+
+.toolbar .stepsNavigation .progressBar.complete > .maxStepsIndicator {
+    background: #ff842A;
+}
+
+.toolbar .stepsNavigation .progressBar > .progressDoneBar > .progressDoneBarEnd {
+    z-index: 1;
+    background: #61c1e9;
+    box-shadow: 2px 2px 3px #403e39,
+                inset 0 -3px 0 #59aed7;
+}
+
+.toolbar .stepsNavigation .progressBar.complete > .progressDoneBar > .progressDoneBarEnd {
+    display: none;
+}
+
+/* Make button */
+div.toolbar button.menu_buttons {
+    height: 44px;
+    background-color: #ff842A;
+}
+
+div.toolbar button.make {
+    width: 155px;
+    background-color: #ff842A;
+}
+
+div.toolbar button.make:hover {
+    background-color: #ffab40;
+}
+
+div.toolbar div.half {
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+}
+
+div.toolbar div.half.left {
+    left: 0;
+}
+
+div.toolbar div.half.right {
+    right: 0;
+}
+
+div.toolbar div.half > * {
+    position: relative;
+    margin-top: 10px;
+    box-sizing: border-box;
+    height: 44px;
+}
+
+div.toolbar div.half.left > * {
+    margin-left: 10px;
+    float: left;
+}
+
+div.toolbar div.half.right > * {
+    margin-right: 10px;
+    float: right;
+}
+
+/**
+ * Toggle buttons
+ */
+div.toolbar div.half > button.toggle input.switch {
+    display: none;
+}
+
+div.toolbar div.half > button.toggle.disabled  {
+    background: #44423d;
+}
+
+div.toolbar div.half > button.toggle.disabled > * {
+    opacity: 0.1;
+}
+
+/* Code Toggle */
+div.toolbar div.half.right > button.toggle.code  {
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 0;
+    width: 115px;
+    display: table;
+}
+
+div.toolbar div.half.right > button.toggle.code input.switch ~ label:hover {
+    background-color: #524f4a;
+}
+
+div.toolbar div.half.right > button.toggle.code input.switch:checked ~ label {
+    background: #7bc540;
+}
+
+div.toolbar div.half.right > button.toggle.code input.switch:checked ~ label:hover {
+    background: #8bd550;
+}
+
+div.toolbar div.half.right > button.toggle.code input.switch ~ label {
+    background: #6d6a63;
+
+    width: 100%;
+    height: 100%;
+    padding: 13px 38px;
+    display: table-cell;
+    white-space: nowrap;
+}
+
+/* Help Toggle */
+.toggle.help {
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #5e5b54;
+}
+
+.toggle.help img {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../kano-blocks/blockly/media/help.png);
+}
+
+.toggle.help.down {
+    background-color: #7bc540;
+}
+
+.toggle.help.down img {
+    background-image: url(../../kano-blocks/blockly/media/help-close.png);
+}
+
+/* Displays info about current level */
+.toolbar .half.left .progressInfo {
+    padding: 13px;
+    cursor: pointer;
+    display: inline-block;
+    background: #61c1e9;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    line-height: 17px;
+}
+
+.toolbar .half.left .progressInfo:hover {
+    background: #71d1f9;
+}
+
+.toolbar .progressInfo img {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+}

@@ -1,0 +1,91 @@
+/**
+ * dialog-challenge.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Challenge dialog styling
+ */
+
+.dialog.challengeInfo .top {
+    overflow: hidden;
+}
+
+.dialog.challengeInfo .top * {
+    color: #ffffff;
+}
+
+.dialog.challengeInfo.pre .top {
+    background-color: #61c1e9;
+}
+
+.dialog.challengeInfo.post .top {
+    background-color: #7cc540;
+}
+
+.dialog.challengeInfo.playground .top {
+    background-color: #fe832a;
+}
+
+.dialog.challengeInfo .top .heading span {
+    display: inline;
+}
+
+.dialog.challengeInfo .top .stat {
+    position: relative;
+    padding: 10px 0;
+    width: 50%;
+    float: left;
+    padding-bottom: 110px;
+    margin-bottom: -100px;
+}
+
+.dialog.challengeInfo .top .stat > span {
+    display: block;
+}
+
+.dialog.challengeInfo .top .stat > img {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+
+.dialog.challengeInfo .bottom .button.back {
+    position: absolute;
+    left: 18px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0;
+    border-radius: 22px;
+    background-color: #bbbbbb;
+    font-size: 30px;
+}
+
+.dialog.challengeInfo.pre .top .stat > .subheading {
+    color: #a4dcf4;
+}
+
+.dialog.challengeInfo.post .top .stat > .subheading {
+    color: #c8f6a3;
+}
+
+.dialog.challengeInfo .top .stat > :not(.subheading) {
+    font-weight: bold;
+}
+
+.dialog.challengeInfo.post .top .stat.code {
+    background-color: #7cb949;
+}
+
+.dialog.challengeInfo.post .top .stat.xp {
+    background-color: #6fa640;
+}
+
+.dialog.challengeInfo.pre .top .stat.badge {
+    background-color: #52a6ca;
+}
+
+.dialog.challengeInfo.pre .top .stat.objective {
+    background-color: #59b1d7;
+}

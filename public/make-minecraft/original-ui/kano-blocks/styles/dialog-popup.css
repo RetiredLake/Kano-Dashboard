@@ -1,0 +1,26 @@
+/**
+ * dialog-popup.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Styling for popup boxes
+ */
+
+div.dialog.resetWorldDialog > div {
+    width: 520px;
+    height: 185px;
+    padding: 30px 0 10px 0;
+}
+
+div.dialog.discardDialog > div {
+    width: 450px;
+    height: 150px;
+    padding: 30px 0 10px 0;
+}
+
+div.dialog.clearBlocksDialog > div {
+    width: 450px;
+    height: 150px;
+    padding: 30px 0 10px 0;
+}

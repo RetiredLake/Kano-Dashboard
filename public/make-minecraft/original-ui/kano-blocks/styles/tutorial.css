@@ -1,0 +1,320 @@
+/* ---------------------------------------------------------------------
+ * Shared
+ * --------------------------------------------------------------------- */
+
+/* The tip message in the tutoral */
+div p.hintlabel {
+    font-family: Bariol, sans-serif;
+    font-size: 19px;
+    color: #ffffff;
+    padding: 3px;
+    margin-right: 3px;
+}
+
+/* Tutorial close button */
+div button.closelabel {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Bariol, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 44px;
+    margin: 0;
+    padding: 10px;
+    pointer-events: auto;
+}
+
+/* Cross styling on the tutorial close button */
+div button.closelabel span.cross {
+    margin: 0 7px;
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------------------------
+ * Items with similar functions
+ * --------------------------------------------------------------------- */
+
+div.alert, span.alert {
+    font-family: Bariol, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    color: #ffffff;
+    width: 500px;
+    margin: auto;
+    padding: 0;
+    z-index: 1;
+    display: none;
+}
+
+div.alert > div, span.alert {
+    position: relative;
+    min-width: 100px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* div.tip, div.success, div.hint, div.error, div.levelDone {*/
+div.alert > div > div {
+    position: relative;
+    padding: 0 10px 0 0;
+    margin: 0 44px 0 0;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------
+ * Tutorial Pointer
+ * ---------------------------------------------------------------------- */
+
+div.tooltip {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+/* ----------------------------------------------------------------------
+ * Tutorial Dialog
+ * ---------------------------------------------------------------------- */
+
+div.tooltipdialog {
+    font-family: Bariol, sans-serif;
+    position: absolute;
+    color: #ffffff;
+    z-index: 3;
+    display: none;
+    pointer-events: none;
+}
+
+div.tooltipdialog.default {
+    text-align: center;
+}
+
+/* The container for the whole tip dialog in the tutorial */
+div.tooltipdialog div.tip + button.closelabel {
+    background: #61c1e9;
+}
+
+div.tooltipdialog div.tip > p.hintlabel {
+    background: #61c1e9;
+}
+
+div.tooltipdialog.left > div:before,
+div.tooltipdialog.up > div:before,
+div.tooltipdialog.down > div:after,
+div.tooltipdialog.right > div:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+}
+
+div.tooltipdialog.left > div:before {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #61c1e9;
+    top: 48px;
+    left: 10px;
+}
+
+div.tooltipdialog.up > div:before {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #61c1e9;
+    left: 100px;
+}
+
+div.tooltipdialog.down > div:after {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #61c1e9;
+    left: 100px;
+}
+
+div.tooltipdialog.right > div:after {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #61c1e9;
+    float: right;
+    bottom: 48px;
+    left: 15px;
+}
+
+.tutorialContent {
+    position: relative;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.tutorialContent > div {
+    max-width: 300px;
+    height: 66px;
+    position: relative;
+    margin: 0 0 0 25px;
+    display: table;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #d9d9d9;
+}
+
+div.tooltipdialog > div > div {
+    background: #61c1e9;
+}
+
+.tutorialContent > div > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tutorialContent > div p {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 11px 25px;
+    margin: 0;
+    line-height: 22px;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.tooltipdialog:not(.down) .tutorialContent > div p {
+    box-shadow: inset 0 -3px 0 #59aed7;
+}
+
+.tutorialContent > div img {
+    margin: 5px 10px 0px 10px;
+}
+
+/* ----------------------------------------------------------------------
+ * The hints that are displayed when the user makes a mistake, saves or shares their work
+ * ---------------------------------------------------------------------- */
+
+div.alert {
+    position: absolute;
+    text-align: center;
+}
+
+div.alert span.msg {
+    margin: 0;
+}
+
+div.alert .tutorialContent > div {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+div.alert button.closelabel {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* ----------------------------------------------------------------------
+ * Success Alert Message
+ * ---------------------------------------------------------------------- */
+
+#successAlert > div {
+    background: #82c255;
+    z-index: 100;
+}
+
+div.success {
+}
+
+div.success + button.closelabel {
+    background: #6ba940;
+}
+
+
+
+/* ----------------------------------------------------------------------
+ * Hints Alert Message
+ * ---------------------------------------------------------------------- */
+
+#hintAlert > div {
+    background: #a5a5a5;
+}
+
+div.hint {
+}
+
+div.hint + button.closelabel {
+    background: #8b8b8b;
+}
+
+
+/* ----------------------------------------------------------------------
+ * Error Alert Message
+ * ---------------------------------------------------------------------- */
+
+#errorAlert > div {
+    background: #f37677;
+    z-index: 100;
+}
+
+div.error {
+}
+
+div.error + button.closelabel {
+    background: #db5759;
+}
+
+
+/* ----------------------------------------------------------------------
+ * Level Already Complete Alert Message
+ * ---------------------------------------------------------------------- */
+
+#finishedLevelAlert > div {
+    background: #82c255;
+}
+
+div.levelDone {
+}
+
+div.levelDone + button.closelabel {
+    background: #6ba940;
+}
+
+/* ----------------------------------------------------------------------
+ * Pointers
+ * ---------------------------------------------------------------------- */
+
+div.tooltip {
+    height: 33px;
+    width: 62px;
+    background-image: url(../blockly/media/hands.png);
+}
+
+div.tooltip.left,
+div.tooltip.right {
+    height: 33px;
+    width: 62px;
+}
+
+div.tooltip.up,
+div.tooltip.down {
+    height: 62px;
+    width: 33px;
+}
+
+div.tooltip.left {
+    background-position: 0 0;
+}
+
+div.tooltip.right {
+    background-position: 0 -33px;
+}
+
+div.tooltip.up {
+    background-position: -62px 0;
+}
+
+div.tooltip.down {
+    background-position: -95px 0;
+}

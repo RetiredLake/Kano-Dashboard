@@ -1,0 +1,344 @@
+/**
+ * dialog-boxes.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * General styling for all dialogs
+ */
+
+/* Menu Dialog box, contains all the project buttons*/
+div.dialog {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+div.dialog:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+div.dialog > div {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 900px;
+    margin: auto;
+    padding: 0;
+    border-radius: 3px;
+    background: white;
+}
+
+div.dialog:target {
+    display: inline;
+    pointer-events: auto;
+}
+
+/**
+ * Close button on dialogs
+ */
+button.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #bebebe;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 18px;
+}
+
+button.close:hover {
+    background-color: #cccccc;
+}
+
+/**
+ * Styling for the dialog template.
+ */
+div.dialog div.top {
+    top: 0;
+    border-radius: 3px 3px 0 0;
+}
+div.dialog div.bottom {
+    bottom: 0;
+    padding: 13px 0;
+    background: #e5e5e5;
+    border-radius: 0 0 3px 3px;
+}
+
+div.dialog .preheading:first-child,
+div.dialog .heading:first-child {
+    padding: 25px 0 0 0;
+}
+
+div.dialog .subheading,
+div.dialog .heading,
+div.dialog .subheading :not(.challengeTitle):not(.challengeNumber),
+div.dialog .heading :not(.challengeTitle):not(.challengeNumber) {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+div.dialog .heading,
+div.dialog .heading * {
+    font-size: 22px;
+    font-weight: bold;
+    color: #323232;
+}
+
+div.dialog .subheading,
+div.dialog .subheading * {
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+div.dialog > div div.content {
+    text-align: center;
+    visibility: visible;
+}
+
+div.dialog > div div.content > button {
+    background-color: #7cc640;
+    color: #ffffff;
+    border-radius: 3px;
+    width: 160px;
+    margin: 0 10px;
+    padding: 12px 0;
+}
+
+div.dialog > div div.content > span {
+    font-size: 16pt;
+    color: #6e6e6e;
+}
+
+/* -----------------------------------------------------------------------
+    Styling specific to certain dialogs
+----------------------------------------------------------------------- */
+
+div.dialog.project > div {
+    width: 610px;
+    padding: 20px;
+}
+
+div.dialog.project.projectInfo > div {
+    height: 120px;
+}
+
+div.dialog.project > div .button:hover {
+  background-color: #a5e874;
+  border-color: #a5e874;
+}
+
+/* Individual button on Menu */
+.dialogItem {
+    font-family: 'Bariol Bold';
+    margin: 5px;
+    border-radius: 3px;
+    pointer-events: auto;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dialogItem.button {
+    font-family: 'Bariol Bold';
+    height: 20px;
+    padding: 12px 0;
+    margin: 5px;
+    position: relative;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+/* Button colours */
+/* Buttons on pop ups, e.g. when levelling up or loading from Kanux box */
+button.level_up_buttons,
+span.level_up_buttons {
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 12px 0;
+    width: 160px;
+    border-radius:3px;
+}
+
+/**
+ * Other
+ */
+
+.whiteRightArrow {
+    background-position: -598px 0;
+}
+
+.replayArrow {
+    margin: 0 5px 0 0;
+    background-position: -382px 0;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+/* -----------------------------------------------------------------------
+    Completed level pop-ups
+----------------------------------------------------------------------- */
+
+div.dialog.levelUp > div {
+    width: 500px;
+}
+
+div.dialog.congratulations > div {
+    width: 500px;
+}
+
+.goToNext {
+    background-color:#7cc640;
+}
+
+.goToNext:hover {
+    background-color:#A5E874;
+}
+
+.replayButton {
+    background-color: #ff842a;
+}
+
+.replayButton:hover {
+    background-color: #ffab40;
+}
+
+#goToPlayground {
+    background-color:#5cbf48;
+    margin: 10px;
+}
+
+.heading {
+    margin:20px 0 15px 0;
+}
+
+.dialog > div .preheading {
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.challengeInfo .heading .challengeTitle {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    display: block;
+    margin-bottom: -15px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.dialog > .challengeInfo .challengeDescription {
+    display: inline-block;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    font-size: 17px;
+}
+
+.fontsize {
+    font-size: 25px;
+}
+
+div.dialog span.goToNextMessage {
+    position: absolute;
+    left: 15px;
+}
+
+div.dialog span.goToPlayground,
+div.dialog span.replayMessage {
+    position: relative;
+    color: #ffffff;
+    font-size: 16px;
+    top: -2px;
+}
+
+/* -----------------------------------------------------------------------
+Main buttons - Make, Load, Share, Menu, Close
+----------------------------------------------------------------------- */
+
+/* Buttons */
+button {
+    font-family: 'Bariol Bold', monospace;
+    border: none;
+}
+
+button > img {
+    position: relative;
+    vertical-align: middle;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+/* Class that controls Save, Load, Share and Exit buttons in main menu, and also Make button the project screen */
+button.menu_buttons {
+    float: left;
+    font-size: 16px;
+    width: 205px;
+    height: 66px;
+    text-align: center;
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color:#ffffff;
+    border-radius:3px;
+}
+
+div.dialog button.menu_buttons.launch {
+    background-color: #61c1e9;
+}
+
+div.dialog button.menu_buttons.launch:hover {
+    background-color: #5bcefd;
+}
+
+div.codepreviewdialog.advanced span.button.save,
+div.dialog.save button.menu_buttons.launch {
+    background-color: #96c573;
+}
+
+div.codepreviewdialog.advanced span.button.save,
+div.dialog.save button.menu_buttons.launch:hover {
+    background-color: #aae082;
+}
+
+div.dialog#challengeMenu > div {
+    max-width: 900px;
+}
+
+div.challengeMenuList {
+    padding: 10px 0 6px;
+}
+
+.mainMenuButtons {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#projectIntroDialog > div {
+    max-width: 500px;
+}

@@ -40,7 +40,7 @@ const launcherPages: { id: string; apps: LauncherApp[] }[] = [
     apps: [
       { id: "code", name: "Kano Code", href: "/code/", icon: "code" },
       { id: "art", name: "Make Art", href: "/art/", icon: "art" },
-      { id: "minecraft", name: "Hack Minecraft", href: "/hack-minecraft/", icon: "minecraft" },
+      { id: "minecraft", name: "Make Minecraft", href: "/make-minecraft/make-minecraft.html", icon: "minecraft" },
     ],
   },
 ];

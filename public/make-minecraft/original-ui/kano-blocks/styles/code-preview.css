@@ -1,0 +1,178 @@
+/* -----------------------------------------------------------------------
+Code preview dialog
+----------------------------------------------------------------------- */
+
+.codePreview {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  bottom: 70px;
+  right: 0;
+  background: #2e2e2e;
+  z-index: 7;
+}
+
+/* Logic for displaying the advanced mode */
+
+.codePreview:not(.advanced) .advancedMode * {
+    display: none;
+}
+
+.codePreview.advanced .basicMode * {
+    display: none;
+}
+
+/* Buttons */
+
+.codePreview .buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+}
+
+.codePreview.advanced .buttons {
+    left: 50%;
+}
+
+.codePreview .buttons .button {
+    margin: 0 10px 0 0;
+    padding: 10px;
+    font-size: 16px;
+    height: 16px;
+    z-index: 5;
+}
+
+.codePreview .buttons .button.advancedModeToggle {
+    background-color: #524f4a;
+}
+
+.codePreview .buttons .button.advancedModeToggle:hover {
+    background-color: #625f5a;
+}
+
+.codePreview .buttons .button.save {
+    background-color: #96c573;
+}
+
+.codePreview .buttons .button.save:hover {
+    background-color: #aae082;
+}
+
+.codePreview .buttons .button.load {
+    background-color: #7cc640;
+}
+
+.codePreview .buttons .button.load:hover {
+    background-color: #aae082;
+}
+
+.codePreview .buttons .button.guide {
+    background-color: #7bc43f;
+}
+
+.codePreview .buttons .button.guide:hover {
+    background-color: #8bd44f;
+}
+
+/* Panes for code, errors and the guide */
+
+.codePreview .code {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 10px;
+}
+
+.codePreview:not(.advanced) .code {
+  bottom: 86px;
+}
+
+.codePreview > div > :not(.buttons) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: Monaco, monospace;
+  border: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.codePreview .advancedMode .code {
+    left: 0;
+    right: 50%;
+}
+
+.codePreview .advancedMode .code span.pln {
+    color: #ffffff
+}
+
+.codePreview .advancedMode .code {
+    outline: none;
+    -webkit-user-select: auto;
+}
+
+.codePreview .advancedMode .code ::selection {
+    background: #323232;
+}
+
+.codePreview .advancedMode .errors {
+    left: 50%;
+    right: 0;
+    background: #433a3a;
+}
+
+.codePreview .advancedMode .heading {
+    font-family: Bariol, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.codePreview .advancedMode .msg {
+    margin: 15px 0;
+    display: block;
+    color: white;
+    font-weight: bold;
+}
+
+.codePreview .advancedMode .guide {
+    left: 50%;
+    right: 0;
+    bottom: 86px;
+    background: #433a3a;
+}
+
+.codePreview.advanced {
+    width: auto;
+    left: 0;
+    padding-top: 25px;
+}
+
+.codePreview.advanced > .advancedMode {
+    display: block;
+}
+
+/* Scrollbar underneath python code to match Blockly scrollbar */
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #d7d7d7;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ababab;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ababab;
+}

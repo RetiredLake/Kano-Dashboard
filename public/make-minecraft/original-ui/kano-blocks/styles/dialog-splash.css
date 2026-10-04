@@ -1,0 +1,35 @@
+/**
+ * dialog-splash.css
+ *
+ * Copyright (C) 2014 Kano Computing Ltd
+ * License: GNU General Public License v2 http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Splash dialog styling
+ */
+
+div.dialog.splash > div {
+    max-width: 625px;
+    background: transparent;
+}
+
+div.dialog.splash .top {
+    height: 238px;
+}
+
+div.dialog.splash .bottom {
+    padding: 13px 0;
+}
+
+div.dialog.splash .bottom button.orange_text {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    background: transparent;
+    color: #ff842A;
+}
+
+div.dialog.splash .bottom button.orange_text img {
+    position: relative;
+    top: 0;
+    margin-right: 5px;
+}

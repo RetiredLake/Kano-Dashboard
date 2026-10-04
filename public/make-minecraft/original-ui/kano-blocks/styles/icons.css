@@ -1,0 +1,196 @@
+img.icon {
+    height: 24px;
+    width: 24px;
+    background-image: url(../blockly/media/Kano-BlockplatformIcons.png);
+}
+
+/* Icon used on buttons */
+.kano-icon {
+    margin-right: 10px;
+    margin-left:-7px;
+}
+
+/* Icon shown on button */
+img.icon.projectMenuIcons {
+    background-repeat:no-repeat;
+    color: #ffffff;
+}
+
+img.icon.projectIcon {
+    /*
+    position: relative;
+    right:5px;
+    top:6px;
+    */
+    background-color:transparent;
+}
+
+img.icon.projectMenuIcons.projectIcon {
+    position: absolute;
+    right: 9px;
+    top: 8px;
+}
+
+#mimicIcon {
+    position:absolute;
+    left:6px;
+    bottom: 7px;
+}
+
+img.icon.greycross {
+    background-position: -48px;
+}
+
+img.icon.padlock {
+    background-position: -144px 0px;
+}
+
+img.icon.lightning {
+    background-position: -96px 0px;
+}
+
+img.icon.tick {
+    background-position: -120px 0px;
+}
+
+img.icon.greySmileyFace {
+    background-position: -406px 0px;
+}
+
+img.icon.greyTick {
+    background-position: -430px 0px;
+}
+
+img.icon.greyLightning {
+    background-position: -454px 0px;
+}
+
+.dialogItem .smileyface {
+    margin-right:15px;
+}
+
+/*
+.mimic .greyLightning {
+    position: relative;
+}
+
+.mimic .greyTick {
+    position: relative;
+}
+*/
+
+img.icon.save-project {
+    background-position: -240px 0px;
+}
+
+img.icon.load-project {
+    background-position: -264px 0px;
+}
+
+img.icon.ship {
+    background-position: -288px 0px;
+}
+
+img.icon.redcross {
+    background-position: -358px 0px;
+}
+
+img.icon.projectInfo-icon {
+    background-position: 0px 0px;
+}
+
+img.icon.reset {
+    background-position: -24px 0px;
+}
+
+img.icon.dustbin {
+    background-position: -574px 0px;
+}
+
+img.icon.brownSmileyFace {
+    background-position: -478px 0px;
+}
+
+img.icon.greySave {
+    background-position: -502px 0px;
+}
+
+img.icon.greyLoad {
+    background-position: -526px 0px;
+}
+
+img.icon.greyship {
+    background-position: -550px 0px;
+}
+
+img.icon.menu-icon {
+    background-position: -648px 0px;
+}
+
+img.icon.projectBack {
+    background-position: -672px 0px;
+}
+
+img.icon.projectForward {
+    background-position: -696px 0px;
+}
+
+/* Arrow which appears on the toolbox menu */
+img.icon.toolbox-arrow {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-position: -72px 0;
+}
+
+img.hint-icon {
+    height: 66px;
+    width: 66px;
+    background-image: url(../blockly/media/hint-faces.png);
+}
+
+img.hint-icon.error {
+    background-position: 0 0;
+}
+
+img.hint-icon.hint {
+    background-position: -66px 0;
+}
+
+img.hint-icon.success {
+    background-position: -132px 0;
+}
+
+img.hint-icon.tip {
+    background-position: -198px 0;
+}
+
+img.indicator {
+    background-image: url(../blockly/media/challenge-menu-icons.png);
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+img.indicator.codeLines {
+    background-position: 0 0;
+}
+
+img.indicator.xp {
+    background-position: -20px 0;
+}
+
+img.indicator.badge {
+    background-position: -40px 0;
+}
+
+img.indicator.objective {
+    background-position: -60px 0;
+}
+
+img.back {
+    background-image: url(../blockly/media/back.png);
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
