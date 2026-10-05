@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Grid2X2, LogOut, RotateCcw, Settings } from "lucide-react";
+import { Grid2X2, RotateCcw, Settings } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,16 +16,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-type DashboardClientProps = {
-  displayName: string;
-  isSignedIn: boolean;
-  signInHref: string;
-  signOutHref: string;
-};
 
 type LauncherApp = {
   id: string;
@@ -84,14 +76,6 @@ function StoryArtwork() {
   return <img className="story-artwork" src="/dashboard/story-mode-tile.png" alt="" />;
 }
 
-function KanoCodeMark() {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-      <path d="M19 13v38M45 14 27 32l19 18" fill="none" stroke="white" strokeWidth="9" strokeLinecap="square" strokeLinejoin="miter" />
-    </svg>
-  );
-}
-
 function removeStoryCookies() {
   const secure = window.location.protocol === "https:" ? "; Secure" : "";
   const attributes = `Max-Age=0; Path=/story/; SameSite=Lax${secure}`;
@@ -128,12 +112,7 @@ async function resetExperience() {
   }
 }
 
-export default function DashboardClient({
-  displayName,
-  isSignedIn,
-  signInHref,
-  signOutHref,
-}: DashboardClientProps) {
+export default function DashboardClient() {
   const [pageIndex, setPageIndex] = useState(0);
   const [resetOpen, setResetOpen] = useState(false);
   const currentPageIndex = Math.min(pageIndex, launcherPages.length - 1);
@@ -147,7 +126,7 @@ export default function DashboardClient({
         <div className="profile-block">
           <GuestAvatar />
           <div className="profile-copy">
-            <strong>{displayName}</strong>
+            <strong>Guest</strong>
             <span>Level 1</span>
           </div>
         </div>
@@ -168,9 +147,9 @@ export default function DashboardClient({
               <a className={`app-tile app-tile-${app.icon}`} href={app.href} target="_top" key={app.id}>
                 <span className={`app-icon app-icon-${app.icon}`}>
                   {app.icon === "code" ? (
-                    <KanoCodeMark />
+                    <img src="/dashboard/kano-code-logo.png" alt="" />
                   ) : app.icon === "minecraft" ? (
-                    <img src="/hack-minecraft/icon.png" alt="" />
+                    <img src="/dashboard/hack-minecraft-logo.png" alt="" />
                   ) : (
                     <img src="/dashboard/make-art-logo.png" alt="" />
                   )}
@@ -182,15 +161,10 @@ export default function DashboardClient({
         </section>
 
         <aside className="dashboard-zone account-zone" aria-live="polite">
-          <h2 className="zone-title">{isSignedIn ? "Staff Picks" : "Unlock Kano World"}</h2>
-          {!isSignedIn && (
-            <div className="account-panel">
-              <a className="chatgpt-signin" href={signInHref} target="_top">
-                <span className="chatgpt-mark" aria-hidden="true">✳</span>
-                <span>Sign in with ChatGPT</span>
-              </a>
-            </div>
-          )}
+          <h2 className="zone-title">Kano World</h2>
+          <div className="account-panel">
+            <span className="login-disabled">Login is currently disabled</span>
+          </div>
         </aside>
       </div>
 
@@ -217,13 +191,6 @@ export default function DashboardClient({
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" side="top" sideOffset={8} className="settings-popover">
-            <DropdownMenuItem asChild disabled={!isSignedIn}>
-              <a href={signOutHref} target="_top" aria-disabled={!isSignedIn}>
-                <LogOut size={16} aria-hidden="true" />
-                Sign Out
-              </a>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
             <DropdownMenuItem onSelect={() => setResetOpen(true)}>
               <RotateCcw size={16} aria-hidden="true" />
               Reset Experience

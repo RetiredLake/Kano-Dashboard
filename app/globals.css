@@ -183,11 +183,11 @@ button:focus-visible, a:focus-visible {
 }
 
 .app-icon-code { background: #f36b21; }
-.app-icon-code svg { width: 71%; height: 71%; }
+.app-icon-code img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-icon-art { background: #343434; }
 .app-icon-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .app-icon-minecraft { background: #7252af; }
-.app-icon-minecraft img { display: block; width: 100%; height: 100%; padding: 3px; object-fit: contain; }
+.app-icon-minecraft img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-tile-minecraft { grid-column: 1; grid-row: 2; }
 
 .app-name {
@@ -214,7 +214,7 @@ button:focus-visible, a:focus-visible {
   box-shadow: 0 2px 6px rgb(35 76 94 / 12%);
 }
 
-.chatgpt-signin {
+.login-disabled {
   display: flex;
   width: 100%;
   min-height: 42px;
@@ -235,8 +235,8 @@ button:focus-visible, a:focus-visible {
   transition: background 130ms ease, transform 130ms ease;
 }
 
-.chatgpt-signin:hover { background: #fff; transform: translateY(-1px); }
-.chatgpt-mark { flex: none; font-size: clamp(13px, 1.4vw, 20px); line-height: 1; }
+
+
 
 .dashboard-controls {
   position: absolute;
@@ -352,7 +352,7 @@ button:focus-visible, a:focus-visible {
   .app-name { font-size: 10px; }
   .account-zone .zone-title { text-align: left; }
   .account-panel { max-width: 260px; }
-  .chatgpt-signin { min-height: 48px; font-size: 11px; }
+  .login-disabled { min-height: 48px; font-size: 11px; }
   .dashboard-controls { right: 7%; bottom: 3%; left: 7%; }
   .settings-button { right: 3%; }
 }

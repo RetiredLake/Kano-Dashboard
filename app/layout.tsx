@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "Kano Dashboard",
   description: "Open Story Mode, Kano Code, or Make Art.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
   },
 };
 

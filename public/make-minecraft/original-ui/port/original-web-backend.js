@@ -36,7 +36,32 @@
     var filePrefix = 'kano.make-minecraft.original-web.file:';
     function saved(name) { return files[name] === undefined ? localStorage.getItem(filePrefix + name) : files[name]; }
     function store(name, source) { files[name] = String(source); localStorage.setItem(filePrefix + name, files[name]); }
+    var editorFocus;
+    function hideGame() {
+        if (!gameStage || gameStage.style.display === 'none') return;
+        var game = gameFrame.contentWindow;
+        if (game.Module && game.Module._webHotfixPause && game.mcMenuOpen === false) {
+            game.Module._webHotfixPause();
+        }
+        var gameDocument = gameFrame.contentDocument;
+        if (gameDocument.exitPointerLock) gameDocument.exitPointerLock();
+        if (gameDocument.fullscreenElement && gameDocument.exitFullscreen) {
+            gameDocument.exitFullscreen().catch(function () {});
+        }
+        gameStage.style.display = 'none';
+        window.focus();
+        if (editorFocus && editorFocus.isConnected) editorFocus.focus();
+    }
+    function returnOnTab(event) {
+        if ((event.key !== 'Tab' && event.code !== 'Tab') ||
+                !gameStage || gameStage.style.display === 'none') return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        hideGame();
+    }
+    window.addEventListener('keydown', returnOnTab, true);
     function showGame() {
+        if (!gameStage || gameStage.style.display === 'none') editorFocus = document.activeElement;
         if (!gameFrame) {
             gameStage = document.createElement('div');
             gameStage.style.cssText = 'position:fixed;inset:0;background:black;z-index:100000;';
@@ -46,15 +71,14 @@
             gameFrame.src = new URL('../../port/game/index.html', document.baseURI).href;
             gameFrame.style.cssText = 'width:100%;height:100%;border:0;';
             gameFrame.allow = 'fullscreen; autoplay';
+            gameFrame.addEventListener('load', function () {
+                gameFrame.contentWindow.addEventListener('keydown', returnOnTab, true);
+            });
             gameStage.appendChild(gameFrame);
             var back = document.createElement('button');
             back.textContent = 'Back to Make Minecraft';
             back.style.cssText = 'position:absolute;right:12px;top:12px;z-index:2;';
-            back.onclick = function () {
-                gameFrame.contentDocument.exitPointerLock();
-                gameStage.style.display = 'none';
-                window.focus();
-            };
+            back.onclick = hideGame;
             gameStage.appendChild(back);
             document.body.appendChild(gameStage);
         }
