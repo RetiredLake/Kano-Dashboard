@@ -1,0 +1,283 @@
+{
+   "id": "013_wingardium",
+   "scene": {
+    "steps": [
+       {
+           "banner": {
+               "text": "In this challenge you will use the Wingardium Leviosa spell motion to activate code, so you can levitate the feather",
+               "next_button": true
+           },
+           "beacon": {
+               "target": "banner-button",
+               "offset": 0
+           }
+       },
+       {
+           "type": "create-block",
+           "openFlyoutCopy": "Use a When App Starts block to run code as soon as the app starts. Open the Events tray",
+           "grabBlockCopy": "Drag the block onto your code space",
+           "category": "events",
+           "blockType": "events_onAppStart",
+           "alias": "block_000",
+           "dropCopy": "Drop this block anywhere in your code space"
+       },
+       
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Objects Create block to add objects to the canvas. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_0",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_000"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Feather</span></kano-value-preview> to create a Feather"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "ID",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0"
+                        },
+                        "value": "Feather"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an On Spell Motion block to run code when the spell motion is performed. Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_999",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_999"
+            },
+            "bannerCopy": "Select the <kano-value-preview><span>Wingardium Leviosa</span></kano-value-preview> movement",
+            "value": "wingardiumLeviosa"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "First stop the Feather from falling. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_1",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_999"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>pin</span></kano-value-preview> to <kano-value-preview><span>freeze</span></kano-value-preview> so the object stays still and you can control it directly with the wand"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "STATE",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_1"
+                        },
+                        "value": "freeze"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Every 1 second block to run code repeatedly. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_2",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview> to run the code faster"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "UNIT",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "milliseconds"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now set the position of the feather using the Set Position block. Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_3",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_2",
+                "inputName": "DO"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Set the position of the Feather to the position of the coding wand pointer. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_4",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3",
+                "shadow": "POSITION",
+                "inputName": "X"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_5",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3",
+                "shadow": "POSITION",
+                "inputName": "Y"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Finally rotate the Feather to match the rotation of the coding wand. Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_6",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_rotation",
+            "alias": "block_7",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_6",
+                "inputName": "ANGLE"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>pitch</span></kano-value-preview> to <kano-value-preview><span>roll</span></kano-value-preview> to read the left and right rotating of the coding wand"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "PROPERTY",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_7"
+                        },
+                        "value": "roll"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "**Hold down the button on your coding wand** and perform the Wingardium Leviosa movement, then release the button to activate the code",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+       "events",
+        "objects",
+        "control",
+        "position",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+       "events": [
+           "events_onAppStart",
+           "events_onGesture"
+       ],
+        "objects": [
+            "objects_add",
+            "objects_stick"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"classroombook\"}"    
+}
+}

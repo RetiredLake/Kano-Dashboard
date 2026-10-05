@@ -1,0 +1,1 @@
+import OwleryScene from"../owlery/index.js";class ExampleInstrumentScene extends OwleryScene{load(...e){super.load(...e),this.instruments=["objects.stick"],this.counter=0}onMethodCalled(e,t){"pin"===t[0]&&(this.counter+=1,3===this.counter&&this.emit("win"))}}export default ExampleInstrumentScene;

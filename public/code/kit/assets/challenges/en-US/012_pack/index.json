@@ -1,0 +1,59 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code, find a way to pack up this Quidditch trunk"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done! You solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "position",
+        "wand",
+        "objects",
+        "control",
+        "world"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_set",
+            "position_applySpin"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_vibrate"
+        ],
+        "objects": [
+            "objects_stick",
+            "objects_positionAngle"
+        ],
+        "control": [
+            "in_x_time"
+        ],
+        "world": [
+            "world_setGravity"
+        ]
+    },
+    "mode": "wand",
+    "id": "012_pack",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle012\"}"
+}

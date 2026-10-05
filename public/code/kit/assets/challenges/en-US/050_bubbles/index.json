@@ -1,0 +1,54 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided fill the room with colourful bubbles using particles"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+              "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "particle",
+        "color",
+        "math",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_setType",
+            "particle_setColor",
+            "particle_generate",
+            "particle_setForce",
+            "particle_setSize"
+        ],
+        "color": [
+            "random_colour"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ]
+    },
+    "id": "050_bubbles",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle050\"}"
+}

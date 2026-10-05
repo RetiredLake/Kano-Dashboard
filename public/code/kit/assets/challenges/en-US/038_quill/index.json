@@ -1,0 +1,362 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Draw as if using a quill pen on the canvas using the coding wand pointer",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Draw Move To block to position the pen. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now to use a loop to draw a line every millisecond",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview>",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "To draw a line you first need to set the colour and how thick the line should be. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_stroke",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SIZE",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>÷ divide</span></kano-value-preview>",
+            "value": "DIVIDE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Using an absolute function will turn any number into a positive number. For example -10 becomes 10. So the stroke will always be thick. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_single",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>square root</span></kano-value-preview> to <kano-value-preview><span>absolute</span></kano-value-preview>",
+            "value": "ABS"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the roll of the coding wand so when you rotate it the stroke will get thicker and thinner like a quill pen. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_rotation",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "NUM",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Pitch</span></kano-value-preview> to <kano-value-preview><span>Roll</span></kano-value-preview>",
+            "value": "roll"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview>",
+            "value": "10"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now to draw the line. Use the Draw Line To block to draw a line to the coding wand pointer. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_line_to",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_12"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move the coding wand around and see how the lines are all drawing from the same position to the coding wand pointer. To fix this you need to move the pen too",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_16"
+            }
+        },
+        {
+            "banner": {
+                "text": "Try drawing with the coding wand controlling the pen. When the drawing gets messy you can code the coding wand button to clear it",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onRecentre",
+            "alias": "block_20",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_clear",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_20"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now you can press the coding wand button to clear the drawing",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "draw",
+        "wand",
+        "control",
+        "math",
+        "variables"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onRecentre"
+        ],
+        "draw": [
+            "draw_move_to",
+            "draw_stroke",
+            "draw_line_to",
+            "draw_clear"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "math": [
+            "math_arithmetic",
+            "math_single"
+        ],
+        "variables": [
+            "math_number"
+        ]
+    },
+    "mode": "wand",
+    "id": "038_quill",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http:\/\/www.w3.org\/1999\/xhtml\\\"><variables><variable type=\\\"\\\" id=\\\"q$sZw|38b[4$X1W2WXf~\\\">item<\/variable><\/variables><block type=\\\"events_onAppStart\\\" id=\\\"[Nc^+t_y\/+g07WBmOM59\\\" x=\\\"937\\\" y=\\\"215\\\"><statement name=\\\"CALLBACK\\\"><block type=\\\"objects_add\\\" id=\\\"BttXdWy3`edv7^t#fzlT\\\"><field name=\\\"ID\\\">Quill<\/field><field name=\\\"NAME\\\">Quill<\/field><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"QayBt@E4~p~rNpY#=Sge\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\"-UW5[H;7kKX?YpwHGMkl\\\"><field name=\\\"NUM\\\">400<\/field><\/shadow><\/value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"b-2\/kCK)O~RoN{l7.p3Q\\\"><field name=\\\"NUM\\\">300<\/field><\/shadow><\/value><\/shadow><\/value><next><block type=\\\"objects_stick\\\" id=\\\"Afw.R!Ywzy55Fu?5WvWR\\\"><field name=\\\"STATE\\\">freeze<\/field><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\":0+Z@%@h(0~\/?oC7zYN_\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><next><block type=\\\"position_setAngle\\\" id=\\\"x{?B,b17r)2~,jKw(v30\\\"><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"pQd#yEiey\/NvU.d2)PH0\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><value name=\\\"ANGLE\\\"><shadow type=\\\"angle\\\" id=\\\"%:x`s{C)u5O]2E\/J_-.w\\\"><field name=\\\"VALUE\\\">45<\/field><\/shadow><\/value><next><block type=\\\"every_x_seconds\\\" id=\\\"MJWX0g5BV#AATM\/^ST,V\\\"><field name=\\\"UNIT\\\">frames<\/field><value name=\\\"INTERVAL\\\"><shadow type=\\\"math_number\\\" id=\\\",ALei3~eUTj9St~9l|7t\\\"><field name=\\\"NUM\\\">1<\/field><\/shadow><\/value><statement name=\\\"DO\\\"><block type=\\\"position_set\\\" id=\\\"Yc6DFF$2#.YfT$oRx{Q8\\\"><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"1ea5xxr4ZPy$D-Xag:c6\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"0hdYN)wn+C0voWT}?4Vd\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\"4KSvi12shw7D$M:++e{@\\\"><field name=\\\"NUM\\\">400<\/field><\/shadow><block type=\\\"math_arithmetic\\\" id=\\\"5hLq\/nv-lDnfDKH=TUXr\\\"><field name=\\\"OP\\\">ADD<\/field><value name=\\\"A\\\"><block type=\\\"wand_x\\\" id=\\\"-k_vh91hYFES`I**Wr*D\\\"><\/block><\/value><value name=\\\"B\\\"><block type=\\\"math_number\\\" id=\\\",X-lno)^jx]YI=8z:`Jg\\\"><field name=\\\"NUM\\\">150<\/field><\/block><\/value><\/block><\/value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"TN:U~lIGk_?,Ej.KWKcN\\\"><field name=\\\"NUM\\\">300<\/field><\/shadow><block type=\\\"math_arithmetic\\\" id=\\\"c!hVhYZl!Uk,+a(i$fio\\\"><field name=\\\"OP\\\">MINUS<\/field><value name=\\\"A\\\"><block type=\\\"wand_y\\\" id=\\\"Bcj01zF6Q819yKjBmush\\\"><\/block><\/value><value name=\\\"B\\\"><block type=\\\"math_number\\\" id=\\\"ZTRe|za~tP)D.8@z;#C+\\\"><field name=\\\"NUM\\\">150<\/field><\/block><\/value><\/block><\/value><\/shadow><\/value><\/block><\/statement><\/block><\/next><\/block><\/next><\/block><\/next><\/block><\/statement><\/block><\/xml>\",\"parts\":[],\"scene\":\"canvas\"}"
+}

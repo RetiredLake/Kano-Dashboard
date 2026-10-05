@@ -1,0 +1,240 @@
+{
+    "steps": [
+       {
+           "banner": {
+               "text": "Set off fireworks every second in rainbow colours",
+               "next_button": true
+               },
+               "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+               }
+       },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_0",
+            "dropCopy": "Drop anywhere in the code space"
+        },
+        {
+            "banner": {
+                "text": "Use a Loop block so that the code within will run every second",
+                "next_button": true
+            },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_bang",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "Use a custom colour block to code some rainbow colours",
+                "next_button": true
+            },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "create_color",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>RGB</span></kano-value-preview> to <kano-value-preview><span>HSV</span></kano-value-preview> which can create rainbows",
+            "value": "hsv"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "1",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>÷ divide</span></kano-value-preview>",
+            "value": "DIVIDE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Wand X position block to change the colour as you move the coding wand left and right. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use some math to make the rainbow smoother. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_number",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>",
+            "value": "8"
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand, watch the fireworks bang under the coding wand Pointer. The speed of the loop can be changed to make it more dramatic",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>",
+            "value": "frames"
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand, watch how the colour changes as the fireworks explode from left to right",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "particle",
+        "wand",
+        "color",
+        "math"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_bang"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ],
+        "color": [
+            "create_color"
+        ],
+        "math": [
+            "math_arithmetic",
+            "math_number"
+        ]
+    },
+    "mode": "wand",
+    "id": "008_rainbowfireworks",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"nightskyhogwarts\"}"
+}

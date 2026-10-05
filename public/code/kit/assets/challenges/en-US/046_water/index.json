@@ -1,0 +1,380 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "In this challenge you will use the Aguamenti spell motion to activate code to create a spout of water using Particles",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_1"
+            },
+            "bannerCopy": "Select the <kano-value-preview><span>Aguamenti</span></kano-value-preview> movement",
+            "value": "aguamenti"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use a loop so you generate Particles every millisecond",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview>",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_generate",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setColor",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "START COLOR",
+                "shadow": "START COLOR",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#0288D1</span></kano-value-preview>"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END COLOR",
+                "shadow": "END COLOR",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#E1F5FE</span></kano-value-preview>"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setLifespan",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LIFESPAN",
+                "shadow": "LIFESPAN",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>1000</span></kano-value-preview> to <kano-value-preview><span>2000</span></kano-value-preview>",
+            "value": "2000"
+        },
+        {
+            "banner": {
+                "text": "Hold down the button on your coding wand and perform the Aguamenti movement. Next make it so that rolling the coding wand left and right will direct the water spout",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setForce",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_rotation",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Pitch</span></kano-value-preview> to <kano-value-preview><span>Roll</span></kano-value-preview>",
+            "value": "roll"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "AMOUNT",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>",
+            "value": "5"
+        },
+        {
+            "banner": {
+                "text": "Hold down the button on your coding wand and perform the Aguamenti movement then try rolling the coding wand between your fingers and see how the water direction changes",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setWind",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ANGLE",
+                "shadow": "ANGLE",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>45</span></kano-value-preview> to <kano-value-preview><span>180</span></kano-value-preview>",
+            "value": "180"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "AMOUNT",
+                "shadow": "AMOUNT",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>30</span></kano-value-preview>",
+            "value": "30"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setSize",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "START SIZE",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview>",
+            "value": "20"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>",
+            "value": "50"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END SIZE",
+                "shadow": "END SIZE",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>20</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>",
+            "value": "5"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setTransparency",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END TRANSPARENCY",
+                "shadow": "END TRANSPARENCY",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>100</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>",
+            "value": "50"
+        },
+        {
+            "banner": {
+                "text": "Hold down the button on your coding wand and perform the Aguamenti movement then wave and roll your coding wand to control the water",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "particle",
+        "wand",
+        "math"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_generate",
+            "particle_setColor",
+            "particle_setLifespan",
+            "particle_setForce",
+            "particle_setWind",
+            "particle_setSize",
+            "particle_setTransparency"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation"
+        ],
+        "math": [
+            "math_random"
+        ]
+    },
+    "mode": "wand",
+    "id": "046_water",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"bathroom\"}"
+}

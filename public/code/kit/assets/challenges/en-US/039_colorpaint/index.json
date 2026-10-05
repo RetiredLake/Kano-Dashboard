@@ -1,0 +1,560 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Draw with colour changing paint while you move your coding wand pointer and use variables to control colour",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Set up a variable that will hold the shade of the colour. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>hue</span></kano-value-preview>",
+            "value": "hue"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now use a loop to change the colour and draw to the canvas every frame",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>",
+            "value": "frames"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Increment block to add 1 to the variable every frame. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "unary",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LEFT_HAND",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>hue</span></kano-value-preview>",
+            "value": "hue"
+        },
+        {
+            "banner": {
+                "text": "Now that the hue variable is increasing every frame it can be used to create a colour",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>inkColour</span></kano-value-preview>",
+            "value": "inkColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "create_color",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>RGB</span></kano-value-preview> to <kano-value-preview><span>HSV</span></kano-value-preview>",
+            "value": "hsv"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "1",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>hue</span></kano-value-preview>",
+            "value": "hue"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "2",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>70</span></kano-value-preview>",
+            "value": "70"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "3",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>100</span></kano-value-preview>",
+            "value": "100"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_setLed",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now to use the colour you created. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>inkColour</span></kano-value-preview>",
+            "value": "inkColour"
+        },
+        {
+            "banner": {
+                "text": "Look at the LED on your coding wand – see how it is cycling through a rainbow? This is because the hue variable is increasing every frame",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Draw Stroke Colour block to set the colour that will be drawn on the canvas. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_stroke",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>inkColour</span></kano-value-preview>",
+            "value": "inkColour"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SIZE",
+                "shadow": "SIZE",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>1</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview>",
+            "value": "10"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Draw Line To block to draw a line across the canvas to the coding wand pointer. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_line_to",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Move To block to move the drawing pen to the same position where the line was drawn. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_21"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move the coding wand around and watch how the colour of the paint matches the coding wand LED because they both use the inkColour variable",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_fizz",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>inkColour</span></kano-value-preview>",
+            "value": "inkColour"
+        },
+        {
+            "banner": {
+                "text": "Watch the particles, LED and paint all change colour because they share a variable. If the canvas is getting messy you can code a way to clear it",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onRecentre",
+            "alias": "block_30",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "restart_code",
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_30"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move the coding wand around to draw some rainbows, then press the coding wand button to clear the canvas",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "variables",
+        "control",
+        "math",
+        "color",
+        "wand",
+        "draw",
+        "particle"
+    ],
+    "variables": [
+        "hue",
+        "inkColour"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onRecentre"
+        ],
+        "variables": [
+            "variables_set",
+            "math_number",
+            "variables_get"
+        ],
+        "control": [
+            "every_x_seconds",
+            "restart_code"
+        ],
+        "math": [
+            "unary"
+        ],
+        "color": [
+            "create_color"
+        ],
+        "wand": [
+            "wand_setLed",
+            "wand_x",
+            "wand_y"
+        ],
+        "draw": [
+            "draw_stroke",
+            "draw_line_to",
+            "draw_move_to"
+        ],
+        "particle": [
+            "particle_fizz"
+        ]
+    },
+    "mode": "wand",
+    "id": "039_colorpaint",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http:\/\/www.w3.org\/1999\/xhtml\\\"><variables><variable type=\\\"\\\" id=\\\"q$sZw|38b[4$X1W2WXf~\\\">item<\/variable><\/variables><block type=\\\"events_onAppStart\\\" id=\\\"[Nc^+t_y\/+g07WBmOM59\\\" x=\\\"937\\\" y=\\\"215\\\"><statement name=\\\"CALLBACK\\\"><block type=\\\"objects_add\\\" id=\\\"BttXdWy3`edv7^t#fzlT\\\"><field name=\\\"ID\\\">Quill<\/field><field name=\\\"NAME\\\">Quill<\/field><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"QayBt@E4~p~rNpY#=Sge\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\"-UW5[H;7kKX?YpwHGMkl\\\"><field name=\\\"NUM\\\">400<\/field><\/shadow><\/value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"b-2\/kCK)O~RoN{l7.p3Q\\\"><field name=\\\"NUM\\\">300<\/field><\/shadow><\/value><\/shadow><\/value><next><block type=\\\"objects_stick\\\" id=\\\"Afw.R!Ywzy55Fu?5WvWR\\\"><field name=\\\"STATE\\\">freeze<\/field><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\":0+Z@%@h(0~\/?oC7zYN_\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><next><block type=\\\"position_setAngle\\\" id=\\\"x{?B,b17r)2~,jKw(v30\\\"><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"pQd#yEiey\/NvU.d2)PH0\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><value name=\\\"ANGLE\\\"><shadow type=\\\"angle\\\" id=\\\"%:x`s{C)u5O]2E\/J_-.w\\\"><field name=\\\"VALUE\\\">45<\/field><\/shadow><\/value><next><block type=\\\"every_x_seconds\\\" id=\\\"MJWX0g5BV#AATM\/^ST,V\\\"><field name=\\\"UNIT\\\">frames<\/field><value name=\\\"INTERVAL\\\"><shadow type=\\\"math_number\\\" id=\\\",ALei3~eUTj9St~9l|7t\\\"><field name=\\\"NUM\\\">1<\/field><\/shadow><\/value><statement name=\\\"DO\\\"><block type=\\\"position_set\\\" id=\\\"Yc6DFF$2#.YfT$oRx{Q8\\\"><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"1ea5xxr4ZPy$D-Xag:c6\\\"><field name=\\\"ID\\\">all<\/field><\/shadow><\/value><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"0hdYN)wn+C0voWT}?4Vd\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\"4KSvi12shw7D$M:++e{@\\\"><field name=\\\"NUM\\\">400<\/field><\/shadow><block type=\\\"math_arithmetic\\\" id=\\\"5hLq\/nv-lDnfDKH=TUXr\\\"><field name=\\\"OP\\\">ADD<\/field><value name=\\\"A\\\"><block type=\\\"wand_x\\\" id=\\\"-k_vh91hYFES`I**Wr*D\\\"><\/block><\/value><value name=\\\"B\\\"><block type=\\\"math_number\\\" id=\\\",X-lno)^jx]YI=8z:`Jg\\\"><field name=\\\"NUM\\\">150<\/field><\/block><\/value><\/block><\/value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"TN:U~lIGk_?,Ej.KWKcN\\\"><field name=\\\"NUM\\\">300<\/field><\/shadow><block type=\\\"math_arithmetic\\\" id=\\\"c!hVhYZl!Uk,+a(i$fio\\\"><field name=\\\"OP\\\">MINUS<\/field><value name=\\\"A\\\"><block type=\\\"wand_y\\\" id=\\\"Bcj01zF6Q819yKjBmush\\\"><\/block><\/value><value name=\\\"B\\\"><block type=\\\"math_number\\\" id=\\\"ZTRe|za~tP)D.8@z;#C+\\\"><field name=\\\"NUM\\\">150<\/field><\/block><\/value><\/block><\/value><\/shadow><\/value><\/block><\/statement><\/block><\/next><\/block><\/next><\/block><\/next><\/block><\/statement><\/block><\/xml>\",\"parts\":[],\"scene\":\"canvas\"}"
+}

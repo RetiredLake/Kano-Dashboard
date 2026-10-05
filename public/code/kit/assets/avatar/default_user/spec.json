@@ -1,0 +1,20 @@
+{
+    "colorEls": {
+        "hair": 1,
+        "skin": 4
+    },
+    "hiddenBones": ["hat"],
+    "slots": {
+        "body": "t_orange",
+        "body_accessory": "",
+        "hair": "hair-03",
+        "hat": "",
+        "hand_l": "",
+        "hand_r": "",
+        "glasses": "",
+        "face": "face_01",
+        "pet": "pet_owl",
+        "ground": "ground_trunk",
+        "flying": "air_snitch"
+    }
+}

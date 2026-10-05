@@ -1,0 +1,56 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code figure out how to defeat the Mountain Troll"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "wand",
+        "objects",
+        "control",
+        "position"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_vibrate",
+            "wand_rotation",
+            "wand_setLed"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "objects": [
+            "objects_scale",
+            "objects_positionAngle"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_applySpin"
+        ]
+    },
+    "mode": "wand",
+    "id": "070_troll",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle070\"}"
+}

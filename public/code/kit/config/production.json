@@ -1,0 +1,22 @@
+{
+    "APP_NAME": "Kano Code",
+    "DISPLAY_NAME": "Kano Desktop App",
+    "DESCRIPTION": "Kano for Desktops",
+    "MANUFACTURER": "Kano Computing Ltd.",
+    "TELEMETRY_ENDPOINT": "https://api.kano.me/track/kit_app",
+    "ICONS": {
+        "WINDOWS": "assets/app/win32/windows.ico",
+        "WINDOWS_INSTALLER": "assets/app/win32/kano-app-installer-icon.bmp",
+        "WINDOWS_INSTALLER_BIG": "assets/app/win32/kano-app-installer-big-icon.bmp",
+        "MACOS": "assets/app/1024.png.icns"
+    },
+    "API_URL": "https://worldapi.kano.me/",
+    "UPDATER": {
+        "WIN32_FEED_URL": "https://worldapi.kano.me/updates/kit-app?platform=win32",
+        "DARWIN_FEED_URL": "https://worldapi.kano.me/updates/kit-app?platform=darwin",
+        "WAND_FEED_URL": "https://worldapi.kano.me/updates/wand?platform=all"
+    },
+    "DEBUG": false,
+    "ENABLE_CHALLENGE_GENERATOR": false,
+    "MODULE_TYPE": "system"
+}

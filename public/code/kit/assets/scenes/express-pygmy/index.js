@@ -1,0 +1,1 @@
+import PuzzleScene from"../express-window/index.js";import Pygmy from"../../../lib/physics/pygmy-puff.js";class ExpressPygmyScene extends PuzzleScene{load(...e){super.load(...e);for(let y=0;y<25;y++)this.pygmy=new Pygmy(800*Math.random(),-300-200*Math.random()),this.pygmy.load(...e),this.addEntity(this.pygmy),this.$.Pygmy=this.pygmy}}export default ExpressPygmyScene;

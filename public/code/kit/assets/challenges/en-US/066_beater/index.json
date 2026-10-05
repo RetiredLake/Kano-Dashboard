@@ -1,0 +1,422 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Welcome to Quidditch coding. Ready to try out as a beater?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "rawId": "QKEbX$D_y3S(]*;;QS1o"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>pin</span></kano-value-preview> to <kano-value-preview><span>freeze</span></kano-value-preview>",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview>",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_rotation",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Pitch</span></kano-value-preview> to <kano-value-preview><span>Roll</span></kano-value-preview>",
+            "value": "roll"
+        },
+        {
+            "banner": {
+                "text": "Try moving your coding wand around. Can you make the Beater's Beater’s Bat move and spin?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Bludger</span></kano-value-preview>",
+            "value": "Bludger"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Bludger</span></kano-value-preview>",
+            "value": "Bludger"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>300</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>",
+            "value": "1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Bludger</span></kano-value-preview>\"",
+            "value": "Bludger"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>80</span></kano-value-preview>\"",
+            "value": "80"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onCollision",
+            "alias": "block_12",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "A",
+                "shadow": "A",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Bludger</span></kano-value-preview>",
+            "value": "Bludger"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "B",
+                "shadow": "B",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Beater’s Bat</span></kano-value-preview>",
+            "value": "Beater’s Bat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Bludger</span></kano-value-preview>",
+            "value": "Bludger"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_speed",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "FORCE",
+                "id": "block_13"
+            }
+        },
+        {
+            "banner": {
+                "text": "How many times can you hit the Bludger without missing?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "Can you add a sound that plays when the bludger collides with the Beater’s Bat?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "objects",
+        "control",
+        "position",
+        "wand",
+        "events"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "objects": [
+            "objects_add",
+            "objects_stick",
+            "objects_scale"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle",
+            "position_applyForce"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation",
+            "wand_speed"
+        ],
+        "events": [
+            "events_onCollision"
+        ]
+    },
+    "mode": "wand",
+    "id": "066_beater",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"events_onAppStart\\\" id=\\\"QKEbX$D_y3S(]*;;QS1o\\\" x=\\\"114\\\" y=\\\"138\\\"><statement name=\\\"CALLBACK\\\"></statement></block></xml>\",\"scene\":\"quidditchpitchnight\"}"
+}

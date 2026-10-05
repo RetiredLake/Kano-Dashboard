@@ -1,0 +1,19 @@
+{
+    "APP_NAME": "Kano Code - Dev",
+    "API_URL": "https://worldapi-dev.kano.me/",
+    "TELEMETRY_ENDPOINT": "https://api-staging.kano.me/track/kit_app",
+    "DEBUG": true,
+    "ENABLE_CHALLENGE_GENERATOR": true,
+    "UPDATER": {
+        "WIN32_FEED_URL": "https://worldapi-dev.kano.me/updates/kit-app?platform=win32",
+        "DARWIN_FEED_URL": "https://worldapi-dev.kano.me/updates/kit-app?platform=darwin",
+        "WAND_FEED_URL": "https://worldapi-dev.kano.me/updates/wand?platform=all"
+    },
+    "ICONS": {
+        "WINDOWS": "assets/app/win32/windows.ico",
+        "WINDOWS_INSTALLER": "assets/app/win32/kano-app-installer-icon.bmp",
+        "WINDOWS_INSTALLER_BIG": "assets/app/win32/kano-app-installer-big-icon.bmp",
+        "MACOS": "assets/app/1024.png.icns"
+    },
+    "MODULE_TYPE": "es"
+}

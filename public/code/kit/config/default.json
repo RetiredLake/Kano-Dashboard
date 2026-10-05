@@ -1,0 +1,24 @@
+{
+    "APP_NAME": "Kano Code",
+    "DISPLAY_NAME": "Kano Desktop App",
+    "DESCRIPTION": "Kano for Desktops",
+    "MANUFACTURER": "Kano Computing Ltd.",
+    "ICONS": {
+        "WINDOWS": "assets/app/windows.ico",
+        "WINDOWS_INSTALLER": "assets/app/kano-app-installer-icon.bmp",
+        "MACOS": "assets/app/1024.png.icns"
+    },
+    "KANO_OS": {
+        "APPS": "assets/app/kano"
+    },
+    "INTERNET_CONNECTION": {
+        "OFFLINE_POLLING_INTERVAL_MIN": 1,
+        "OFFLINE_POLLING_INTERVAL_MAX": 2048
+    },
+    "WINDOWS_STORE": {
+        "PACKAGE_NAME": "KanoComputing.KanoCode",
+        "PACKAGE_DISPLAY_NAME": "Kano Code",
+        "PUBLISHER": "CN=5F3CCEA7-D562-4AF0-A330-11A092BC3806",
+        "PUBLISHER_DISPLAY_NAME": "Kano Computing"
+    }
+}

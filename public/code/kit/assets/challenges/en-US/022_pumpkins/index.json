@@ -1,0 +1,38 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, make the perfect-sized pumpkins for Halloween"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+           "events_onGesture"
+        ],
+        "objects": [
+            "objects_scale"
+        ]
+    },
+    "mode": "wand",
+    "id": "022_pumpkins",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle022\"}"
+}

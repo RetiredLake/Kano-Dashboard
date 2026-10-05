@@ -1,0 +1,312 @@
+{
+   "id": "052_gemino",
+   "scene": {
+       "modules": ["wand", "position", "particle", "control"],
+    "steps": [
+       {
+           "banner": {
+               "text": "Let's create a Gemino curse by duplicating goblets",
+               "next_button": true
+           },
+           "beacon": {
+               "target": "banner-button",
+               "offset": 0
+           }
+       },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onFlick",
+            "alias": "block_0",
+            "dropCopy": "Drop the block on to the code space."
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_1",
+            "connectCopy": "Connect it below this block",
+            "connectTo": {
+                "id": "block_0",
+                "inputName": "CALLBACK"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "N",
+                        "shadow": "N",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "N",
+                            "id": "block_1"
+                        },
+                        "value": "4"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect it below this block",
+            "connectTo": {
+                "id": "block_1",
+                "inputName": "DO"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Golden Goblet</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "ID",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "Golden Goblet"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_3",
+            "connectCopy": "Connect it below this block",
+            "connectTo": {
+                "id": "block_2",
+                "shadow": "POSITION",
+                "inputName": "X"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>800</span></kano-value-preview> because the canvas is 800 pixels wide"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "MAX",
+                        "shadow": "MAX",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "MAX",
+                            "id": "block_3"
+                        },
+                        "value": "800"
+                    }
+                }
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>500</span></kano-value-preview>\"",
+            "value": "500"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_4",
+            "connectCopy": "Connect it below this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_5",
+            "connectCopy": "Connect it below this block",
+            "connectTo": {
+                "id": "block_4",
+                "inputName": "SPEED"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-10</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "MIN",
+                        "shadow": "MIN",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "MIN",
+                            "id": "block_5"
+                        },
+                        "value": "-10"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Add a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand Cast</span></kano-value-preview>\" to \"<kano-value-preview><span>Glass 1</span></kano-value-preview>\"",
+            "value": "Glass 1"
+        },
+        {
+            "banner": {
+                "text": "**Wave your coding wand upwards quickly** to duplicate Goblets",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "math",
+        "position",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onFlick"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "objects": [
+            "objects_add"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "position": [
+            "position_applySpin"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"vault\"}"
+    
+}
+}

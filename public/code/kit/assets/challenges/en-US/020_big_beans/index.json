@@ -1,0 +1,363 @@
+{
+   "id": "020_big_beans",
+   "scene": {
+    "steps": [
+       {
+           "banner": {
+               "text": "Use your coding wand to change the size of the Bertie Bott's Every-Flavour Beans",
+               "next_button": true
+           },
+           "beacon": {
+               "target": "banner-button",
+               "offset": 0
+           }
+       },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_0",
+            "dropCopy": "Drop the block on to the code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_1",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_0",
+                "inputName": "CALLBACK"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "VALUE",
+                        "shadow": "VALUE",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "VALUE",
+                            "id": "block_1"
+                        },
+                        "value": "20"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_2",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>Medium</span></kano-value-preview> to <kano-value-preview><span>Short</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "PATTERN",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "short"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Let's add a **Speaker** part using the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Effects</span></kano-value-preview>\"",
+            "value": "Effects"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand Cast</span></kano-value-preview>\" to \"<kano-value-preview><span>Pop 2</span></kano-value-preview>\"",
+            "value": "Pop 2"
+        },
+        {
+            "banner": {
+                "text": "Wave your coding wand upwards to make the Every-Flavour Beans grow. Next, you’ll code an event to make them small again",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_4",
+            "dropCopy": "Drop the block on to the code space"
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview>Up</kano-value-preview> to <kano-value-preview>Down</kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "TYPE",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_4"
+                        },
+                        "value": "downMove"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_5",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_4",
+                "inputName": "CALLBACK"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>grow</span></kano-value-preview> to <kano-value-preview><span>set</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "PROPORTION",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "set"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "VALUE",
+                        "shadow": "VALUE",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "VALUE",
+                            "id": "block_5"
+                        },
+                        "value": "15"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_6",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray to add a sound effect as the beans clatter on the ground",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Squish 1</span></kano-value-preview>\"",
+            "value": "Squish 1"
+        },
+        {
+            "banner": {
+                "text": "Wave the coding wand up and down to control the size of the Bertie Bott's Every Flavour Beans",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "objects": [
+            "objects_scale"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"honeydukesbeans\"}"
+}
+}

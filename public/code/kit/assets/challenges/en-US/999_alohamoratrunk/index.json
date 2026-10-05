@@ -1,0 +1,992 @@
+{
+    "steps": [
+      {
+          "banner": {
+              "text": "Open up the trunk using the Alohamora spell motion and find out what's inside",
+              "next_button": true
+          }
+      },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Start by opening the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_0",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Trunk</span></kano-value-preview>\"",
+            "value": "Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Trunk</span></kano-value-preview>\"",
+            "value": "Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>430</span></kano-value-preview>\" so it sits on the floor",
+            "value": "430"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Trunk</span></kano-value-preview>\"",
+            "value": "Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>80</span></kano-value-preview>\"",
+            "value": "80"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>trunkClosed</span></kano-value-preview>\". This variable will keep track of whether the Trunk is open or not",
+            "value": "trunkClosed"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_5",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Accio</span></kano-value-preview>\" to \"<kano-value-preview><span>Alohomora</span></kano-value-preview>\"",
+            "value": "alohomora"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>trunkClosed</span></kano-value-preview>\"",
+            "value": "trunkClosed"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_7"
+            }
+        },
+        {
+          "banner": {
+            "text": "The code inside this If statement will only run if the Alohamora spell motion has been cast and the Trunk is already closed",
+            "next_button": true
+        }
+    },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's start by removing the Trunk object and replacing it with an Open Trunk object. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_remove",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Trunk</span></kano-value-preview>\"",
+            "value": "Trunk"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray to add the Open Trunk object",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Open Trunk</span></kano-value-preview>\"",
+            "value": "Open Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Open Trunk</span></kano-value-preview>\"",
+            "value": "Open Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>430</span></kano-value-preview>\"",
+            "value": "430"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Open Trunk</span></kano-value-preview>\"",
+            "value": "Open Trunk"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>80</span></kano-value-preview>\"",
+            "value": "80"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray to add a sound effect when the Trunk opens",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_play"
+            },
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_sample"
+            },
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Hard Object Drop 2</span></kano-value-preview>\"",
+            "value": "Hard Object Drop 2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "in_x_time",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "DELAY",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>1</span></kano-value-preview>\" to \"<kano-value-preview><span>0.3</span></kano-value-preview>\"",
+            "value": "0.3"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_play"
+            },
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_sample"
+            },
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Glass 2</span></kano-value-preview>\"",
+            "value": "Glass 2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "What's inside the Trunk? Open the Objects tray to add in its contents",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Felix Felicis</span></kano-value-preview>\"",
+            "value": "Felix Felicis"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Felix Felicis</span></kano-value-preview>\"",
+            "value": "Felix Felicis"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>set</span></kano-value-preview>\"",
+            "value": "set"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Felix Felicis</span></kano-value-preview>\"",
+            "value": "Felix Felicis"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>40</span></kano-value-preview>\"",
+            "value": "40"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Quill</span></kano-value-preview>\"",
+            "value": "Quill"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Quill</span></kano-value-preview>\"",
+            "value": "Quill"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_20"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>set</span></kano-value-preview>\"",
+            "value": "set"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Quill</span></kano-value-preview>\"",
+            "value": "Quill"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>35</span></kano-value-preview>\"",
+            "value": "35"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Book</span></kano-value-preview>\"",
+            "value": "Book"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Book</span></kano-value-preview>\"",
+            "value": "Book"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>set</span></kano-value-preview>\"",
+            "value": "set"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Book</span></kano-value-preview>\"",
+            "value": "Book"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>75</span></kano-value-preview>\"",
+            "value": "75"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Add three Galleons using a Repeat block. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_23"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "N",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>3</span></kano-value-preview>\"",
+            "value": "3"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Galleon</span></kano-value-preview>\"",
+            "value": "Galleon"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Galleon</span></kano-value-preview>\"",
+            "value": "Galleon"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>set</span></kano-value-preview>\"",
+            "value": "set"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TARGET",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>Galleon</span></kano-value-preview>\"",
+            "value": "Galleon"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "VALUE",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>120</span></kano-value-preview>\"",
+            "value": "120"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now that the Trunk has been opened, the variable trunkClosed needs to be set to false. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>trunkclosed</span></kano-value-preview>\"",
+            "value": "trunkClosed"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>true</span></kano-value-preview>\" to \"<kano-value-preview><span>false</span></kano-value-preview>\"",
+            "value": "FALSE"
+        },
+        {
+            "banner": {
+                "text": "Try opening the Trunk by casting the Alohamora spell motion with your coding wand",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's finish off by adding some code that closes the Trunk when the coding wand is waved upwards. Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onFlick",
+            "alias": "block_29",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_30",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_29"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_32",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_31"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_32"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>trunkClosed</span></kano-value-preview>\"",
+            "value": "trunkClosed"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_33",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_31"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_33"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>true</span></kano-value-preview>\" to \"<kano-value-preview><span>false</span></kano-value-preview>\"",
+            "value": "FALSE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_play"
+            },
+            "alias": "block_34",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_sample"
+            },
+            "alias": "block_35",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_34"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_35"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_35"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Hard Object Drop 1</span></kano-value-preview>\"",
+            "value": "Hard Object Drop 1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "restart_code",
+            "alias": "block_36",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_34"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now try closing the Trunk when it's open by waving the coding wand upwards",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "variables",
+        "logic",
+        "control"
+    ],
+    "variables": [
+        "trunkClosed"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onGesture",
+            "events_onFlick"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_scale",
+            "objects_remove"
+        ],
+        "variables": [
+            "variables_set",
+            "variables_get"
+        ],
+        "logic": [
+            "logic_boolean",
+            "controls_if",
+            "logic_compare"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ],
+        "control": [
+            "in_x_time",
+            "repeat_x_times",
+            "restart_code"
+        ]
+    },
+    "mode": "wand",
+    "id": "missingno",
+    "defaultApp": "{\"scene\":\"hogsmeadstation\",\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"parts\":[{\"id\":\"speaker\",\"name\":\"Speaker\",\"type\":\"speaker\",\"tagName\":\"kano-part-speaker\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":58,\"y\":43.5},\"partType\":\"hardware\",\"supportedHardware\":[]}]}"
+}

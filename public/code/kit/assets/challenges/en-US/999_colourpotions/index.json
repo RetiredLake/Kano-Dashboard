@@ -1,0 +1,977 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Wave your wand over the potions to change the colour of the cauldron",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's add the cauldron first. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Cauldron</span></kano-value-preview>\"",
+            "value": "Cauldron"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Cauldron</span></kano-value-preview>\"",
+            "value": "Cauldron"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>600</span></kano-value-preview>\"",
+            "value": "600"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>400</span></kano-value-preview>\" to place it on the table",
+            "value": "400"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Next we'll add the potions. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 1</span></kano-value-preview>\"",
+            "value": "Potion Bottle 1"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 1</span></kano-value-preview>\"",
+            "value": "Potion Bottle 1"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>430</span></kano-value-preview>\"",
+            "value": "430"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 2</span></kano-value-preview>\"",
+            "value": "Potion Bottle 2"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 2</span></kano-value-preview>\"",
+            "value": "Potion Bottle 2"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>200</span></kano-value-preview>\"",
+            "value": "200"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>430</span></kano-value-preview>\"",
+            "value": "430"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 3</span></kano-value-preview>\"",
+            "value": "Potion Bottle 3"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 3</span></kano-value-preview>\"",
+            "value": "Potion Bottle 3"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>335</span></kano-value-preview>\"",
+            "value": "335"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>430</span></kano-value-preview>\"",
+            "value": "430"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's set up a variable to store the current colour of the cauldron. Open up the Variables tray",
+            "grabBlockCopy": "Drag the Set Variable block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "colour_picker",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ff0000</span></kano-value-preview>\" to \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Next we'll need a loop block that will keep the potionColour variable updated. Open the Control tray ",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "INTERVAL",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>1</span></kano-value-preview>\" to \"<kano-value-preview><span>0.5</span></kano-value-preview>\"",
+            "value": "0.5"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_setColor",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "TINT",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Cauldron</span></kano-value-preview>\"",
+            "value": "Cauldron"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now we need to set the colour of the cauldron to be equal to the potionColour variable. Go to the Variables tray ",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "TO COLOR",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's make the coding wands LED light up to match the cauldron. Open the Wand tray",
+            "grabBlockCopy": "Drag the Set LED block onto your code space",
+            "category": "wand",
+            "blockType": "wand_setLed",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's mix some colours by hovering over the different potions. Let's grab an On Wand Pointer Over block from the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_13",
+            "dropCopy": "Drop it anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "ENTITY",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 1</span></kano-value-preview>\"",
+            "value": "Potion Bottle 1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "FROM",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "TO",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\" to pink \"<kano-value-preview><span>#f06292</span></kano-value-preview>\" to match the potion colour in the bottle"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "PERCENT",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>50</span></kano-value-preview>\" to \"<kano-value-preview><span>25</span></kano-value-preview>\"",
+            "value": "25"
+        },
+        {
+            "banner": {
+                "text": "Hover over the first potion with your wand and watch how the cauldron changes colour. If you move your wand away and back over it again, it'll get deeper by 25%, the amount we specified in the Lerp block",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now open the Particles tray to create a particle bang when you hover over the bottle",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_bang",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Change the X and Y position of the particle bang to match the placement of your coding wand. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "STRENGTH",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change the strength from \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>4</span></kano-value-preview>\"",
+            "value": "4"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "COLOR",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000000</span></kano-value-preview>\" to \"<kano-value-preview><span>#f8bbd0</span></kano-value-preview>\" to match the colour of the potion bottle"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now to do the same for the other two potion bottles. Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_21",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "ENTITY",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 2</span></kano-value-preview>\"",
+            "value": "Potion Bottle 2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "FROM",
+                "id": "block_23"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "TO",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\" to \"<kano-value-preview><span>#fdd835</span></kano-value-preview>\""
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "PERCENT",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>50</span></kano-value-preview>\" to \"<kano-value-preview><span>25</span></kano-value-preview>\"",
+            "value": "25"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_bang",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "STRENGTH",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>4</span></kano-value-preview>\"",
+            "value": "4"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "COLOR",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000000</span></kano-value-preview>\" to \"<kano-value-preview><span>#ffee58</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "banner": {
+                "text": "Try waving your coding wand back and forth between the first two potions and see how the colours get mixed together in the cauldron and on your coding wands LED",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's finish off by adding the final potion. sOpen the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_29",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "shadow": "ENTITY",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Potion Bottle 3</span></kano-value-preview>\"",
+            "value": "Potion Bottle 3"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_30",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_29"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_30"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_32",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "FROM",
+                "id": "block_31"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_32"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>potionColour</span></kano-value-preview>\"",
+            "value": "potionColour"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "TO",
+                "id": "block_31"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\" to \"<kano-value-preview><span>#8bc34b</span></kano-value-preview>\""
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "PERCENT",
+                "id": "block_31"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>50</span></kano-value-preview>\" to \"<kano-value-preview><span>25</span></kano-value-preview>\"",
+            "value": "25"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_bang",
+            "alias": "block_33",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_34",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_33"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_35",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_33"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "STRENGTH",
+                "id": "block_33"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>4</span></kano-value-preview>\"",
+            "value": "4"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOUR",
+                "shadow": "COLOR",
+                "id": "block_33"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000000</span></kano-value-preview>\" to \"<kano-value-preview><span>#4caf51</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_36",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_33"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_36"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "banner": {
+                "text": "Wave your wand over the potions to mix the colour",
+                "next_button": true
+            }
+        }
+
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "variables",
+        "color",
+        "control",
+        "wand",
+        "particle"
+    ],
+    "variables": [
+        "potionColour"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onWandOver"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_setColor"
+        ],
+        "variables": [
+            "variables_set",
+            "variables_get"
+        ],
+        "color": [
+            "colour_picker",
+            "color_lerp"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "wand": [
+            "wand_setLed",
+            "wand_x",
+            "wand_y",
+            "wand_vibrate"
+        ],
+        "particle": [
+            "particle_bang"
+        ]
+    },
+    "mode": "wand",
+    "id": "missingno",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"classroompotionsnopotion\"}"
+}

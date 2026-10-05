@@ -1,0 +1,89 @@
+{
+    "id": "001_colovaria",
+    "scene": {
+        "steps": [
+           {
+               "banner": {
+                   "text": "Read the instructions up here. Drag blocks and connect them to create code.<br>The <b style='background-color:#fec02d; border-radius: 5px; padding: 2px 8px;'>yellow beacon</b> shows you the next step. <b>Click NEXT to begin</b>",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "openFlyoutCopy": "Open the Events tray",
+                "grabBlockCopy": "Pick up the block with your mouse or finger and drag it into the middle",
+                "category": "events",
+                "blockType": "events_onFlick",
+                "alias": "block_0",
+                "dropCopy": "Drop it onto your code space to add it into your program."
+            },
+            {
+                "type": "create-block",
+                "openFlyoutCopy": "Open the Objects tray",
+                "grabBlockCopy": "Grab this block. It changes an object’s color",
+                "category": "objects",
+                "blockType": "objects_setColor",
+                "alias": "block_1",
+                "connectCopy": "Connect it in here. Then the blocks work together",
+                "connectTo": {
+                    "id": "block_0",
+                    "inputName": "CALLBACK"
+                }
+            },
+           {
+               "banner": {
+                   "text": "**Wave your coding wand upward quickly**, and watch the owl",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "banner": {
+                    "text": "Why not try changing the owl to a different color? Or adding a different Wand direction? <br>**Click BACK TO CHALLENGES when you’re ready**",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": "banner-button",
+                    "offset": 0
+                },
+				"tooltips": [
+					{
+						"location": {
+							"block": {
+								"id": "block_1"
+							}
+						},
+						"position": "right",
+						"text": "Try changing this colour  <kano-value-preview><span>#ffa000</span></kano-value-preview> <kano-value-preview><span>#06a9f5</span></kano-value-preview> <kano-value-preview><span>#e91e64</span></kano-value-preview>"
+					}
+				]
+            }
+        ],
+        "parts": [
+            "speaker"
+        ],
+        "modules": [
+            "events",
+            "objects"
+        ],
+        "variables": [],
+        "filterBlocks": {
+            "events": [
+                "events_onFlick"
+            ],
+            "objects": [
+                "objects_setColor"
+            ]
+        },
+        "mode": "wand",
+        "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"owlery\"}",
+        "flyoutMode": true
+    }
+}

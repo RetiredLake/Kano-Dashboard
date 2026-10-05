@@ -1,0 +1,58 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code, figure out how to stop the flying Bludger"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "position",
+        "math",
+        "wand",
+        "particle"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture",
+            "events_onAppStart"
+        ],
+        "objects": [
+            "objects_scale",
+            "objects_setColor",
+            "objects_stick",
+            "objects_remove"
+        ],
+        "position": [
+            "position_applyForce"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ],
+        "particle": [
+            "particle_bang"
+        ]
+    },
+    "mode": "wand",
+    "id": "029_bludger",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle029\"}"
+}

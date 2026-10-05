@@ -1,0 +1,313 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "In this challenge you will use the Locomotor spell motion to make a Butterbeer tankard move on the table with your coding wand",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_3",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_3"
+            },
+            "bannerCopy": "Select the <kano-value-preview><span>Locomotor</span></kano-value-preview> movement",
+            "value": "locomotor"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_444",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_444"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview>",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_444"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The Angle From block can calculate the direction from one object to a coordinate. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_positionAngle",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ORIGIN",
+                "shadow": "ORIGIN",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>random</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Wand X and Y Position blocks to launch the Butterbeer towards the coding wand pointer. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FORCE",
+                "shadow": "FORCE",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>",
+            "value": "4"
+        },
+        {
+            "banner": {
+                "text": "Recenter your cursor by clicking the button. **Then, hold the button**, make the Locomotor movement, then release it. Move your coding wand pointer around and watch the Butterbeer fly towards it",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "Next, make the Butterbeer point towards the coding wand pointer",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_positionAngle",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ORIGIN",
+                "shadow": "ORIGIN",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>random</span></kano-value-preview> to <kano-value-preview><span>Butterbeer</span></kano-value-preview>",
+            "value": "Butterbeer"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_10"
+            }
+        },
+        {
+            "banner": {
+                "text": "Recenter your cursor by clicking the button. **Then, hold the button**, make the Locomotor movement, then release it",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "control",
+        "position",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onGesture"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_positionAngle"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_setAngle"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ]
+    },
+    "mode": "wand",
+    "id": "016_butterbeer",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"hogshead\"}"    
+}

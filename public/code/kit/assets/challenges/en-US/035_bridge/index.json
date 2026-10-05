@@ -1,0 +1,48 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, build a bridge with items from Borgin & Burkes"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "wand",
+        "position",
+        "objects"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture",
+            "events_onFlick"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle"
+        ],
+        "objects": [
+            "objects_stick"
+        ]
+    },
+    "mode": "wand",
+    "id": "035_bridge",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle035\"}"
+}

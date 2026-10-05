@@ -1,0 +1,28 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Use the pin block 3 times"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "You won",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {},
+    "id": "999_instrument",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"example-instrument\"}"
+}

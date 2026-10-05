@@ -1,0 +1,757 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Make the rat turn into a cup – and sometimes into a ‘Rat Goblet’ – using logic",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "First you need to add the rat and set up a variable",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_2",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Rat</span></kano-value-preview>\"",
+            "value": "Rat"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Rat</span></kano-value-preview>\"",
+            "value": "Rat"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>450</span></kano-value-preview>\"",
+            "value": "450"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use a variable to store whether the rat is currently a rat or a cup.  Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>ratStatus</span></kano-value-preview>\"",
+            "value": "ratStatus"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "text",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TEXT",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>&#160;</span></kano-value-preview>\" to \"<kano-value-preview><span>rat</span></kano-value-preview>\"",
+            "value": "rat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onFlick",
+            "alias": "block_6",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Up</span></kano-value-preview>\" to \"<kano-value-preview><span>Down</span></kano-value-preview>\"",
+            "value": "down"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "First remove all the objects from the canvas so they can be replaced with a rat or a cup. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_remove",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_6"
+            }
+        },
+        {
+            "banner": {
+                "text": "Use an If block to check if the ratStatus variable is set to \"rat\"or \"cup\", then nest another If block to sometimes turn the rat into a Rat Goblet",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if_else_custom",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an = block to check if the variable on the left side of the block is equal to the variable on the right side",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Add the ratStatus variable to check it. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>ratStatus</span></kano-value-preview>\"",
+            "value": "ratStatus"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "text",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TEXT",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>&#160;</span></kano-value-preview>\" to \"<kano-value-preview><span>rat</span></kano-value-preview>\"",
+            "value": "rat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use another If block to decide if the rat will change into a cup or a Rat Goblet. Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if_else_custom",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>=</span></kano-value-preview>\" to \"<kano-value-preview><span>&lt; less than </span></kano-value-preview>\"",
+            "value": "LT"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use a random number to roll virtual dice and decide if the rat will turn into a Rat Goblet. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Make it so that the If block checks whether the random number you generate is less than 3. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>3</span></kano-value-preview>\"",
+            "value": "3"
+        },
+        {
+            "banner": {
+                "text": "The if statements are set up. Now you can create Rat Goblet or a cup",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Rat Goblet</span></kano-value-preview>\"",
+            "value": "Rat Goblet"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Rat Goblet</span></kano-value-preview>\"",
+            "value": "Rat Goblet"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>450</span></kano-value-preview>\"",
+            "value": "450"
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Add a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Squish 1</span></kano-value-preview>\"",
+            "value": "Squish 1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ELSE",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Cup</span></kano-value-preview>\"",
+            "value": "Cup"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Cup</span></kano-value-preview>\"",
+            "value": "Cup"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>450</span></kano-value-preview>\"",
+            "value": "450"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Glass 1</span></kano-value-preview>\"",
+            "value": "Glass 1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Update the ratStatus variable so the code will know if the rat is currently a cup or a rat. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>ratStatus</span></kano-value-preview>\"",
+            "value": "ratStatus"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "text",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TEXT",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>&#160;</span></kano-value-preview>\" to \"<kano-value-preview><span>cup</span></kano-value-preview>\"",
+            "value": "cup"
+        },
+        {
+            "banner": {
+                "text": "If ratStatus is already set to \"cup\" then you need to change the cup back into a rat",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ELSE",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Rat</span></kano-value-preview>\"",
+            "value": "Rat"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>rat 2</span></kano-value-preview>\"",
+            "value": "Rat 2"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>450</span></kano-value-preview>\"",
+            "value": "450"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Update the ratStatus variable again. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>ratStatus</span></kano-value-preview>\"",
+            "value": "ratStatus"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "text",
+            "alias": "block_29",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_28"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TEXT",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>&#160;</span></kano-value-preview>\" to \"<kano-value-preview><span>rat</span></kano-value-preview>\"",
+            "value": "rat"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_28"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_32",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_31"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_32"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Effects</span></kano-value-preview>\"",
+            "value": "Effects"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_32"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bell 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Pop 1</span></kano-value-preview>\"",
+            "value": "Pop 1"
+        },
+        {
+            "banner": {
+                "text": "Try **waving your coding wand down quickly** many times and see if you can turn the rat into a Rat Goblet",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "variables",
+        "logic",
+        "math"
+    ],
+    "variables": [
+        "ratStatus"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onFlick"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_remove"
+        ],
+        "variables": [
+            "variables_set",
+            "text",
+            "variables_get",
+            "math_number"
+        ],
+        "logic": [
+            "controls_if_else_custom",
+            "logic_compare"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "mode": "wand",
+    "id": "032_ratcup",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"classroomtransfig\"}"
+}

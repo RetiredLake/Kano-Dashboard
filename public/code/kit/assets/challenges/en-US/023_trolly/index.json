@@ -1,0 +1,53 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code, shrink the giant Pumpkin Pasties and place them onto the trolley"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "control",
+        "events",
+        "wand",
+        "position",
+        "objects"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "control": [
+            "every_x_seconds"
+        ],
+        "events": [
+            "events_onGesture"
+        ],
+        "wand": [
+            "wand_y",
+            "wand_x"
+        ],
+        "position": [
+            "position_set",
+            "position_applyForce",
+            "position_setAngle"
+        ],
+        "objects": [
+            "objects_scale"
+        ]
+    },
+    "mode": "wand",
+    "id": "023_trolly",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle023\"}"
+}

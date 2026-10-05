@@ -1,0 +1,796 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Make different sized plants using the Orchideous spell motion",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Accio</span></kano-value-preview>\" to \"<kano-value-preview><span>Orchideous</span></kano-value-preview>\"",
+            "value": "orchideous"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The code should loop 5 times when the Orchideous spell movement is made so that 5 plants appear. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "N",
+                "shadow": "N",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>5</span></kano-value-preview>\"",
+            "value": "5"
+        },
+        {
+            "banner": {
+                "text": "All the code that draws the plant pots will be inside this loop so it happens 5 times",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Using random numbers you can set where the plants are going to be drawn from. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>800</span></kano-value-preview>\", because the canvas is 800 pixels wide",
+            "value": "800"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_6"
+            },
+            "bannerCopy": "Because the canvas is 600 pixels tall, change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>600</span></kano-value-preview>\"",
+            "value": "600"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "To randomise how many leaves each plant has, you can use another variable. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>numberOfLeaves</span></kano-value-preview>\"",
+            "value": "numberOfLeaves"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>1</span></kano-value-preview>\"",
+            "value": "1"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>7</span></kano-value-preview>\"",
+            "value": "7"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "N",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>numberOfLeaves</span></kano-value-preview>\"",
+            "value": "numberOfLeaves"
+        },
+        {
+            "banner": {
+                "text": "This loop will draw a set of leaves each time it runs, until it reaches the same number as the variable 'numberOfLeaves'",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now set the colours that are used for the centre of the plant. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_color",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FROM",
+                "shadow": "FROM",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000000</span></kano-value-preview>\" to \"<kano-value-preview><span>#e6ee9c</span></kano-value-preview>\""
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TO",
+                "shadow": "TO",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\" to \"<kano-value-preview><span>#8bc34b</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "PERCENT",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_circle",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RADIUS",
+                "shadow": "RADIUS",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Next pick the colours for the outer leaves. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_color",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FROM",
+                "shadow": "FROM",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000000</span></kano-value-preview>\" to \"<kano-value-preview><span>#66bb6a</span></kano-value-preview>\""
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TO",
+                "shadow": "TO",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#ffffff</span></kano-value-preview>\" to \"<kano-value-preview><span>#1b5e20</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "PERCENT",
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Before drawing the leaves you have to tell them where to draw. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": "X",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>-20</span></kano-value-preview>\"",
+            "value": "-20"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": "Y",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Using ellipses, draw the first leaf. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_ellipse",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RADIUSX",
+                "shadow": "RADIUSX",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>25</span></kano-value-preview>\"",
+            "value": "25"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RADIUSY",
+                "shadow": "RADIUSY",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now set where the right leaf is drawn. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": "X",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>40</span></kano-value-preview>\"",
+            "value": "40"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": "Y",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>0</span></kano-value-preview>\"",
+            "value": "0"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_ellipse",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_23"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RADIUSX",
+                "shadow": "RADIUSX",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>25</span></kano-value-preview>\"",
+            "value": "25"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RADIUSY",
+                "shadow": "RADIUSY",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+
+
+
+
+
+
+
+
+
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": "X",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>-20</span></kano-value-preview>\"",
+            "value": "-20"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": "Y",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "banner": {
+                "text": "**Try holding down the button on your coding wand**, performing the Orchideous spell motion, and releasing the button",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The plants have been drawn but they need to be in pots. Open the Draw tray to start drawing them",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": "X",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>-50</span></kano-value-preview>\"",
+            "value": "-50"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": "Y",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>0</span></kano-value-preview>\"",
+            "value": "0"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now pick the colour for the top of the plant pot. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_color",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_26"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOR",
+                "shadow": "COLOR",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000</span></kano-value-preview>\" to \"<kano-value-preview><span>#a1887f</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_rectangle",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "WIDTH",
+                "shadow": "WIDTH",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "HEIGHT",
+                "shadow": "HEIGHT",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>30</span></kano-value-preview>\"",
+            "value": "30"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Lastly, make the bottom part of the plant pot. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move",
+            "alias": "block_29",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_28"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": "X",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": "Y",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>30</span></kano-value-preview>\"",
+            "value": "30"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Set the colour of the bottom of the plant pot. Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_color",
+            "alias": "block_30",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_29"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "COLOR",
+                "shadow": "COLOR",
+                "id": "block_30"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>#000</span></kano-value-preview>\" to \"<kano-value-preview><span>#6d4c41</span></kano-value-preview>\""
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_rectangle",
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "WIDTH",
+                "shadow": "WIDTH",
+                "id": "block_31"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>80</span></kano-value-preview>\"",
+            "value": "80"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "HEIGHT",
+                "shadow": "HEIGHT",
+                "id": "block_31"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>5</span></kano-value-preview>\" to \"<kano-value-preview><span>50</span></kano-value-preview>\"",
+            "value": "50"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_999",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_31"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_999"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>medium</span></kano-value-preview>\" to \"<kano-value-preview><span>3 short</span></kano-value-preview>\"",
+            "value": "3 short"
+        },
+        {
+            "banner": {
+                "text": "**Hold the button on your coding wand**, make the Orchideous movement, then release the button, and watch plants appear",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "variables",
+        "math",
+        "draw",
+        "color",
+        "wand"
+    ],
+    "variables": [
+        "plantX",
+        "plantY",
+        "numberOfLeaves"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "variables": [
+            "variables_set",
+            "variables_get"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "draw": [
+            "draw_move_to",
+            "draw_color",
+            "draw_circle",
+            "draw_move",
+            "draw_ellipse",
+            "draw_rectangle"
+        ],
+        "color": [
+            "color_lerp"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "id": "059_flowers",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"greenhouse\"}"
+}

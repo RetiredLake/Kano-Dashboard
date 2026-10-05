@@ -1,0 +1,485 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "In this challenge you will use the Gemino spell motion to activate code, so you can duplicate a goblet",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "Start by adding a goblet to duplicate using the App starts event",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_2",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Silver Goblet</span></kano-value-preview>\"",
+            "value": "Silver Goblet"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's use a variable to hold how many goblets are in the scene. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_999",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_999"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>numberOfGoblets</span></kano-value-preview>\"",
+            "value": "numberOfGoblets"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_999"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>1</span></kano-value-preview>\", because the app will always start with one goblet",
+            "value": "1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_4",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_4"
+            },
+            "bannerCopy": "Select the <kano-value-preview><span>Gemino</span></kano-value-preview> movement",
+            "value": "gemino"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "N",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>numberOfGoblets</span></kano-value-preview>\"",
+            "value": "numberOfGoblets"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Silver Goblet</span></kano-value-preview>\"",
+            "value": "Silver Goblet"
+        },
+
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>800</span></kano-value-preview>\"",
+            "value": "800"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_889",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_889"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>400</span></kano-value-preview>\"",
+            "value": "400"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_889"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>500</span></kano-value-preview>\"",
+            "value": "500"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Silver Goblet 2</span></kano-value-preview>\"",
+            "value": "Silver Goblet 2"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FORCE",
+                "shadow": "FORCE",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>300</span></kano-value-preview>\"",
+            "value": "300"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Silver Goblet 2</span></kano-value-preview>\"",
+            "value": "Silver Goblet 2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_912",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SPEED",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_912"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>-100</span></kano-value-preview>\"",
+            "value": "-100"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_912"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "banner": {
+                "text": "To duplicate every goblet you need to double the numberOfGoblets variable",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "unary",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LEFT_HAND",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>numberOfGoblets</span></kano-value-preview>\"",
+            "value": "numberOfGoblets"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OPERATOR",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+=</span></kano-value-preview>\" to \"<kano-value-preview><span>*=</span></kano-value-preview>\"",
+            "value": "*="
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "RIGHT_HAND",
+                "shadow": "RIGHT_HAND",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>1</span></kano-value-preview>\" to \"<kano-value-preview><span>2</span></kano-value-preview>\"",
+            "value": "2"
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Add some sound effects with a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Crashes</span></kano-value-preview>\"",
+            "value": "Crashes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Bang 1</span></kano-value-preview>\" to \"<kano-value-preview><span>Glass 1</span></kano-value-preview>\"",
+            "value": "Glass 1"
+        },
+        {
+            "banner": {
+                "text": "Hold down the button on your coding wand and perform the Gemino movement to duplicate the goblets",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "variables",
+        "control",
+        "position",
+        "math"
+    ],
+    "variables": [
+        "numberOfGoblets"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onGesture"
+        ],
+        "objects": [
+            "objects_add"
+        ],
+        "variables": [
+            "variables_set",
+            "math_number",
+            "variables_get"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_applySpin"
+        ],
+        "math": [
+            "math_random",
+            "unary"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "mode": "wand",
+    "id": "055_gemino",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"vault\"}"
+}

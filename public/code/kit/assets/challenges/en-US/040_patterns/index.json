@@ -1,0 +1,834 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Draw colourful patterns with your coding wand. First set up an Every Millisecond loop to draw onto the canvas constantly",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>seconds</span></kano-value-preview>\" to \"<kano-value-preview><span>milliseconds</span></kano-value-preview>\"",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_color",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_circle",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_8"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand around and see how it draws to the canvas. The same method can be tweaked and reused to draw patterns",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>- subtract</span></kano-value-preview>\"",
+            "value": "MINUS"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>800</span></kano-value-preview>\"",
+            "value": "800"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_circle",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_14"
+            }
+        },
+        {
+            "banner": {
+                "text": "Try moving the coding wand around again and see how it now makes mirrored drawings",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>- subtract</span></kano-value-preview>\"",
+            "value": "MINUS"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>600</span></kano-value-preview>\"",
+            "value": "600"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_circle",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_move_to",
+            "alias": "block_29",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_30",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_29"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_30"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>- subtract</span></kano-value-preview>\"",
+            "value": "MINUS"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_31",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_31"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>800</span></kano-value-preview>\"",
+            "value": "800"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_32",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_30"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_33",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_29"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_33"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>- subtract</span></kano-value-preview>\"",
+            "value": "MINUS"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_34",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_33"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_34"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>600</span></kano-value-preview>\"",
+            "value": "600"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_35",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_33"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Draw tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "draw",
+            "blockType": "draw_circle",
+            "alias": "block_36",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_29"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move the coding wand again and see how it now draws four mirrored lines. Now, make it colourful using variables",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "Use a Wand Pointer Reset block so that every time you press the coding wand button the pen size and colour will change",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onRecentre",
+            "alias": "block_40",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_41",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_40"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_41"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>quillSize</span></kano-value-preview>\"",
+            "value": "quillSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_42",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_41"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MIN",
+                "shadow": "MIN",
+                "id": "block_42"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_42"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>50</span></kano-value-preview>\"",
+            "value": "50"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_43",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_41"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_43"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>colour1</span></kano-value-preview>\"",
+            "value": "colour1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "random_colour",
+            "alias": "block_44",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_43"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_45",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_43"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_45"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>colour2</span></kano-value-preview>\"",
+            "value": "colour2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "random_colour",
+            "alias": "block_46",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_45"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now that you have set the variables, it's time to put them into the rest of your code",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Colour Lerp block, which can blend between the two colours that have been stored in the variables. Open the Colour tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "color",
+            "blockType": "color_lerp",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "COLOR",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "FROM",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>colour1</span></kano-value-preview>\"",
+            "value": "colour1"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "TO",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>colour2</span></kano-value-preview>\"",
+            "value": "colour2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The colour can be coded to change between the two variables depending on how quickly the coding wand is moved. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_speed",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "PERCENT",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the quillSize variable to set all the circle radiuses. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "RADIUS",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>quillSize</span></kano-value-preview>\"",
+            "value": "quillSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "RADIUS",
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>quillSize</span></kano-value-preview>\"",
+            "value": "quillSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "RADIUS",
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>quillSize</span></kano-value-preview>\"",
+            "value": "quillSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_37",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "RADIUS",
+                "id": "block_36"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_37"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>quillSize</span></kano-value-preview>\"",
+            "value": "quillSize"
+        },
+        {
+            "banner": {
+                "text": "Press the coding wand button to change the colour and size of the drawing pen",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "draw",
+        "color",
+        "variables",
+        "wand",
+        "math"
+    ],
+    "variables": [
+        "quillSize",
+        "colour1",
+        "colour2"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onRecentre"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "draw": [
+            "color",
+            "draw_move_to",
+            "draw_circle"
+        ],
+        "color": [
+            "color_lerp",
+            "random_colour"
+        ],
+        "variables": [
+            "variables_get",
+            "math_number",
+            "variables_set"
+        ],
+        "wand": [
+            "wand_speed",
+            "wand_x",
+            "wand_y"
+        ],
+        "math": [
+            "math_arithmetic",
+            "math_random"
+        ]
+    },
+    "mode": "wand",
+    "id": "040_patterns",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"canvas\"}"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="800px" height="600px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C7B299;}
+	.st1{fill:#998675;}
+	.st2{fill:#534741;}
+</style>
+<path class="st0" d="M734.5,534h-665c-1.9,0-3.5-1.6-3.5-3.5l0,0c0-1.9,1.6-3.5,3.5-3.5h665c1.9,0,3.5,1.6,3.5,3.5l0,0
+	C738,532.4,736.4,534,734.5,534z"/>
+<rect x="70" y="534" class="st1" width="664" height="25"/>
+<rect x="77" y="559" class="st2" width="653" height="5"/>
+<path class="st1" d="M731.1,570H72.9c-1.6,0-2.9-1.3-2.9-2.9v-0.3c0-1.6,1.3-2.9,2.9-2.9h658.3c1.6,0,2.9,1.3,2.9,2.9v0.3
+	C734,568.7,732.7,570,731.1,570z"/>
+<rect x="87" y="570" class="st2" width="11" height="11"/>
+<rect x="87" y="581" class="st1" width="11" height="6"/>
+<path class="st1" d="M92.5,581L92.5,581c-3,0-5.5,2.5-5.5,5.5l0,0c0,3,2.5,5.5,5.5,5.5h0c3,0,5.5-2.5,5.5-5.5l0,0
+	C98,583.5,95.5,581,92.5,581z"/>
+<rect x="70" y="564" class="st1" width="664" height="3"/>
+<rect x="700" y="570" class="st2" width="11" height="11"/>
+<rect x="700" y="581" class="st1" width="11" height="6"/>
+<path class="st1" d="M705.5,581L705.5,581c-3,0-5.5,2.5-5.5,5.5l0,0c0,3,2.5,5.5,5.5,5.5l0,0c3,0,5.5-2.5,5.5-5.5l0,0
+	C711,583.5,708.5,581,705.5,581z"/>
+<g id="objects">
+	<rect id="e:Goblet:Goblet" x="120" y="310" width="20" height="20"/>
+	<rect id="e:Feather:Feather" x="300" y="0" width="20" height="20"/>
+	<rect id="e:Book:Book" x="420" y="310" width="20" height="20"/>
+	<rect id="e:Teacup:Teacup" x="500" y="240" width="20" height="20"/>
+	<rect id="e:Candle:Candle" x="600" y="310" width="20" height="20"/>
+</g>
+<g id="bounds">
+	<rect x="70" y="534" class="st25" width="664" height="25"/>
+</g>
+</svg>

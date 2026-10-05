@@ -1,0 +1,49 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, create a shelf where you can stack the bottles of Pumpkin Juice"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "position",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onFlick"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_setColor"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "id": "018_juice",
+    "flyoutMode": true,    
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"objects_add\\\" id=\\\"8F{`u7(nQ}e$#ILR#7oY\\\" x=\\\"500\\\" y=\\\"389\\\"><field name=\\\"ID\\\">Trunk</field><field name=\\\"NAME\\\">Trunk</field><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"=e!mcbSbfRVCX_F;,XJf\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\";fQv|cP-I@-N}c?}!:r_\\\"><field name=\\\"NUM\\\">600</field></shadow></value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"k@tZwGXqj}gfbPf,zE|e\\\"><field name=\\\"NUM\\\">300</field></shadow></value></shadow></value><next></next></block></xml>\",\"scene\":\"puzzle018\"}"
+    
+}
