@@ -37,6 +37,7 @@
     function saved(name) { return files[name] === undefined ? localStorage.getItem(filePrefix + name) : files[name]; }
     function store(name, source) { files[name] = String(source); localStorage.setItem(filePrefix + name, files[name]); }
     var editorFocus;
+    var returningTab = false;
     function hideGame() {
         if (!gameStage || gameStage.style.display === 'none') return;
         var game = gameFrame.contentWindow;
@@ -55,11 +56,21 @@
     function returnOnTab(event) {
         if ((event.key !== 'Tab' && event.code !== 'Tab') ||
                 !gameStage || gameStage.style.display === 'none') return;
+        returningTab = true;
         event.preventDefault();
         event.stopImmediatePropagation();
         hideGame();
     }
+    function finishReturnTab(event) {
+        if (!returningTab || (event.key !== 'Tab' && event.code !== 'Tab')) return;
+        // Focus moved to the editor on keydown. Do not let its original keyup
+        // launcher reopen the game from that very same physical key press.
+        returningTab = false;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+    }
     window.addEventListener('keydown', returnOnTab, true);
+    window.addEventListener('keyup', finishReturnTab, true);
     function showGame() {
         if (!gameStage || gameStage.style.display === 'none') editorFocus = document.activeElement;
         if (!gameFrame) {
@@ -73,6 +84,7 @@
             gameFrame.allow = 'fullscreen; autoplay';
             gameFrame.addEventListener('load', function () {
                 gameFrame.contentWindow.addEventListener('keydown', returnOnTab, true);
+                gameFrame.contentWindow.addEventListener('keyup', finishReturnTab, true);
             });
             gameStage.appendChild(gameFrame);
             var back = document.createElement('button');
