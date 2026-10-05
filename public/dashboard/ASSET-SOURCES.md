@@ -6,3 +6,4 @@ V17: make-minecraft-logo.png is the original green cube from KanoComputing/kano-
 V17 original OS artwork, copied byte-for-byte from the Kano OS 4.3.3 kit filesystem:
 - wallpaper.png: /usr/share/kano-dashboard/KanoDashboard/wallpaper.png (1920x1080).
 - judoka-avatar.png: /usr/share/kano-dashboard/KanoDashboard/Widgets/LiveTile/judoka.png (54x54).
+- story-mode-tile.png: deterministic composite of Widgets/StoryMode/story.png (317x316) and story-mode.png (198x132), title resized with nearest-neighbor to 158x105 and placed bottom-left fully visible. No save data or generated artwork.
