@@ -1,0 +1,1 @@
+define(["exports","./chunk-fdc6718c.js"],function(t,e){"use strict";let c;t.DeviceManagerStore=class{static get(){return c}static set(t){c=t}}});

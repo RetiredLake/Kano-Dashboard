@@ -1,0 +1,248 @@
+{
+   "id": "007_fizzbang",
+   "scene": {
+       "steps": [
+          {
+              "banner": {
+                  "text": "Make fireworks that fizz and then bang",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Use a loop block, because you want the code to run over and over. Drag it onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_0",
+            "dropCopy": "Drop the block onto the code space"
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview> so that the code will run every frame"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "UNIT",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0"
+                        },
+                        "value": "frames"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Make some fizzing particles using this block. Drag it onto your code space",
+            "category": "particle",
+            "blockType": "particle_fizz",
+            "alias": "block_1",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_0",
+                "inputName": "DO"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Use this block to get the current X position of the coding wand pointer. Drag it onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_2",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1",
+                "shadow": "POSITION",
+                "inputName": "X"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Now match the Y position too so that the Particles fizz under the coding wand pointer. Drag it onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_3",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1",
+                "shadow": "POSITION",
+                "inputName": "Y"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#29B6F6</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Now that you have fizzing Particles, make them explode every second",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Use another loop block to run code every second. Drag it onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_4",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Explode some Particles with the bang block. Drag it onto your code space",
+            "category": "particle",
+            "blockType": "particle_bang",
+            "alias": "block_5",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_4",
+                "inputName": "DO"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Match the exploding Particles up to your fizz function. Drag this block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_6",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_5",
+                "shadow": "POSITION",
+                "inputName": "X"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag this block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_7",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_5",
+                "shadow": "POSITION",
+                "inputName": "Y"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#03A9F5</span></kano-value-preview> to match the fizzing Particles"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_5"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Now make the wand rumble with the particle explosions. Drag this block onto the code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand around and watch the fireworks fizz and bang",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "control",
+        "particle",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "control": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_fizz",
+            "particle_bang"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"greathall\"}",
+    "flyoutMode": true
+
+}
+}

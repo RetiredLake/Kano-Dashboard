@@ -1,0 +1,279 @@
+{
+    "steps": [
+       {
+           "banner": {
+               "text": "In this challenge you will use code to levitate a feather using your Mouse",
+               "next_button": true
+           },
+           "beacon": {
+               "target": "banner-button",
+               "offset": 0
+           }
+       },
+       {
+           "type": "create-block",
+           "openFlyoutCopy": "Use a When App Starts block to run code as soon as the app starts. Open the Events tray",
+           "grabBlockCopy": "Drag the block onto your code space",
+           "category": "events",
+           "blockType": "events_onAppStarts",
+           "alias": "block_000",
+           "dropCopy": "Drop this block anywhere in your code space"
+       },
+       
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Objects Create block to add objects to the canvas. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_0",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_000"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Feather</span></kano-value-preview> to create a Feather"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "ID",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0"
+                        },
+                        "value": "Feather"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "First stop the Feather from falling. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_1",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_0"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>pin</span></kano-value-preview> to <kano-value-preview><span>freeze</span></kano-value-preview> so the object stays still and you can control it directly with the Mouse"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "STATE",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_1"
+                        },
+                        "value": "freeze"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Every 1 second block to run code repeatedly. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_2",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview> to run the code faster"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "UNIT",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "milliseconds"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now set the position of the feather using the Set Position block. Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_3",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_2",
+                "inputName": "DO"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Set the position of the Feather to the position of the Mouse cursor. Open the Mouse tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "mouse",
+            "blockType": "mouse#mouse_x",
+            "alias": "block_4",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3",
+                "shadow": "POSITION",
+                "inputName": "X"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Mouse tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "mouse",
+            "blockType": "mouse#mouse_y",
+            "alias": "block_5",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3",
+                "shadow": "POSITION",
+                "inputName": "Y"
+            }
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_1",
+            "openPartsCopy": "Add a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_1"
+            },
+            "blockType": {
+                "part": "part_1",
+                "type": "speaker_loop"
+            },
+            "alias": "block_900",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_1"
+            },
+            "blockType": {
+                "part": "part_1",
+                "type": "speaker_sample"
+            },
+            "alias": "block_901",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_900"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_901"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand Cast</span></kano-value-preview>\" to \"<kano-value-preview><span>Wand Loop</span></kano-value-preview>\"",
+            "value": "Wand Loop"
+        },
+        {
+            "banner": {
+                "text": "Move your Mouse over the canvas and watch the Feather match your movements",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "banner": {
+                "text": "Can you levitate something other than a Feather?",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "control",
+        "position",
+        "mouse"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "speaker": [
+            "speaker_loop",
+            "speaker_sample"
+        ],
+       "events": [
+           "events_onAppStarts"
+       ],
+        "objects": [
+            "objects_add",
+            "objects_stick"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle"
+        ],
+        "mouse": [
+            "mouse_x",
+            "mouse_y"
+        ]
+    },
+    "mode": "wand",
+    "id": "001_hoc_wingardium",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http:\/\/www.w3.org\/1999\/xhtml\\\"><variables><\/variables><\/xml>\",\"parts\":[{\"id\":\"mouse\",\"name\":\"Mouse\",\"type\":\"mouse\",\"tagName\":\"kano-part-mouse\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":60.166666666666664,\"y\":45.125},\"partType\":\"hardware\",\"supportedHardware\":[]}],\"scene\":\"classroombook\"}"    
+}

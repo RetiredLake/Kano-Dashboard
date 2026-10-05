@@ -38,3 +38,18 @@ if (!source.includes("Could not load Make Art header")) {
 }
 
 console.log("Make Art startup errors will be reported by the page wrapper.");
+
+// Vite exposes the legacy UMD compiler as a module export, not a window global.
+// Keep the original global path for the kit runtime and use the export in Vite.
+const compilerModule = fileURLToPath(new URL("../../../kano-apps/make-art/lib/modules/coffeescript.js", import.meta.url));
+const compilerSource = await readFile(compilerModule, "utf8");
+const compilerFixed = `import compiler from 'coffeescript/lib/coffeescript-browser-compiler-legacy/coffeescript.js';
+
+export default window.CoffeeScript || compiler.CoffeeScript || compiler;
+`;
+if (!compilerSource.includes("compiler.CoffeeScript")) {
+    if (!compilerSource.includes("export default window.CoffeeScript;")) {
+        throw new Error("Could not patch Make Art CoffeeScript initialization");
+    }
+    await writeFile(compilerModule, compilerFixed);
+}

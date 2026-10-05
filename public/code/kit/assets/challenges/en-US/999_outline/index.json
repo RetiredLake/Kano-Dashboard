@@ -1,0 +1,50 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Try to move the owl inside the outline"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "You won",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "position",
+        "math"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_scale"
+        ],
+        "position": [
+            "position_applyForce"
+        ],
+        "math": [
+            "math_random"
+        ]
+    },
+    "mode": "wand",
+    "id": "999_outline",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"example-outline\"}"
+}

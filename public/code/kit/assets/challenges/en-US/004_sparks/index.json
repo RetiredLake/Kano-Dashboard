@@ -1,0 +1,247 @@
+{
+   "id": "004_sparks",
+   "scene": {
+       "steps": [
+          {
+              "banner": {
+                  "text": "Create sparks using your coding wand",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "This block will run code within it over and over while the coding wand is moving in a specific direction. Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_0",
+            "dropCopy": "Drop the block onto the code space."
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "This block will fizz some particles. Drag it onto your code space",
+            "category": "particle",
+            "blockType": "particle_fizz",
+            "alias": "block_1",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_0",
+                "inputName": "CALLBACK"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#8BC34B</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Your coding wand has an LED we can code. Drag this block onto your code space to light up the LED",
+            "category": "wand",
+            "blockType": "wand_setLed",
+            "alias": "block_2",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "banner": {
+                "text": "Look down at your coding wand - it's lit up! Change <kano-value-preview><span>#ffffff</span></kano-value-preview> to <kano-value-preview><span>#8BC34B</span></kano-value-preview> to match the colour of the sparks."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_2"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Wave your coding wand upwards and watch the sparks fly!",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Why not code some red sparks too? Drag this block onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_3",
+            "dropCopy": "Drop the block onto the code space."
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview>Up</kano-value-preview> to <kano-value-preview>Down</kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "TYPE",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_3"
+                        },
+                        "value": "downMove"
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particles tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_fizz",
+            "alias": "block_4",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_3",
+                "inputName": "CALLBACK"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#FF5723</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_4"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_setLed",
+            "alias": "block_5",
+            "connectCopy": "Connect it to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>#ffffff</span></kano-value-preview> to <kano-value-preview><span>#FF5723</span></kano-value-preview>"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "COLOR",
+                        "shadow": "COLOR",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_5"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Now wave your coding wand up and down to make different coloured sparks",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "particle",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "particle": [
+            "particle_fizz"
+        ],
+        "wand": [
+            "wand_setLed"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"nightskywillow\"}",
+    "flyoutMode": true
+}
+}

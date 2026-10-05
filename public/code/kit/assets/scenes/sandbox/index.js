@@ -1,0 +1,1 @@
+import PuzzleScene from"../simple/index.js";class SandboxScene extends PuzzleScene{load(...e){super.load(...e)}}export default SandboxScene;

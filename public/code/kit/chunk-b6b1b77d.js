@@ -1,0 +1,1 @@
+define(["exports","./chunk-fdc6718c.js"],function(n,e){"use strict";const o=["1.0.0","1.0.2","1.0.3"];n.isBadWandVersion=function(n,e){return-1!==o.indexOf(e)&&("android"===n.OS_PLATFORM.toLowerCase()||"ios"===n.OS_PLATFORM.toLowerCase())}});

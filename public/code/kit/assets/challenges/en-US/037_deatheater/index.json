@@ -1,0 +1,203 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Use a coding wand movement to flip a Death Eater dummy",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Death Eater Dummy</span></kano-value-preview>",
+            "value": "Death Eater Dummy"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Death Eater Dummy</span></kano-value-preview>",
+            "value": "Death Eater Dummy"
+        },
+        {
+            "banner": {
+                "text": "Now use a Wand movement block to activate the code to flip the Death Eater",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_4",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Accio</span></kano-value-preview> to <kano-value-preview><span>Flipendo</span></kano-value-preview>",
+            "value": "flipendo"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SPEED",
+                "shadow": "SPEED",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>50</span></kano-value-preview> to <kano-value-preview><span>30</span></kano-value-preview>",
+            "value": "30"
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Add a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Whooshes</span></kano-value-preview>\"",
+            "value": "Whooshes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Blast</span></kano-value-preview> to <kano-value-preview><span>Snap</span></kano-value-preview>",
+            "value": "Snap"
+        },
+        {
+            "banner": {
+                "text": "Hold down the coding wand button and perform the Flipendo coding wand movement to flip the Death Eater dummy",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "position"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onGesture"
+        ],
+        "objects": [
+            "objects_add"
+        ],
+        "position": [
+            "position_applySpin"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "mode": "wand",
+    "id": "037_deatheater",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"roomofrequirements\"}"
+}

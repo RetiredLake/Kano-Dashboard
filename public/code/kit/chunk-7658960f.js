@@ -1,0 +1,1 @@
+define(["exports","./chunk-fdc6718c.js"],function(n,t){"use strict";n.navigateTo=function(n){window.history.pushState({},"",n),window.dispatchEvent(new CustomEvent("location-changed"))},n.historyBack=function(){window.history.back()}});

@@ -1,0 +1,226 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Practice disarming this Death Eater dummy using a coding wand movement",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Accio</span></kano-value-preview> to <kano-value-preview><span>Expelliarmus</span></kano-value-preview>",
+            "value": "expelliarmus"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>pin</span></kano-value-preview> to <kano-value-preview><span>unfreeze</span></kano-value-preview>",
+            "value": "unfreeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Death Eater Dummy Wand</span></kano-value-preview>",
+            "value": "Death Eater Dummy Wand"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Death Eater Dummy Wand</span></kano-value-preview>",
+            "value": "Death Eater Dummy Wand"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FORCE",
+                "shadow": "FORCE",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>",
+            "value": "15"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Death Eater Dummy Wand</span></kano-value-preview>",
+            "value": "Death Eater Dummy Wand"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SPEED",
+                "shadow": "SPEED",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>50</span></kano-value-preview> to <kano-value-preview><span>-40</span></kano-value-preview>",
+            "value": "-40"
+        },
+        {
+            "type": "create-part",
+            "part": "speaker",
+            "alias": "part_0",
+            "openPartsCopy": "Add a **Speaker** part, use the Add Parts button",
+            "addPartCopy": "Select the **Speaker** part to add it to your app"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_play"
+            },
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "part": "part_0"
+            },
+            "blockType": {
+                "part": "part_0",
+                "type": "speaker_sample"
+            },
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Whooshes</span></kano-value-preview>\"",
+            "value": "Whooshes"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Blast</span></kano-value-preview> to <kano-value-preview><span>Whip</span></kano-value-preview>",
+            "value": "Whip"
+        },        
+        {
+            "banner": {
+                "text": "Hold down the coding wand button and perform a movement like that of the Expelliarmus spell",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [
+        "speaker"
+    ],
+    "modules": [
+        "events",
+        "objects",
+        "position"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "objects": [
+            "objects_stick"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_applySpin"
+        ],
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "mode": "wand",
+    "id": "036_disarm",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"events_onAppStart\\\" id=\\\"#bM`(m/]J1uy(jjX1^){\\\" x=\\\"124\\\" y=\\\"238\\\"><statement name=\\\"CALLBACK\\\"><block type=\\\"objects_add\\\" id=\\\"iNa4)o1JUNCDC$O%Zhih\\\"><field name=\\\"ID\\\">Death Eater Dummy Wand</field><field name=\\\"NAME\\\">Death Eater Dummy Wand</field><value name=\\\"POSITION\\\"><shadow type=\\\"position_create\\\" id=\\\"_B)nHFtu:2PDmEH(f{r3\\\"><value name=\\\"X\\\"><shadow type=\\\"math_number\\\" id=\\\"4i1$.3K/GRg2c%ZQSynm\\\"><field name=\\\"NUM\\\">255</field></shadow></value><value name=\\\"Y\\\"><shadow type=\\\"math_number\\\" id=\\\"@p!yPW*f#/W/Y!Y4_ef4\\\"><field name=\\\"NUM\\\">235</field></shadow></value></shadow></value><next><block type=\\\"position_setAngle\\\" id=\\\"T7{X+[WW{=7rO-8?h);p\\\"><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"Y5K/tE*U#QLI.C+/.y-+\\\"><field name=\\\"ID\\\">Death Eater Dummy Wand</field></shadow></value><value name=\\\"ANGLE\\\"><shadow type=\\\"angle\\\" id=\\\"m[V(j]%Gx-}oMSS#TP-!\\\"><field name=\\\"VALUE\\\">124</field></shadow></value><next><block type=\\\"objects_stick\\\" id=\\\"88R}0_gzBJinqma38mfs\\\"><field name=\\\"STATE\\\">freeze</field><value name=\\\"TARGET\\\"><shadow type=\\\"objects_get\\\" id=\\\"vLEr-`N;Y]m[0le?,|+b\\\"><field name=\\\"ID\\\">all</field></shadow></value><next></next></block></next></block></next></block></statement></block></xml>\",\"scene\":\"roomofrequirementsdisarm\"}"
+}

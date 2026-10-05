@@ -1,0 +1,46 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, shoot random-coloured celebratory fireworks into the sky"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+              "text": "Well done! You solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "particle",
+        "color",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_bang"
+        ],
+        "color": [
+            "random_colour"
+        ]
+    },
+    "id": "006_celebration",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle006\"}"
+}

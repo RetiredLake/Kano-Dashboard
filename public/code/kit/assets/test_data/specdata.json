@@ -1,0 +1,1209 @@
+{
+    "avatarDisplay": {
+        "name": "Avatar",
+        "size": {
+            "x": 800,
+            "y": 400
+        },
+        "position": {
+            "x": 400,
+            "y": 250
+        }
+    },
+    "customisedElements": {
+        "face": {
+            "customName": "Face",
+            "emptySlot": false,
+            "customBackgrounds": ["face", "eyes"],
+            "slots": [{
+                    "name": "face_01",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_02",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_03",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_04",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_05",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_06",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_07",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_08",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_09",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "face_10",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    }
+                }
+            ]
+        },
+        "hair": {
+            "customName": "Hair",
+            "emptySlot": false,
+            "customBackgrounds": [],
+            "slots": [{
+                "name": "hair-01",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-02",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-03",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-04",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-05",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-06",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-07",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-08",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-09",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-10",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-11",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-12",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-13",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-14",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-15",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-16",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-17",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-18",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-19",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }, {
+                "name": "hair-20",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hat"]
+            }]
+        },
+        "glasses": {
+            "customName": "Glasses",
+            "emptySlot": true,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "glasses",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    },
+                    "bonesToHide": []
+                },
+                {
+                    "name": "flying_goggles",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    },
+                    "bonesToHide": []
+                },
+                {
+                    "name": "spectrespecs",
+                    "image": true,
+                    "animation": {
+                        "animations": ["head_change"],
+                        "delay": 0
+                    },
+                    "bonesToHide": []
+                }
+            ]
+        },
+        "hat": {
+            "customName": "Hats",
+            "emptySlot": true,
+            "customBackgrounds": [],
+            "slots": [{
+                "name": "hat06",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat07",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat08",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat09",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat05",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat01",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat02",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat03",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }, {
+                "name": "hat04",
+                "image": true,
+                "animation": {
+                    "animations": ["head_change"],
+                    "delay": 0
+                },
+                "bonesToHide": ["hair"]
+            }]
+        },
+        "hand_r": {
+            "customName": "Right Hand",
+            "emptySlot": true,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "rh_spell_book",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_exercise_book",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                }, 
+                {
+                    "name": "rh_monster_book",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                }, 
+                {
+                    "name": "rh_beaters_bat",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_quaffle",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_marauders_map",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_felix_felicis",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_love_potion",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "rh_omnioculars",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_r_switch"],
+                        "delay": 0
+                    }
+                }
+            ]
+        },
+        "hand_l": {
+            "customName": "Left Hand",
+            "emptySlot": true,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "lh_quill",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_broom",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_nimbus_2000",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_firebolt",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_elder_wand",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_beaded_bag",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_remembrall",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_butterbeer",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_pumpkin_juice",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_chocolate_frog",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_beans",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_fudge_flies",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "lh_pumpkin_pastie",
+                    "image": true,
+                    "animation": {
+                        "animations": ["hand_l_switch"],
+                        "delay": 0
+                    }
+                }
+
+            ]
+        },
+        "pet": {
+            "customName": "Magical Creatures",
+            "emptySlot": false,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "pet_owl",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_cat",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_toad",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_rat",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_snake",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_pygmypuff",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_spider",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_mandrake",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_dragon_egg",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_gringylow",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "pet_pixie",
+                    "image": true,
+                    "animation": {
+                        "animations": ["pet_change"],
+                        "delay": 0
+                    }
+                }
+            ]
+        },
+        "ground": {
+            "customName": "On the floor",
+            "emptySlot": false,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "ground_trunk",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_cauldron",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_harp",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_record_player",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_potions",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_pumpkin",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "ground_decoy_detonator",
+                    "image": true,
+                    "animation": {
+                        "animations": ["floor_change"],
+                        "delay": 0
+                    }
+                }
+            ]
+        },
+        "flying": {
+            "customName": "Flying",
+            "emptySlot": false,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "air_snitch",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                }, {
+                    "name": "air_candles",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                }, {
+                    "name": "air_howler",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                }, {
+                    "name": "air_winged_key",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                }
+            ]
+        },
+        "body": {
+            "customName": "Clothes",
+            "emptySlot": false,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "t_orange",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    },
+                    "set": [{
+                            "bone": "arm_l",
+                            "slot": "t_orange_arm_l"
+                        },
+                        {
+                            "bone": "arm_r",
+                            "slot": "t_orange_arm_r"
+                        }
+                    ]
+                    }, {
+                        "name": "t_black",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_black_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_black_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "t_white",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_white_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_white_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "t_maroon",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_maroon_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_maroon_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "t_teal",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_teal_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_teal_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "t_blue",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_blue_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_blue_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "t_yellow",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "t_yellow_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "t_yellow_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "jumper_ron",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "jumper_ron_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "jumper_ron_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "jumper_harry",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "jumper_harry_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "jumper_harry_arm_r"
+                            }
+                        ]
+                    }, {
+                        "name": "waistcoat",
+                        "image": true,
+                        "animation": {
+                            "animations": [],
+                            "delay": 0
+                        },
+                        "set": [{
+                                "bone": "arm_l",
+                                "slot": "waistcoat_arm_l"
+                            },
+                            {
+                                "bone": "arm_r",
+                                "slot": "waistcoat_arm_r"
+                            }
+                        ]
+                    }
+            ]
+        },
+        "body_accessory": {
+            "customName": "Accessories",
+            "emptySlot": true,
+            "customBackgrounds": [],
+            "slots": [{
+                    "name": "scarf_gryffindor",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "scarf_slytherin",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "scarf_ravenclaw",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                },
+                {
+                    "name": "scarf_hufflepuff",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                },
+
+                {
+                    "name": "b_timeturner",
+                    "image": true,
+                    "animation": {
+                        "animations": [],
+                        "delay": 0
+                    }
+                }
+            ]
+        }
+    },
+    "categories": [{
+            "id": "head",
+            "name": "Head",
+            "list": ["glasses", "face", "hair", "hat"]
+        },
+        {
+            "id": "body",
+            "name": "Body",
+            "list": ["body", "body_accessory"]
+        },
+        {
+            "id": "accessories",
+            "name": "Accessories",
+            "list": ["hand_r", "hand_l"]
+        },
+        {
+            "id": "creatures",
+            "name": "Creatures",
+            "list": ["pet"]
+        },
+        {
+            "id": "artefacts",
+            "name": "Artefacts",
+            "list": ["flying", "ground"]
+        }
+    ],
+    "customBackgrounds": [{
+            "name": "face_08",
+            "url": "../src/images/face_blank.png",
+            "width": 300,
+            "height": 300,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "name": "eyes",
+            "url": "../src/images/eye_both.png",
+            "width": 100,
+            "height": 14,
+            "x": 100,
+            "y": 100
+        }
+    ],
+    "colorEls": {
+        "skin": {
+            "label": "Skintone",
+            "list": [{
+                    "uid": 0,
+                    "hue": "#281818",
+                    "brightness": "ffffff",
+                    "display": "#281818"
+                    }, {
+                        "uid": 1,
+                        "hue": "#3B201E",
+                        "brightness": "fefefe",
+                        "display": "#3B201E"
+                    }, {
+                        "uid": 2,
+                        "hue": "#A45D31",
+                        "brightness": "ffffff",
+                        "display": "#A45D31"
+                    }, {
+                        "uid": 3,
+                        "hue": "#B97753",
+                        "brightness": "fefefe",
+                        "display": "#B97753"
+                    }, {
+                        "uid": 4,
+                        "hue": "#D19E7F",
+                        "brightness": "ffffff",
+                        "display": "#D19E7F"
+                    }, {
+                        "uid": 5,
+                        "hue": "#E6B492",
+                        "brightness": "fefefe",
+                        "display": "#E6B492"
+                    }, {
+                        "uid": 6,
+                        "hue": "#FFF1E6",
+                        "brightness": "ffffff",
+                        "display": "#FFF1E6"
+                    }, {
+                        "uid": 7,
+                        "hue": "#DD6512",
+                        "brightness": "fefefe",
+                        "display": "#DD6512"
+                    }, {
+                        "uid": 8,
+                        "hue": "#2ABBF4",
+                        "brightness": "ffffff",
+                        "display": "#2ABBF4"
+                    }, {
+                        "uid": 9,
+                        "hue": "#7FE425",
+                        "brightness": "fefefe",
+                        "display": "#7FE425"
+                    }, {
+                        "uid": 10,
+                        "hue": "#6500A2",
+                        "brightness": "ffffff",
+                        "display": "#6500A2"
+                    }, {
+                        "uid": 11,
+                        "hue": "#B97753",
+                        "brightness": "fefefe",
+                        "display": "#B97753"
+                    }, {
+                        "uid": 12,
+                        "hue": "#DB1B1B",
+                        "brightness": "ffffff",
+                        "display": "#DB1B1B"
+                    }
+            ],
+            "default": {
+                "uid": 5,
+                "hue": "#E6B492",
+                "brightness": "fefefe",
+                "display": "#E6B492"
+            },
+            "bonesToColor": ["head", "hand_r_body", "hand_l_body", "neck"],
+            "relatedBones": ["face"]
+        },
+        "hair": {
+            "label": "Hair Color",
+            "list": [{
+                    "uid": 0,
+                    "hue": "#1a1a1a",
+                    "brightness": "ffffff",
+                    "display": "#1a1a1a"
+                },
+                {
+                    "uid": 1,
+                    "hue": "#80532B",
+                    "brightness": "fefefe",
+                    "display": "#80532B"
+                },
+                {
+                    "uid": 2,
+                    "hue": "#986446",
+                    "brightness": "ffffff",
+                    "display": "#986446"
+                },
+                {
+                    "uid": 3,
+                    "hue": "#D48E2B",
+                    "brightness": "fefefe",
+                    "display": "#D48E2B"
+                },
+                {
+                    "uid": 4,
+                    "hue": "#FF7C00",
+                    "brightness": "000000",
+                    "display": "#FF7C00"
+                },
+                {
+                    "uid": 5,
+                    "hue": "#EFB229",
+                    "brightness": "fefefe",
+                    "display": "#EFB229"
+                },
+                {
+                    "uid": 6,
+                    "hue": "#FFE7A8",
+                    "brightness": "ffffff",
+                    "display": "#FFE7A8"
+                },
+                {
+                    "uid": 7,
+                    "hue": "#AFAFAF",
+                    "brightness": "fefefe",
+                    "display": "#AFAFAF"
+                },
+                {
+                    "uid": 8,
+                    "hue": "#D8D8D8",
+                    "brightness": "ffffff",
+                    "display": "#D8D8D8"
+                },
+                {
+                    "uid": 9,
+                    "hue": "#2ABBF4",
+                    "brightness": "fefefe",
+                    "display": "#2ABBF4"
+                },
+                {
+                    "uid": 10,
+                    "hue": "#00E74F",
+                    "brightness": "ffffff",
+                    "display": "#00E74F"
+                },
+                {
+                    "uid": 11,
+                    "hue": "#6500A2",
+                    "brightness": "fefefe",
+                    "display": "#6500A2"
+                },
+                {
+                    "uid": 12,
+                    "hue": "#F917FF",
+                    "brightness": "ffffff",
+                    "display": "#F917FF"
+                }
+            ],
+            "default": {
+                "uid": 1,
+                "hue": "#80532B",
+                "brightness": "fefefe",
+                "display": "#80532B"
+            },
+            "bonesToColor": ["hair"],
+            "relatedBones": ["hair"]
+
+        }
+    },
+    "avatar": {
+        "idle": "idle_2",
+        "default": {
+            "colorEls": {
+                "hair": 1,
+                "skin": 4
+            },
+            "hiddenBones": ["hat"],
+            "slots": {
+                "body": "t_orange",
+                "body_accessory": "",
+                "hair": "hair-02",
+                "hat": "",
+                "hand_l": "",
+                "hand_r": "",
+                "glasses": "",
+                "face": "face_01",
+                "pet": "pet_owl",
+                "ground": "ground_trunk",
+                "flying": "air_snitch"
+            }
+        }
+    }
+}

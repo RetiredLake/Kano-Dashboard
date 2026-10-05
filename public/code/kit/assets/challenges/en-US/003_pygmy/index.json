@@ -1,0 +1,108 @@
+{
+    "steps": [
+       {
+           "banner": {
+               "text": "Use your coding wand to give the Pygmy Puffs a variety of different colours",
+               "next_button": true
+           },
+           "beacon": {
+               "target": "banner-button",
+               "offset": 0
+           }
+       },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the **while** block onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_0",
+            "dropCopy": "Drop it anywhere in the code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Because there are lots of Pygmy Puffs, use a repeat block, to run the code inside it 10 times. Drag it onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "This block will change the colour of an object. Drag it onto your code space",
+            "category": "objects",
+            "blockType": "objects_setColor",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TINT",
+                "shadow": "TINT",
+                "id": "block_2"
+            },
+            "bannerCopy": "**Try a waving your coding wand!** Next, let’s pick a random Pygmy Puff and change its colour, by changing <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>random</span></kano-value-preview>",
+            "value": "random"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Colour tray",
+            "grabBlockCopy": "**Try another wave!** Random ones will turn red. Now let’s make random Pygmy Puffs turn random colors. Drag this block onto your code space",
+            "category": "color",
+            "blockType": "random_colour",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "TO COLOR",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "**Wave your coding wand upwards** and watch the Pygmy Puffs change into random colours",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "color"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "objects": [
+            "objects_setColor"
+        ],
+        "color": [
+            "random_colour"
+        ]
+    },
+    "mode": "wand",
+    "id": "003_pygmy",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"expresspygmy\"}",
+    "flyoutMode": true
+}

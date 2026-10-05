@@ -1,0 +1,639 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Enlarge the Venomous Tentacula by casting the Engorgio spell motion, and shrink them using the Reducio spell motion",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_24",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Accio</span></kano-value-preview>\" to \"<kano-value-preview><span>Engorgio</span></kano-value-preview>\"",
+            "value": "engorgio"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>growing</span></kano-value-preview>\"",
+            "value": "growing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onGesture",
+            "alias": "block_27",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Accio</span></kano-value-preview>\" to \"<kano-value-preview><span>Reducio</span></kano-value-preview>\"",
+            "value": "reducio"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>growing</span></kano-value-preview>\"",
+            "value": "growing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_29",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_28"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>true</span></kano-value-preview>\" to \"<kano-value-preview><span>false</span></kano-value-preview>\"",
+            "value": "FALSE"
+        },
+
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray and grab a When App Starts block",
+            "grabBlockCopy": "Drag it onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray and grab a Repeat block",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "N",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>10</span></kano-value-preview>\" to \"<kano-value-preview><span>3</span></kano-value-preview>\"so that you can make 3 Venomous Tentaculas appear",
+            "value": "3"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Venomous Tentacula</span></kano-value-preview>\"",
+            "value": "Venomous Tentacula"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>owl</span></kano-value-preview>\" to \"<kano-value-preview><span>venomous tentacula</span></kano-value-preview>\"",
+            "value": "Venomous Tentacula"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now let's make a variable that will store the size of the Venomous Tentaculas. Open up the Variables tray",
+            "grabBlockCopy": "Drag the Set Variable block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_4",
+            "connectCopy": "Connect it underneath the loop",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\"",
+            "value": "plantSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>120</span></kano-value-preview>\", which is the size that the plants will start out at",
+            "value": "120"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Next we'll get a loop block so that the plants can grow continuously. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>seconds</span></kano-value-preview>\" to \"<kano-value-preview><span>frames</span></kano-value-preview>\" so the code can run faster",
+            "value": "frames"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\"",
+            "value": "plantSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "We need to use a Constrain block to limit the size of the Tentaculas, so that they don't get so big that they fill up the screen or so small that they disappear. Open the Math tray",
+            "grabBlockCopy": "Grab the Constrain block",
+            "category": "math",
+            "blockType": "math_constrain",
+            "alias": "block_8",
+            "connectCopy": "Connect to the plantSize variable",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\"",
+            "value": "plantSize"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "LOW",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>20</span></kano-value-preview>\". This means that the Venomous Tentaculas will never get smaller than 20",
+            "value": "20"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "HIGH",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>200</span></kano-value-preview>\". This will stop the Venomous Tentaculas from growing above the size of 200",
+            "value": "200"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now we're going to make some If Statements to control whether the plants are growing or shrinking. Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>growing</span></kano-value-preview>\"",
+            "value": "growing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "unary",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LEFT_HAND",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\"",
+            "value": "plantSize"
+        },
+
+        {
+            "banner": {
+                "text": "When the Engorgio spell motion is cast, it will set the Growing variable to true, triggering this If statement that will make the plants grow by 1 every frame. Now let's create another If statement to shrink them down too",
+                "next_button": true
+            }
+        },
+
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray and grab another If block",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>growing</span></kano-value-preview>\"",
+            "value": "growing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_20"
+            },
+            "bannerCopy": "This time change \"<kano-value-preview><span>true</span></kano-value-preview>\" to \"<kano-value-preview><span>false</span></kano-value-preview>\"",
+            "value": "FALSE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "unary",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LEFT_HAND",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\"",
+            "value": "plantSize"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OPERATOR",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+=</span></kano-value-preview>\" to \"<kano-value-preview><span>-=</span></kano-value-preview>\". This will reduce the size of the plants every frame",
+            "value": "-="
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>grow</span></kano-value-preview>\" to \"<kano-value-preview><span>set</span></kano-value-preview>\"",
+            "value": "set"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_23",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>plantSize</span></kano-value-preview>\". This will update the size of the Venomous Tentaculas every frame",
+            "value": "plantSize"
+        },
+        {
+            "banner": {
+                "text": "Cast Engorgio and Reducio to make the Tentaculas change size",
+                "next_button": true
+            }
+        }
+
+
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "variables",
+        "math",
+        "logic"
+    ],
+    "variables": [
+        "plantSize",
+        "growing"
+    ],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart",
+            "events_onGesture"
+        ],
+        "control": [
+            "repeat_x_times",
+            "every_x_seconds"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_scale"
+        ],
+        "variables": [
+            "variables_set",
+            "math_number",
+            "variables_get"
+        ],
+        "math": [
+            "math_constrain",
+            "unary"
+        ],
+        "logic": [
+            "controls_if",
+            "logic_compare",
+            "logic_boolean"
+        ]
+    },
+    "mode": "wand",
+    "id": "058_orchideous",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"greenhouse\"}"
+}

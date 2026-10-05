@@ -1,0 +1,42 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided create \"Chattering Teeth\" where you point your coding wand"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+              "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onRecentre"
+        ],
+        "objects": [
+            "objects_add"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ]
+    },
+    "id": "054_teeth",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle054\"}"
+}

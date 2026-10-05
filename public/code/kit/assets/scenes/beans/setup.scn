@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve" width="800" height="600">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FCD6F4;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="background">
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="400" y1="600" x2="400" y2="-9.094947e-13">
+			<stop  offset="0" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#FAD9F3"/>
+		</linearGradient>
+		<rect class="st0" width="800" height="600"/>
+		<path class="st1" d="M793.6,600H6c-3.3,0-6-2.7-6-6V477.3h799.6V594C799.6,597.3,796.9,600,793.6,600z"/>
+	</g>
+</g>
+<g id="objects">
+	<rect id="e:Bertie Bott’s Beans:t14" x="245" y="-71" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t13" x="495.7" y="-96" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t12" x="607" y="-61" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t11" x="276" y="-262" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t10" x="169" y="-256" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t9" x="370" y="-212" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t8" x="388.1" y="-282" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t7" x="495.7" y="-272" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t6" x="502" y="-202" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t5" x="276" y="-172" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t4" x="296" y="-96" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t3" x="192" y="-152" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t2" x="434" y="-142" width="20" height="20"/>
+	<rect id="e:Bertie Bott’s Beans:t1" x="350" y="-132" width="20" height="20"/>
+</g>
+<g id="bounds">
+	<rect x="-51.6" y="519.2" class="st2" width="903.2" height="80.8"/>
+	<rect x="-52" y="-1205.2" class="st2" width="52" height="1724.4"/>
+	<rect x="799.6" y="-1205.2" class="st2" width="52" height="1724.4"/>
+</g>
+</svg>

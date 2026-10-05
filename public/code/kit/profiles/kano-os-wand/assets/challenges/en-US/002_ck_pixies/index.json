@@ -1,0 +1,156 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Use your coding wand to immobilise a swarm of Pixies on screen",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "We'll use a coding wand motion to immobilise the Pixies. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_onFlick"
+            },
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Up</span></kano-value-preview>\" to \"<kano-value-preview><span>Down</span></kano-value-preview>\"",
+            "value": "down"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>pixievelocity</span></kano-value-preview>\". This variable stores the speed and direction of the Pixies",
+            "value": "pixieVelocity"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now when you move your coding wand down the Pixies will stop moving, because the speed and direction of the Pixies has been set to 0. Let's add some code that makes them move again when you wave your wand up",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_onFlick"
+            },
+            "alias": "block_4",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>pixieVelocity</span></kano-value-preview>\"",
+            "value": "pixieVelocity"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>10</span></kano-value-preview>\"",
+            "value": "10"
+        },
+        {
+            "banner": {
+                "text": "Wave your coding wand downwards quickly to stop all the Pixies, and back up to make them move again",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "variables"
+    ],
+    "variables": [
+        "pixieVelocity"
+    ],
+    "filterBlocks": {
+        "wand": [
+            "wand_onFlick"
+        ],
+        "variables": [
+            "variables_set",
+            "math_number"
+        ]
+    },
+    "id": "002_ck_pixies",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"global_when\\\" id=\\\"RQ[is5t,CsCE/Q(V^R@$\\\" x=\\\"0\\\" y=\\\"0\\\"><field name=\\\"EVENT\\\">global.start</field><statement name=\\\"DO\\\"><block type=\\\"pixie1#set_sticker\\\" id=\\\"NyXGWUXdCKp?#[h?AO)u\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"ro5sQapTBfUiSk7D??o,\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">pixie</field></shadow></value><next><block type=\\\"pixie2#set_sticker\\\" id=\\\"./Wm:7;DXk]8-k9=[,[Z\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"aaan({!vP!_[]C)K?IIB\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">pixie</field></shadow></value><next><block type=\\\"pixie3#set_sticker\\\" id=\\\"uSh:aI~d+;4qJ5MhBQNe\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"i,TznwPHybv`:jT(Ov(9\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">pixie</field></shadow></value><next><block type=\\\"background#set_sticker\\\" id=\\\"sjOm|$KHt9!(?HNcyTHg\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"^!3`Z1}nK~Dc=~M#3_RD\\\"><mutation set=\\\"backgrounds\\\"></mutation><field name=\\\"SET\\\">backgrounds</field><field name=\\\"STICKER\\\">classroomdada</field></shadow></value><next><block type=\\\"background#ui_scale\\\" id=\\\"7OsSb%m!i$Ya8DfcMh$v\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"~q6LL/swTTbCdmLC)]2,\\\"><field name=\\\"NUM\\\">513</field></block></value><next><block type=\\\"background#ui_set_x_y\\\" id=\\\"E*gh%:0+/3t50xSOV9YL\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"56U^YlCm.u|H~hZikT49\\\"><field name=\\\"NUM\\\">207</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"g3i~^phu?Yx2vbSx|NU4\\\"><field name=\\\"NUM\\\">149</field></block></value><next><block type=\\\"variables_set\\\" id=\\\"N4U$U*sGo#j$2/eQP`_S\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\" id=\\\"+dc$g_$T|muGxv]b(b.*\\\"><field name=\\\"NUM\\\">10</field></block></value><next><block type=\\\"every_x_seconds\\\" id=\\\"A9c$2gvv|0OMiHB*;U;7\\\"><field name=\\\"UNIT\\\">frames</field><value name=\\\"INTERVAL\\\"><shadow type=\\\"math_number\\\" id=\\\"]a3YXYb!`oZ}UQV2JdEN\\\"><field name=\\\"NUM\\\">1</field></shadow></value><statement name=\\\"DO\\\"><block type=\\\"pixie1#ui_move_by\\\" id=\\\"8Z8DW9NHoG)!y~8Gmd;{\\\"><value name=\\\"pixels\\\"><block type=\\\"math_random\\\" id=\\\"$G{`l`[)%USWvF;]nod/\\\"><value name=\\\"MIN\\\"><shadow type=\\\"math_number\\\" id=\\\"+s*_b6H+Y,$k8{n?rTLV\\\"><field name=\\\"NUM\\\">0</field></shadow></value><value name=\\\"MAX\\\"><shadow type=\\\"math_number\\\" id=\\\"4#[_N7`erhO6:o0.jlX9\\\"><field name=\\\"NUM\\\">10</field></shadow><block type=\\\"variables_get\\\" id=\\\"1zaBD`kV-DVFsRrm+.DV\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value></block></value><next><block type=\\\"pixie2#ui_move_by\\\" id=\\\"V:L{e?+1o]nP6Fw(Oa31\\\"><value name=\\\"pixels\\\"><block type=\\\"math_random\\\" id=\\\"gUL)~^-T$a?+fs+v@VP!\\\"><value name=\\\"MIN\\\"><shadow type=\\\"math_number\\\" id=\\\"yc#7B@tTe^Kyd,CIh#KN\\\"><field name=\\\"NUM\\\">0</field></shadow></value><value name=\\\"MAX\\\"><shadow type=\\\"math_number\\\" id=\\\"MX10+sv6p5gu%Ln~a!s6\\\"><field name=\\\"NUM\\\">10</field></shadow><block type=\\\"variables_get\\\" id=\\\"VgtGXQp1U$-By`neu)Dv\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value></block></value><next><block type=\\\"pixie3#ui_move_by\\\" id=\\\"$zS`aw_=f5!:M+D{@1|-\\\"><value name=\\\"pixels\\\"><block type=\\\"math_random\\\" id=\\\"ccs7K^TAuy`sAl7Pr;ga\\\"><value name=\\\"MIN\\\"><shadow type=\\\"math_number\\\" id=\\\"/Hef-_fjo/?]|JoN33Tf\\\"><field name=\\\"NUM\\\">0</field></shadow></value><value name=\\\"MAX\\\"><shadow type=\\\"math_number\\\" id=\\\"1Jm!,1K;g/i^~0;e;|DK\\\"><field name=\\\"NUM\\\">10</field></shadow><block type=\\\"variables_get\\\" id=\\\"Nf8OIWjM}V5JXfyNUp3w\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value></block></value><next><block type=\\\"pixie1#ui_rotate\\\" id=\\\"1E-jCi29(|ZIWaW4P3w5\\\"><field name=\\\"DIR\\\">cw</field><value name=\\\"DEG\\\"><block type=\\\"variables_get\\\" id=\\\"87+WA$-w^Vo[gO%9;ZdA\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value><next><block type=\\\"pixie2#ui_rotate\\\" id=\\\"Xu?!FE?k[H^6GCy(RYZg\\\"><field name=\\\"DIR\\\">cw</field><value name=\\\"DEG\\\"><block type=\\\"math_single\\\" id=\\\"`O;Sz0D$DRAz}w/poYt,\\\"><field name=\\\"OP\\\">NEG</field><value name=\\\"NUM\\\"><block type=\\\"variables_get\\\" id=\\\"JazV{}I.415II9pd:Q|u\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value></block></value><next><block type=\\\"pixie3#ui_rotate\\\" id=\\\"r$80C`lh|wNEmE@a~eBF\\\"><field name=\\\"DIR\\\">cw</field><value name=\\\"DEG\\\"><block type=\\\"variables_get\\\" id=\\\"~l*I?XAjCj($i[%ui0x~\\\"><field name=\\\"VAR\\\" id=\\\"Bc;99joPW=[}yx[v}%$M\\\" variabletype=\\\"\\\">pixieVelocity</field></block></value></block></next></block></next></block></next></block></next></block></next></block></statement><next></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>\",\"parts\":[{\"id\":\"speaker\",\"name\":\"Speaker\",\"type\":\"speaker\",\"tagName\":\"kano-part-speaker\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":59.111104329427086,\"y\":44.333333333333336},\"partType\":\"hardware\",\"supportedHardware\":[]},{\"id\":\"pixie1\",\"name\":\"Pixie 1\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/pixie.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":131,\"y\":130},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":6870,\"scale\":100,\"visible\":true},{\"id\":\"wand\",\"name\":\"Wand\",\"type\":\"wand\",\"tagName\":\"kc-part-wand\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":55.111104329427086,\"y\":124},\"partType\":\"hardware\",\"supportedHardware\":[]},{\"id\":\"pixie2\",\"name\":\"Pixie 2\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/pixie.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":205.33331298828125,\"y\":150},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":-6870,\"scale\":100,\"visible\":true},{\"id\":\"pixie3\",\"name\":\"Pixie 3\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/pixie.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":172.55552164713544,\"y\":118},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":6870,\"scale\":100,\"visible\":true},{\"id\":\"background\",\"name\":\"Background\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/backgrounds/classroombook.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":206,\"y\":148},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":513,\"visible\":true}]}"
+}

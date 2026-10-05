@@ -1,0 +1,186 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "In this challenge you will levitate the Feather using the coding wand",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Every 1 second block to run code repeatedly. Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_0",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "rawId": "wMBbbD=hAcs83wix:QQ9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_0"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>seconds</span></kano-value-preview>\" to \"<kano-value-preview><span>frames</span></kano-value-preview>\" to run the code faster",
+            "value": "frames"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now set the position of the Feather using the Move to block. Open the Feather tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "feather"
+            },
+            "blockType": {
+                "rawPart": "feather",
+                "type": "ui_set_x_y"
+            },
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Set the position of the Feather to the position of the coding wand pointer. Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_x"
+            },
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_y"
+            },
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Finally rotate the Feather to match the rotation of the coding wand. Open the Feather tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "feather"
+            },
+            "blockType": {
+                "rawPart": "feather",
+                "type": "ui_rotate"
+            },
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>&#x21BB;</span></kano-value-preview>\" to \"<kano-value-preview><span>to</span></kano-value-preview>\"",
+            "value": "absolute"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_rotation"
+            },
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DEG",
+                "id": "block_4"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>Pitch</span></kano-value-preview> to <kano-value-preview><span>roll</span></kano-value-preview> to read the left and right rotating of the coding wand"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "inputName": "PROPERTY",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "roll"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Try moving your wand and watch as the Feather floats on the screen",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "control"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "control": [
+            "every_x_seconds"
+        ],
+        "feather": [
+            "ui_set_x_y",
+            "ui_rotate"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation"
+        ]
+    },
+    "id": "001_ck_feather",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"global_when\\\" id=\\\"default_part_event_id\\\" x=\\\"62\\\" y=\\\"120\\\"><field name=\\\"EVENT\\\">global.start</field><statement name=\\\"DO\\\"><block type=\\\"feather#set_sticker\\\" id=\\\"cu_]Fk4,uvY3XR!d/H$[\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"qIR/MWqSQ76d{hT}fuE1\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">feather</field></shadow></value><next><block type=\\\"background#set_sticker\\\" id=\\\"mxj2@tasCe~q(WZEdQGf\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"mhsn/_}b.,eL/*YrW{4f\\\"><mutation set=\\\"backgrounds\\\"></mutation><field name=\\\"SET\\\">backgrounds</field><field name=\\\"STICKER\\\">classroombook</field></shadow></value><next><block type=\\\"background#ui_scale\\\" id=\\\"oW|IdtZB0_EHhKOq{9+:\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"U83uK~AP#yd7Os4q=;Wk\\\"><field name=\\\"NUM\\\">514</field></block></value><next><block type=\\\"background#ui_set_x_y\\\" id=\\\"8e-dRep*)bK}u!Bez:g/\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"~8QEB$k}Vm0[330/ZiW0\\\"><field name=\\\"NUM\\\">207</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"?2;wfMVF7l5i1],x2Q9U\\\"><field name=\\\"NUM\\\">148</field></block></value><next><block type=\\\"feather#ui_set_x_y\\\" id=\\\"~;Jk}mFztNqPvjI4$EYB\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"[{+!Zfu0+nP4`X}`N(V!\\\"><field name=\\\"NUM\\\">207</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"kh)rM;qMj_Knj:bWJSU?\\\"><field name=\\\"NUM\\\">180</field></block></value><next><block type=\\\"feather#ui_scale\\\" id=\\\"wMBbbD=hAcs83wix:QQ9\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"=F83YdM#]cULMF%%DqdE\\\"><field name=\\\"NUM\\\">250</field></block></value><next></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>\",\"parts\":[{\"id\":\"feather\",\"name\":\"Feather\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/feather.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":255,\"y\":191},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":250,\"visible\":true},{\"id\":\"background\",\"name\":\"Background\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/backgrounds/classroombook.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":206,\"y\":147},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":514,\"visible\":true},{\"id\":\"wand\",\"name\":\"Wand\",\"type\":\"wand\",\"tagName\":\"kc-part-wand\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":275.55552164713544,\"y\":41.333333333333336},\"partType\":\"hardware\",\"supportedHardware\":[]}]}"
+}

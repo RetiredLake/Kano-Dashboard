@@ -1,0 +1,1 @@
+import OwleryScene from"../owlery/index.js";import{Target}from"../../../lib/physics/entities/index.js";class ExampleAtoBScene extends OwleryScene{load(...e){super.load(...e),this.target=new Target(800,600,100,100),this.target.onCollisionWith(this.$.Owl,()=>{this.emit("win")}),this.addEntity(this.target)}}export default ExampleAtoBScene;

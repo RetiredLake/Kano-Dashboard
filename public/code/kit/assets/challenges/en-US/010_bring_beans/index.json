@@ -1,0 +1,175 @@
+{
+   "id": "010_bring_beans",
+   "scene": {
+       "steps": [
+          {
+              "banner": {
+                  "text": "Summon some Bertie Bott's Every-Flavour Beans",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Use this block to run the code repeatedly while the coding wand moves upwards. Drag it onto your code space",
+            "category": "events",
+            "blockType": "events_whileFlick",
+            "alias": "block_0",
+            "dropCopy": "Drop it anywhere in the code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "repeat_x_times",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_0"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "N",
+                "shadow": "N",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>",
+            "value": "5"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Owl</span></kano-value-preview>\" to \"<kano-value-preview><span>Bertie Bott’s Beans</span></kano-value-preview>\"",
+            "value": "Bertie Bott’s Beans"
+        },
+        {
+            "banner": {
+                "text": "Try moving your coding wand up. Now, stop them from stacking up by using an Apply Force block",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the Apply Force block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>All</span></kano-value-preview> to <kano-value-preview><span>Bertie Bott’s Beans</span></kano-value-preview>",
+            "value": "Bertie Bott’s Beans"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "You can use a random number to fire them all in different directions. Drag this block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "MAX",
+                "shadow": "MAX",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>360</span></kano-value-preview>",
+            "value": "360"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FORCE",
+                "shadow": "FORCE",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>",
+            "value": "50"
+        },
+        {
+            "banner": {
+                "text": "Wave your coding wand upwards and summon piles of Bertie Bott's Every-Flavour Beans",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "position",
+        "math"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_whileFlick"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "objects": [
+            "objects_add"
+        ],
+        "position": [
+            "position_applyForce"
+        ],
+        "math": [
+            "math_random"
+        ]
+    },
+    "mode": "wand",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"honeydukes\"}",
+     "flyoutMode": true
+}
+}

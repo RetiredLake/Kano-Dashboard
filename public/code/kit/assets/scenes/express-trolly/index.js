@@ -1,0 +1,1 @@
+import Scene from"../../../lib/physics/scene/scene.js";import{Store}from"../../../lib/store.js";class ExpressTrollyScene extends Scene{load(...e){super.load(...e)}static get setupFileUrl(){const{config:e}=Store.getState();return`${e.root}assets/scenes/express-trolly/setup.scn`}}export default ExpressTrollyScene;

@@ -1,0 +1,1 @@
+import Scene from"../../../lib/physics/scene/scene.js";import{Store}from"../../../lib/store.js";class HogwartsDarkScene extends Scene{load(...e){super.load(...e)}static get setupFileUrl(){const{config:e}=Store.getState();return`${e.root}assets/scenes/hogwarts-dark/setup.scn`}}export default HogwartsDarkScene;

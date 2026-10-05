@@ -1,0 +1,53 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code figure out how to put the wheels back on the Knight Bus"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "position",
+        "math",
+        "wand",
+        "particle"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "position": [
+            "position_set",
+            "position_launch",
+            "position_applySpin"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "wand": [
+            "wand_vibrate",
+            "wand_setLed"
+        ],
+        "particle": [
+            "particle_fizz"
+        ]
+    },
+    "mode": "wand",
+    "id": "057_bus",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle057\"}"
+}

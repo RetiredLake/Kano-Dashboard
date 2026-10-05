@@ -1,0 +1,48 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, clear these spiders out of the forest"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "control",
+        "objects",
+        "math",
+        "position"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+           "events_onFlick"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_applySpin"
+        ],
+        "math": [
+            "math_random"
+        ]
+    },
+    "mode": "wand",
+    "id": "030_spiders",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle030\"}"
+}

@@ -1,0 +1,56 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided get the Serpent to the end of the maze"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "modules": [
+        "events",
+        "wand",
+        "position",
+        "control",
+        "world",
+        "objects"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onRecentre",
+            "events_whileFlick"
+        ],
+        "wand": [
+            "wand_y",
+            "wand_x"
+        ],
+        "position": [
+            "position_applyForce"
+        ],
+        "world": [
+            "world_setGravity"
+        ],
+        "control": [
+            "every_x_seconds",
+            "in_x_time"
+        ],
+        "objects": [
+            "objects_positionAngle"
+        ]
+    },
+    "mode": "wand",
+    "id": "064_snakemaze",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle064\"}"
+}

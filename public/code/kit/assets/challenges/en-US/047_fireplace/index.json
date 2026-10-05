@@ -1,0 +1,54 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided use water particles to put out the fire in the fireplace"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "particle",
+        "control",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onGesture"
+        ],
+        "particle": [
+            "particle_generate",
+            "particle_setSize",
+            "particle_setForce",
+            "particle_setLifespan",
+            "particle_setTransparency",
+            "particle_setColor"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_vibrate",
+            "wand_setLed"
+        ]
+    },
+    "mode": "wand",
+    "id": "047_fireplace",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle047\"}"
+}

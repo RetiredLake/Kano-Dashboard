@@ -1,0 +1,1 @@
+define(["exports","./chunk-fdc6718c.js","./chunk-93a2d04f.js"],function(e,s,n){"use strict";const t=(e,s,n)=>{const t=e instanceof HTMLElement;t?e.addEventListener(s,n):e.on(s,n);return{dispose:()=>{t?e.removeEventListener(s,n):e.removeListener(s,n)}}};e.subscribe=t,e.Subscriptions=class extends n.Disposables{static subscribe(...e){return t(...e)}}});

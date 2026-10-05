@@ -1,0 +1,47 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, launch the Quaffle at highest Quidditch goal"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "wand",
+        "objects",
+        "position"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onRecentre"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ],
+        "objects": [
+            "objects_positionAngle"
+        ],
+        "position": [
+            "position_applyForce"
+        ]
+    },
+    "mode": "wand",
+    "id": "019_goal",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle019\"}"
+}

@@ -1,0 +1,240 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Make the car fly and follow your coding wand pointer",
+                "next_button": true
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "rawId": "h-?@^u=A$0{x%1`/3{{b"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>seconds</span></kano-value-preview>\" to \"<kano-value-preview><span>frames</span></kano-value-preview>\"",
+            "value": "frames"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Ford Anglia tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "fordanglia"
+            },
+            "blockType": {
+                "rawPart": "fordanglia",
+                "type": "ui_set_x_y"
+            },
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_x"
+            },
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "X",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_y"
+            },
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "Y",
+                "id": "block_2"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand in different directions and watch the car fly. Next we'll make the car turn with the coding wand",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Ford Anglia tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "fordanglia"
+            },
+            "blockType": {
+                "rawPart": "fordanglia",
+                "type": "ui_rotate"
+            },
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "DIR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>↻</span></kano-value-preview>\" to \"<kano-value-preview><span>to</span></kano-value-preview>\"",
+            "value": "absolute"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now use a constrain block to make sure the car doesn't flip upside down when we rotate it. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_constrain",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DEG",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_rotation"
+            },
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Pitch</span></kano-value-preview>\" to \"<kano-value-preview><span>Roll</span></kano-value-preview>\"",
+            "value": "roll"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "LOW",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>-40</span></kano-value-preview>\"",
+            "value": "-40"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "HIGH",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>40</span></kano-value-preview>\"",
+            "value": "40"
+        },
+        {
+            "banner": {
+                "text": "Wave and twist your coding wand around and watch the car fly on the canvas",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "control",
+        "math",
+        "variables"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "control": [
+            "every_x_seconds"
+        ],
+        "fordanglia": [
+            "ui_set_x_y",
+            "ui_rotate"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_rotation"
+        ],
+        "math": [
+            "math_constrain"
+        ],
+        "variables": [
+            "math_number"
+        ]
+    },
+    "id": "008_ck_car",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"global_when\\\" id=\\\"default_part_event_id\\\" x=\\\"62\\\" y=\\\"120\\\"><field name=\\\"EVENT\\\">global.start</field><statement name=\\\"DO\\\"><block type=\\\"background#set_sticker\\\" id=\\\"B[@f6=QYnZrIHNLL~}k^\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"Yme(@;-){s*TY9~,EhL%\\\"><mutation set=\\\"backgrounds\\\"></mutation><field name=\\\"SET\\\">backgrounds</field><field name=\\\"STICKER\\\">nightskywillow</field></shadow></value><next><block type=\\\"fordanglia#set_sticker\\\" id=\\\"mwM7%eD5L-v*a,|m%f4:\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"M`[iB~ewQL98kcu;}$4:\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">car</field></shadow></value><next><block type=\\\"background#ui_scale\\\" id=\\\"G=[-WW^R*9w`nZUzOW%_\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"-MBQ0^A=NQPGY,n*A#Y:\\\"><field name=\\\"NUM\\\">514</field></block></value><next><block type=\\\"background#ui_set_x_y\\\" id=\\\"k0|cnTT`.;`!j6Sgi@a?\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"f{0l4BF@0Ls|%UXO95,p\\\"><field name=\\\"NUM\\\">207</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"~qr{;.Yrz:c#T5A5#+8y\\\"><field name=\\\"NUM\\\">149</field></block></value><next><block type=\\\"fordanglia#ui_scale\\\" id=\\\"h-?@^u=A$0{x%1`/3{{b\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"+)T9cGamsna6}.-;#Auq\\\"><field name=\\\"NUM\\\">200</field></block></value><next></next></block></next></block></next></block></next></block></next></block></statement></block></xml>\",\"parts\":[{\"id\":\"fordanglia\",\"name\":\"Ford Anglia\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/car.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":255,\"y\":191},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":200,\"visible\":true},{\"id\":\"background\",\"name\":\"Background\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/backgrounds/nightskywillow.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":206,\"y\":148},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":514,\"visible\":true},{\"id\":\"wand\",\"name\":\"Wand\",\"type\":\"wand\",\"tagName\":\"kc-part-wand\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":290.8333333333333,\"y\":43.625},\"partType\":\"hardware\",\"supportedHardware\":[]}]}"
+}

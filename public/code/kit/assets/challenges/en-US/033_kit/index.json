@@ -1,0 +1,732 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Use code so that as the coding wand pointer rolls over the broom booster parts they get added to this broom",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Broom</span></kano-value-preview>\"",
+            "value": "Broom"
+        },
+        {
+            "banner": {
+                "text": "All code within this block will run when the coding wand pointer rolls over the object",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Broom</span></kano-value-preview>\"",
+            "value": "Broom"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>450</span></kano-value-preview>\"",
+            "value": "450"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Broom</span></kano-value-preview>\"",
+            "value": "Broom"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>pin</span></kano-value-preview>\" to \"<kano-value-preview><span>freeze</span></kano-value-preview>\"",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Broom</span></kano-value-preview>\"",
+            "value": "Broom"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "banner": {
+                "text": "Try moving the coding wand pointer over the broom and see what happens. Now, repeat this code for the rest of the parts",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_8",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_8"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Guard</span></kano-value-preview>\"",
+            "value": "Guard"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_8"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Guard</span></kano-value-preview>\"",
+            "value": "Guard"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>270</span></kano-value-preview>\"",
+            "value": "270"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_10"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Guard</span></kano-value-preview>\"",
+            "value": "Guard"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>pin</span></kano-value-preview>\" to \"<kano-value-preview><span>freeze</span></kano-value-preview>\"",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Guard</span></kano-value-preview>\"",
+            "value": "Guard"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_13",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Nose</span></kano-value-preview>\"",
+            "value": "Nose"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Nose</span></kano-value-preview>\"",
+            "value": "Nose"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>200</span></kano-value-preview>\"",
+            "value": "200"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Nose</span></kano-value-preview>\"",
+            "value": "Nose"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>pin</span></kano-value-preview>\" to \"<kano-value-preview><span>freeze</span></kano-value-preview>\"",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Nose</span></kano-value-preview>\"",
+            "value": "Nose"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_18",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Rocket</span></kano-value-preview>\"",
+            "value": "Rocket"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Rocket</span></kano-value-preview>\"",
+            "value": "Rocket"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>470</span></kano-value-preview>\"",
+            "value": "470"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>364</span></kano-value-preview>\"",
+            "value": "364"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_19"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Rocket</span></kano-value-preview>\"",
+            "value": "Rocket"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_20"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>pin</span></kano-value-preview>\" to \"<kano-value-preview><span>freeze</span></kano-value-preview>\"",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Rocket</span></kano-value-preview>\"",
+            "value": "Rocket"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_23",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_23"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Wing</span></kano-value-preview>\"",
+            "value": "Wing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_set",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_23"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Wing</span></kano-value-preview>\"",
+            "value": "Wing"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>400</span></kano-value-preview>\" to \"<kano-value-preview><span>530</span></kano-value-preview>\"",
+            "value": "530"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_24"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>300</span></kano-value-preview>\" to \"<kano-value-preview><span>259</span></kano-value-preview>\"",
+            "value": "259"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_setAngle",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_24"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_25"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Wing</span></kano-value-preview>\"",
+            "value": "Wing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_stick",
+            "alias": "block_26",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_25"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STATE",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>pin</span></kano-value-preview>\" to \"<kano-value-preview><span>freeze</span></kano-value-preview>\"",
+            "value": "freeze"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_26"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>all</span></kano-value-preview>\" to \"<kano-value-preview><span>Wing</span></kano-value-preview>\"",
+            "value": "Wing"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_vibrate",
+            "alias": "block_27",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_26"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PATTERN",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>medium</span></kano-value-preview>\" to \"<kano-value-preview><span>Short</span></kano-value-preview>\"",
+            "value": "short"
+        },
+        {
+            "banner": {
+                "text": "Move the coding wand pointer over all the items and watch the booster kit assemble itself",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "position",
+        "objects",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onWandOver"
+        ],
+        "position": [
+            "position_set",
+            "position_setAngle"
+        ],
+        "objects": [
+            "objects_stick"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "id": "033_kit",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"wizardwheezeskit\"}"
+}

@@ -1,0 +1,46 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using the code blocks provided, move Hagrid's things out of the way to place the dragon egg into the fireplace"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "position",
+        "objects",
+        "wand"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onWandOver"
+        ],
+        "position": [
+            "position_applySpin"
+        ],
+        "objects": [
+            "objects_remove"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ]
+    },
+    "mode": "wand",
+    "id": "014_junk",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle014\"}"
+}

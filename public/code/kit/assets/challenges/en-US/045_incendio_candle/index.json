@@ -1,0 +1,602 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Ready to use code and logic to light the candle?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the When App Starts block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_999",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's start out by setting a variable that we'll be using later. Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_1",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_999"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_1"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>candleLit</span></kano-value-preview>",
+            "value": "candleLit"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>true</span></kano-value-preview> to <kano-value-preview><span>false</span></kano-value-preview>, because we want the code to start with the candle unlit",
+            "value": "FALSE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "INTERVAL",
+                "shadow": "INTERVAL",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>1</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview>",
+            "value": "20"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>milliseconds</span></kano-value-preview>",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "We'll use a particle effect to create a flame. Start by opening the Particles tray",
+            "grabBlockCopy": "This block defines the particle colour. Drag it onto the code space",
+            "category": "particle",
+            "blockType": "particle_setColor",
+            "alias": "block_5",
+            "connectCopy": "Connect it inside the loop",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "START COLOR",
+                "shadow": "START COLOR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change the start colour from <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#FFFFFF</span></kano-value-preview>. This will form the middle of your flame"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END COLOR",
+                "shadow": "END COLOR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change the end colour from <kano-value-preview><span>#000000</span></kano-value-preview> to <kano-value-preview><span>#FBC02D</span></kano-value-preview>. This is the colour of the top of your flame"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now to generate a particle every 20 milliseconds. Open the Particle tray again",
+            "grabBlockCopy": "Drag the Create block onto your code space",
+            "category": "particle",
+            "blockType": "particle_generate",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "We want the flame to move with the wand, which we can do using the wand X and Y position blocks. Open up the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_7",
+            "connectCopy": "Connect it to the x position",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Now for the wand Y position",
+            "grabBlockCopy": "Grab the Y Position block this time",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_8",
+            "connectCopy": "Connect it to the y position",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray to set the size of the particles to start off big and get smaller",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setSize",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "START SIZE",
+                "shadow": "START SIZE",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>20</span></kano-value-preview> to <kano-value-preview><span>40</span></kano-value-preview>",
+            "value": "40"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END SIZE",
+                "shadow": "END SIZE",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>20</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>",
+            "value": "2"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Did you see the particles change size? Now to set the direction. Open the particle tray again",
+            "grabBlockCopy": "Grab this block",
+            "category": "particle",
+            "blockType": "particle_setForce",
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_9"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_random",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setLifespan",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "LIFESPAN",
+                "shadow": "LIFESPAN",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>1000</span></kano-value-preview> to <kano-value-preview><span>150</span></kano-value-preview>",
+            "value": "150"
+        },
+        {
+            "banner": {
+                "text": "Give your wand a wave to move the flame around",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "banner": {
+                "text": "Now we can control the flame with the wand, but we can't light the candle with it yet- let's code some logic to do that",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_16"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_17"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>candleLit</span></kano-value-preview>",
+            "value": "candleLit"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_16"
+            }
+        },
+        {
+            "banner": {
+                "text": "If the candle should be lit, this block of code will run",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Let's make the flame for the candle using particles. Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_setColor",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_15"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "START COLOR",
+                "shadow": "START COLOR",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change the start colour to <kano-value-preview><span>#FFFFFF</span></kano-value-preview>"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "END COLOR",
+                "shadow": "END COLOR",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change the end value to <kano-value-preview><span>#03A9F5</span></kano-value-preview>. This will form the top of your candle flame"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Particle tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "particle",
+            "blockType": "particle_generate",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_20"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "X",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "X"
+                },
+                "id": "block_21"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>400</span></kano-value-preview> to <kano-value-preview><span>405</span></kano-value-preview>",
+            "value": "405"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "Y",
+                "shadow": {
+                    "name": "POSITION",
+                    "shadow": "Y"
+                },
+                "id": "block_21"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>300</span></kano-value-preview> to <kano-value-preview><span>190</span></kano-value-preview>",
+            "value": "190"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onWandOver",
+            "alias": "block_22",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ENTITY",
+                "shadow": "ENTITY",
+                "id": "block_22"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Candle</span></kano-value-preview>",
+            "value": "Candle"
+        },
+        {
+            "banner": {
+                "text": "When the wand pointer goes over the candle, we can set the candleLit variable to true. The logic statement you coded earlier will light the candle",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_24",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_22"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_24"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>candleLit</span></kano-value-preview>",
+            "value": "candleLit"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_25",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_24"
+            }
+        },
+        {
+            "banner": {
+                "text": "Try it out. What happens when you move your wand over the candle?",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": " Finally, add the code to put out the candle with a swish of your coding wand. Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onFlick",
+            "alias": "block_27",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TYPE",
+                "id": "block_27"
+            },
+            "bannerCopy": "Change <kano-value-preview>Up</kano-value-preview> to <kano-value-preview>Right</kano-value-preview>",
+            "value": "right"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_28",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_27"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_28"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>candleLit</span></kano-value-preview>",
+            "value": "candleLit"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_boolean",
+            "alias": "block_29",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_28"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "BOOL",
+                "id": "block_29"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>true</span></kano-value-preview> to <kano-value-preview><span>false</span></kano-value-preview>",
+            "value": "FALSE"
+        },
+        {
+            "banner": {
+                "text": "Try it out- light the candle by moving the flame over it, then put it out again with a swish to the right",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "variables",
+        "logic",
+        "control",
+        "particle",
+        "wand",
+        "math",
+        "events"
+    ],
+    "variables": [
+        "candleLit"
+    ],
+    "filterBlocks": {
+        "variables": [
+            "variables_set",
+            "variables_get"
+        ],
+        "logic": [
+            "logic_boolean",
+            "controls_if",
+            "logic_compare"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "particle": [
+            "particle_setColor",
+            "particle_generate",
+            "particle_setSize",
+            "particle_setForce",
+            "particle_setLifespan"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ],
+        "math": [
+            "math_random"
+        ],
+        "events": [
+            "events_onWandOver",
+            "events_onFlick",
+            "events_onAppStart"
+        ]
+    },
+    "mode": "wand",
+    "id": "045_incendio_candle",
+    "defaultApp": "{\"scene\":\"fireplacetable\"}"
+}

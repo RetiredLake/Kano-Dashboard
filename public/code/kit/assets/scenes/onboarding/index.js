@@ -1,0 +1,1 @@
+import Scene from"../../../lib/physics/scene/scene.js";class OnboardingScene extends Scene{load(...e){super.load(...e)}}export default OnboardingScene;

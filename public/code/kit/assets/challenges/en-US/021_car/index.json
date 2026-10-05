@@ -1,0 +1,525 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Make the car fly and follow your coding wand pointer",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Events tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "events",
+            "blockType": "events_onAppStart",
+            "alias": "block_1",
+            "dropCopy": "Drop this block anywhere in your code space"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_add",
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "CALLBACK",
+                "id": "block_1"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ID",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NAME",
+                "id": "block_2"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>Owl</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_scale",
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPORTION",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>grow</span></kano-value-preview> to <kano-value-preview><span>set</span></kano-value-preview>",
+            "value": "set"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VALUE",
+                "shadow": "VALUE",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>",
+            "value": "50"
+        },
+        {
+            "banner": {
+                "text": "Use a loop to add force to the car every frame",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_3"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>",
+            "value": "frames"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applyForce",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The Object Angle From block can be used to make an object fly towards the coding wand pointer. Open the Objects tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "objects",
+            "blockType": "objects_positionAngle",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "ANGLE",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "ORIGIN",
+                "shadow": "ORIGIN",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>random</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_x",
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "X",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "wand",
+            "blockType": "wand_y",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "shadow": "POSITION",
+                "inputName": "Y",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "FORCE",
+                "shadow": "FORCE",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>70</span></kano-value-preview>",
+            "value": "70"
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand in different directions. You made the car fly but with one problem: sometimes it turns upside down. This can be fixed using logic blocks",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "By checking the current angle of the car, you can spin the car the opposite way to keep it upright. Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_12"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>=</span></kano-value-preview> to <kano-value-preview><span>&lt; less than</span></kano-value-preview>",
+            "value": "LT"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_get",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_12"
+            }
+        },
+        {   
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>x position</span></kano-value-preview> to <kano-value-preview><span>angle</span></kano-value-preview>",
+            "value": "angle"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>random</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-20</span></kano-value-preview>",
+            "value": "-20"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use an Object Spin block to spin the car right when it spins too far left. Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SPEED",
+                "shadow": "SPEED",
+                "id": "block_15"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>50</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>",
+            "value": "1"
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand around again and see how the car will only spin right because of the logic blocks. Now stop the car spinning right too",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_11"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_18"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>=</span></kano-value-preview> to <kano-value-preview><span>&gt; greater than</span></kano-value-preview>",
+            "value": "GT"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_get",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "PROPERTY",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>x position</span></kano-value-preview> to <kano-value-preview><span>angle</span></kano-value-preview>",
+            "value": "angle"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>random</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview>",
+            "value": "20"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Physics tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "position",
+            "blockType": "position_applySpin",
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "TARGET",
+                "shadow": "TARGET",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>all</span></kano-value-preview> to <kano-value-preview><span>Ford Anglia</span></kano-value-preview>",
+            "value": "Ford Anglia"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SPEED",
+                "shadow": "SPEED",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change <kano-value-preview><span>50</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>",
+            "value": "-1"
+        },
+        {
+            "banner": {
+                "text": "The car now flies towards the coding wand pointer but will never turn upside down",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "objects",
+        "control",
+        "position",
+        "wand",
+        "logic",
+        "variables"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onAppStart"
+        ],
+        "objects": [
+            "objects_add",
+            "objects_scale",
+            "objects_positionAngle"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "position": [
+            "position_applyForce",
+            "position_get",
+            "position_applySpin"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y"
+        ],
+        "logic": [
+            "controls_if",
+            "logic_compare"
+        ],
+        "variables": [
+            "math_number"
+        ]
+    },
+    "mode": "wand",
+    "id": "021_car",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"nightskywillow\"}"
+}

@@ -1,0 +1,557 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "Control the pitch of the music using your coding wand",
+                "next_button": true
+            }
+        },
+
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Use the Speaker and loop the harp music so that it plays over and over. Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_loop"
+            },
+            "alias": "block_2",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "rawId": "H:-AO0Q=7Xo`yA8yD6l0"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_sample"
+            },
+            "alias": "block_3",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "SAMPLE",
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SET",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand</span></kano-value-preview>\" to \"<kano-value-preview><span>Music</span></kano-value-preview>\"",
+            "value": "Music"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "SAMPLE",
+                "id": "block_3"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Wand Cast</span></kano-value-preview>\" to \"<kano-value-preview><span>Harp 2 loop</span></kano-value-preview>\"",
+            "value": "Harp 2 Loop"
+        },
+        {
+            "banner": {
+                "text": "You can use a code loop to continuously change how the music is played",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Control tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "control",
+            "blockType": "every_x_seconds",
+            "alias": "block_4",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_2"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "UNIT",
+                "id": "block_4"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>seconds</span></kano-value-preview>\" to \"<kano-value-preview><span>milliseconds</span></kano-value-preview>\"",
+            "value": "milliseconds"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_set",
+            "alias": "block_5",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO",
+                "id": "block_4"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_5"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>musicPitch</span></kano-value-preview>\"",
+            "value": "musicPitch"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "A Lerp block can be used to remap the pointer position to sensible pitch scale. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_lerp",
+            "alias": "block_6",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VALUE",
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "FROM",
+                "id": "block_6"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>20</span></kano-value-preview>\"",
+            "value": "20"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The canvas is 800 pixels wide, so use some math to get a 0 to 100 value from the x position. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_7",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "PERCENT",
+                "id": "block_6"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_7"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>÷ divide</span></kano-value-preview>\"",
+            "value": "DIVIDE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_x"
+            },
+            "alias": "block_8",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_9",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_7"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_9"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>8</span></kano-value-preview>\"",
+            "value": "8"
+        },
+        {
+            "banner": {
+                "text": "Use the Speaker Set Pitch block with the musicPitch variable. This will make the speed at which the music plays change as you move your coding wand",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_playback_rate"
+            },
+            "alias": "block_10",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_5"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_11",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "RATE",
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_11"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>musicPitch</span></kano-value-preview>\"",
+            "value": "musicPitch"
+        },
+        {
+            "banner": {
+                "text": "You can use the same coding blocks to change the volume of the music too",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Speaker tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "speaker"
+            },
+            "blockType": {
+                "rawPart": "speaker",
+                "type": "speaker_set_volume"
+            },
+            "alias": "block_12",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_10"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_lerp",
+            "alias": "block_13",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "VOLUME",
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "FROM",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>200</span></kano-value-preview>\"",
+            "value": "200"
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "shadow": "TO",
+                "id": "block_13"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>200</span></kano-value-preview>\" to \"<kano-value-preview><span>0</span></kano-value-preview>\"",
+            "value": "0"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "The canvas is 600 pixels tall, so use some math again to get a 0 to 100 value from the x position. Open the Math tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "math",
+            "blockType": "math_arithmetic",
+            "alias": "block_14",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "PERCENT",
+                "id": "block_13"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "OP",
+                "id": "block_14"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>+</span></kano-value-preview>\" to \"<kano-value-preview><span>÷ divide</span></kano-value-preview>\"",
+            "value": "DIVIDE"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_y"
+            },
+            "alias": "block_15",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_16",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_14"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_16"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>6</span></kano-value-preview>\"",
+            "value": "6"
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand around and listen to the music change with your movements",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "controls_if",
+            "alias": "block_17",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_12"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Logic tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "logic",
+            "blockType": "logic_compare",
+            "alias": "block_18",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "IF0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "variables_get",
+            "alias": "block_19",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "A",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "VAR",
+                "id": "block_19"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>item</span></kano-value-preview>\" to \"<kano-value-preview><span>musicPitch</span></kano-value-preview>\"",
+            "value": "musicPitch"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Variables tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": "variables",
+            "blockType": "math_number",
+            "alias": "block_20",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "B",
+                "id": "block_18"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "NUM",
+                "id": "block_20"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>0</span></kano-value-preview>\" to \"<kano-value-preview><span>100</span></kano-value-preview>\"",
+            "value": "100"
+        },
+        {
+            "banner": {
+                "text": "This if block will trigger the code within when the pitch is perfect, so the awake Fluffy can be swapped for sleeping Fluffy",
+                "next_button": true
+                },
+                "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+                }
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Fluffy tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "fluffy"
+            },
+            "blockType": {
+                "rawPart": "fluffy",
+                "type": "set_sticker"
+            },
+            "alias": "block_21",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "inputName": "DO0",
+                "id": "block_17"
+            }
+        },
+        {
+            "type": "change-input",
+            "block": {
+                "inputName": "STICKER",
+                "shadow": "PICTURE",
+                "id": "block_21"
+            },
+            "bannerCopy": "Change \"<kano-value-preview><span>Feather</span></kano-value-preview>\" to \"<kano-value-preview><span>Fluffy Asleep</span></kano-value-preview>\"",
+            "value": "fluffyasleep"
+        },
+        {
+            "type": "create-block",
+            "openFlyoutCopy": "Open the Wand tray",
+            "grabBlockCopy": "Drag the block onto your code space",
+            "category": {
+                "rawPart": "wand"
+            },
+            "blockType": {
+                "rawPart": "wand",
+                "type": "wand_vibrate"
+            },
+            "alias": "block_22",
+            "connectCopy": "Connect to this block",
+            "connectTo": {
+                "id": "block_21"
+            }
+        },
+        {
+            "banner": {
+                "text": "Move your coding wand around again and see if you can find the right pitch to make Fluffy fall asleep",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "control",
+        "variables",
+        "math",
+        "logic"
+    ],
+    "variables": [
+        "musicPitch"
+    ],
+    "filterBlocks": {
+        "speaker": [
+            "speaker_loop",
+            "speaker_sample",
+            "speaker_playback_rate",
+            "speaker_set_volume"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "variables": [
+            "variables_set",
+            "math_number",
+            "variables_get"
+        ],
+        "math": [
+            "math_lerp",
+            "math_arithmetic"
+        ],
+        "wand": [
+            "wand_x",
+            "wand_y",
+            "wand_vibrate"
+        ],
+        "logic": [
+            "controls_if",
+            "logic_compare"
+        ],
+        "fluffy": [
+            "set_sticker"
+        ]
+    },
+    "id": "010_ck_fluffy",
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"global_when\\\" id=\\\"default_part_event_id\\\" x=\\\"62\\\" y=\\\"120\\\"><field name=\\\"EVENT\\\">global.start</field><statement name=\\\"DO\\\"><block type=\\\"background#set_sticker\\\" id=\\\"iMT1s8lZz/Z`NWStytfw\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"B{f(Em?%Rrd`.g7ldo|E\\\"><mutation set=\\\"backgrounds\\\"></mutation><field name=\\\"SET\\\">backgrounds</field><field name=\\\"STICKER\\\">hogwartschamber</field></shadow></value><next><block type=\\\"fluffy#set_sticker\\\" id=\\\"gWY1*sVQ]=;@wT2X@CMn\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"]E7-5W~;pl*LD](S}/9{\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">fluffyawake</field></shadow></value><next><block type=\\\"harp#set_sticker\\\" id=\\\"?Z/@fih(y`4Y[L[:rB]n\\\"><value name=\\\"PICTURE\\\"><shadow type=\\\"assets_get_sticker\\\" id=\\\"RH*^8!k|W[yIp@lbQ4MY\\\"><mutation set=\\\"all\\\"></mutation><field name=\\\"SET\\\">all</field><field name=\\\"STICKER\\\">harp</field></shadow></value><next><block type=\\\"background#ui_scale\\\" id=\\\"{Z1]Sm[OCnmtcJscNmjz\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"pn:,S2-|Odhw.ZGw9rd6\\\"><field name=\\\"NUM\\\">514</field></block></value><next><block type=\\\"background#ui_set_x_y\\\" id=\\\"HwbTsZunoUDECf%d9hy#\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"/%HuN}]aWNXsc2qb6c,I\\\"><field name=\\\"NUM\\\">208</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"*hzhewild6T1@^mjZJ,v\\\"><field name=\\\"NUM\\\">148</field></block></value><next><block type=\\\"harp#ui_set_x_y\\\" id=\\\"pLBE{_8(wx7j6u*9kDq6\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"OBp2Og.5Znh9N6g;8qFH\\\"><field name=\\\"NUM\\\">20</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\"FOx**,RjzRy~NjzA33K~\\\"><field name=\\\"NUM\\\">260</field></block></value><next><block type=\\\"fluffy#ui_set_x_y\\\" id=\\\"NB)81e.MC6xYmTuh_sZw\\\"><value name=\\\"X\\\"><block type=\\\"math_number\\\" id=\\\"hKWSv}sgZhTk?.H8m8Pz\\\"><field name=\\\"NUM\\\">210</field></block></value><value name=\\\"Y\\\"><block type=\\\"math_number\\\" id=\\\")YJ}DjuV/urK%u4vK7D|\\\"><field name=\\\"NUM\\\">175</field></block></value><next><block type=\\\"fluffy#ui_scale\\\" id=\\\"H:-AO0Q=7Xo`yA8yD6l0\\\"><value name=\\\"FACTOR\\\"><block type=\\\"math_number\\\" id=\\\"[WLm@cG$y1TAii`e`Th~\\\"><field name=\\\"NUM\\\">300</field></block></value><next></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>\",\"parts\":[{\"id\":\"fluffy\",\"name\":\"Fluffy\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/fluffyawake.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":209,\"y\":174},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":300,\"visible\":true},{\"id\":\"harp\",\"name\":\"Harp\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/all/harp.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":19,\"y\":259},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":100,\"visible\":true},{\"id\":\"background\",\"name\":\"Background\",\"type\":\"sticker\",\"tagName\":\"kano-ui-sticker\",\"userStyle\":{},\"userProperties\":{\"size\":100,\"src\":\"/./profiles/kano-os-wand/assets/part/stickers/backgrounds/hogwartschamber.svg\"},\"nonvolatileProperties\":[\"src\",\"size\"],\"position\":{\"x\":207,\"y\":147},\"partType\":\"ui\",\"supportedHardware\":[],\"excludeDefaultBlocks\":false,\"showDefaultConfiguration\":true,\"rotation\":0,\"scale\":514,\"visible\":true},{\"id\":\"speaker\",\"name\":\"Speaker\",\"type\":\"speaker\",\"tagName\":\"kano-part-speaker\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":58.166666666666664,\"y\":130.875},\"partType\":\"hardware\",\"supportedHardware\":[]},{\"id\":\"wand\",\"name\":\"Wand\",\"type\":\"wand\",\"tagName\":\"kc-part-wand\",\"userStyle\":{},\"userProperties\":{},\"nonvolatileProperties\":[],\"position\":{\"x\":174.5,\"y\":130.875},\"partType\":\"hardware\",\"supportedHardware\":[]}]}"
+}

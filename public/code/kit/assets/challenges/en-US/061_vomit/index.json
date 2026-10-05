@@ -1,0 +1,58 @@
+{
+    "steps": [
+        {
+            "banner": {
+                "text": "**PUZZLE:** Using code sort the vomit flavoured Bertie Bott's Every Flavour Beans from the other flavours and into the jar, the vomit flavoured ones are orange with speckles"
+            },
+            "validation": "win"
+        },
+        {
+            "banner": {
+                "text": "Well done, you solved the puzzle",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [],
+    "modules": [
+        "events",
+        "position",
+        "objects",
+        "control",
+        "wand",
+        "math",
+        "particle"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "events": [
+            "events_onWandOver",
+            "events_onGesture"
+        ],
+        "position": [
+            "position_set",
+            "position_applyForce"
+        ],
+        "objects": [
+            "objects_positionAngle"
+        ],
+        "control": [
+            "repeat_x_times"
+        ],
+        "wand": [
+            "wand_vibrate"
+        ],
+        "math": [
+            "math_random",
+            "math_lerp"
+        ]
+    },
+    "mode": "wand",
+    "id": "061_vomit",
+    "flyoutMode": true,
+    "defaultApp": "{\"source\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"></xml>\",\"scene\":\"puzzle061\"}"
+}

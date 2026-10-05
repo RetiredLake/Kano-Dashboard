@@ -1,0 +1,1 @@
+import Scene from"../../../lib/physics/scene/scene.js";import{Store}from"../../../lib/store.js";class ClassroomPotionsNoPotionScene extends Scene{load(...o){super.load(...o)}static get setupFileUrl(){const{config:o}=Store.getState();return`${o.root}assets/scenes/classroom-potions-no-potion/setup.scn`}}export default ClassroomPotionsNoPotionScene;
