@@ -122,11 +122,10 @@ export default function DashboardClient() {
 
   return (
     <main className="dashboard-page">
-      <SkyArtwork />
 
       <header className="dashboard-header">
         <div className="profile-block">
-          <GuestAvatar />
+          <img className="profile-avatar" src="/dashboard/judoka-avatar.png" alt="Profile" />
           <div className="profile-copy">
             <strong>Guest</strong>
             <span>Level 1</span>

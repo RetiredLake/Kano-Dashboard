@@ -62,7 +62,7 @@ button:focus-visible, a:focus-visible {
   min-height: 300px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(180deg, #4eacd9 0%, #68b9e0 46%, #9bd7ed 100%);
+  background: #54aad7 url("/dashboard/wallpaper.png") center / cover no-repeat;
 }
 
 .sky-artwork {
