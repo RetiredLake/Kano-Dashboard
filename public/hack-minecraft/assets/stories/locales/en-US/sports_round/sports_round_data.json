@@ -1,0 +1,326 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "This app needs two parts: sports news data and a scroller to show the news! Click 'Add Part'."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "sports",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-sports"
+            },
+            "tooltips": [{
+                "text": "Add the sports data",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "Now let's add the scroller."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "scrolling-text",
+                    "id": "part_1"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-scrolling-text"
+            },
+            "tooltips": [{
+                "text": "Click on 'Scroller'.",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "rawId": "default_part_event_id"
+                        },
+                        "value": {
+                            "event_from": "part_0",
+                            "event": "update"
+                        }
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This is your event block.<br />Change <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Sports updated</span></kano-value-preview>."
+            }
+        },
+        {
+            "banner": {
+                "text": "That's a small but important change to your code! Now any code inside this block will run every time the sports data is updated.",
+                "next_button": true
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Sports tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "for_each",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "for_each"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>for each item in sports</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to your event block"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Scroller tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "scroll",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "scroll"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drag the <em>scroll</em> block into your code."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "inputName": "DO"
+                        },
+                        "target": "block_1"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": "block_0"
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it inside the <em>for each item</em> loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Sports tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "get_value_at",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "get_value_at"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>Sports title</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "inputName": "TEXT"
+                        },
+                        "target": "block_2"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": "block_1"
+                },
+                "target": "TEXT"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the scroller <em>scroll</em> block."
+            }
+        },
+        {
+            "banner": {
+                "text": "Nice work! This clever loop goes through all the sports headlines and queues them up to scroll across the page!",
+                "next_button": true
+            }
+        },
+        {
+            "banner": {
+                "text": "Now your text scroller shows the latest sports news, but it could look a lot better. Click 'Scroller' in the Parts list (under your creation) and change the style settings.",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "sports",
+        "scrolling-text"
+    ],
+    "filterBlocks": {
+        "sports": [
+            "for_each",
+            "get_value_at"
+        ]
+    },
+    "modules": [],
+    "variables": [],
+    "mode": "normal"
+}

@@ -1,0 +1,300 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "M",
+                "key": 77,
+                "name": "Moat",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"M\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Make a Moat",
+        "group": "fortress",
+        "nextStory": "fortress-tower",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Let's put a moat around the wall, we'll use a loop to make it faster",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_0",
+                "openFlyoutCopy": "Use a variable to keep track of the size of the moat, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space to create a variable",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>moatSize</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "moatSize"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_1",
+                "openFlyoutCopy": "Add a number to set the variable, Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "=.[7E@+f{(=Y-ArK/JT~",
+                    "id": "block_0",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>40</span></kano-value-preview>, this will be the size of the moat"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "40"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "repeat_x_times",
+                "alias": "block_2",
+                "openFlyoutCopy": "Loops run the code within over an over, open the Control tray and add a repeat block",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "=.[7E@+f{(=Y-ArK/JT~",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "N",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "N",
+                                "id": "block_2"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_3",
+                "openFlyoutCopy": "Let's add a cylinder within the loop, open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "nwq2:E?Kq=z)fy~z[p%?",
+                    "id": "block_2",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Y value from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-4</span></kano-value-preview>, this will sink the moat into the ground"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "-4"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_4",
+                "openFlyoutCopy": "Now we can use the variable we set earlier for the width, open the Variables tray",
+                "grabBlockCopy": "This block is used to get a variable we set earlier",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "M~@IdzWr-^~QMcXn[X8e",
+                    "id": "block_3",
+                    "inputName": "WIDTH"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>moatSize</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_4"
+                            },
+                            "value": "moatSize"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-water\"></i> to make the moat water"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "unary",
+                "alias": "block_5",
+                "openFlyoutCopy": "Let's use some math to change the variable every loop, open the Math tray",
+                "grabBlockCopy": "This block will add 1 to the variable every loop",
+                "connectCopy": "Connect it below the cylinder block",
+                "connectTo": {
+                    "rawId": "M~@IdzWr-^~QMcXn[X8e",
+                    "id": "block_3",
+                    "inputName": "@next"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>moatSize</span></kano-value-preview> so it changes the moat size"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "moatSize"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Let's make your moat, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to make your moat",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ],
+        "variables": [
+            "moatSize"
+        ]
+    }
+}

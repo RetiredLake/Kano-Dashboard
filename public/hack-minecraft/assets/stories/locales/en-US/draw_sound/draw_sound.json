@@ -1,0 +1,658 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "First grab a microphone to hear the sound around you."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "microphone",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-microphone"
+            },
+            "tooltips": [{
+                "text": "Add the Mic to your app",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Let's start drawing!<br>Open this tray"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#move_to",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#move_to"
+                }
+            },
+            "banner": {
+                "text": "This block sets the position of the drawing pen. Grab it!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Connect it inside your <em>app starts</em> event."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "X",
+                            "id": "block_0"
+                        },
+                        "value": "0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "X",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "We want to start drawing on the left side. Change the x (left to right) to <kano-value-preview><span>0</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "Y",
+                            "id": "block_0"
+                        },
+                        "value": "190"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "Y",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the y (top to bottom) to <kano-value-preview><span>190</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Want to pick the colors we use? Open the draw tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#color",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#color"
+                }
+            },
+            "banner": {
+                "text": "This block picks the color of the inside of our shapes. This is called the <em>fill color</em>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": "`8*u[W%@ULYO%%#6qBmw"
+                        },
+                        "target": "block_1"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "`8*u[W%@ULYO%%#6qBmw"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the previous block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_1",
+                            "shadow": "COLOR"
+                        }
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1",
+                        "shadow": "COLOR"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to a bright color like <kano-value-preview><span>#ffff00</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Next we need to set the color of the shape’s edge. This is called the <em>stroke</em>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#stroke",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#stroke"
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>stroke</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "rawId": "ACR2tsPl0HX?=e^iu~-6"
+                        },
+                        "target": "block_3"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "ACR2tsPl0HX?=e^iu~-6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "control"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "control"
+                }
+            },
+            "banner": {
+                "text": "Great colors!<br>Now let’s start drawing. To start we need a <em>loop</em>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "every_x_seconds",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "every_x_seconds"
+                }
+            },
+            "banner": {
+                "text": "We will put our drawing code inside of this loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_3",
+                            "rawId": "F#ArBE7^H=0DvaR_jN:L"
+                        },
+                        "target": "block_5"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "F#ArBE7^H=0DvaR_jN:L"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop it there"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "frames"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Make it go faster!<br>Change to <kano-value-preview><span>frames</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Now we will add code inside our loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#move",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#move"
+                }
+            },
+            "banner": {
+                "text": "This block will <em>move</em> our drawing pen"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_5",
+                            "rawId": ",-.2dTGy/KR*tv1Vz?@0",
+                            "inputName": "DO"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": ",-.2dTGy/KR*tv1Vz?@0"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": ",-.2dTGy/KR*tv1Vz?@0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop it inside the loop"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "X",
+                            "id": "block_6"
+                        },
+                        "value": "1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "X",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Move x along by <kano-value-preview><span>1</span></kano-value-preview> pixel each frame"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "Y",
+                            "id": "block_6"
+                        },
+                        "value": "0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "Y",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Set y to move <kano-value-preview><span>0</span></kano-value-preview> pixels"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Time to pick our shape!<br>We want an ellipse."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#ellipse",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#ellipse"
+                }
+            },
+            "banner": {
+                "text": "Grab this block"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_6",
+                            "rawId": "M=QqGn5pi~-7k._R`l+%"
+                        },
+                        "target": "block_7"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_6",
+                        "rawId": "M=QqGn5pi~-7k._R`l+%"
+                    }
+                }
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "RADIUSX",
+                            "id": "block_7"
+                        },
+                        "value": "1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "RADIUSX",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let's make the ellipse super narrow<br>Change to <kano-value-preview><span>1</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Finally, we will control its height using<br>data from our mic!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "get_volume",
+                        "id": "block_8"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "get_volume"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block gives us the mic's volume"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_7",
+                            "rawId": "rDUmTEBLgb]W]Rt%p:a.",
+                            "inputName": "RADIUSY"
+                        },
+                        "target": "block_8"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "rDUmTEBLgb]W]Rt%p:a."
+                    }
+                },
+                "target": "RADIUSY"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "rDUmTEBLgb]W]Rt%p:a."
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let's control the shape's height using sound!<br>It will be tall when its loud..."
+            }
+        },
+        {
+            "banner": {
+                "text": "Say something and see what shapes the sound can make!",
+                "next_button": true
+            }
+        },
+        {
+            "banner": {
+                "text": "Try remixing your creation by changing the colors and making it go at different speeds!",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "microphone"
+    ],
+    "modules": [
+        "control"
+    ],
+    "filterBlocks": {
+        "normal": [
+            "move_to",
+            "move",
+            "color",
+            "stroke",
+            "ellipse"
+        ],
+        "microphone": [
+            "get_volume"
+        ],
+        "control": [
+            "every_x_seconds"
+        ]
+    },
+    "variables": [],
+    "mode": "normal",
+    "defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

@@ -1,0 +1,121 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 71,
+            "keyLabel": "G",
+            "name": "Color Flurry",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"G\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Color Flurry",
+        "group": "origin",
+        "nextStory": "water-pyramid",
+        "steps": [
+            {
+                "banner": {
+                    "text":"Let's combine random positions and random color to create a crazy colorful space",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "Open the <b>Craft</b> tray.",
+                "grabBlockCopy": "Drag the <b>create</b> block onto your code space.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "position",
+                "blockType": "minecraft_position_random",
+                "alias": "block_1",
+                "openFlyoutCopy": "Open the <b>Position</b> tray.",
+                "grabBlockCopy": "Random functions in code is like rolling a dice, it gives you a different number every time. Drag the <b>random position</b> block onto your code space.",
+                "connectCopy": "Connect it to the cube position.",
+                "connectTo": {
+                    "id": "block_0",
+                    "rawId": "-3}`5jPaM0mnF6=]mTjI",
+                    "inputName": "POSITION"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change the distance to <kano-value-preview><span>10</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "DISTANCE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "DISTANCE",
+                                "id": "block_1"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "blocks",
+                "blockType": "minecraft_random_wool",
+                "alias": "block_2",
+                "openFlyoutCopy": "Open the <b>Blocks</b> tray",
+                "grabBlockCopy": "Random isn't just for numbers, we can use it for colors too. Drag the <b>random wool</b> block onto your code space.",
+                "connectCopy": "Connect it to the cube <b>Type</b>.",
+                "connectTo": {
+                    "id": "block_0",
+                    "rawId": "-3}`5jPaM0mnF6=]mTjI",
+                    "inputName": "TYPE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit Tab. Mash the key and look around"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Keep hitting the ${default_power.keyLabel} key! Fill the world with colorful blocks",
+                "validation": {
+                    "wait": 10000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+            "banner": {
+                "text":"Why not try changing the Random Wool to Random Block",
+                "next_button": true
+            }
+            }
+        ]
+    }
+}

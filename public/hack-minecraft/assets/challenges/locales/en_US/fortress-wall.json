@@ -1,0 +1,340 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "V",
+                "key": 86,
+                "name": "Wall",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"V\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Fortress Wall",
+        "group": "fortress",
+        "nextStory": "fortress-moat",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Every fortress needs a wall, let's build a circular wall using cylinders",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_0",
+                "openFlyoutCopy": "Cylinders can be found in the Craft tray, open it",
+                "grabBlockCopy": "Drag the cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>30</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_0"
+                            },
+                            "value": "30"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_0"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change type from<i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i> for the outer walls"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's create the battlements, open the Craft tray",
+                "grabBlockCopy": "Drag another Cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "*J9n6Ag;y4|58o~gL_p]",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>29</span></kano-value-preview>, smaller than the outer wall"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_1"
+                            },
+                            "value": "29"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Make the battlements shorter so you can walk around them, change height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_1"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_2",
+                "openFlyoutCopy": "Make more battlements, open the Craft tray again",
+                "grabBlockCopy": "Drag another cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "}wgDSlv~JI5@zGkY`}5r",
+                    "id": "block_1"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>28</span></kano-value-preview> smaller than the last"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_2"
+                            },
+                            "value": "28"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_2"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_3",
+                "openFlyoutCopy": "Let's finish off the wall, open the Craft tray",
+                "grabBlockCopy": "Drag a final cylinder onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "(UEH`wGTTyPszCdt3w6G",
+                    "id": "block_2"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>27</span></kano-value-preview> completing the inner wall"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_3"
+                            },
+                            "value": "27"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview> to match the outer wall"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_3"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Let's build your fortress wall! Hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to build a wall instantly",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

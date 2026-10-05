@@ -1,0 +1,91 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 70,
+            "keyLabel": "F",
+            "name": "Teleportation",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"F\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Teleportation",
+        "group": "origin",
+        "nextStory": "random-wool",
+        "steps": [
+            {
+                "banner": {
+                    "text":"Code can do more than just change the Minecraft landscape, it can hack your character too",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "player",
+                "blockType": "minecraft_player_set",
+                "alias": "block_0",
+                "openFlyoutCopy": "Open the <b>Player</b> tray.",
+                "grabBlockCopy": "We can move Steve with this <b>Set player position</b> block.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>40</span></kano-value-preview>, this will teleport you high into the air."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "40"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": "Hit tab and try teleporting a few times.",
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to teleport into the sky!",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Experiment changing the X Y Z Position values to teleport in different directions.",
+                    "next_button": true
+                }
+            }
+        ]
+    }
+}

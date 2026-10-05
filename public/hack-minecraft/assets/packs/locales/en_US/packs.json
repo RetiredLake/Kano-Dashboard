@@ -1,0 +1,177 @@
+[{
+    "id": "origin",
+    "heading": "Your Origin Story",
+    "description": "Take on challenges to unlock new code powers",
+    "cardDescription": "Discover new powers that can reshape the world (with the tap of a key)",
+    "image": "/hack-minecraft/assets/origin-story.jpg",
+    "new": false,
+    "challenges": [{
+        "id": "tower",
+        "image": "/hack-minecraft/assets/challenges/images/tower.png",
+        "heading": "T is for Tower",
+        "description": "The power to make towers by pressing one key"
+    },{
+        "id": "your-name",
+        "image": "/hack-minecraft/assets/challenges/images/your-name.png",
+        "heading": "Namify",
+        "description": "The power to make your name appear in blocks"
+    },
+    {
+        "id": "shelter",
+        "image": "/hack-minecraft/assets/challenges/images/shelter.png",
+        "heading": "Pow Pow Shelter",
+        "description": "Make an instant shelter with the tap of a key. Pow!"
+    },
+    {
+        "id": "hole",
+        "image": "/hack-minecraft/assets/challenges/images/hole.png",
+        "heading": "Holey-Moley",
+        "description": "Learn the power to mine large chunks of the world"
+    },
+    {
+        "id": "road",
+        "image": "/hack-minecraft/assets/challenges/images/road.png",
+        "heading": "Whammy Walk",
+        "description": "Make a path appear wherever you walk or jump"
+    },
+    {
+        "id": "teleport",
+        "image": "/hack-minecraft/assets/challenges/images/teleport.png",
+        "heading": "Teleportation",
+        "description": "No more walking. Teleport around the world instead"
+    },
+    {
+        "id": "random-wool",
+        "image": "/hack-minecraft/assets/challenges/images/random-wool.png",
+        "heading": "Color Flurry",
+        "description": "Spawn random colored blocks in crazy patterns"
+    },
+    {
+        "id": "water-pyramid",
+        "image": "/hack-minecraft/assets/challenges/images/water-pyramid.png",
+        "heading": "Powermid",
+        "description": "The power to spawn giant pyramids with waterfalls"
+    },
+    {
+        "id": "tree-mendous",
+        "image": "/hack-minecraft/assets/challenges/images/tree-mendous.png",
+        "heading": "TreeMendous",
+        "description": "The power over nature. Grow a spectacular tree instantly"
+    },
+    {
+        "id": "lava-sphere",
+        "image": "/hack-minecraft/assets/challenges/images/lava-sphere.png",
+        "heading": "Lava Sphere",
+        "description": "Make a lava-filled sphere appear before your eyes"
+    }]
+}, {
+    "id": "fortress",
+    "heading": "Fortress of Blocktitude",
+    "description": "Build a Fortress Using Code",
+    "cardDescription": "Code the building blocks to make amazing fortresses",
+    "image": "/hack-minecraft/assets/fortress.jpg",
+    "new": false,
+    "challenges": [
+       {
+        "id": "fortress-clear",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-clear.png",
+        "heading": "Clear Some Space",
+        "description": "Clear trees and mountains with the press of a key"
+       },
+       {
+        "id": "fortress-wall",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-wall.png",
+        "heading": "Fortress Wall",
+        "description": "Build a huge wall to start your Fortress"
+       },
+       {
+        "id": "fortress-moat",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-moat.png",
+        "heading": "Dig a Moat",
+        "description": "Protect your wall with a moat made with loops"
+       },
+       {
+        "id": "fortress-tower",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-tower.png",
+        "heading": "Make Turrets",
+        "description": "Build many turrets for your wall"
+       },
+       {
+        "id": "fortress-gatehouse",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-gatehouse.png",
+        "heading": "Make a Gatehouse",
+        "description": "Build a gatehouse to enter your Fortress"
+       },
+       {
+        "id": "fortress-flag",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-flag.png",
+        "heading": "Plant some Flags",
+        "description": "Make many flags using random wool"
+       },
+       {
+        "id": "fortress-dungeon",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-dungeon.png",
+        "heading": "Dig a Dungeon",
+        "description": "Use loops to dig deep dungeons"
+       },
+       {
+        "id": "fortress-keep",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-keep.png",
+        "heading": "Create a Keep",
+        "description": "Craft a truly terrifying keep"
+       },
+       {
+        "id": "fortress-throne",
+        "image": "/hack-minecraft/assets/challenges/images/fortress-throne.png",
+        "heading": "Make a Throne",
+        "description": "The finishing touch to your Fortress"
+       }
+ ]
+ }, {
+     "id": "space",
+     "heading": "Galactic Crafting",
+     "description": "Hack your own unique space creations",
+     "cardDescription": "Become an astronaut and program your own unique galaxy",
+     "image": "/hack-minecraft/assets/space.jpg",
+     "new": true,
+     "challenges": [
+        {
+         "id": "space-planet",
+         "image": "/hack-minecraft/assets/challenges/images/space-planet.png",
+         "heading": "Random Planet Maker",
+         "description": "Code a power that makes unique planets every time"
+        },
+        {
+         "id": "space-stars",
+         "image": "/hack-minecraft/assets/challenges/images/space-stars.png",
+         "heading": "A Galaxy of Stars",
+         "description": "Make an array of stars"
+        },
+        {
+         "id": "space-launchpad",
+         "image": "/hack-minecraft/assets/challenges/images/space-launchpad.png",
+         "heading": "Set Up a Launchpad",
+         "description": "You can't have a rocket without a place to launch it!"
+        },
+        {
+         "id": "space-rocket",
+         "image": "/hack-minecraft/assets/challenges/images/space-rocket.png",
+         "heading": "Blast off!",
+         "description": "Craft a space-faring rocket"
+        },
+        {
+         "id": "space-ufo",
+         "image": "/hack-minecraft/assets/challenges/images/space-ufo.png",
+         "heading": "Unidentified Flying Object",
+         "description": "Make a giant UFO!"
+        },
+        {
+         "id": "space-uforay",
+         "image": "/hack-minecraft/assets/challenges/images/space-beam.png",
+         "heading": "UFO Beam",
+         "description": "Use variables and loops to make a beam come from the UFO"
+        }
+
+  ]
+  }
+]

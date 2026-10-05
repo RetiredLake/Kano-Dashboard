@@ -1,0 +1,782 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Tree-Mendous",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Tree-Mendous",
+        "group": "origin",
+        "nextStory": "lava-sphere",
+        "steps": [
+            {
+                "banner": {
+                    "text": "Let’s make a tree grow with the power of our mind. Or the tap of a key.",
+                    "next_button": true
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "Let's start with the trunk, open the <b>Craft</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                },
+                "arrow": {
+                    "target": {
+                        "category": "craft"
+                    },
+                    "angle": 45,
+                    "size": 80
+                },
+                "injected": true
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_set_blocks"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_set_blocks\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_set_blocks"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_set_blocks",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": null,
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change Y to <kano-value-preview><span>10</span></kano-value-preview> to set the height of our tree"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change to <i class=\"blocks-sprite blocks-sprite-wood_spruce_up_down\"></i>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Variables are a way of storing numbers, text or color in your code"
+                },
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "variables"
+                        },
+                        "position": "right",
+                        "text": "Open the Variables tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "variables"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "variables_set"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"variables_set\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "variables_set"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "variables_set",
+                            "id": "block_2"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "HX=9,C.Xw[ZqY2aP~UR:"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "HX=9,C.Xw[ZqY2aP~UR:"
+                            },
+                            "target": "block_2"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "HX=9,C.Xw[ZqY2aP~UR:"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "variables"
+                        },
+                        "position": "right",
+                        "text": "Now we need to add leaves to our tree, open the Variables tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "variables"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "math_number"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "math_number"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "math_number",
+                            "id": "block_3"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_2",
+                                "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_2",
+                                "rawId": "tgyAcxjh|$.d.S7#aE^j",
+                                "inputName": "VALUE"
+                            },
+                            "target": "block_3"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_2",
+                            "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                        }
+                    },
+                    "target": "VALUE"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_3"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change to <kano-value-preview><span>3</span></kano-value-preview>, this is the height where our leaves begin"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "control"
+                        },
+                        "position": "right",
+                        "text": "We're going to use loops to grow our leaves, open the Control tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "control"
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Repeat loops run the same piece of code a number of times"
+                },
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "repeat_x_times"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"repeat_x_times\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "repeat_x_times"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "repeat_x_times",
+                            "id": "block_4"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_2",
+                                "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_2",
+                                "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                            },
+                            "target": "block_4"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_2",
+                            "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "N",
+                                "id": "block_4"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We need <kano-value-preview><span>4</span></kano-value-preview> branches<br>so what number do you think goes in here?"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "N",
+                                "id": "block_4"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "Well done! Now let's grow those leaves, open the Craft tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_shape"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_shape\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_create_shape"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_shape",
+                            "id": "block_5"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_4",
+                                "rawId": "!K}-NRv6yVKPj3oL0U/q"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_4",
+                                "rawId": "!K}-NRv6yVKPj3oL0U/q",
+                                "inputName": "DO"
+                            },
+                            "target": "block_5"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_4",
+                            "rawId": "!K}-NRv6yVKPj3oL0U/q"
+                        }
+                    },
+                    "target": "DO"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_5"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change **cube** to **pyramid**"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "PYRAMID"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "variables"
+                        },
+                        "position": "right",
+                        "text": "Let's use the variable we set earlier, open the Variables tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "variables"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "variables_get"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"variables_get\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "variables_get"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "variables_get",
+                            "id": "block_7"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_5",
+                                "shadow": "POSITION"
+                            }
+                        },
+                        "position": "bottom",
+                        "text": "Connect it to Y"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_5",
+                                "shadow": "POSITION",
+                                "inputName": "Y"
+                            },
+                            "target": "block_7"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_5",
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            }
+                        }
+                    },
+                    "target": "Y"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "TYPE",
+                                "id": "block_5"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change to <i class=\"blocks-sprite blocks-sprite-leaves_oak_leaves\"></i>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_5"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "math"
+                        },
+                        "position": "right",
+                        "text": "Let's use math to work our way up the trunk, open the Math tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "math"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "unary"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"unary\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "unary"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "unary",
+                            "id": "block_8"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_5",
+                                "rawId": "bwpqGtH+a$ku]Tfx:=4d"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it within our loop"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_5",
+                                "rawId": "bwpqGtH+a$ku]Tfx:=4d"
+                            },
+                            "target": "block_8"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_5",
+                            "rawId": "bwpqGtH+a$ku]Tfx:=4d"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "RIGHT_HAND",
+                                "id": "block_8"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Our branches are <kano-value-preview><span>3</span></kano-value-preview> blocks apart"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RIGHT_HAND",
+                                "id": "block_8"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab. And use your power to grow a forest!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try taking a step back to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Play with different Types of blocks, maybe water",
+                    "next_button": true
+                }
+            }
+        ]
+    },
+    "title": "Arbol-Tástico"
+}

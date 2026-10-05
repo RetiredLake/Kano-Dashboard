@@ -1,0 +1,1753 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "You're going to animate a sticker by looping through three different pictures. Click 'Add part' to get started."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "sticker",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-sticker"
+            },
+            "tooltips": [{
+                "text": "Add a Sticker to your app",
+				"position": "top",
+				"location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_set",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_set"
+                }
+            },
+            "banner": {
+                "text": "Drag the variable block into your code."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0"
+                        },
+                        "value": "stickerlist"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the variable from <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>stickerlist</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "lists"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "lists"
+                }
+            },
+            "banner": {
+                "text": "Open the Lists tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "lists_create_with",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "lists_create_with"
+                }
+            },
+            "banner": {
+                "text": "Grab the list block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": ")Kt?BsmhQ.bJ|6XUd7ly",
+                            "inputName": "VALUE"
+                        },
+                        "target": "block_1"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": ")Kt?BsmhQ.bJ|6XUd7ly"
+                    }
+                },
+                "target": "VALUE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": ")Kt?BsmhQ.bJ|6XUd7ly"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to your variable."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Sticker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "assets_get_sticker",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "assets_get_sticker"
+                }
+            },
+            "banner": {
+                "text": "Grab the sticker block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "rawId": "5c0B*(^f`[%cBEBhw91#",
+                            "inputName": "ADD0"
+                        },
+                        "target": "block_2"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                },
+                "target": "ADD0"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the first list input."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "vehicles"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the first value from <kano-value-preview><span>animals</span></kano-value-preview> to  <kano-value-preview><span>vehicles</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Sticker tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "assets_get_sticker",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "assets_get_sticker"
+                }
+            },
+            "banner": {
+                "text": "Grab another of the same sticker blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "rawId": "5c0B*(^f`[%cBEBhw91#",
+                            "inputName": "ADD1"
+                        },
+                        "target": "block_3"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                },
+                "target": "ADD1"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the second list input."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_3"
+                        },
+                        "value": "vehicles"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>animals</span></kano-value-preview> to <kano-value-preview><span>vehicles</span></kano-value-preview> again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_3"
+                        },
+                        "value": "fire-engine"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the second input to <kano-value-preview><span>Fire engine</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "one more time. Open the sticker tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "assets_get_sticker",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "assets_get_sticker"
+				}
+            },
+            "banner": {
+                "text": "Grab a third of the same sticker blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "rawId": "5c0B*(^f`[%cBEBhw91#",
+                            "inputName": "ADD2"
+                        },
+                        "target": "block_4"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                },
+                "target": "ADD2"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "5c0B*(^f`[%cBEBhw91#"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the third list input."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_4"
+                        },
+                        "value": "vehicles"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>animals</span></kano-value-preview> to <kano-value-preview><span>vehicles</span></kano-value-preview> again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_4"
+                        },
+                        "value": "police-car"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This time, set the sticker to <kano-value-preview><span>Police car</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_set",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_set"
+                }
+            },
+            "banner": {
+                "text": "Drag the <em>set item</em> block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": ")Kt?BsmhQ.bJ|6XUd7ly"
+                        },
+                        "target": "block_5"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": ")Kt?BsmhQ.bJ|6XUd7ly"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": ")Kt?BsmhQ.bJ|6XUd7ly"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "count"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>count</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Drag the simple number block into your code."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_5",
+                            "rawId": "X_V-y_4@#!#0zf?s/T-7",
+                            "inputName": "VALUE"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "X_V-y_4@#!#0zf?s/T-7"
+                    }
+                },
+                "target": "VALUE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "X_V-y_4@#!#0zf?s/T-7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to your <em>count</em> variable."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_6"
+                        },
+                        "value": "1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Set the number to <kano-value-preview><span>1</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "control"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "control"
+                }
+            },
+            "banner": {
+                "text": "Open the Control tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "every_x_seconds",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "every_x_seconds"
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>Every 1 second</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_5",
+                            "rawId": "X_V-y_4@#!#0zf?s/T-7"
+                        },
+                        "target": "block_7"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "X_V-y_4@#!#0zf?s/T-7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "X_V-y_4@#!#0zf?s/T-7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it beneath your last block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_7"
+                        },
+                        "value": "frames"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This will be the animation loop that flips between sticker pictures. Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "INTERVAL",
+                            "id": "block_7"
+                        },
+                        "value": "10"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "INTERVAL",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change this number so the loop runs every <kano-value-preview><span>10</span></kano-value-preview> frames."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "math"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "math"
+                }
+            },
+            "banner": {
+                "text": "Open the Math tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "unary",
+                        "id": "block_8"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "unary"
+                }
+            },
+            "banner": {
+                "text": "Grab this block. It will add one to the variable every time the code loops."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_7",
+                            "rawId": "ykR?}6([/]=LRV#n)F0n",
+                            "inputName": "DO"
+                        },
+                        "target": "block_8"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "ykR?}6([/]=LRV#n)F0n"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "ykR?}6([/]=LRV#n)F0n"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it inside the loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_8"
+                        },
+                        "value": "count"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_8"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>count</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "banner": {
+                "text": "Time for some logic. Open the tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "controls_if",
+                        "id": "block_9"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "controls_if"
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>if</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_8",
+                            "rawId": "FHo|a7}!BC`1/yztR%7;"
+                        },
+                        "target": "block_9"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_8",
+                        "rawId": "FHo|a7}!BC`1/yztR%7;"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_8",
+                        "rawId": "FHo|a7}!BC`1/yztR%7;"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "banner": {
+                "text": "Open the Logic tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "logic_compare",
+                        "id": "block_10"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "logic_compare"
+                }
+            },
+            "banner": {
+                "text": "Grab this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "Q|hm(id]@S)H?@j}[TU.",
+                            "inputName": "IF0"
+                        },
+                        "target": "block_10"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                },
+                "target": "IF0"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to your <em>if</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_10"
+                        },
+                        "value": "GT"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>=</span></kano-value-preview> to <kano-value-preview><span>> greater than</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_get",
+                        "id": "block_11"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_get"
+                }
+            },
+            "banner": {
+                "text": "Grab this block. It <em>returns</em> the value of the variable."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_10",
+                            "rawId": "]82eRtq~vd(WRg~yRqUo",
+                            "inputName": "A"
+                        },
+                        "target": "block_11"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "]82eRtq~vd(WRg~yRqUo"
+                    }
+                },
+                "target": "A"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "]82eRtq~vd(WRg~yRqUo"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Plug it into the left input of your logic check."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_11"
+                        },
+                        "value": "count"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_11"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>count</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_12"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab a simple number block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_10",
+                            "rawId": "]82eRtq~vd(WRg~yRqUo",
+                            "inputName": "B"
+                        },
+                        "target": "block_12"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "]82eRtq~vd(WRg~yRqUo"
+                    }
+                },
+                "target": "B"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "]82eRtq~vd(WRg~yRqUo"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Plug it into the right input in your logic check."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_12"
+                        },
+                        "value": "3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_12"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Set the number to <kano-value-preview><span>3</span></kano-value-preview>."
+            }
+        },
+        {
+            "banner": {
+                "text": "Now <em>if</em> the number stored in the variable is greater than 3, the code in this block will run.",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_set",
+                        "id": "block_13"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_set"
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>set item to</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "Q|hm(id]@S)H?@j}[TU.",
+                            "inputName": "DO0"
+                        },
+                        "target": "block_13"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                },
+                "target": "DO0"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it inside the if statement."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_13"
+                        },
+                        "value": "count"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_13"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>count</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_14"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab the simple number block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_13",
+                            "rawId": "^y_fMHDL5+mq[9!wbhP8",
+                            "inputName": "VALUE"
+                        },
+                        "target": "block_14"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "^y_fMHDL5+mq[9!wbhP8"
+                    }
+                },
+                "target": "VALUE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "^y_fMHDL5+mq[9!wbhP8"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the <em>set</em> variable block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_14"
+                        },
+                        "value": "1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_14"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the value to <kano-value-preview><span>1</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Sticker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "set_sticker",
+                        "id": "block_15"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "set_sticker"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>set to</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "Q|hm(id]@S)H?@j}[TU."
+                        },
+                        "target": "block_15"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "Q|hm(id]@S)H?@j}[TU."
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it beneath the if block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "lists"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "lists"
+                }
+            },
+            "banner": {
+                "text": "Open the Lists tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "lists_getIndex",
+                        "id": "block_16"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "lists_getIndex"
+                }
+            },
+            "banner": {
+                "text": "Grab this block. It’s for getting back things you stored in the list."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_15",
+                            "rawId": "yxFpN%b^CYy=]%|TJLrB",
+                            "inputName": "PICTURE"
+                        },
+                        "target": "block_16"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_15",
+                        "rawId": "yxFpN%b^CYy=]%|TJLrB"
+                    }
+                },
+                "target": "PICTURE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_15",
+                        "rawId": "yxFpN%b^CYy=]%|TJLrB",
+                        "inputName": "PICTURE"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the sticker input."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_get",
+                        "id": "block_17"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_get"
+                }
+            },
+            "banner": {
+                "text": "Drag the <kano-blockly-block type=\"variables_get\"></kano-blockly-block> block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_16",
+                            "rawId": "*)tRBzROHrDE~T=0.`j+",
+                            "inputName": "VALUE"
+                        },
+                        "target": "block_17"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "*)tRBzROHrDE~T=0.`j+"
+                    }
+                },
+                "target": "VALUE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "*)tRBzROHrDE~T=0.`j+"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the left input of the <em>in list get</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_17"
+                        },
+                        "value": "stickerlist"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_17"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>stickerlist</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "variables_get",
+                        "id": "block_18"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "variables_get"
+                }
+            },
+            "banner": {
+                "text": "Grab another <kano-blockly-block type=\"variables_get\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_16",
+                            "rawId": "*)tRBzROHrDE~T=0.`j+",
+                            "inputName": "AT"
+                        },
+                        "target": "block_18"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "*)tRBzROHrDE~T=0.`j+"
+                    }
+                },
+                "target": "AT"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "*)tRBzROHrDE~T=0.`j+"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to the right input of the <em>in list get</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_18"
+                        },
+                        "value": "count"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_18"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>count</span></kano-value-preview>."
+            }
+        },
+        {
+            "banner": {
+                "text": "Wow! That's some tricky coding.<br />Can you make it go faster?",
+                "next_button": true
+            }
+        },
+        {
+            "banner": {
+                "text": "In the next challenge, you'll learn how to animate a car driving across the canvas.",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "sticker"
+    ],
+    "modules": [
+        "variables",
+        "lists",
+        "control",
+        "math",
+        "logic"
+    ],
+    "variables": [
+        "stickerlist",
+        "count"
+    ],
+    "mode": "normal",
+    "defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

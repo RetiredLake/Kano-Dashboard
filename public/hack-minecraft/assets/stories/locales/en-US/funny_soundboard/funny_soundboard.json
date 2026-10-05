@@ -1,0 +1,840 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "You're going to build a funny soundboard! It will use three buttons and the speaker part. Click 'Add Part' to begin."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "button",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-button"
+            },
+            "tooltips": [{
+                "text": "Add the first button to your app",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "Two buttons are better than one.<br />Add another one in. Click 'Add Part' again to add another."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "button",
+                    "id": "part_1"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-button"
+            },
+            "tooltips": [{
+                "text": "Add another button part.",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "Those two buttons look a little lonely.<br />Add one more."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "button",
+                    "id": "part_2"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-button"
+            },
+            "tooltips": [{
+                "text": "One more button!",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "And now for the speaker. Click 'Add Parts' again (last time)!"
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "speaker",
+                    "id": "part_3"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-speaker"
+            },
+            "tooltips": [{
+                "text": "Click 'speaker' to let you add sound to your app.",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "rawId": "default_part_event_id"
+                        },
+                        "value": "button.clicked"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "We want code to run when each button is clicked... So change <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Button is clicked</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "When the button is clicked let's make a sound!<br>Open the Speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_play",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_play"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block tells the speaker to play something.<br>Drag it in."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Putting it here will trigger the sound when the button is clicked"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Next we need to pick a sound to play."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_sample",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block lets you pick a sound. Grab it!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": "dWa1n5{!bE7w6wE;kMgk",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_1"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "dWa1n5{!bE7w6wE;kMgk"
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "banner": {
+                "text": "Connect it to the <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_1"
+                        },
+                        "value": "Sounds"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the first drop down (which picks the sound set) from <kano-value-preview><span>drum machine</span></kano-value-preview> to <kano-value-preview><span>sounds</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_1"
+                        },
+                        "value": "misc_crow"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the second drop down (which picks the sound to play) from <kano-value-preview><span>Bell</span></kano-value-preview> to <kano-value-preview><span>Crow</span></kano-value-preview>."
+            }
+        },
+        {
+            "beacon": {
+                "target": {
+                    "path": "workspace",
+                    "part": "part_0"
+                }
+            },
+            "banner": {
+                "text": "Click on the first button in your app to hear the crow sound!",
+                "next_button": true
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "events"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "events"
+                }
+            },
+            "banner": {
+                "text": "Nice! Now let's add sound to the next button. Open the Events tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "part_event",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "part_event"
+                }
+            },
+            "banner": {
+                "text": "We need another event block to add code to."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "drop": {
+                        "target": "block_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop the block anywhere on your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2"
+                        },
+                        "value": "button2.clicked"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the event from <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Button 2 is clicked</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Now to add the sound to the button. Open the speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_play",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_play"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_2",
+                            "rawId": "p4!)q:5C,Vwz)?4Wv}q1",
+                            "inputName": "DO"
+                        },
+                        "target": "block_3"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "p4!)q:5C,Vwz)?4Wv}q1"
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Connect it inside the <em>button 2 clicked</em> event."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Speaker tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_sample",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the sample picker block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_3",
+                            "rawId": "0n,SuTS#0!%?NbZw=j:(",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_4"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "0n,SuTS#0!%?NbZw=j:("
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "banner": {
+                "text": "Connect it to the <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_4"
+                        },
+                        "value": "Sounds"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the first input from <kano-value-preview><span>drum machine</span></kano-value-preview> to <kano-value-preview><span>sounds</span></kano-value-preview>."
+            }
+        },
+        {
+            "beacon": {
+                "target": {
+                    "path": "workspace",
+                    "part": "part_1"
+                }
+            },
+            "banner": {
+                "text": "Click on the green button to hear the bell sound!",
+                "next_button": true
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "events"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "events"
+                }
+            },
+            "banner": {
+                "text": "Ding! Last part: let's add sound to the third button.<br>Open the Events tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "part_event",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "part_event"
+                }
+            },
+            "banner": {
+                "text": "Grab another event block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "drop": {
+                        "target": "block_5"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop the block anywhere on your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "button3.clicked"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Button 3 is clicked</span></kano-value-preview>"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_play",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_play"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_5",
+                            "rawId": "IRlSoQd(`Zsi)iK,GmY?",
+                            "inputName": "DO"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "IRlSoQd(`Zsi)iK,GmY?"
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Just like before! Connect it inside the event block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Speaker tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_3",
+                        "type": "speaker_sample",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_3",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab another sample picker block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_6",
+                            "rawId": "5(}T0p1oPE#C;Q_n-`7U",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_7"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_6",
+                        "rawId": "5(}T0p1oPE#C;Q_n-`7U"
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "banner": {
+                "text": "Connect it to the <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_7"
+                        },
+                        "value": "Sounds"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>drum machine</span></kano-value-preview> to <kano-value-preview><span>sounds</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_7"
+                        },
+                        "value": "perc_swash"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the second input too. Find the <kano-value-preview><span>Swash</span></kano-value-preview> sound."
+            }
+        },
+        {
+            "banner": {
+                "text": "Great sound board! Now click the third button to hear the last sound effect!",
+                "next_button": true
+            }
+        },
+        {
+            "banner": {
+                "text": "Remix your code by adding more buttons and sound effects, or by picking new sounds.",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "button",
+        "speaker"
+    ],
+    "modules": [
+        "events"
+    ],
+    "filterBlocks": {
+        "speaker": [
+            "speaker_play",
+            "speaker_sample"
+        ]
+    },
+    "variables": [],
+    "mode": "normal",
+    "defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

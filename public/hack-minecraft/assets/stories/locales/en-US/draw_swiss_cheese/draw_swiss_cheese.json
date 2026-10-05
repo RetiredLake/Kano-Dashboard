@@ -1,0 +1,739 @@
+{
+	"steps": [
+		{
+            "banner": {
+                "text": "Ready to use loops and random numbers to draw Swiss cheese?",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+		{
+			"banner": {
+				"text": "Start by opening the 'draw' tray."
+			},
+			"beacon": {
+				"target": {
+					"category": "normal"
+				}
+			},
+			"validation": {
+				"blockly": {
+					"open-flyout": "normal"
+				}
+			}
+		},
+		{
+			"banner": {
+				"text": "Grab a block to set the background color ..."
+			},
+			"beacon": {
+				"target": {
+					"flyout_block": "normal#set_background_color"
+				}
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "normal#set_background_color",
+						"id": "block_0"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+				"text": "...and connect the blocks together."
+			},
+			"beacon": {
+				"target": {
+					"block": {
+						"id": null,
+						"rawId": "default_part_event_id"
+					}
+				}
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": null,
+							"rawId": "default_part_event_id",
+							"inputName": "DO"
+						},
+						"target": "block_0"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": null,
+						"rawId": "default_part_event_id"
+					}
+				},
+				"target": "DO"
+			}
+		},
+		{
+		    "banner": {
+		        "text": "Click the color to change it to a nice dark yellow <kano-value-preview><span>#ffcc66</span></kano-value-preview>"
+		    },
+		    "beacon": {
+		        "target": {
+		            "block": {
+		                "shadow": "COLOR",
+		                "id": "block_0"
+		            }
+		        }
+		    },
+		    "validation": {
+		        "blockly": {
+		            "value": {
+		                "target": {
+		                    "shadow": "COLOR",
+		                    "id": "block_0"
+		                }
+		            }
+		        }
+		    }
+		},
+		{
+		   "banner": {
+			   "text": "Open the draw tray again."
+		   },
+		   "beacon": {
+			   "target": {
+				   "category": "normal"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "normal"
+				}
+			}
+		},
+		{
+			"banner": {
+ 			   "text": "This block sets the fill color for drawing shapes. Grab one."
+ 		   },
+ 		   "beacon": {
+ 			   "target": {
+ 				   "flyout_block": "normal#color"
+ 			   }
+ 		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "normal#color",
+						"id": "block_2"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+ 			   "text": "Connect it under your other blocks."
+ 		   },
+ 		   "beacon": {
+ 			   "target": {
+				   "block": {
+					   "id": "block_0",
+					   "rawId": "Qn?NCh`QvFl],N)mC+9a"
+				   }
+ 			   }
+ 		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_0",
+							"rawId": "Qn?NCh`QvFl],N)mC+9a"
+						},
+						"target": "block_2"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_0",
+						"rawId": "Qn?NCh`QvFl],N)mC+9a"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Now pick a dark yellow or brown for your fill color. Something like this one -  <kano-value-preview><span>#996633</span></kano-value-preview>"
+		   },
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "shadow": "COLOR",
+					   "id": "block_2"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+		                    "shadow": "COLOR",
+		                    "id": "block_2"
+		                }
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Now for the loop! Open the control tray."
+		   },
+		   "beacon": {
+			   "target": {
+				   "category": "control"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "control"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "This one loops code every second. Grab it!"
+	   		},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "every_x_seconds"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "every_x_seconds",
+						"id": "block_4"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Connect the blocks together."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "id": "block_2",
+					   "rawId": "I{%qy||N?fdTwJd5;EVx"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_2",
+							"rawId": "I{%qy||N?fdTwJd5;EVx"
+						},
+						"target": "block_4"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_2",
+						"rawId": "I{%qy||N?fdTwJd5;EVx"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Change this value from <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>"
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "id": "block_4"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+							"id": "block_4"
+						},
+						"value": "frames"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Change from <kano-value-preview><span>1</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview> so the code in the loop runs every 10 frames."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "shadow": "INTERVAL",
+					   "id": "block_4"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+							"shadow": "INTERVAL",
+							"id": "block_4"
+						},
+						"value": "10"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Open the Draw tray again."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "category": "normal"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "normal"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Grab a 'move to' block. It sets the cursor position for drawing shapes."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "normal#move_to"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "normal#move_to",
+						"id": "block_5"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Connect it inside the loop."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "id": "block_4",
+					   "rawId": "n{]z|pYgu`2XLD1VgzNa"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_4",
+							"rawId": "n{]z|pYgu`2XLD1VgzNa",
+							"inputName": "DO"
+						},
+						"target": "block_5"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_4",
+						"rawId": "n{]z|pYgu`2XLD1VgzNa"
+					}
+				},
+				"target": "DO"
+			}
+		},
+		{
+			"banner": {
+			   "text": "Open the 'math' tray."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "category": "math"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "math"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "This block outputs a random number. Grab one!"
+	   		},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "math_random"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_random",
+						"id": "block_6"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Connect it to the drawing x position"
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+						  "id": "block_5",
+						  "rawId": "}D@(u`?+cov=sP}mJ@Bd"
+					  }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_5",
+							"rawId": "}D@(u`?+cov=sP}mJ@Bd",
+							"inputName": "X"
+						},
+						"target": "block_6"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_5",
+						"rawId": "}D@(u`?+cov=sP}mJ@Bd"
+					}
+				},
+				"target": "X"
+			}
+		},
+		{
+			"banner": {
+			   "text": "Your app is <kano-value-preview><span>512</span></kano-value-preview> pixels wide.<br />Change the second number in your random block to match."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "shadow": "MAX",
+					   "id": "block_6"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+							"shadow": "MAX",
+							"id": "block_6"
+						},
+						"value": "512"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Open the 'math' tray again."
+	   		},
+		   "beacon": {
+			   "target": {
+				   "category": "math"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "math"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Grab another random number block."
+			},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "math_random"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_random",
+						"id": "block_7"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Connect it to the drawing y position"
+			},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "id": "block_5",
+					   "rawId": "}D@(u`?+cov=sP}mJ@Bd"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_5",
+							"rawId": "}D@(u`?+cov=sP}mJ@Bd",
+							"inputName": "Y"
+						},
+						"target": "block_7"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_5",
+						"rawId": "}D@(u`?+cov=sP}mJ@Bd"
+					}
+				},
+				"target": "Y"
+			}
+		},
+		{
+			"banner": {
+			   "text": "Your app is <kano-value-preview><span>384</span></kano-value-preview> pixels tall.<br />Use that number here."
+			},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "shadow": "MAX",
+					   "id": "block_7"
+				   }
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+							"shadow": "MAX",
+							"id": "block_7"
+						},
+						"value": "384"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Now you can draw circles at random places in your app."
+			},
+		   "beacon": {
+			   "target": {
+				   "category": "normal"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "normal"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Grab the circle block..."
+			},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "normal#circle"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "normal#circle",
+						"id": "block_8"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "...and connect it here."
+			},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "id": "block_5",
+					   "rawId": "}D@(u`?+cov=sP}mJ@Bd"
+				   },
+				   "inputName": "DO"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_5",
+							"rawId": "}D@(u`?+cov=sP}mJ@Bd"
+						},
+						"target": "block_8"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_5",
+						"rawId": "}D@(u`?+cov=sP}mJ@Bd"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "Back to the math tray!"
+			},
+		   "beacon": {
+			   "target": {
+				   "category": "math"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"open-flyout": "math"
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "One more random block!"
+			},
+		   "beacon": {
+			   "target": {
+				   "flyout_block": "math_random"
+			   }
+		   },
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_random",
+						"id": "block_9"
+					}
+				}
+			}
+		},
+		{
+			"banner": {
+			   "text": "This one will control the size of circle"
+			},
+		   "beacon": {
+			   "target": {
+   					"block": {
+   						"id": "block_8",
+   						"rawId": "u]Nyr)N8.NY#Fi9@o5S+"
+   					},
+   					"target": "RADIUS"
+				}
+		   },
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": "block_8",
+							"rawId": "u]Nyr)N8.NY#Fi9@o5S+",
+							"inputName": "RADIUS"
+						},
+						"target": "block_9"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": "block_8",
+						"rawId": "u]Nyr)N8.NY#Fi9@o5S+"
+					}
+				},
+				"target": "RADIUS"
+			}
+		},
+		{
+			"banner": {
+			   "text": "Change the limit of the random number to <kano-value-preview><span>25</span></kano-value-preview>"
+			},
+		   "beacon": {
+			   "target": {
+				   "block": {
+					   "shadow": "MAX",
+					   "id": "block_9"
+				   }
+				}
+		   },
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": {
+							"shadow": "MAX",
+							"id": "block_9"
+						},
+						"value": "25"
+					}
+				}
+			}
+		},
+		{
+            "banner": {
+                "text": "Amazing! That's some random cheese.",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "banner": {
+                "text": "What else can you make with random circles? Click next when you’re done.",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+	],
+	"parts": [],
+	"modules": [
+		"color",
+		"control",
+		"math"
+	],
+	"variables": [],
+	"mode": "normal",
+	"defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

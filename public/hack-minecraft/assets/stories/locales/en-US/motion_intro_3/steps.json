@@ -1,0 +1,670 @@
+{
+    "steps": [
+      {
+          "banner": {
+              "text": "Please plug in a Motion sensor for this challenge"
+          },
+          "validation": {
+              "add-part": {
+                  "type": "motion-sensor",
+                  "id": "motion_0"
+              }
+          }
+      },
+      {
+          "banner": {
+              "text": "We use If statements to decide whether something should happen, or not. For example...<br> When you're hungry, If statements can make sure you don't get breakfast for dinner too!",
+              "next_button": true
+          },
+          "beacon": {
+              "target": "banner-button",
+              "offset": 0
+          }
+      },
+      {
+          "banner": {
+              "text": "You're hungry. Should mom give you fruit🍌, a hotdog🌭, or pasta🍝?<br>IF it's morning, you should get 🍌. IF it's not morning, you should get 🌭🍝",
+              "next_button": true
+          },
+          "beacon": {
+              "target": "banner-button",
+              "offset": 0
+          }
+      },
+        {
+            "banner": {
+                "text": "Let's use If statements make something happen IF your hand is close to the Sensor.<br>Open the Control tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": "control"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "control"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "every_x_seconds"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "every_x_seconds",
+                        "id": "block_0"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Connect it to this block."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            }
+        },
+        {
+            "banner": {
+                "text": "Now, change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0"
+                        },
+                        "value": "frames"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Let's set a background color. <br>Open the Draw tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "This block sets the background color"
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#set_background_color"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#set_background_color",
+                        "id": "block_1"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Connect it to this block"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "9M3z5To:LX97GC*A@tdS"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": "9M3z5To:LX97GC*A@tdS",
+                            "inputName": "DO"
+                        },
+                        "target": "block_1"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "9M3z5To:LX97GC*A@tdS"
+                    }
+                },
+                "target": "DO"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change it to a nice blue, like this <kano-value-preview><span>#3366ff</span></kano-value-preview>."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "COLOR",
+                        "id": "block_1"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "If statements make the computer answer a question before the code runs.<br>Open the Logic tray..."
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space..."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "controls_if"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "controls_if",
+                        "id": "block_2"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "...and connect it to this block."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "Wnxd(U2Xy$dp!edlSA.-"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_1",
+                            "rawId": "Wnxd(U2Xy$dp!edlSA.-"
+                        },
+                        "target": "block_2"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_1",
+                        "rawId": "Wnxd(U2Xy$dp!edlSA.-"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Now you need to decide which question to ask.<br>Open the Logic tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "logic_compare"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "logic_compare",
+                        "id": "block_3"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Connect it to this block."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "nv5/iwp0/5_li6A#ej0G"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_2",
+                            "rawId": "nv5/iwp0/5_li6A#ej0G",
+                            "inputName": "IF0"
+                        },
+                        "target": "block_3"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "nv5/iwp0/5_li6A#ej0G"
+                    }
+                },
+                "target": "IF0"
+            }
+        },
+        {
+            "banner": {
+                "text": "Let's test if the first Sensor value is greater than the second.<br>Change <kano-value-preview><span>=</span></kano-value-preview> to <kano-value-preview><span>></span></kano-value-preview>."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_3"
+                        },
+                        "value": "GT"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Let's use your Sensor data. <br>Open the Motion tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "motion_0"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "motion_0"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space..."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "motion_0",
+                        "type": "motion_sensor_value"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "motion_0",
+                        "type": "motion_sensor_value",
+                        "id": "block_4"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Connect it to the first empty space in the If statement..."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "@HwXt?yqSEiGEP:LJLAt"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_3",
+                            "rawId": "@HwXt?yqSEiGEP:LJLAt",
+                            "inputName": "A"
+                        },
+                        "target": "block_4"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "@HwXt?yqSEiGEP:LJLAt"
+                    }
+                },
+                "target": "A"
+            }
+        },
+        {
+            "banner": {
+                "text": "Great! Now,let's add the second value (you'll add the first later). <br>Open the Variables tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space..."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_5"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "...and connect it to the other open space in the if statement."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "@HwXt?yqSEiGEP:LJLAt"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_3",
+                            "rawId": "@HwXt?yqSEiGEP:LJLAt",
+                            "inputName": "B"
+                        },
+                        "target": "block_5"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_3",
+                        "rawId": "@HwXt?yqSEiGEP:LJLAt"
+                    }
+                },
+                "target": "B"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>80</span></kano-value-preview>."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "80"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Now... make something happen when the first Sensor value is greater than 80!<br>Open the Draw tray."
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Drag the block onto your code space."
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#set_background_color"
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#set_background_color",
+                        "id": "block_6"
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Connect it to this block."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "nv5/iwp0/5_li6A#ej0G"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_2",
+                            "rawId": "nv5/iwp0/5_li6A#ej0G",
+                            "inputName": "DO0"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "nv5/iwp0/5_li6A#ej0G"
+                    }
+                },
+                "target": "DO0"
+            }
+        },
+        {
+            "banner": {
+                "text": "Change the color to a nice red, like this <kano-value-preview><span>#ff0000</span></kano-value-preview>."
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "COLOR",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "COLOR",
+                            "id": "block_6"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "banner": {
+                "text": "Put your hand over the Sensor... the background color changes when the first Sensor value is greater than 80!",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        },
+        {
+            "banner": {
+                "text": "You're getting the hang of this! Next, learn how to make LOTS of different things happen with Sensor zones",
+                "next_button": true
+            },
+            "beacon": {
+                "target": "banner-button",
+                "offset": 0
+            }
+        }
+    ],
+    "parts": [
+        "motion-sensor"
+    ],
+    "modules": [
+        "control",
+        "logic",
+        "variables"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "control": [
+            "every_x_seconds"
+        ],
+        "normal": [
+            "set_background_color"
+        ],
+        "logic": [
+            "controls_if",
+            "logic_compare"
+        ],
+        "motion": [
+            "motion_sensor_value"
+        ],
+        "variables": [
+            "math_number"
+        ]
+    },
+    "mode": "normal"
+}

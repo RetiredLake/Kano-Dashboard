@@ -1,0 +1,229 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Teleportation",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Teleportation",
+        "group": "origin",
+        "nextStory": "random-wool",
+        "steps": [
+            {
+                "banner": {
+                    "text": "Code can do more than just change the Minecraft landscape, it can hack your character too",
+                    "next_button": true
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "player"
+                        },
+                        "position": "right",
+                        "text": "Open the <b>Player</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "player"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_player_set"
+                        },
+                        "position": "right",
+                        "text": "We can move Steve with this <kano-blockly-block type=\"minecraft_player_set\"></kano-blockly-block> block"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_player_set"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_player_set",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to the key pressed block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": null,
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "position"
+                        },
+                        "position": "right",
+                        "text": "We need to tell Minecraft where to move Steve to, open the <b>Position</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "position"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_position_random"
+                        },
+                        "position": "right",
+                        "text": "This is a special block: <kano-blockly-block type=\"minecraft_position_random\"></kano-blockly-block> sets a random position"
+                    }
+                ],
+                "banner": "Random functions in code are like rolling a dice, it gives you different numbers every time",
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_position_random"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_position_random",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "$k~B7vG^aX~je5sjc~n:"
+                            }
+                        },
+                        "position": "bottom",
+                        "text": "Connect it to the Set Position block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "$k~B7vG^aX~je5sjc~n:",
+                                "inputName": "POSITION"
+                            },
+                            "target": "block_1"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "$k~B7vG^aX~je5sjc~n:"
+                        }
+                    },
+                    "target": "POSITION"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "DISTANCE",
+                                "id": "block_1"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Let's increase the range so we teleport further, change Distance to <kano-value-preview><span>10</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "DISTANCE",
+                                "id": "block_1"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": "Hit tab and try teleporting a few times, you might have to dig yourself out",
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to teleport",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Why not replace the random function with an XYZ block and experiment",
+                    "next_button": true
+                }
+            }
+        ]
+    },
+    "title": "Teletransportación"
+}

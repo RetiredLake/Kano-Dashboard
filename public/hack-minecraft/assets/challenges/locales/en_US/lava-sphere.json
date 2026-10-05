@@ -1,0 +1,308 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 78,
+            "keyLabel": "N",
+            "name": "Lava Sphere",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"N\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Lava Sphere",
+        "group": "origin",
+        "lastOfGroup": true,
+        "steps": [
+            {
+                "banner": {
+                    "text":"In Minecraft lava is deadly. But we can code a power that lets us control it. Take that lava!",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "We need to <b>Craft</b> a container for our lava.",
+                "grabBlockCopy": "Drag the <b>create</b> block onto your code space.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change **cube** to **sphere**."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "inputName": "SHAPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"X, Y and Z are directions in the Minecraft world. Y is up and down. Move the sphere up by changing Y to <kano-value-preview><span>12</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Let's control the size of the sphere, change the Radius to <kano-value-preview><span>7</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RADIUS",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_0"
+                            },
+                            "value": "7"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"We want to sphere to be see-through, change Type to <i class=\"blocks-sprite blocks-sprite-glass\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            },
+                            "value": "GLASS"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_2",
+                "openFlyoutCopy": "Let's heat things up, open the Craft tray.",
+                "grabBlockCopy": "Drag the <b>create</b> block onto your code space.",
+                "connectCopy": "Connect it to beneath your glass sphere.",
+                "connectTo": {
+                    "rawId": "=;4klv,e(}[QV-Eq`9Ie",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text":"We want to create another **sphere**"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "SHAPE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"To fill the glass sphere with lava, change Y to <kano-value-preview><span>12</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Make it smaller to fit inside the glass sphere, change Radius to <kano-value-preview><span>5</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RADIUS",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_2"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Oooohhh <span style=\"color: #fe8329;\">lava</span>! Change Type to <i class=\"blocks-sprite blocks-sprite-lava\"></i>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            },
+                            "value": "LAVA"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Check the Filled checkbox."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2",
+                                "inputName": "FILLED"
+                            },
+                            "value": true
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab. Fire off your power!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try looking above to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+            "banner": {
+                "text":"Why not try making the spheres bigger?",
+                "next_button": true
+            }
+            }
+        ]
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Your Name",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Name in Blocks",
+        "group": "origin",
+        "nextStory": "shelter",
+        "steps": [
+            {
+                "banner": {
+                    "text": "Okay, let’s code your first power and and see what it can do.",
+                    "next_button": true
+                }
+            },
+            {
+                "banner": {
+                    "text": "We need to bind Code Powers to a key. You press the key to unleash them in the Minecraft World.",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "text",
+                "blockType": "minecraft_write_text",
+                "alias": "block_0",
+                "connectTo": {
+                    "rawId": "default_on_key_event"
+                },
+                "openFlyoutCopy": "We need to use the Write block, open the Text tray",
+                "connectCopy": "Connect it to the key pressed block"
+            },
+            {
+                "banner": {
+                    "text": "Type your name in this block",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TEXT",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": "Hit the Tab key to play with your power in Minecraft. Trigger your power by tapping the key you chose.",
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to write your name",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try taking a step back to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    },
+    "title": "Nom en Blocks"
+}

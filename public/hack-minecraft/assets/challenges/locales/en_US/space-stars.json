@@ -1,0 +1,1167 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "K",
+                "key": 75,
+                "name": "Stars",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"K\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Starry sky",
+        "group": "space",
+        "nextStory": "space-launchpad",
+        "steps": [
+          {
+              "banner": {
+                  "text": "It's not space without a sky full of stars! Let's make some stars using a loop",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "repeat_x_times",
+                "alias": "block_0",
+                "openFlyoutCopy": "Open the Control tray to grab a loop block",
+                "grabBlockCopy": "Drag the Repeat 10 times block onto your code space",
+                "connectCopy": "Connect it up here",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Everything you put inside of this block will run 10 times- so each time you activate your power you'll make 10 stars",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": "banner-button",
+                    "offset": 0
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_1",
+                "openFlyoutCopy": "Next up we need to make some variables that will set the coordinates for the stars. Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "*2:F~`A1.m}?C:]*Gp*=",
+                    "id": "block_0",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starX</span></kano-value-preview>, which will store the x position of the star"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "starX"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_random",
+                "alias": "block_2",
+                "openFlyoutCopy": "We can use a random number block to randomise where the stars will be placed. Open the Math tray",
+                "grabBlockCopy": "Drag the random number block onto your code space",
+                "connectCopy": "Connect it to the starX variable",
+                "connectTo": {
+                    "rawId": "qT+lw9@[4?e=I9+J:w61",
+                    "id": "block_1",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MIN",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MIN",
+                                "id": "block_2"
+                            },
+                            "value": "-50"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MAX",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MAX",
+                                "id": "block_2"
+                            },
+                            "value": "50"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_3",
+                "openFlyoutCopy": "We also need to make variables that set the Y and Z positions of the stars. Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "qT+lw9@[4?e=I9+J:w61",
+                    "id": "block_1"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starY</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "starY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_random",
+                "alias": "block_4",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "=TBb:Q3f(3}_TvyvEU]Z",
+                    "id": "block_3",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MIN",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MIN",
+                                "id": "block_4"
+                            },
+                            "value": "-50"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MAX",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MAX",
+                                "id": "block_4"
+                            },
+                            "value": "50"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_5",
+                "openFlyoutCopy": "Now for the last position variable. Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "=TBb:Q3f(3}_TvyvEU]Z",
+                    "id": "block_3"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starZ</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "starZ"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_random",
+                "alias": "block_6",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "x~-~z{DO~7$TMnj.3./o",
+                    "id": "block_5",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MIN",
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MIN",
+                                "id": "block_6"
+                            },
+                            "value": "-50"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "MAX",
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "MAX",
+                                "id": "block_6"
+                            },
+                            "value": "50"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_7",
+                "openFlyoutCopy": "Now it's time to craft the stars themselves- open the Craft tray",
+                "grabBlockCopy": "Drag the Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "x~-~z{DO~7$TMnj.3./o",
+                    "id": "block_5"
+                }
+            },
+
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_8",
+                "openFlyoutCopy": "Let's replace the x, y and z coordinates with the variables we just defined. Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "D!V6^F+rwhX3lqJy@%Oq",
+                    "id": "block_7",
+                    "shadow": "POSITION",
+                    "inputName": "X"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starX</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_8"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_8"
+                            },
+                            "value": "starX"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_9",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "D!V6^F+rwhX3lqJy@%Oq",
+                    "id": "block_7",
+                    "shadow": "POSITION",
+                    "inputName": "Y"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_10",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "i^OQO-TFnAc^^7+p[y4P",
+                    "id": "block_9",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starY</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_10"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_10"
+                            },
+                            "value": "starY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_11",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "i^OQO-TFnAc^^7+p[y4P",
+                    "id": "block_9",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>3</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_11"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_11"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_12",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "D!V6^F+rwhX3lqJy@%Oq",
+                    "id": "block_7",
+                    "shadow": "POSITION",
+                    "inputName": "Z"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starZ</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_12"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_12"
+                            },
+                            "value": "starZ"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_7"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a nice bright <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_7"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <img src='/hack-minecraft/assets/axis-picker/y-dark.svg' width='30'> to <img src='/hack-minecraft/assets/axis-picker/x-dark.svg' width='30'> to rotate the plane"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_7",
+                            "inputName": "AXIS"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_7"
+                            },
+                            "value": "x"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "That's the first point of the star complete. Next we'll make it 3D by adding two more planes",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": "banner-button",
+                    "offset": 0
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_13",
+                "openFlyoutCopy": "Open the Craft tray and grab another Plane block ",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "D!V6^F+rwhX3lqJy@%Oq",
+                    "id": "block_7"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_14",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "-CG5?~Mj$$!Vl1934Skm",
+                    "id": "block_13",
+                    "shadow": "POSITION",
+                    "inputName": "X"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_15",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "dAOBK]6BFA2~X{bD-dCn",
+                    "id": "block_14",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starX</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_15"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_15"
+                            },
+                            "value": "starX"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_16",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "dAOBK]6BFA2~X{bD-dCn",
+                    "id": "block_14",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_16"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_16"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_17",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "-CG5?~Mj$$!Vl1934Skm",
+                    "id": "block_13",
+                    "shadow": "POSITION",
+                    "inputName": "Y"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_18",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "]0b-dnIyKNZ$XlM+H_Be",
+                    "id": "block_17",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starY</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_18"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_18"
+                            },
+                            "value": "starY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_19",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the number block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "]0b-dnIyKNZ$XlM+H_Be",
+                    "id": "block_17",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_19"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_19"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_20",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "-CG5?~Mj$$!Vl1934Skm",
+                    "id": "block_13",
+                    "shadow": "POSITION",
+                    "inputName": "Z"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starZ</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_20"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_20"
+                            },
+                            "value": "starZ"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_13"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_13"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_13"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_13"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_21",
+                "openFlyoutCopy": "Final plane now! Open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "-CG5?~Mj$$!Vl1934Skm",
+                    "id": "block_13"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_22",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it up to this block",
+                "connectTo": {
+                    "rawId": "@=6Ax4pxV,vJS`9H7J~B",
+                    "id": "block_21",
+                    "shadow": "POSITION",
+                    "inputName": "X"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_23",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "Q#jeCN9srVk#B4%h2DIL",
+                    "id": "block_22",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starX</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_23"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_23"
+                            },
+                            "value": "starX"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_24",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "Q#jeCN9srVk#B4%h2DIL",
+                    "id": "block_22",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_24"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_24"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_25",
+                "openFlyoutCopy": "Open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "@=6Ax4pxV,vJS`9H7J~B",
+                    "id": "block_21",
+                    "shadow": "POSITION",
+                    "inputName": "Y"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_26",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "0MsLA-:~CB5tJWoAH`@M",
+                    "id": "block_25",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starY</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_26"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_26"
+                            },
+                            "value": "starY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_27",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "0MsLA-:~CB5tJWoAH`@M",
+                    "id": "block_25",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_27"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_27"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_28",
+                "openFlyoutCopy": "Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "@=6Ax4pxV,vJS`9H7J~B",
+                    "id": "block_21",
+                    "shadow": "POSITION",
+                    "inputName": "Z"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>starZ</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_28"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_28"
+                            },
+                            "value": "starZ"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_21"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_21"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "And to finish off, change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>!"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_21"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_21"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab to return to Minecraft and fill the sky with stars!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Try flying into the air and pressing the ${default_power.keyLabel} key to make stars appear in the sky!",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding ",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ],
+        "variables": [
+            "starX",
+            "starY",
+            "starZ"
+        ]
+    }
+}

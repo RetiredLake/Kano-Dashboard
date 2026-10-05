@@ -1,0 +1,15 @@
+{
+    "id": "draw_swiss_cheese",
+    "name": "Swiss Cheese",
+    "next": "sticker_randomiser",
+    "description": "",
+    "progress": {
+        "group": "art_projects"
+    },
+    "scenes": [{
+        "id": "_0",
+        "component": "common/editor",
+        "data_path": "draw_swiss_cheese.json",
+        "show_remix_options": true
+    }]
+}

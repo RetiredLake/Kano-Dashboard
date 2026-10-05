@@ -1,0 +1,1018 @@
+{
+	"steps": [
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "variables_set"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"variables_set\"></kano-blockly-block> block onto your code space. <br>We will use this variable to keep track of which<br> light we are currently turning on."
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "variables_set"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "variables_set",
+						"id": "block_0"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": {
+							"rawId": "default_part_event_id"
+						}
+					},
+					"position": "right",
+					"text": "Connect it to this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": {
+						"rawId": "default_part_event_id"
+					}
+			    },
+			    "target": "DO"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"rawId": "default_part_event_id"
+						},
+						"target": "block_0"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "math_number"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "math_number"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_number",
+						"id": "block_1"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_0"
+					},
+					"position": "right",
+					"text": "Connect it to this block.<br> We want the variable to be 0 because we are going to<br> start with the first light, and then it will grow bigger..."
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_0"
+			    },
+			    "target": "VALUE"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_0",
+						"target": "block_1"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "control"
+					},
+					"position": "right",
+					"text": "Open the Control tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "control"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "every_x_seconds"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"every_x_seconds\"></kano-blockly-block> block onto your code space.<br>This is the loop we will use to draw all the colors!"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "every_x_seconds"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "every_x_seconds",
+						"id": "block_2"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_0"
+					},
+					"position": "right",
+					"text": "Connect it under this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_0"
+			    },
+			    "target": "next"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_0",
+						"target": "block_2"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_2"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>frames</span></kano-value-preview>"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_2",
+						"value": "frames"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "lightboard"
+					},
+					"position": "right",
+					"text": "Open this tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "lightboard"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "lightboard#turn_on"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"lightboard#turn_on\"></kano-blockly-block> block onto your code space...<br>...so we can turn on some lights!"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "lightboard#turn_on"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "lightboard#turn_on",
+						"id": "block_3"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_2"
+					},
+					"position": "right",
+					"text": "Connect it inside the loop"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_2"
+			    },
+			    "target": "DO"
+			},
+
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_2",
+						"target": "block_3"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "lightboard"
+					},
+					"position": "right",
+					"text": "Open this tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "lightboard"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "lightboard#light_x_y"
+					},
+					"position": "right",
+					"text": "Next we need to tell it which light to turn on...<br>Drag the <kano-blockly-block type=\"lightboard#light_x_y\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "lightboard#light_x_y"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "lightboard#light_x_y",
+						"id": "block_4"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_3"
+					},
+					"position": "right",
+					"text": "Connect it to this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_3"
+			    },
+			    "target": "TARGET"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_3",
+						"target": "block_4"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "variables_get"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"variables_get\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "variables_get",
+						"id": "block_5"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_4"
+					},
+					"position": "right",
+					"text": "Connect it inside this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_4"
+			    },
+			    "target": "X"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_4",
+						"target": "block_5"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "misc"
+					},
+					"position": "right",
+					"text": "Open this tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "misc"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "create_color"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"create_color\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "create_color"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "create_color",
+						"id": "block_6"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_3"
+					},
+					"position": "right",
+					"text": "Connect it to this block. This will control the hue of the color we use."
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_3"
+			    },
+			    "target": "COLOR"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_3",
+						"target": "block_6"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_6"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>hsv</span></kano-value-preview>"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_6",
+						"value": "hsv"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "math"
+					},
+					"position": "right",
+					"text": "Open the Math tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "math"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "math_arithmetic"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"math_arithmetic\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "math_arithmetic"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_arithmetic",
+						"id": "block_7"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_6"
+					},
+					"position": "right",
+					"text": "Connect it to this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_6"
+			    },
+			    "target": "1"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_6",
+						"target": "block_7"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_7"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>x</span></kano-value-preview>"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_7",
+						"value": "MULTIPLY"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "variables_get"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"variables_get\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "variables_get",
+						"id": "block_8"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_7"
+					},
+					"position": "right",
+					"text": "Connect it inside this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_7"
+			    },
+			    "target": "A"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_7",
+						"target": "block_8"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "math_number"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "math_number"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_number",
+						"id": "block_9"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_7"
+					},
+					"position": "right",
+					"text": "Connect it to this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_7"
+			    },
+			    "target": "B"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_7",
+						"target": "block_9"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_9"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>0.7</span></kano-value-preview>"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_9",
+						"value": "0.7"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "math_number"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "math_number"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_number",
+						"id": "block_10"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_6"
+					},
+					"position": "right",
+					"text": "Connect it to this block. This will control how colorful the color we generate is."
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_6"
+			    },
+			    "target": "2"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_6",
+						"target": "block_10"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_10"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>100</span></kano-value-preview> to make the color really saturated!"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_10",
+						"value": "100"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "variables"
+					},
+					"position": "right",
+					"text": "Open the Variables tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "variables"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "math_number"
+					},
+					"position": "right",
+					"text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "math_number"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "math_number",
+						"id": "block_11"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_6"
+					},
+					"position": "right",
+					"text": "Connect it to this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_6"
+			    },
+			    "target": "3"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_6",
+						"target": "block_11"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_11"
+					},
+					"position": "top",
+					"text": "Change to <kano-value-preview><span>100</span></kano-value-preview>"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"value": {
+						"target": "block_11",
+						"value": "100"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "math"
+					},
+					"position": "right",
+					"text": "Open the Math tray"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "math"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"flyout_block": "unary"
+					},
+					"position": "right",
+					"text": "We are at the end of the loop!<br>We need to tell the computer to move on to the next light.<br>To do that we make the item variable bigger!<br>Drag the <kano-blockly-block type=\"unary\"></kano-blockly-block> block onto your code space"
+				}
+			],
+			"arrow": {
+				"target": {
+					"flyout_block": "unary"
+				},
+				"angle": 120,
+				"size": 80
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "unary",
+						"id": "block_12"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": "block_3"
+					},
+					"position": "right",
+					"text": "Connect it under this block"
+				}
+			],
+			"phantom_block": {
+			    "location": {
+			        "block": "block_3"
+			    },
+			    "target": "DO"
+			},
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": "block_3",
+						"target": "block_12"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": "make-button",
+					"position": "bottom",
+					"text": "The app is finished, hit the play button."
+				}
+			],
+			"validation": {
+				"running": {
+					"value": true
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": "workspace-panel",
+					"position": "left",
+					"text": "You made an amazing rainbow with code! Look at it grow!<br>Try changing the code to make it your own.",
+					"next_button": true
+				}
+			]
+		}
+	],
+	"parts": [
+		"microphone"
+	],
+	"modules": [
+		"variables",
+		"control",
+		"misc",
+		"math"
+	],
+	"variables": [],
+	"mode": "lightboard",
+	"defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

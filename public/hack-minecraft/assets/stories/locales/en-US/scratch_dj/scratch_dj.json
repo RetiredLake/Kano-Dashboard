@@ -1,0 +1,896 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "To start our project we need to add some parts! Click 'Add Part'."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "sticker",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-sticker"
+            },
+            "tooltips": [{
+                "text": "First we need a few Stickers...",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "Let's add a second one."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "sticker",
+                    "id": "part_1"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-sticker"
+            }
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "And we also need a speaker..."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "speaker",
+                    "id": "part_2"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-speaker"
+            },
+            "tooltips": [{
+                "text": "Add the speaker",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Our first sticker will trigger some tunes. Let’s change it to look like a music note!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "set_sticker",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "set_sticker"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>set sticker</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Connect it to your <em>app starts</em> event."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0",
+                            "shadow": "PICTURE"
+                        },
+                        "value": "music"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "shadow": "PICTURE"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the first drop down from <kano-value-preview><span>animals</span></kano-value-preview> to <kano-value-preview><span>music</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0",
+                            "shadow": "PICTURE"
+                        },
+                        "value": "music-musical-note"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "shadow": "PICTURE"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the second input to <kano-value-preview><span>Note</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "The second sticker will stop the sounds...<br>so we want a lightning bolt sticker."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "set_sticker",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "set_sticker"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab this block to set the sticker picture."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": "wh_rVK8#~y;_TlzYqy|#"
+                        },
+                        "target": "block_2"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "wh_rVK8#~y;_TlzYqy|#"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2",
+                            "shadow": "PICTURE"
+                        },
+                        "value": "other"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2",
+                        "shadow": "PICTURE"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the category from <kano-value-preview><span>animals</span></kano-value-preview> to <kano-value-preview><span>other</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_2",
+                            "shadow": "PICTURE"
+                        },
+                        "value": "other-lightning-bolt"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3",
+                        "shadow": "PICTURE"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the picture from <kano-value-preview><span>avocado</span></kano-value-preview> to <kano-value-preview><span>Lightning bolt</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "events"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "events"
+                }
+            },
+            "banner": {
+                "text": "Next we want to start the music when the music note sticker is clicked."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "part_event",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "part_event"
+                }
+            },
+            "banner": {
+                "text": "This event block is what we need."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "drop": {
+                        "target": "block_4"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop the block anywhere on your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_4"
+                        },
+                        "value": "sticker.clicked"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Sticker is clicked</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "<em>When the speaker is clicked</em>, let's play a loop! Open the Speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_2",
+                        "type": "speaker_loop",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_2",
+                        "type": "speaker_loop"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block plays some music in a loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_4",
+                            "rawId": "wwiLnVyRrJ]1LP:O+5Dc",
+                            "inputName": "DO"
+                        },
+                        "target": "block_5"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_4",
+                        "rawId": "wwiLnVyRrJ]1LP:O+5Dc"
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Connect the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Now to pick the tune..."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_2",
+                        "type": "speaker_sample",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_2",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the sample picker block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_5",
+                            "rawId": "fkW)5~A,n|@ZXyDcz7J!",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_5",
+                        "rawId": "fkW)5~A,n|@ZXyDcz7J!"
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "banner": {
+                "text": "Connect it to the <em>loop</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_6"
+                        },
+                        "value": "Loops"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "The loops live in the <kano-value-preview><span>loops</span></kano-value-preview> category. Change the first input to loops."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_6"
+                        },
+                        "value": "apache"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Select the classic beat: <kano-value-preview><span>Apache</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "events"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "events"
+                }
+            },
+            "banner": {
+                "text": "Now let’s stop the beat when we click the second sticker. Open the events tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "part_event",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "part_event"
+                }
+            },
+            "banner": {
+                "text": "Grab another event block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "drop": {
+                        "target": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drop the block anywhere on your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_7"
+                        },
+                        "value": "sticker2.clicked"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the event from <kano-value-preview><span>app starts</span></kano-value-preview> to <kano-value-preview><span>Sticker 2 is clicked</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "<em>When Sticker 2 is clicked</em>, let’s stop the sound. Open the speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_2",
+                        "type": "speaker_stop",
+                        "id": "block_8"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_2",
+                        "type": "speaker_stop"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block stops whatever is playing. Grab it."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_7",
+                            "rawId": ",_?T6|z-(%hyFOv)-B/(",
+                            "inputName": "DO"
+                        },
+                        "target": "block_8"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": ",_?T6|z-(%hyFOv)-B/("
+                    }
+                },
+                "target": "DO"
+            },
+            "banner": {
+                "text": "Connect it inside your new event block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "To spice it up, let's add a cool sound effect. Open the speaker tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_2",
+                        "type": "speaker_play",
+                        "id": "block_9"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_2",
+                        "type": "speaker_play"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let’s play something cool..."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_8",
+                            "rawId": "^vKWc@cE*[h.(L_%R-C-"
+                        },
+                        "target": "block_9"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_8",
+                        "rawId": "^vKWc@cE*[h.(L_%R-C-"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_2"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Open the Speaker tray again."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_2",
+                        "type": "speaker_sample",
+                        "id": "block_10"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_2",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the sample picker block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "8i@,Hs-6s1{#yqueQsx:",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_10"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "8i@,Hs-6s1{#yqueQsx:"
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "banner": {
+                "text": "Connect it to your <em>play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_10"
+                        },
+                        "value": "Sounds"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>drum machine</span></kano-value-preview> to <kano-value-preview><span>sounds</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_10"
+                        },
+                        "value": "vinyl_backspin"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the sound to <kano-value-preview><span>Vinyl</span></kano-value-preview> (in the second menu)."
+            }
+        },
+        {
+            "banner": {
+                "text": "<em>Click the music note</em> to rock some jams... and <em>click the lightning bolt</em> to stop the music like a DJ!",
+                "next_button": true
+            }
+        },
+        {
+            "banner": {
+                "text": "Nice work! Can you remix your creation with different sounds?",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "sticker",
+        "speaker"
+    ],
+    "modules": [
+        "events"
+    ],
+    "filterBlocks": {
+        "speaker": [
+            "speaker_play",
+            "speaker_loop",
+            "speaker_stop",
+            "speaker_sample"
+        ],
+        "sticker": [
+            "set_sticker"
+        ]
+    },
+    "variables": [],
+    "mode": "normal",
+    "defaultApp": "{\"parts\":[],\"code\":{\"snapshot\":{\"javascript\":\"global.when('start', function () {\\n});\\n\",\"pseudo\":\"global.when('start', function () {\\n});\\n\",\"blocks\":\"<xml xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><block type=\\\"part_event\\\" id=\\\"default_part_event_id\\\" x=\\\"60\\\" y=\\\"68\\\"><field name=\\\"EVENT\\\">global.start</field></block></xml>\"}},\"background\":{\"name\":\"My app\",\"userStyle\":{\"background\":\"#FFFFFF\"}},\"mode\":\"normal\"}"
+}

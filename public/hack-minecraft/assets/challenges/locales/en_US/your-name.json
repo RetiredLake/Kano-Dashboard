@@ -1,0 +1,74 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 67,
+            "keyLabel": "C",
+            "name": "Your Name",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" x=\"27\" y=\"140\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Name in Blocks",
+        "group": "origin",
+        "nextStory": "shelter",
+        "steps": [
+            {
+                "type": "create-block",
+                "category": "text",
+                "blockType": "minecraft_write_text",
+                "alias": "block_0",
+                "connectTo": {
+                    "rawId": "default_on_key_event"
+                },
+                "openFlyoutCopy": "Ready to write your name in code?<br>Open the <b>Text</b> tray",
+                "grabBlockCopy": "Drag out the <b>Write</b> block.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block."
+            },
+            {
+                "banner": {
+                    "text": "Type your name in the text input block. Hit 'next' when you're done.",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TEXT",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": "Hit the <b>Tab</b> key to play with your power in Minecraft.",
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to write your name",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try taking a step back to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Nice work! Try typing something else...",
+                    "next_button": true
+                }
+            }
+        ]
+    }
+}

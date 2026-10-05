@@ -1,0 +1,13 @@
+{
+  "name": "Hack Minecraft",
+  "short_name": "Hack Minecraft",
+  "start_url": "./#/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

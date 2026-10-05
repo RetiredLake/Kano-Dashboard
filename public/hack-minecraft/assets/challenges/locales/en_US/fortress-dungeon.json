@@ -1,0 +1,424 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "U",
+                "key": 85,
+                "name": "Dungeon",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"U\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Dungeon",
+        "group": "fortress",
+        "nextStory": "fortress-keep",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Every fortress needs a dungeon to throw griefers and creepers, let's make one using variables and loops",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's add a variable to track how deep our dungeon is, open the Variables tray",
+                "grabBlockCopy": "This block sets a variable, drag it to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentDepth</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "currentDepth"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's set the starting depth of the dungeon, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "nF-2sp^dLuQd-t+Foe?O",
+                    "id": "block_0",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "repeat_x_times",
+                "alias": "block_2",
+                "openFlyoutCopy": "Let's use a loop to repeat the code a few times, open the Control tray",
+                "grabBlockCopy": "This block repeats any code within in, drag it to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "nF-2sp^dLuQd-t+Foe?O",
+                    "id": "block_0"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_3",
+                "openFlyoutCopy": "Let's add some code to repeat, open the Craft tray",
+                "grabBlockCopy": "We'll use cubes to dig the dungeon, drag this block to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "%Nk=d$rGyKyf^8{IP3cp",
+                    "id": "block_2",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_4",
+                "openFlyoutCopy": "Let's use math to dig the dungeon down, open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to the Y value",
+                "connectTo": {
+                    "id": "block_3",
+                    "inputName": "Y",
+                    "shadow": "POSITION"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>x Multiply</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_4"
+                            },
+                            "value": "MULTIPLY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_5",
+                "openFlyoutCopy": "Let's set a number for how deep the dungeon will dig every loop, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "liz$u[RFq5GFOInfUpz1",
+                    "id": "block_4",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-4</span></kano-value-preview> to dig 4 blocks every time"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "-4"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_6",
+                "openFlyoutCopy": "Next we'll use the variable we set earlier, open the Variables tray",
+                "grabBlockCopy": "This block gets variables you set, drag it to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "liz$u[RFq5GFOInfUpz1",
+                    "id": "block_4",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentDepth</span></kano-value-preview> to get the variable you set earlier"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_6"
+                            },
+                            "value": "currentDepth"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Size from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_3"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-air\"></i> so the cube removes blocks"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_3",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "unary",
+                "alias": "block_7",
+                "openFlyoutCopy": "If we change the variable every loop we can dig the dungeon downwards, open the Math tray",
+                "grabBlockCopy": "This block can add to a variable every time, drag it to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "}Mq(%b$[qAEE{z0azcKy",
+                    "id": "block_3"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentDepth</span></kano-value-preview> so the variable has 1 added to it every time"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_7"
+                            },
+                            "value": "currentDepth"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_floor",
+                "alias": "block_8",
+                "openFlyoutCopy": "Finally let's add a floor so we don't fall into the dungeon ourselves! Open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "%Nk=d$rGyKyf^8{IP3cp",
+                    "id": "block_2"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Size to <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview> to match the hole we've dug"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_8"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_8"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-glass\"></i> so we can see down the dungeon"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_8"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_8"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now let's build your dungeon, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to make a dungeon",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ],
+        "variables": [
+            "currentDepth"
+        ]
+    }
+}

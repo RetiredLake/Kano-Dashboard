@@ -1,0 +1,304 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Whammy Walk",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Whammy Walk",
+        "group": "origin",
+        "nextStory": "teleport",
+        "steps": [
+            {
+                "banner": {
+                    "text": "One of the coolest things about code is we can repeat things over and over and over and over.<br>Let's make a power that builds a road everywhere you walk",
+                    "next_button": true
+                }
+            },
+            {
+                "banner": "Loops let us easily repeat code without having to type it out loads of times",
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "control"
+                        },
+                        "position": "right",
+                        "text": "We need to use a loop, so open the <b>Control</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "control"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "every_x_seconds"
+                        },
+                        "position": "right",
+                        "text": "We can use the <kano-blockly-block type=\"every_x_seconds\"></kano-blockly-block> loop to repeat our code"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "every_x_seconds"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "every_x_seconds",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to the key pressed block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": null,
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We want to make the loop faster so change<br>seconds to <kano-value-preview><span>milliseconds</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "milliseconds"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "INTERVAL",
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change this to <kano-value-preview><span>300</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "INTERVAL",
+                                "id": "block_0"
+                            },
+                            "value": "300"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "We need to <b>Craft</b> a floor"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_set_floor"
+                        },
+                        "position": "right",
+                        "text": "Grab the <kano-blockly-block type=\"minecraft_set_floor\"></kano-blockly-block> block"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_set_floor"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_set_floor",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "K(^h?quQshB@4(qMpL*j"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Drop it within the loop"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "K(^h?quQshB@4(qMpL*j",
+                                "inputName": "DO"
+                            },
+                            "target": "block_1"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "K(^h?quQshB@4(qMpL*j"
+                        }
+                    },
+                    "target": "DO"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "SIZE",
+                                "id": "block_1"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Make it a bit bigger, change Floor Size to <kano-value-preview><span>5</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_1"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We're making a road so set the block to <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            },
+                            "value": "COBBLESTONE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit Tab. Trigger your power then walk, jump and see what happens"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Why not try changing the Type to Glass or Diamond or Lava",
+                    "next_button": true
+                }
+            }
+        ]
+    },
+    "title": "Caminata Encantada"
+}

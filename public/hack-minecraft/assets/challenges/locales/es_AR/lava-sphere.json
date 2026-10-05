@@ -1,0 +1,443 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Lava Sphere",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Lava Sphere",
+        "group": "origin",
+        "steps": [
+            {
+                "banner": {
+                    "text": "In Minecraft lava is deadly. But we can code a power that lets us control it. Take that lava!",
+                    "next_button": true
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "We need to <b>Craft</b> a container for our lava"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_shape"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_shape\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_create_shape"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_shape",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": null,
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change **cube** to **sphere**"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "X, Y and Z are directions in the Minecraft world. Y is up and down"
+                },
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We want it to appear above our heads so change Y to <kano-value-preview><span>12</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "RADIUS",
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Let's control the size of the sphere, change the Radius to <kano-value-preview><span>7</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_0"
+                            },
+                            "value": "7"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We want to sphere to be see-through, change Type to <i class=\"blocks-sprite blocks-sprite-glass\"></i>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            },
+                            "value": "GLASS"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "Let's heat things up, open the Craft tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_shape"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_shape\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_create_shape"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_shape",
+                            "id": "block_2"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "=;4klv,e(}[QV-Eq`9Ie"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "=;4klv,e(}[QV-Eq`9Ie"
+                            },
+                            "target": "block_2"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "=;4klv,e(}[QV-Eq`9Ie"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_2"
+                            }
+                        },
+                        "position": "top",
+                        "text": "We want to create another **sphere**"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            }
+                        },
+                        "position": "top",
+                        "text": "To fill the glass sphere with lava, change Y to <kano-value-preview><span>12</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "RADIUS",
+                                "id": "block_2"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Make it smaller to fit inside the glass sphere, change Radius to <kano-value-preview><span>5</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_2"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Oooohhh <span style=\"color: #fe8329;\">lava</span>! Change Type to <i class=\"blocks-sprite blocks-sprite-lava\"></i>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            },
+                            "value": "LAVA"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_2"
+                            }
+                        },
+                        "position": "bottom",
+                        "text": "Check the Filled checkbox"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2",
+                                "inputName": "FILLED"
+                            },
+                            "value": true
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab. Fire off your power!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try looking above to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Why not try making the spheres bigger?",
+                    "next_button": true
+                }
+            }
+        ]
+    },
+    "title": "Esfera de Lava"
+}

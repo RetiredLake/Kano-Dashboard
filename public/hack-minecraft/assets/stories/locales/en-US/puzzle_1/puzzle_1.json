@@ -1,0 +1,95 @@
+{
+	"steps": [
+		{
+			"tooltips": [
+				{
+					"location": {
+						"category": "lightboard"
+					},
+					"position": "right",
+					"text": "The code we need lives inside of one of these trays..."
+				}
+			],
+			"validation": {
+				"blockly": {
+					"open-flyout": "lightboard"
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": "blocks-panel",
+					"position": "right",
+					"text": "Can you find the block that turns on a light?<br>Drag it into the event block"
+				}
+			],
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": null,
+						"rawId": "default_part_event_id"
+					}
+				},
+				"target": "DO"
+			},
+			"validation": {
+				"blockly": {
+					"create": {
+						"type": "lightboard#turn_on",
+						"id": "block_0"
+					}
+				}
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": {
+						"block": {
+							"id": null,
+							"rawId": "default_part_event_id"
+						}
+					},
+					"position": "right",
+					"text": "🎉🎉That's the one!🎉🎉<br>Connect it to this block"
+				}
+			],
+			"validation": {
+				"blockly": {
+					"connect": {
+						"parent": {
+							"id": null,
+							"rawId": "default_part_event_id",
+							"inputName": "DO"
+						},
+						"target": "block_0"
+					}
+				}
+			},
+			"phantom_block": {
+				"location": {
+					"block": {
+						"id": null,
+						"rawId": "default_part_event_id"
+					}
+				},
+				"target": "DO"
+			}
+		},
+		{
+			"tooltips": [
+				{
+					"location": "workspace-panel",
+					"position": "left",
+					"text": "Well done! You just made your lightboard come to life...<br>...with code!",
+					"next_button": true
+				}
+			]
+		}
+	],
+	"parts": [],
+	"modules": [],
+	"variables": [],
+	"mode": "lightboard"
+}

@@ -1,0 +1,2315 @@
+{
+    "steps": [
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "It's party time! First we need some parts."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "speaker",
+                    "id": "part_0"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-speaker"
+            },
+            "tooltips": [{
+                "text": "Click 'Speaker' to add it.",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "open-parts": true
+            },
+            "beacon": {
+                "target": "add-part-button"
+            },
+            "banner": {
+                "text": "Let’s add more..."
+            }
+        },
+        {
+            "validation": {
+                "add-part": {
+                    "type": "sticker",
+                    "id": "part_1"
+                }
+            },
+            "beacon": {
+                "target": "parts-panel-sticker"
+            },
+            "tooltips": [{
+                "text": "Now add a Sticker to your app.",
+                "position": "top",
+                "location": "parts-panel"
+            }]
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Now we need a colorful background!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#set_background_color",
+                        "id": "block_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#set_background_color"
+                }
+            },
+            "banner": {
+                "text": "Drag the <em>background color</em> block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": null,
+                            "rawId": "default_part_event_id",
+                            "inputName": "DO"
+                        },
+                        "target": "block_0"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": null,
+                        "rawId": "default_part_event_id"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_0",
+                            "shadow": "COLOR"
+                        }
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "shadow": "COLOR"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Pick any color!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Music makes a parade lively!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "speaker_loop",
+                        "id": "block_2"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "speaker_loop"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the <em>speaker loop</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_0",
+                            "rawId": "Ogn)aM1}~qBTqmbs[QML"
+                        },
+                        "target": "block_2"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "Ogn)aM1}~qBTqmbs[QML"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_0",
+                        "rawId": "Ogn)aM1}~qBTqmbs[QML"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_0"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let's get the party started!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_0",
+                        "type": "speaker_sample",
+                        "id": "block_3"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_0",
+                        "type": "speaker_sample"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block picks the music to play. Grab it."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_2",
+                            "rawId": "8smD/34%99P3wa}4uVpd",
+                            "inputName": "SAMPLE"
+                        },
+                        "target": "block_3"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "8smD/34%99P3wa}4uVpd"
+                    }
+                },
+                "target": "SAMPLE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "8smD/34%99P3wa}4uVpd"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to your <em>speaker play</em> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_3"
+                        },
+                        "value": "Loops"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_3"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>drum machine</span></kano-value-preview> to <kano-value-preview><span>loops</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Our sticker is a bit small. Let's make it bigger!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_scale",
+                        "id": "block_4"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_scale"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_2",
+                            "rawId": "8smD/34%99P3wa}4uVpd"
+                        },
+                        "target": "block_4"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "8smD/34%99P3wa}4uVpd"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_2",
+                        "rawId": "8smD/34%99P3wa}4uVpd"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "200% should be a perfect size."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_5"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_4",
+                            "rawId": "e/yG+b|e^THPOe}Z]DU8",
+                            "inputName": "FACTOR"
+                        },
+                        "target": "block_5"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_4",
+                        "rawId": "e/yG+b|e^THPOe}Z]DU8"
+                    }
+                },
+                "target": "FACTOR"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4",
+                        "rawId": "e/yG+b|e^THPOe}Z]DU8"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_5"
+                        },
+                        "value": "200"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_5"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change the number to <kano-value-preview><span>200</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "control"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "control"
+                }
+            },
+            "banner": {
+                "text": "A control block will make the balloon move every frame."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "every_x_seconds",
+                        "id": "block_6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "every_x_seconds"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_4",
+                            "rawId": "e/yG+b|e^THPOe}Z]DU8"
+                        },
+                        "target": "block_6"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_4",
+                        "rawId": "e/yG+b|e^THPOe}Z]DU8"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_4",
+                        "rawId": "e/yG+b|e^THPOe}Z]DU8"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_6"
+                        },
+                        "value": "frames"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_6"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change <kano-value-preview><span>seconds</span></kano-value-preview> to <kano-value-preview><span>frames</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let’s move the sticker 6 pixels every loop."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_move_by",
+                        "id": "block_7"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_move_by"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_6",
+                            "rawId": "9s}qL|,s82ncoo9/g=fI",
+                            "inputName": "DO"
+                        },
+                        "target": "block_7"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_6",
+                        "rawId": "9s}qL|,s82ncoo9/g=fI"
+                    }
+                },
+                "target": "DO"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_6",
+                        "rawId": "9s}qL|,s82ncoo9/g=fI"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "We’ll use a minus symbol to make it go backwards."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_8"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_7",
+                            "rawId": "h%(;jfEvx5Od9X-E/BfZ",
+                            "inputName": "pixels"
+                        },
+                        "target": "block_8"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "h%(;jfEvx5Od9X-E/BfZ"
+                    }
+                },
+                "target": "pixels"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "h%(;jfEvx5Od9X-E/BfZ"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_8"
+                        },
+                        "value": "-6"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_8"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>-6</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "banner": {
+                "text": "Oh no! We lost our balloon. Let’s get it back with logic!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "controls_if",
+                        "id": "block_9"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "controls_if"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_7",
+                            "rawId": "h%(;jfEvx5Od9X-E/BfZ"
+                        },
+                        "target": "block_9"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "h%(;jfEvx5Od9X-E/BfZ"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_7",
+                        "rawId": "h%(;jfEvx5Od9X-E/BfZ"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "logic"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "logic"
+                }
+            },
+            "banner": {
+                "text": "If the balloon moves off the screen, reset it."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "logic_compare",
+                        "id": "block_10"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "logic_compare"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "_kwnSn%7|vCYr;vM*D,p",
+                            "inputName": "IF0"
+                        },
+                        "target": "block_10"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                },
+                "target": "IF0"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_10"
+                        },
+                        "value": "LT"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span><</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "We’ll check the sticker’s current position."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_x",
+                        "id": "block_11"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_x"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block returns the sticker’s current x coordinate. Grab it!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_10",
+                            "rawId": "kqOv/*Q6/:TLFn[7|(ph",
+                            "inputName": "A"
+                        },
+                        "target": "block_11"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "kqOv/*Q6/:TLFn[7|(ph"
+                    }
+                },
+                "target": "A"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "kqOv/*Q6/:TLFn[7|(ph"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "If the sticker x position is less than -100, reset it!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_12"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "grab another <kano-blockly-block type=\"math_number\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_10",
+                            "rawId": "kqOv/*Q6/:TLFn[7|(ph",
+                            "inputName": "B"
+                        },
+                        "target": "block_12"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "kqOv/*Q6/:TLFn[7|(ph"
+                    }
+                },
+                "target": "B"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_10",
+                        "rawId": "kqOv/*Q6/:TLFn[7|(ph"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_12"
+                        },
+                        "value": "-100"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_12"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>-100</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Time for the sticker to reset."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_set_x_y",
+                        "id": "block_13"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_set_x_y"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "_kwnSn%7|vCYr;vM*D,p",
+                            "inputName": "DO0"
+                        },
+                        "target": "block_13"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                },
+                "target": "DO0"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "600 pixels will work perfectly."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_14"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab another number block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_13",
+                            "rawId": "Ze%4JClE`Ftmh34n}xg:",
+                            "inputName": "X"
+                        },
+                        "target": "block_14"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                },
+                "target": "X"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_14"
+                        },
+                        "value": "600"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_14"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>600</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "100px should be a good height for the balloon."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_15"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Drag the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_13",
+                            "rawId": "Ze%4JClE`Ftmh34n}xg:",
+                            "inputName": "Y"
+                        },
+                        "target": "block_15"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                },
+                "target": "Y"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_15"
+                        },
+                        "value": "100"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_15"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>100</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Now to re-draw the sticker."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "set_sticker",
+                        "id": "block_16"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "set_sticker"
+                    }
+                }
+            },
+            "banner": {
+                "text": "This block sets the sticker picture. Grab it."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_13",
+                            "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                        },
+                        "target": "block_16"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_13",
+                        "rawId": "Ze%4JClE`Ftmh34n}xg:"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "We’ll use random stickers to make it exciting!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "assets_random_sticker_from",
+                        "id": "block_17"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "assets_random_sticker_from"
+                }
+            },
+            "banner": {
+                "text": "This block gives you a different sticker every time."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_16",
+                            "rawId": "vq[Kik4JA~x*v7yJ#`?l",
+                            "inputName": "PICTURE"
+                        },
+                        "target": "block_17"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "vq[Kik4JA~x*v7yJ#`?l"
+                    }
+                },
+                "target": "PICTURE"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_16",
+                        "rawId": "vq[Kik4JA~x*v7yJ#`?l"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect the blocks."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Let’s add a string so the balloon doesn’t fly away!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#clear",
+                        "id": "block_18"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#clear"
+                }
+            },
+            "banner": {
+                "text": "Drag the <kano-blockly-block type=\"normal#clear\"></kano-blockly-block> block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_9",
+                            "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                        },
+                        "target": "block_18"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_9",
+                        "rawId": "_kwnSn%7|vCYr;vM*D,p"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "Now we need to define a stroke for the string."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#stroke",
+                        "id": "block_101"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#stroke"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_18"
+                        },
+                        "target": "block_101"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_18"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_18"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "A Move To block will keep the string steady."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#move_to",
+                        "id": "block_19"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#move_to"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_101"
+                        },
+                        "target": "block_19"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_101"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_101"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "math"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "math"
+                }
+            },
+            "banner": {
+                "text": "Some maths will keep it straight."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_arithmetic",
+                        "id": "block_20"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_arithmetic"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_19",
+                            "rawId": "hps}GT/K_!MR6wI:Pc(E",
+                            "inputName": "X"
+                        },
+                        "target": "block_20"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                },
+                "target": "X"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "We need the sticker’s position."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_x",
+                        "id": "block_21"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_x"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab another X-position block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_20",
+                            "rawId": "s;7Zuj%Y,P^]:K5P~5/1",
+                            "inputName": "A"
+                        },
+                        "target": "block_21"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_20",
+                        "rawId": "s;7Zuj%Y,P^]:K5P~5/1"
+                    }
+                },
+                "target": "A"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_20",
+                        "rawId": "s;7Zuj%Y,P^]:K5P~5/1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "A bit of padding will make it look better!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_22"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab the <kano-blockly-block type=\"math_number\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_20",
+                            "rawId": "s;7Zuj%Y,P^]:K5P~5/1",
+                            "inputName": "B"
+                        },
+                        "target": "block_22"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_20",
+                        "rawId": "s;7Zuj%Y,P^]:K5P~5/1"
+                    }
+                },
+                "target": "B"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_20",
+                        "rawId": "s;7Zuj%Y,P^]:K5P~5/1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_22"
+                        },
+                        "value": "50"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_22"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>50</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "math"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "math"
+                }
+            },
+            "banner": {
+                "text": "Let’s pad the Y value too."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_arithmetic",
+                        "id": "block_23"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_arithmetic"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_19",
+                            "rawId": "hps}GT/K_!MR6wI:Pc(E",
+                            "inputName": "Y"
+                        },
+                        "target": "block_23"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                },
+                "target": "Y"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Let’s get the Y position."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_y",
+                        "id": "block_24"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_y"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab the block for the sticker y-position."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_23",
+                            "rawId": "*Z3#oG2_pAw~qM?^=w2[",
+                            "inputName": "A"
+                        },
+                        "target": "block_24"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_23",
+                        "rawId": "*Z3#oG2_pAw~qM?^=w2["
+                    }
+                },
+                "target": "A"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_23",
+                        "rawId": "*Z3#oG2_pAw~qM?^=w2["
+                    }
+                }
+            },
+            "banner": {
+                "text": "Plug it into this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "variables"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "variables"
+                }
+            },
+            "banner": {
+                "text": "Open the Variables tray."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "math_number",
+                        "id": "block_25"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "math_number"
+                }
+            },
+            "banner": {
+                "text": "Grab another <kano-blockly-block type=\"math_number\"></kano-blockly-block> block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_23",
+                            "rawId": "*Z3#oG2_pAw~qM?^=w2[",
+                            "inputName": "B"
+                        },
+                        "target": "block_25"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_23",
+                        "rawId": "*Z3#oG2_pAw~qM?^=w2["
+                    }
+                },
+                "target": "B"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_23",
+                        "rawId": "*Z3#oG2_pAw~qM?^=w2["
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "id": "block_25"
+                        },
+                        "value": "40"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_25"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>40</span></kano-value-preview>."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": "normal"
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": "normal"
+                }
+            },
+            "banner": {
+                "text": "It's line drawing time!"
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "type": "normal#line_to",
+                        "id": "block_26"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": "normal#line_to"
+                }
+            },
+            "banner": {
+                "text": "Drag this block onto your code space."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_19",
+                            "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                        },
+                        "target": "block_26"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_19",
+                        "rawId": "hps}GT/K_!MR6wI:Pc(E"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "open-flyout": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "category": {
+                        "part": "part_1"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Oh no! It’s drawing the wrong way! Let’s fix it."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "create": {
+                        "target": "part_1",
+                        "type": "ui_x",
+                        "id": "block_27"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "flyout_block": {
+                        "part": "part_1",
+                        "type": "ui_x"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Grab another sticker x position block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "connect": {
+                        "parent": {
+                            "id": "block_26",
+                            "rawId": "_L0)aMhGr*ZumH3^0V9g",
+                            "inputName": "X"
+                        },
+                        "target": "block_27"
+                    }
+                }
+            },
+            "phantom_block": {
+                "location": {
+                    "block": {
+                        "id": "block_26",
+                        "rawId": "_L0)aMhGr*ZumH3^0V9g"
+                    }
+                },
+                "target": "X"
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "id": "block_26",
+                        "rawId": "_L0)aMhGr*ZumH3^0V9g"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Connect it to this block."
+            }
+        },
+        {
+            "validation": {
+                "blockly": {
+                    "value": {
+                        "target": {
+                            "shadow": "Y",
+                            "id": "block_26"
+                        },
+                        "value": "600"
+                    }
+                }
+            },
+            "beacon": {
+                "target": {
+                    "block": {
+                        "shadow": "Y",
+                        "id": "block_26"
+                    }
+                }
+            },
+            "banner": {
+                "text": "Change to <kano-value-preview><span>600</span></kano-value-preview>."
+            }
+        },
+        {
+            "banner": {
+                "text": "Your parade is in full swing! Try remixing it by changing the stickers and variables!",
+                "next_button": true
+            }
+        }
+    ],
+    "parts": [
+        "speaker",
+        "sticker"
+    ],
+    "modules": [
+        "color",
+        "variables",
+        "control",
+        "logic",
+        "math"
+    ],
+    "variables": [],
+    "filterBlocks": {
+        "normal": [
+            "set_background_color",
+            "clear",
+            "move_to",
+            "line_to",
+            "stroke"
+        ],
+        "speaker": [
+            "speaker_loop",
+            "speaker_sample"
+        ],
+        "sticker": [
+            "ui_scale",
+            "ui_move_by",
+            "ui_x",
+            "ui_set_x_y",
+            "set_sticker",
+            "assets_random_sticker_from",
+            "ui_y"
+        ],
+        "variables": [
+            "math_number"
+        ],
+        "control": [
+            "every_x_seconds"
+        ],
+        "logic": [
+            "controls_if",
+            "logic_compare"
+        ],
+        "math": [
+            "math_arithmetic"
+        ]
+    },
+    "mode": "normal"
+}

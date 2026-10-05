@@ -1,0 +1,380 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "L",
+                "key": 76,
+                "name": "Launchpad",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"L\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Set up a Launchpad",
+        "group": "space",
+        "nextStory": "space-rocket",
+        "steps": [
+          {
+              "banner": {
+                  "text": "You can't blast off into space without a rocket- but before we make a rocket, we need a launchpad first!",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's create the base of the launchpad using a plane block. Open the Craft tray",
+                "grabBlockCopy": "Drag the Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "The launchpad needs to be big enough to have a rocket sit on it, so change the width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_0"
+                            },
+                            "value": "20"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now change the height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>20</span></kano-value-preview> too"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_0"
+                            },
+                            "value": "20"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a sturdy base, like <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i> or <i class=\"blocks-sprite blocks-sprite-stone_brick_cracked_stone_brick\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_1",
+                "openFlyoutCopy": "Open the Craft tray",
+                "grabBlockCopy": "Drag another Plane block onto your code space",
+                "connectCopy": "Connect it up here",
+                "connectTo": {
+                    "rawId": "`S6zZ^cO.1!JI(csl7w~",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>25</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_1"
+                            },
+                            "value": "25"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>25</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_1"
+                            },
+                            "value": "25"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a bright colour like <i class=\"blocks-sprite blocks-sprite-wool_pink\"></i><i class=\"blocks-sprite blocks-sprite-wool_red\"></i><i class=\"blocks-sprite blocks-sprite-wool_yellow\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Launchpad complete! But no space program is complete without a space agency (like NASA)! Let's make our own",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": "banner-button",
+                    "offset": 0
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "text",
+                "blockType": "minecraft_write_text",
+                "alias": "block_2",
+                "openFlyoutCopy": "Open the Text tray",
+                "grabBlockCopy": "Grab the Write block",
+                "connectCopy": "Connect it here!",
+                "connectTo": {
+                    "rawId": "^E(x-Y6c;8{[fESrBZ/g",
+                    "id": "block_1"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Give your space agency a cool name, like <kano-value-preview><span>HMISA</span></kano-value-preview> (the Hack Minecraft International Space Agency!) Hit 'next' when you're done.",
+                    "next_button": true
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TEXT",
+                            "id": "block_2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Z position from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>11</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Z"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Z"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "11"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Pick a bright colour for your new space agency logo, like <i class=\"blocks-sprite blocks-sprite-wool_pink\"></i><i class=\"blocks-sprite blocks-sprite-wool_red\"></i><i class=\"blocks-sprite blocks-sprite-wool_yellow\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "player",
+                "blockType": "minecraft_player_set",
+                "alias": "block_0",
+                "openFlyoutCopy": "Open the Player tray",
+                "createCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "id": "block_2"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>5</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab, find a nice flat area and make your launchpad!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to build your rocket launchpad (try and put it in a big flat space!)",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go to the next challenge",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

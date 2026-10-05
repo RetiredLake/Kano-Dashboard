@@ -1,0 +1,152 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 72,
+            "keyLabel": "H",
+            "name": "Holey-Moley",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"H\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Holey-Moley",
+        "group": "origin",
+        "nextStory": "road",
+        "steps": [
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "Want to mine massive holes in seconds? Let’s go!<br>We want to <b>Craft</b> a large round hole, so start in the Craft tray.",
+                "grabBlockCopy": "Use the <b>Create</b> function.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text":"Spheres are what we call ball-shaped objects in 3D space. Let's craft one – change <b>cube</b> to <b>sphere</b>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "inputName": "SHAPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"We want to dig out everything within the sphere so tick the Filled box."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "inputName": "FILLED",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0",
+                                "inputName": "FILLED"
+                            },
+                            "value": true
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"We want to dig out a really big area. Change the Radius to <kano-value-preview><span>5</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RADIUS",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_0"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Finally, change the block <b>Type</b> to air (<i class=\"blocks-sprite blocks-sprite-air\"></i>), this will remove blocks instead of adding them."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            },
+                            "value": "AIR"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Hit <b>Tab</b> to fill the world with holes"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to dig a hole",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "How deep can you go? Keep hitting the ${default_power.keyLabel} key!",
+                "validation": {
+                    "wait": 10000
+                }
+            },
+            {
+                "minecraft_chat": "Press TAB to unlock your next power!",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

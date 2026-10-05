@@ -1,0 +1,250 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Shelter",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Pow Pow Shelter",
+        "group": "origin",
+        "nextStory": "hole",
+        "steps": [
+            {
+                "banner": {
+                    "text": "In the world of Minecraft it's important to have shelter. let's code a power to build one in a blink of an eye",
+                    "next_button": true
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "We need to <b>Craft</b> a cube for our shelter"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                },
+                "arrow": {
+                    "target": {
+                        "category": "craft"
+                    },
+                    "angle": 45,
+                    "size": 80
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_shape"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_shape\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_create_shape"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_shape",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to the key pressed block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "SIZE",
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Let's make a shelter big enough to walk around in,<br> change the size to <kano-value-preview><span>6</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_0"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "We need a way to get out of the shelter, let's <b>Craft</b> a door"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_door"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_door\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_door",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0"
+                            },
+                            "target": "block_1"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "X, Y and Z are directions in the Minecraft world. Z is forward and backward"
+                },
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Z"
+                                },
+                                "id": "block_1"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Let's move the door to the walls of the shelter.<br>Click here to change the Z value to 2"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Z"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Hit the Tab key to go back into Minecraft to try your new power"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to create your shelter",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    },
+    "title": "Refugio Instantáneo"
+}

@@ -1,0 +1,865 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "K",
+                "key": 75,
+                "name": "Keep",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"K\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Fortress Keep",
+        "group": "fortress",
+        "nextStory": "fortress-throne",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Every fortress needs a huge menacing building in it to intimidate visitors, let's build a Keep",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's start with building the ground floor of the Keep. We'll use a cylinder to make it circular, open the Craft tray",
+                "grabBlockCopy": "Drag the cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                   "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box so the floor is solid"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_0",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_0"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview> so the floor is only on the ground"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_0"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your fortress unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_1",
+                "openFlyoutCopy": "We'll use a variable to store the current floor so we can build it upwards, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "zu=l~3Bo%h@?vSy{35PU",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_2",
+                "openFlyoutCopy": "We'll use a number to set the starting floor, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "|3O{N!Xdf8JSrbb.{#j)",
+                    "id": "block_1",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "repeat_x_times",
+                "alias": "block_3",
+                "openFlyoutCopy": "We'll use a loop to build the tower upwards, open the Control tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "|3O{N!Xdf8JSrbb.{#j)",
+                    "id": "block_1"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>, this will build 8 floors"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "N",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "N",
+                                "id": "block_3"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_4",
+                "openFlyoutCopy": "Now time to add some walls, open the Craft tray",
+                "grabBlockCopy": "Drag the cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "U%^UBx9!1g6yUUQFEpA;",
+                    "id": "block_3",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_5",
+                "openFlyoutCopy": "We'll use math to position the floors, open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to the Y port",
+                "connectTo": {
+                    "rawId": "M/TH:q:aQY{?c368+*N,",
+                    "id": "block_4",
+                    "inputName": "Y",
+                    "shadow": "POSITION"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>x multiply</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "MULTIPLY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_6",
+                "openFlyoutCopy": "We need to set the height of the floor, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "Th99:0v3]S8h9_RzIz1#",
+                    "id": "block_5",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview> because each floor will be 8 blocks high"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_6"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_7",
+                "openFlyoutCopy": "We'll use the variable we set before, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "Th99:0v3]S8h9_RzIz1#",
+                    "id": "block_5",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_7"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_8",
+                "openFlyoutCopy": "We need to change the width for each floor too so let's use math again, open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "#_yD#!.TgLd.sE6P4Xld",
+                    "id": "block_4",
+                    "inputName": "WIDTH"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>- subtract</span></kano-value-preview> so the walls get smaller each floor"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_8"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_8"
+                            },
+                            "value": "MINUS"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_9",
+                "openFlyoutCopy": "Let's set the starting size for the walls, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "@ko@.vTQ,%|@{|Q,?{ca",
+                    "id": "block_8",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview> to match the floor"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_9"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_9"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_10",
+                "openFlyoutCopy": "Let's use the currentFloor variable again, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "@ko@.vTQ,%|@{|Q,?{ca",
+                    "id": "block_8",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_10"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_10"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview> to make the walls taller"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_4"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-stone_brick\"></i> to make it a strong keep"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_4"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_11",
+                "openFlyoutCopy": "We'll make another cylinder so it looks cool, open the Craft tray",
+                "grabBlockCopy": "Drag the cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "#_yD#!.TgLd.sE6P4Xld",
+                    "id": "block_4"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_12",
+                "openFlyoutCopy": "We're going to do the same as before so open the Math tray and grab a math block",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "id": "block_11",
+                    "inputName": "Y",
+                    "shadow": "POSITION"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>x multiply</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_12"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_12"
+                            },
+                            "value": "MULTIPLY"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_13",
+                "openFlyoutCopy": "Let's set the position again, Open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "N6W|3E=r_Kf3:dB;W.dD",
+                    "id": "block_12",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview> because each floor is 8 blocks high"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_13"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_13"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_14",
+                "openFlyoutCopy": "Grab our currentFloor variable again, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "N6W|3E=r_Kf3:dB;W.dD",
+                    "id": "block_12",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_14"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_14"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "math_arithmetic",
+                "alias": "block_15",
+                "openFlyoutCopy": "Now to set the width, open the Math tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "gOf9*oI{p,Wlz`2NoMkt",
+                    "id": "block_11",
+                    "inputName": "WIDTH"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>+</span></kano-value-preview> to <kano-value-preview><span>- subtract</span></kano-value-preview> again"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_15"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_15"
+                            },
+                            "value": "MINUS"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_16",
+                "openFlyoutCopy": "Open the Variables tray and grab a number again",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "p7h~sv/}n=UO~}iJ==|@",
+                    "id": "block_15",
+                    "inputName": "A"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_16"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_16"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_17",
+                "openFlyoutCopy": "Time to use the variable, open the Variables tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "p7h~sv/}n=UO~}iJ==|@",
+                    "id": "block_15",
+                    "inputName": "B"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_17"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_17"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview> to make a nice ring around the stone walls"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_11"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_11"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your fortress unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_11"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_11"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "unary",
+                "alias": "block_18",
+                "openFlyoutCopy": "Finally let's change the currentFloor variable every time this loops to build the keep's tower. Open the Math tray",
+                "grabBlockCopy": "This block will add to a variable every time",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "gOf9*oI{p,Wlz`2NoMkt",
+                    "id": "block_11"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>currentFloor</span></kano-value-preview> to change currentFloor every time the code loops"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_18"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_18"
+                            },
+                            "value": "currentFloor"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Woah! The keep is complete, now let's build it, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to build your huge keep",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ],
+        "variables": [
+            "currentFloor"
+        ]
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 82,
+            "keyLabel": "R",
+            "name": "Whammy Walk",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"R\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Whammy Walk",
+        "group": "origin",
+        "nextStory": "teleport",
+        "steps": [
+            {
+                "banner": {
+                    "text":"One of the coolest things about code is we can repeat things over and over and over and over.<br>Let's make a power that builds a road everywhere you walk",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "every_x_seconds",
+                "alias": "block_0",
+                "openFlyoutCopy": "Loops let us easily repeat code without having to type it out loads of times. Open the <b>Control</b> tray.",
+                "grabBlockCopy": "We can use the <b>every 1 second</b> loop to repeat our code.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            { 
+                "banner": {
+                    "text":"We want to make the loop faster so change<br>seconds to <kano-value-preview><span>milliseconds</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_0",
+                            "inputName": "VALUE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "milliseconds"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change this to <kano-value-preview><span>300</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "INTERVAL",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "INTERVAL",
+                                "id": "block_0"
+                            },
+                            "value": "300"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_floor",
+                "alias": "block_1",
+                "openFlyoutCopy": "We need to <b>Craft</b> a floor.",
+                "grabBlockCopy": "Grab the <b>set floor</b> block.",
+                "connectCopy": "Connect it inside your loop.",
+                "connectTo": {
+                    "id": "block_0",
+                    "rawId": "K(^h?quQshB@4(qMpL*j",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Make it a bit bigger, change the floor <b>Size</b> to <kano-value-preview><span>5</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_1"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"We're making a road so set the block to <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit Tab. Trigger your power then walk, jump and see what happens"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Now walk around. What happens when you jump?",
+                "validation": {
+                    "wait": 10000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the TAB key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Why not try changing the Type to Glass or Diamond or Lava?",
+                    "next_button": true
+                }
+            }
+        ]
+    }
+}

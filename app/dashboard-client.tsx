@@ -23,7 +23,7 @@ type LauncherApp = {
   id: string;
   name: string;
   href: string;
-  icon: "code" | "art" | "minecraft";
+  icon: "code" | "art" | "minecraft" | "hack";
 };
 
 const launcherPages: { id: string; apps: LauncherApp[] }[] = [
@@ -33,6 +33,7 @@ const launcherPages: { id: string; apps: LauncherApp[] }[] = [
       { id: "code", name: "Kano Code", href: "/code/", icon: "code" },
       { id: "art", name: "Make Art", href: "/art/", icon: "art" },
   { id: "minecraft", name: "Make Minecraft", href: "/make-minecraft/minecraft/", icon: "minecraft" },
+      { id: "hack", name: "Hack Minecraft", href: "/hack-minecraft/", icon: "hack" },
     ],
   },
 ];
@@ -148,6 +149,8 @@ export default function DashboardClient() {
                 <span className={`app-icon app-icon-${app.icon}`}>
                   {app.icon === "code" ? (
                     <img src="/dashboard/kano-code-logo.png" alt="" />
+                  ) : app.icon === "hack" ? (
+                    <img src="/hack-minecraft/icon.svg" alt="" />
                   ) : app.icon === "minecraft" ? (
                     <img src="/dashboard/hack-minecraft-logo.png" alt="" />
                   ) : (

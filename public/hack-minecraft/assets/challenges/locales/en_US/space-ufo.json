@@ -1,0 +1,1173 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "U",
+                "key": 85,
+                "name": "UFO",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"U\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Alien Invasion!",
+        "group": "space",
+        "nextStory": "space-uforay",
+        "steps": [
+          {
+              "banner": {
+                  "text": "Space is full of mystery! What's out there? Planets, stars, satellites... aliens? Build a UFO with the power of code!",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+            {
+                "type": "create-block",
+                "category": "player",
+                "blockType": "minecraft_player_set",
+                "alias": "block_0",
+                "openFlyoutCopy": "To start, you need to move the player's position so that the UFO doesn't build on top of you! Open the Player tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-20</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "X"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "X"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "-20"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's start building the UFO by using a sphere to create a glass dome. Open the Craft tray",
+                "grabBlockCopy": "Drag a Create block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "{~O?aL{?6{Ywo`rL($|f",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>cube</span></kano-value-preview> to <kano-value-preview><span>sphere</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1",
+                            "inputName": "SHAPE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "15"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the radius of the sphere from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RADIUS",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_1"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Swap <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> with <i class=\"blocks-sprite blocks-sprite-glass\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            },
+                            "value": "GLASS"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_2",
+                "openFlyoutCopy": "Now we'll start making the classic saucer shape - open up the Craft tray",
+                "grabBlockCopy": "Grab the Cylinder block",
+                "connectCopy": "Connect it here",
+                "connectTo": {
+                    "rawId": "w8h1vFC+0WDGww8xjdJ.",
+                    "id": "block_1"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>17</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "17"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Width to <kano-value-preview><span>12</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_2"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "And the height to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_2"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to something sleek and futuristic like <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> "
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_3",
+                "openFlyoutCopy": "Let's use some more cylinders to fill out our UFO. Open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "!K#:fI)sxMZ]pFW9S.E_",
+                    "id": "block_2"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>16</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "16"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>16</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_3"
+                            },
+                            "value": "16"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_3"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a grey block, like <i class=\"blocks-sprite blocks-sprite-stone\"></i><i class=\"blocks-sprite blocks-sprite-gravel\"></i><i class=\"blocks-sprite blocks-sprite-coal_ore\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_3",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_4",
+                "openFlyoutCopy": "Open the Craft tray",
+                "grabBlockCopy": "Drag another Cylinder onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "qAZzqa+9D+0kOM|*QPe9",
+                    "id": "block_3"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_4"
+                            },
+                            "value": "15"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>22</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_4"
+                            },
+                            "value": "22"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_4"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a another grey block like <i class=\"blocks-sprite blocks-sprite-stone\"></i><i class=\"blocks-sprite blocks-sprite-gravel\"></i><i class=\"blocks-sprite blocks-sprite-coal_ore\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_4"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box!"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_4",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_4"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_5",
+                "openFlyoutCopy": "Open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": ":H.pdz.Ah;__b?siOG{3",
+                    "id": "block_4"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>14</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_5"
+                            },
+                            "value": "14"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>24</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_5"
+                            },
+                            "value": "24"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_5"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to something shiny like <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_5"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_6",
+                "openFlyoutCopy": "Now for the bottom half of the saucer! Open the Craft tray",
+                "grabBlockCopy": "Grab the cylinder block",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": ":7tTtRC/K$dh%v,M)Y7R",
+                    "id": "block_5"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>13</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_6"
+                            },
+                            "value": "13"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>22</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_6"
+                            },
+                            "value": "22"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_6"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a grey block like <i class=\"blocks-sprite blocks-sprite-stone\"></i><i class=\"blocks-sprite blocks-sprite-gravel\"></i><i class=\"blocks-sprite blocks-sprite-coal_ore\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_6"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_6"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_6",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_6"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_7",
+                "openFlyoutCopy": "Nearly there now! Open the Craft tray",
+                "grabBlockCopy": "Drag a Cylinder block onto your code space",
+                "connectCopy": "Drop the block here",
+                "connectTo": {
+                    "rawId": "79pvE$BkpZ3+3o6|5-RW",
+                    "id": "block_6"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>12</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_7"
+                            },
+                            "value": "12"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>16</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_7"
+                            },
+                            "value": "16"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_7"
+                            },
+                            "value": "0"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to a grey block <i class=\"blocks-sprite blocks-sprite-stone\"></i><i class=\"blocks-sprite blocks-sprite-gravel\"></i><i class=\"blocks-sprite blocks-sprite-coal_ore\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_7"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_7"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_7",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_7"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_9",
+                "openFlyoutCopy": "We need to remove the bottom half of the sphere we used for the UFO's dome, so let's do that next. Open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "2hu/T2sL_[K[dXex(S|M",
+                    "id": "block_7"
+                }
+            },
+
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_9"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_9"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>11</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_9"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_9"
+                            },
+                            "value": "11"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change the Height to <kano-value-preview><span>11</span></kano-value-preview> too"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_9"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_9"
+                            },
+                            "value": "11"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to air<i class=\"blocks-sprite blocks-sprite-air\"></i>. This will remove blocks!"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_9"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_9"
+                            },
+                            "value": "AIR"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_9",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_9"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab to run your code, fly up (press the spacebar twice!) and make your UFO"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Fly up into the air, hit the ${default_power.keyLabel} key and watch your UFO appear",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,517 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "J",
+                "key": 74,
+                "name": "UFO Beam",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"J\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "UFO abduction",
+        "group": "space",
+        "lastOfGroup": true,
+        "steps": [
+          {
+              "banner": {
+                  "text": "Let's Hack Minecraft to make an alien beam come from the UFO",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "variables_set",
+              "alias": "block_0",
+              "openFlyoutCopy": "To make this we're going to use a couple of variables, so go ahead and open the Variables tray",
+              "grabBlockCopy": "Drag the Create Variable block onto your code space",
+              "connectCopy": "Connect it here",
+              "connectTo": {
+                  "rawId": "default_on_key_event",
+                  "id": null
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>raySize</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_0"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_0"
+                          },
+                          "value": "raySize"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "math_number",
+              "alias": "block_1",
+              "openFlyoutCopy": "Open the Variables tray",
+              "grabBlockCopy": "Drag the Number block onto your code space",
+              "connectCopy": "Connect it to the raySize variable",
+              "connectTo": {
+                  "rawId": "XJj)%M]^a3.seo)ga4~+",
+                  "id": "block_0",
+                  "inputName": "VALUE"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>3</span></kano-value-preview>. This will be the starting size of the abduction Ray"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_1"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_1"
+                          },
+                          "value": "3"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "variables_set",
+              "alias": "block_2",
+              "openFlyoutCopy": "The second variable is going to define the height of the rays. Open the Variables tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "XJj)%M]^a3.seo)ga4~+",
+                  "id": "block_0"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>rayHeight</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_2"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_2"
+                          },
+                          "value": "rayHeight"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "math_number",
+              "alias": "block_3",
+              "openFlyoutCopy": "Open the Variables tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "f0EJSfQ_CC#vyAdr+5(%",
+                  "id": "block_2",
+                  "inputName": "VALUE"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_3"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_3"
+                          },
+                          "value": "15"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "control",
+              "blockType": "repeat_x_times",
+              "alias": "block_4",
+              "openFlyoutCopy": "Now we're going to use a loop! Open the Control tray and grab a Repeat block",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "f0EJSfQ_CC#vyAdr+5(%",
+                  "id": "block_2"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>10</span></kano-value-preview> to <kano-value-preview><span>15</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "shadow": "N",
+                          "id": "block_4"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "shadow": "N",
+                              "id": "block_4"
+                          },
+                          "value": "15"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "math",
+              "blockType": "unary",
+              "alias": "block_5",
+              "openFlyoutCopy": "Open the Math tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "AqIx%@KXlRzFD!}|_5aX",
+                  "id": "block_4",
+                  "inputName": "DO"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>raySize</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_5"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_5"
+                          },
+                          "value": "raySize"
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>1</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "shadow": "RIGHT_HAND",
+                          "id": "block_5"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "shadow": "RIGHT_HAND",
+                              "id": "block_5"
+                          },
+                          "value": "2"
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Now every time this block of code repeats, the value of raySize will go up by 2, making the Ray bigger",
+                  "next_button": true
+              },
+              "beacon": {
+                  "target": "banner-button",
+                  "offset": 0
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "math",
+              "blockType": "unary",
+              "alias": "block_6",
+              "openFlyoutCopy": "Open the Math tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "h0OY4K{.fYzccbW`$jGU",
+                  "id": "block_5"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>rayHeight</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_6"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_6"
+                          },
+                          "value": "rayHeight"
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>+=</span></kano-value-preview> to <kano-value-preview><span>-=</span></kano-value-preview>. This will take a number off the variable rayHeight every time this code runs"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_6"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_6"
+                          },
+                          "value": "-="
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>1</span></kano-value-preview> to <kano-value-preview><span>3</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "shadow": "RIGHT_HAND",
+                          "id": "block_6"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "shadow": "RIGHT_HAND",
+                              "id": "block_6"
+                          },
+                          "value": "3"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "craft",
+              "blockType": "minecraft_create_column",
+              "alias": "block_7",
+              "openFlyoutCopy": "Open the Craft tray to start making some rays!",
+              "grabBlockCopy": "Drag the Cylinder block onto your code space",
+              "connectCopy": "Connect it inside your loop",
+              "connectTo": {
+                  "rawId": "64yCL{V785h}#J(={h.,",
+                  "id": "block_6"
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "variables_get",
+              "alias": "block_8",
+              "openFlyoutCopy": "Open the Variables tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "2WjT0VtR}95C$j([RegI",
+                  "id": "block_7",
+                  "shadow": "POSITION",
+                  "inputName": "Y"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>rayHeight</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_8"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_8"
+                          },
+                          "value": "rayHeight"
+                      }
+                  }
+              }
+          },
+          {
+              "type": "create-block",
+              "category": "variables",
+              "blockType": "variables_get",
+              "alias": "block_9",
+              "openFlyoutCopy": "Open the Variables tray",
+              "grabBlockCopy": "Drag the block onto your code space",
+              "connectCopy": "Connect it to this block",
+              "connectTo": {
+                  "rawId": "2WjT0VtR}95C$j([RegI",
+                  "id": "block_7",
+                  "inputName": "WIDTH"
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>item</span></kano-value-preview> to <kano-value-preview><span>raySize</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "id": "block_9"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "id": "block_9"
+                          },
+                          "value": "raySize"
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>0</span></kano-value-preview>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "shadow": "HEIGHT",
+                          "id": "block_7"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "shadow": "HEIGHT",
+                              "id": "block_7"
+                          },
+                          "value": "0"
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-wool_lime\"></i>"
+              },
+              "beacon": {
+                  "target": {
+                      "block": {
+                          "shadow": "TYPE",
+                          "id": "block_7"
+                      }
+                  }
+              },
+              "validation": {
+                  "blockly": {
+                      "value": {
+                          "target": {
+                              "shadow": "TYPE",
+                              "id": "block_7"
+                          }
+                      }
+                  }
+              }
+          },
+          {
+              "banner": {
+                  "text": "Now hit tab, stand below your UFO and use your power!"
+              },
+              "validation": {
+                  "mode-change": "play"
+              }
+          },
+          {
+              "minecraft_chat": "Stand under the UFO and hit the ${default_power.keyLabel} key!",
+              "validation": {
+                  "power-triggered": "default_power"
+              }
+          },
+          {
+              "minecraft_chat": "When you're done, hit tab to go back to coding",
+              "validation": {
+                  "mode-change": "code"
+              }
+          }
+      ],
+        "variables": [
+            "raySize",
+            "rayHeight"
+        ]
+    }
+}

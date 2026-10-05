@@ -1,0 +1,193 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "C",
+                "key": 67,
+                "name": "Clear Space",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Clear Some Land",
+        "group": "fortress",
+        "nextStory": "fortress-wall",
+        "steps": [
+           {
+               "banner": {
+                   "text": "You're going to code a huge castle so we need to clear some space",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's use a Create block to remove some Minecraft blocks, Open the Craft tray",
+                "grabBlockCopy": "Drag the Cube block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "We want to clear a lot of space so change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview>, you can click and type the value or use the <kano-value-preview><span>+</span></kano-value-preview> and <kano-value-preview><span>-</span></kano-value-preview> buttons"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_0"
+                            },
+                            "value": "50"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-air\"></i> which will remove the blocks"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_0",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_floor",
+                "alias": "block_1",
+                "openFlyoutCopy": "Now let's smooth out the floor, open the Craft tray",
+                "grabBlockCopy": "Drag the Set Floor block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "T^h#;56L7JR7gkdMSM8M",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>50</span></kano-value-preview> to match our cube"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_1"
+                            },
+                            "value": "50"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-grass\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Let's clear some space, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to New Power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,207 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 66,
+            "keyLabel": "B",
+            "name": "Powermid",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"B\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Powermid",
+        "group": "origin",
+        "nextStory": "tree-mendous",
+        "steps": [
+            {
+                "banner": {
+                    "text":"Learn the power to create a new wonder of the world!",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's Craft our pyramid.",
+                "grabBlockCopy": "Drag the <b>create shape</b> block onto your code space.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change **cube** to **pyramid**."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "inputName": "SHAPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_0"
+                            },
+                            "value": "PYRAMID"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Set the size of our pyramid to <kano-value-preview><span>4</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "BASE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "BASE",
+                                "id": "block_0"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"This is a special pyramid, it's completely transparent. Change Type to <i class=\"blocks-sprite blocks-sprite-glass\"></i>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            },
+                            "value": "GLASS"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_block",
+                "alias": "block_1",
+                "openFlyoutCopy": "And it has a built in waterfall. Let's add some water, open the Craft tray.",
+                "grabBlockCopy": "Grab the code to create blocks.",
+                "connectCopy": "Connect it beneath your create block.",
+                "connectTo": {
+                    "id": "block_0",
+                    "rawId": "sRke;HWqQcex,]isU!GR"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change Y to <kano-value-preview><span>5</span></kano-value-preview> so the block is above your pyramid."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "5"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change the block type to <i class=\"blocks-sprite blocks-sprite-water\"></i>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            },
+                            "value": "WATER"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit Tab and become a power pharaoh!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Sweet pyramid! Use your sword if you need to escape",
+                "validation": {
+                    "wait": 10000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Play with different materials or try to make your powermid bigger",
+                    "next_button": true
+                }
+            }
+        ]
+    }
+}

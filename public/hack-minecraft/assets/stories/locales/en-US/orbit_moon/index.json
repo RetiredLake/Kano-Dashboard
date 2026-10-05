@@ -1,0 +1,15 @@
+{
+    "id": "orbit_moon",
+    "name": "Orbiting Moon",
+    "next": "autumn_leaves",
+    "progress": {
+        "group": "fake_group"
+    },
+    "description": "Use oscillators to make the moon orbit earth!",
+    "scenes": [{
+        "id": "_0",
+        "component": "common/editor",
+        "data_path": "orbit_moon.json",
+        "show_remix_options": true
+    }]
+}

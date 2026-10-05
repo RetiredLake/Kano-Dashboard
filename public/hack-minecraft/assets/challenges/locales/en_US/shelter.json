@@ -1,0 +1,124 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 86,
+            "keyLabel": "V",
+            "name": "Shelter",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"V\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Pow Pow Shelter",
+        "group": "origin",
+        "nextStory": "hole",
+        "steps": [
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's build a house!<br>We need to <b>Craft</b> a cube for our shelter.",
+                "grabBlockCopy": "Drag the <b>create shape</b> block onto your code space.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text":"Let's make a shelter big enough to walk around in, change the size to <kano-value-preview><span>6</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_0"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_door",
+                "alias": "block_1",
+                "openFlyoutCopy": "We need a way to get out of the shelter, let's <b>Craft</b> a door.",
+                "grabBlockCopy": "Drag the <b>create door</b> block onto your code space.",
+                "connectCopy": "Connect it to this block.",
+                "connectTo": {
+                    "id": "block_0",
+                    "inputName": "@next"
+                }
+            },                    
+            {
+                "banner": {
+                    "text":"X, Y and Z are directions in Minecraft. Z is forward and backward. Move the door to the walls of the shelter. Change the <b>Z value</b> to <kano-value-preview><span>2</span></kano-value-preview>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Z"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Z"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Hit the <b>Tab</b> key to go back into Minecraft to try your new power."
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to create your shelter",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Nice house! You can open the door by right clicking on it",
+                "validation": {
+                    "wait": 10000
+                }
+            },
+            {
+                "minecraft_chat": "Now press TAB to unlock your next power!",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

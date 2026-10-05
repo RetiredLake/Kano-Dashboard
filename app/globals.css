@@ -189,6 +189,9 @@ button:focus-visible, a:focus-visible {
 .app-icon-minecraft { background: #7252af; }
 .app-icon-minecraft img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-tile-minecraft { grid-column: 1; grid-row: 2; }
+.app-tile-hack { grid-column: 2; grid-row: 2; }
+.app-icon-hack { background: #7252af; }
+.app-icon-hack img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
 .app-name {
   max-width: 100%;

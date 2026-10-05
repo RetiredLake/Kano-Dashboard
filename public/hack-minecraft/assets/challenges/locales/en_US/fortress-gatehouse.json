@@ -1,0 +1,566 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "G",
+                "key": 71,
+                "name": "Gatehouse",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"G\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Gatehouse",
+        "group": "fortress",
+        "nextStory": "fortress-flag",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Let's make a gatehouse so we can get in and out of the Fortress",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_0",
+                "openFlyoutCopy": "We'll start with a cube, open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview> to raise it out of the ground"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Size from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>7</span></kano-value-preview> to make the cube bigger"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_0"
+                            },
+                            "value": "7"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-stone_brick\"></i> to make it sturdy"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's create a cool roof using a sphere, open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "V!pYrt;NivFOuV7YI4}L",
+                    "id": "block_0",
+                    "inputName": "@next"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>CUBE</span></kano-value-preview> to <kano-value-preview><span>SPHERE</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1",
+                            "inputName": "SHAPE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "SPHERE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "The sphere is inside the cube, Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>6</span></kano-value-preview> so we can see it"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Radius from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview> so it matches the cube"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RADIUS",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RADIUS",
+                                "id": "block_1"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your fortress unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_column",
+                "alias": "block_2",
+                "openFlyoutCopy": "We can use a cylinder to create the doorway, open the Craft tray",
+                "grabBlockCopy": "Drag the cylinder block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "o=O%%r4K(d4SwP~?F#?P",
+                    "id": "block_1",
+                    "inputName": "@next"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_2"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Change <img src='/hack-minecraft/assets/axis-picker/y-dark.svg' width='30'> to <img src='/hack-minecraft/assets/axis-picker/x-dark.svg' width='30'>, to rotate the cylinder"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "AXIS"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "x"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change X from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "X"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "X"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "-4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_2"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-air\"></i> so it removes the blocks instead of adding them"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_3",
+                "openFlyoutCopy": "Now let's add the floor back using a plane, open the Craft tray. Planes are long flat planks of blocks",
+                "grabBlockCopy": "Drag the Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "N2X65xhnkR4/GB*Ks4od",
+                    "id": "block_2",
+                    "inputName": "@next"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Z from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Z"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Z"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>8</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_3"
+                            },
+                            "value": "8"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-cobblestone\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now let's add the gatehouse to your wall, hit Tab to return to Minecraft."
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Go to your fortress wall and hit the ${default_power.keyLabel} key to build a gatehouse",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

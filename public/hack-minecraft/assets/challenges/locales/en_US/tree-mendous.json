@@ -1,0 +1,319 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [{
+            "key": 89,
+            "keyLabel": "Y",
+            "name": "Tree-Mendous",
+            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"27\" y=\"140\"><mutation key=\"Y\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+        }]
+    },
+    "challenge": {
+        "title": "Tree-Mendous",
+        "group": "origin",
+        "nextStory": "lava-sphere",
+        "steps": [
+            {
+                "banner": {
+                    "text":"Let’s make a tree grow with the power of our mind. Or the tap of a key.",
+                    "next_button": true
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_blocks",
+                "alias": "block_0",
+                "openFlyoutCopy": "Let's start with the trunk, open the <b>Craft</b> tray.",
+                "grabBlockCopy": "Drag the <b>set blocks</b> block onto your code space.",
+                "connectCopy": "Connect it to the <em>When key is pressed</em> block.",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change Y to <kano-value-preview><span>10</span></kano-value-preview> to set the height of our tree."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change the block <b>Type</b> to <i class=\"blocks-sprite blocks-sprite-wood_spruce_up_down\"></i>."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_set",
+                "alias": "block_2",
+                "openFlyoutCopy": "Variables are a way of storing numbers, text or color in your code. Open the <b>variables</b> tray.",
+                "grabBlockCopy": "Grab a block to set the variable.",
+                "connectCopy": "Connect it under your <b>Set Blocks</b> code.",
+                "connectTo": {
+                    "id": "block_0",
+                    "rawId": "HX=9,C.Xw[ZqY2aP~UR:"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "math_number",
+                "alias": "block_3",
+                "openFlyoutCopy": "Now we need to add leaves to our tree, open the Variables tray again.",
+                "grabBlockCopy": "Drag the simple <b>number</b> block into your code.",
+                "connectCopy": "Connect it to your variable.",
+                "connectTo": {
+                    "id": "block_2",
+                    "rawId": "tgyAcxjh|$.d.S7#aE^j",
+                    "inputName": "VALUE"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Set the value to <kano-value-preview><span>3</span></kano-value-preview>, this is the height where our leaves begin."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "control",
+                "blockType": "repeat_x_times",
+                "alias": "block_4",
+                "openFlyoutCopy": "We're going to use loops to grow our leaves, open the Control tray.",
+                "grabBlockCopy": "Repeat loops run the same piece of code a number of times. Grab a <b>repeat</b> block.",
+                "connectCopy": "Connect it beneath your variable.",
+                "connectTo": {
+                    "id": "block_2",
+                    "rawId": "tgyAcxjh|$.d.S7#aE^j"
+                }
+            },
+            {
+                "banner": {
+                    "text":"We need <kano-value-preview><span>4</span></kano-value-preview> branches<br>so what number do you think goes in here?"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "N",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "N",
+                                "id": "block_4"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_5",
+                "openFlyoutCopy": "Well done! Now let's grow those leaves, open the Craft tray.",
+                "grabBlockCopy": "Drag the <b>create shape</b> block onto your code space.",
+                "connectCopy": "Connect it inside your repeat loop.",
+                "connectTo": {
+                    "id": "block_4",
+                    "rawId": "!K}-NRv6yVKPj3oL0U/q",
+                    "inputName": "DO"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change **cube** to **pyramid**"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5",
+                            "inputName": "SHAPE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_5"
+                            },
+                            "value": "PYRAMID"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text":"Change the block type to <i class=\"blocks-sprite blocks-sprite-leaves_oak_leaves\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_5",
+                            "shadow": "TYPE"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_5"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "variables",
+                "blockType": "variables_get",
+                "alias": "block_7",
+                "openFlyoutCopy": "Let's use the variable we set earlier, open the Variables tray.",
+                "grabBlockCopy": "Grab this block. It gets the value of a variable.",
+                "connectCopy": "Connect it to the Y position.",
+                "connectTo": {
+                    "id": "block_5",
+                    "shadow": "POSITION",
+                    "inputName": "Y"
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "math",
+                "blockType": "unary",
+                "alias": "block_8",
+                "openFlyoutCopy": "Let's use math to work our way up the trunk, open the Math tray.",
+                "grabBlockCopy": "Grab this math block.",
+                "connectCopy": "Connect it beneath the pyramid block",
+                "connectTo": {
+                    "id": "block_5",
+                    "rawId": "bwpqGtH+a$ku]Tfx:=4d"
+                }
+            },
+            {
+                "banner": {
+                    "text":"Our branches are <kano-value-preview><span>3</span></kano-value-preview> blocks apart."
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "RIGHT_HAND",
+                            "id": "block_8"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "RIGHT_HAND",
+                                "id": "block_8"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit tab. And use your power to grow a forest!"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power.",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Wow, something happened!  Try taking a step back to see what showed up!",
+                "validation": {
+                    "wait": 3000
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding.",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+            "banner": {
+                "text": "Play with different Types of blocks. How about a water tree?",
+                "next_button": true
+            }
+            }
+        ]
+    }
+}

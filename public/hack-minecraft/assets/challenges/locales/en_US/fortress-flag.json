@@ -1,0 +1,274 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "F",
+                "key": 70,
+                "name": "Flags",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"F\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Flagpole",
+        "group": "fortress",
+        "nextStory": "fortress-dungeon",
+        "steps": [
+           {
+               "banner": {
+                   "text": "Every fortress needs some flags, let's make a random flag power!",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_set_blocks",
+                "alias": "block_0",
+                "openFlyoutCopy": "We can use Set Blocks to build a pillar of blocks for a flagpole, open the Craft tray",
+                "grabBlockCopy": "Drag Set Blocks onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview> to make the pole"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "SIZE",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "SIZE",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-fence\"></i> to make it more pole-like"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's use a plane to put a flag on the pole, open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "jpE]Ci``cc};iuRjFlc2",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <img src='/hack-minecraft/assets/axis-picker/y-dark.svg' width='30'> to <img src='/hack-minecraft/assets/axis-picker/z-dark.svg' width='30'>, to rotate the plane"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_1",
+                            "inputName": "AXIS"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_1"
+                            },
+                            "value": "z"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change X from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>3</span></kano-value-preview> to move it to the pole"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "X"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "X"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>10</span></kano-value-preview> to raise the flag up the pole"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_1"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_1"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_1"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "blocks",
+                "blockType": "minecraft_random_wool",
+                "alias": "block_2",
+                "openFlyoutCopy": "Let's use a random block to make different flags every time you use the power, open the Blocks tray",
+                "grabBlockCopy": "This block will use a different color of wool every time, drag it to your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "q;*!PHz9wa6thib=f62W",
+                    "id": "block_1",
+                    "inputName": "TYPE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now let's make lots of flags, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key a few times to make different color flags",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

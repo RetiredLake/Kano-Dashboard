@@ -1,0 +1,689 @@
+{
+    "editor": {
+        "snippets": [
+            {
+                "keyLabel": "R",
+                "key": 82,
+                "name": "Throne",
+                "blocks": "<xml><block id=\"default_on_key_event\" type=\"fake_keyboard_hat\" x=\"137\" y=\"80\" deletable=\"false\" editable=\"false\" movable=\"false\"><mutation key=\"R\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ],
+        "powerId": 0
+    },
+    "challenge": {
+        "title": "Throne",
+        "group": "fortress",
+        "nextStory": "",
+        "steps": [
+           {
+               "banner": {
+                   "text": "The finishing touch to the fortress will be an amazing throne, let's get started",
+                   "next_button": true
+               },
+               "beacon": {
+                   "target": "banner-button",
+                   "offset": 0
+               }
+           },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_0",
+                "openFlyoutCopy": "First build a suitable floor using a plane, open the Craft tray",
+                "grabBlockCopy": "Drag the Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "default_on_key_event",
+                    "id": null
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-1</span></kano-value-preview> to sink it into the floor"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_0"
+                            },
+                            "value": "-1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>6</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_0"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>6</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_0"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your throne unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_0"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_0"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_1",
+                "openFlyoutCopy": "Let's build the throne stand, open the Craft tray",
+                "grabBlockCopy": "Drag another Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "58JWF`n_IN?G3+9:QBo*",
+                    "id": "block_0"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Width from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "WIDTH",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "WIDTH",
+                                "id": "block_1"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_1"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-glowstone_block\"></i> to make it glow!"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_1"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_1"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_2",
+                "openFlyoutCopy": "Let's build the seat of the throne using a Cube, open the Craft tray",
+                "grabBlockCopy": "Drag the block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "+G}.b%ig;@($|Jsqmb7L",
+                    "id": "block_1"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_2",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_2"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_2"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Size from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_2"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your fortress unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_2"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_2"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_shape",
+                "alias": "block_3",
+                "openFlyoutCopy": "Now to cut out the seat, open the Craft tray",
+                "grabBlockCopy": "Drag the Create Cube block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "l/:lsRCCWk|?|m12JMNB",
+                    "id": "block_2"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Tick the <kano-value-preview><span>Filled</span></kano-value-preview> box"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_3",
+                            "inputName": "FILLED"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_3"
+                            },
+                            "value": "TRUE"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change X from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>1</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "X"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "X"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "1"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>3</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_3"
+                            },
+                            "value": "3"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Size from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "SIZE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "SIZE",
+                                "id": "block_3"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Type from <i class=\"blocks-sprite blocks-sprite-wood_planks\"></i> to <i class=\"blocks-sprite blocks-sprite-air\"></i> so it removes blocks"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_3"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_3"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "craft",
+                "blockType": "minecraft_create_plane",
+                "alias": "block_4",
+                "openFlyoutCopy": "Let's finish off the throne with a back, open the Craft tray",
+                "grabBlockCopy": "Drag the Plane block onto your code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "rawId": "~?:5w|l*%mKB$76J^6gC",
+                    "id": "block_3"
+                }
+            },
+            {
+                "banner": {
+                   "text": "Change <img src='/hack-minecraft/assets/axis-picker/y-dark.svg' width='30'> to <img src='/hack-minecraft/assets/axis-picker/x-dark.svg' width='30'>, to rotate the plane"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "id": "block_4",
+                            "inputName": "AXIS"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "id": "block_4"
+                            },
+                            "value": "x"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change X from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>-2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "X"
+                            },
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "X"
+                                },
+                                "id": "block_4"
+                            },
+                            "value": "-2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Y from <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>6</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_4"
+                            },
+                            "value": "6"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change Height from <kano-value-preview><span>3</span></kano-value-preview> to <kano-value-preview><span>2</span></kano-value-preview>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "HEIGHT",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "HEIGHT",
+                                "id": "block_4"
+                            },
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                   "text": "Let's make your fortress unique. Change Type and choose a cool block like <i class=\"blocks-sprite blocks-sprite-gold_block\"></i>, <i class=\"blocks-sprite blocks-sprite-diamond_block\"></i> or <i class=\"blocks-sprite blocks-sprite-lapis_lazuli_block\"></i>"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": "TYPE",
+                            "id": "block_4"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "TYPE",
+                                "id": "block_4"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "type": "create-block",
+                "category": "player",
+                "blockType": "minecraft_player_set",
+                "alias": "block_5",
+                "openFlyoutCopy": "Let's move the player to sit you on the throne, open the Player tray",
+                "grabBlockCopy": "This block moves the player, drag it to the code space",
+                "connectCopy": "Connect it to this block",
+                "connectTo": {
+                    "id": "block_4"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Change <kano-value-preview><span>0</span></kano-value-preview> to <kano-value-preview><span>4</span></kano-value-preview> to move the player up"
+                },
+                "beacon": {
+                    "target": {
+                        "block": {
+                            "shadow": {
+                                "name": "POSITION",
+                                "shadow": "Y"
+                            },
+                            "id": "block_5"
+                        }
+                    }
+                },
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": {
+                                    "name": "POSITION",
+                                    "shadow": "Y"
+                                },
+                                "id": "block_5"
+                            },
+                            "value": "4"
+                        }
+                    }
+                }
+            },
+            {
+                "banner": {
+                    "text": "Let's place the throne, hit tab to return to Minecraft"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Find a suitable place for your throne and press the ${default_power.keyLabel} key to make it",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Your fortress is now complete! Hit tab to complete the challenge",
+                "validation": {
+                    "mode-change": "code"
+                }
+            }
+        ]
+    }
+}

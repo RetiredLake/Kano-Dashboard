@@ -1,0 +1,313 @@
+{
+    "editor": {
+        "powerId": 0,
+        "snippets": [
+            {
+                "key": 67,
+                "keyLabel": "C",
+                "name": "Color Flurry",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" movable=\"false\" x=\"20\" y=\"100\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field></block></xml>"
+            }
+        ]
+    },
+    "challenge": {
+        "title": "Color Flurry",
+        "group": "origin",
+        "nextStory": "water-pyramid",
+        "steps": [
+            {
+                "banner": {
+                    "text": "Let's combine random positions and random color to create a crazy colorful space",
+                    "next_button": true
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "craft"
+                        },
+                        "position": "right",
+                        "text": "Open the <b>Craft</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "craft"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_create_shape"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_create_shape\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_create_shape"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_create_shape",
+                            "id": "block_0"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            }
+                        },
+                        "position": "right",
+                        "text": "Connect it to the key pressed block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": null,
+                                "rawId": "default_on_key_event"
+                            },
+                            "target": "block_0"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": null,
+                            "rawId": "default_on_key_event"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "position"
+                        },
+                        "position": "right",
+                        "text": "Open the <b>Position</b> tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "position"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_position_random"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_position_random\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "banner": {
+                    "text": "Random functions in code is like rolling a dice, it gives you different numbers every time"
+                },
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_position_random"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_position_random",
+                            "id": "block_1"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "-3}`5jPaM0mnF6=]mTjI"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Connect it to this block"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "-3}`5jPaM0mnF6=]mTjI",
+                                "inputName": "POSITION"
+                            },
+                            "target": "block_1"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "-3}`5jPaM0mnF6=]mTjI"
+                        }
+                    },
+                    "target": "POSITION"
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "shadow": "DISTANCE",
+                                "id": "block_1"
+                            }
+                        },
+                        "position": "top",
+                        "text": "Change to <kano-value-preview><span>10</span></kano-value-preview>"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "value": {
+                            "target": {
+                                "shadow": "DISTANCE",
+                                "id": "block_1"
+                            },
+                            "value": "10"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "category": "blocks"
+                        },
+                        "position": "right",
+                        "text": "Open the Blocks tray"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "open-flyout": "blocks"
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "flyout_block": "minecraft_random_wool"
+                        },
+                        "position": "right",
+                        "text": "Drag the <kano-blockly-block type=\"minecraft_random_wool\"></kano-blockly-block> block onto your code space"
+                    }
+                ],
+                "banner": {
+                    "text": "Random isn't just for numbers, we can use it for colors too"
+                },
+                "arrow": {
+                    "target": {
+                        "flyout_block": "minecraft_random_wool"
+                    },
+                    "angle": 120,
+                    "size": 80
+                },
+                "validation": {
+                    "blockly": {
+                        "create": {
+                            "type": "minecraft_random_wool",
+                            "id": "block_2"
+                        }
+                    }
+                }
+            },
+            {
+                "tooltips": [
+                    {
+                        "location": {
+                            "block": {
+                                "id": "block_0",
+                                "rawId": "-3}`5jPaM0mnF6=]mTjI"
+                            }
+                        },
+                        "position": "bottom",
+                        "text": "Connect it to Type"
+                    }
+                ],
+                "validation": {
+                    "blockly": {
+                        "connect": {
+                            "parent": {
+                                "id": "block_0",
+                                "rawId": "-3}`5jPaM0mnF6=]mTjI",
+                                "inputName": "TYPE"
+                            },
+                            "target": "block_2"
+                        }
+                    }
+                },
+                "phantom_block": {
+                    "location": {
+                        "block": {
+                            "id": "block_0",
+                            "rawId": "-3}`5jPaM0mnF6=]mTjI"
+                        }
+                    },
+                    "target": "TYPE"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Now hit Tab. Mash the key and look around"
+                },
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the ${default_power.keyLabel} key to use your new power",
+                "validation": {
+                    "power-triggered": "default_power"
+                }
+            },
+            {
+                "minecraft_chat": "Hit the tab key to go back to coding",
+                "validation": {
+                    "mode-change": "code"
+                }
+            },
+            {
+                "banner": {
+                    "text": "Why not try changing the Random Wool to Random Block",
+                    "next_button": true
+                }
+            }
+        ]
+    },
+    "title": "Explosión de Color"
+}

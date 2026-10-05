@@ -1,0 +1,77 @@
+[
+    {
+        "id": "origin",
+        "heading": "Tu Historia de Origen",
+        "description": "Afronta desafíos y desbloquea nuevos poderes de programación",
+        "cardDescription": "Descubre nuevos poderes que pueden remodelar el mundo (con tan sólo presionar una tecla)",
+        "image": "/hack-minecraft/assets/origin-story.jpg",
+        "new": true,
+        "challenges": [
+            {
+                "id": "tower",
+                "image": "/hack-minecraft/assets/challenges/images/tower.png",
+                "heading": "Nombre Asombroso",
+                "description": "El poder de hacer aparecer tu nombre en bloques"
+            },
+            {
+                "id": "your-name",
+                "image": "/hack-minecraft/assets/challenges/images/your-name.png",
+                "heading": "Refugio Instantáneo",
+                "description": "Construye un refugio en un instante con sólo presionar una tecla. ¡Zas!"
+            },
+            {
+                "id": "shelter",
+                "image": "/hack-minecraft/assets/challenges/images/shelter.png",
+                "heading": "El Topo Loco",
+                "description": "Aprende a excavar grandes trozos del mundo"
+            },
+            {
+                "id": "hole",
+                "image": "/hack-minecraft/assets/challenges/images/hole.png",
+                "heading": "Caminata Encantada",
+                "description": "Haz que aparezca una camino en dondequiera que andes o saltes"
+            },
+            {
+                "id": "road",
+                "image": "/hack-minecraft/assets/challenges/images/road.png",
+                "heading": "Teletransportación",
+                "description": "Olvídate de caminar. ¡Mucho mejor teletransportate por el mundo!"
+            },
+            {
+                "id": "teleport",
+                "image": "/hack-minecraft/assets/challenges/images/teleport.png",
+                "heading": "¡Bum!",
+                "description": "Haz que aparezca dinamita y ve cómo explota"
+            },
+            {
+                "id": "random-wool",
+                "image": "/hack-minecraft/assets/challenges/images/random-wool.png",
+                "heading": "Explosión de Color",
+                "description": "Haz aparecer bloques de colores aleatorios en patrones interesantes"
+            },
+            {
+                "id": "water-pyramid",
+                "image": "/hack-minecraft/assets/challenges/images/water-pyramid.png",
+                "heading": "Podérmide",
+                "description": "El poder de hacer aparecer pirámides enormes con cascadas"
+            },
+            {
+                "id": "tree-mendous",
+                "image": "/hack-minecraft/assets/challenges/images/tree-mendous.png",
+                "heading": "Árbolavilloso",
+                "description": "El poder sobre la naturaleza. Cultiva instantáneamente un árbol espectacular"
+            },
+            {
+                "id": "lava-sphere",
+                "image": "/hack-minecraft/assets/challenges/images/lava-sphere.png",
+                "heading": "Esfera de Lava",
+                "description": "Haz aparecer una esfera llena de lava ante tus ojos"
+            }
+        ]
+    },
+    {
+        "heading": "Fortaleza de Bloquedad",
+        "cardDescription": "¡Próximamente!",
+        "locked": true
+    }
+]
