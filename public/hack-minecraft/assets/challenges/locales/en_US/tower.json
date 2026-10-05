@@ -1,20 +1,34 @@
 {
     "editor": {
-        "mode": "play",
+        "mode": "code",
         "powerId": 0,
-        "snippets":[{
-            "key": 84,
-            "keyLabel": "T",
-            "name": "Tower",
-            "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables></variables><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" x=\"27\" y=\"140\"><mutation key=\"C\"></mutation><field name=\"TOGGLE\">PRESS</field><next><block type=\"minecraft_set_blocks\" id=\";H/}3Ud`)+J1a`wtYKp4\"><value name=\"POSITION\"><shadow type=\"minecraft_coordinates\" id=\"H5`9n4zfu+f/Q@k-e4Uu\"><value name=\"X\"><shadow type=\"minecraft_stepper\" id=\"e*qstUiF.LPoO1Q-eLpN\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Y\"><shadow type=\"minecraft_stepper\" id=\"u*6axt#Alb.v9uu!jGS?\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Z\"><shadow type=\"minecraft_stepper\" id=\"uE@RcbRO1Kt?AIL(75NC\"><field name=\"VALUE\">0</field></shadow></value></shadow></value><value name=\"SIZE\"><shadow type=\"minecraft_coordinates\" id=\"mSXUKm[niTZ[5oGi.c:!\"><value name=\"X\"><shadow type=\"minecraft_stepper\" id=\"vdX^vU.*FW:2epO?/KuE\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Y\"><shadow type=\"minecraft_stepper\" id=\"X63P1tp!Dr3},]tc4RkN\"><field name=\"VALUE\">10</field></shadow></value><value name=\"Z\"><shadow type=\"minecraft_stepper\" id=\"H|(m197FF]efWp0e{Ae8\"><field name=\"VALUE\">0</field></shadow></value></shadow></value><value name=\"TYPE\"><shadow type=\"minecraft_block\" id=\"#SFi.:$3~7-4rovm~x4)\"><field name=\"BLOCK\">GLASS_PANE</field></shadow></value></block></next></block></xml>",
-            "code": "minecraft.setBlocks({\"x\":0,\"y\":0,\"z\":0}, {\"x\":0,\"y\":10,\"z\":0}, minecraft.block(\"GLASS_PANE\"));"                
-        }]
+        "snippets": [
+            {
+                "key": 84,
+                "keyLabel": "T",
+                "name": "Tower",
+                "blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables></variables><block type=\"fake_keyboard_hat\" id=\"default_on_key_event\" deletable=\"false\" x=\"27\" y=\"140\"><mutation key=\"T\"></mutation><field name=\"TOGGLE\">PRESS</field><next><block type=\"minecraft_set_blocks\" id=\";H/}3Ud`)+J1a`wtYKp4\"><value name=\"POSITION\"><shadow type=\"minecraft_coordinates\" id=\"H5`9n4zfu+f/Q@k-e4Uu\"><value name=\"X\"><shadow type=\"minecraft_stepper\" id=\"e*qstUiF.LPoO1Q-eLpN\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Y\"><shadow type=\"minecraft_stepper\" id=\"u*6axt#Alb.v9uu!jGS?\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Z\"><shadow type=\"minecraft_stepper\" id=\"uE@RcbRO1Kt?AIL(75NC\"><field name=\"VALUE\">0</field></shadow></value></shadow></value><value name=\"SIZE\"><shadow type=\"minecraft_coordinates\" id=\"mSXUKm[niTZ[5oGi.c:!\"><value name=\"X\"><shadow type=\"minecraft_stepper\" id=\"vdX^vU.*FW:2epO?/KuE\"><field name=\"VALUE\">0</field></shadow></value><value name=\"Y\"><shadow type=\"minecraft_stepper\" id=\"X63P1tp!Dr3},]tc4RkN\"><field name=\"VALUE\">10</field></shadow></value><value name=\"Z\"><shadow type=\"minecraft_stepper\" id=\"H|(m197FF]efWp0e{Ae8\"><field name=\"VALUE\">0</field></shadow></value></shadow></value><value name=\"TYPE\"><shadow type=\"minecraft_block\" id=\"#SFi.:$3~7-4rovm~x4)\"><field name=\"BLOCK\">GLASS_PANE</field></shadow></value></block></next></block></xml>",
+                "code": "minecraft.setBlocks({\"x\":0,\"y\":0,\"z\":0}, {\"x\":0,\"y\":10,\"z\":0}, minecraft.block(\"GLASS_PANE\"));"
+            }
+        ]
     },
     "challenge": {
         "title": "T is for Tower",
         "group": "origin",
         "nextStory": "your-name",
         "steps": [
+            {
+                "banner": {
+                    "text": "Welcome! This starter code creates a tower when you press T. First, take a look at your power in the editor.",
+                    "next_button": true
+                }
+            },
+            {
+                "banner": "Press Tab when you are ready to try your Tower power in Minecraft.",
+                "validation": {
+                    "mode-change": "play"
+                }
+            },
             {
                 "banner": "Press the Tab key to go back to the challenge",
                 "validation": {
@@ -85,13 +99,13 @@
             },
             {
                 "banner": {
-                    "text":"This is the code that creates the tower! Ready to hack it?",
+                    "text": "This is the code that creates the tower! Ready to hack it?",
                     "next_button": true
                 }
             },
             {
                 "banner": {
-                    "text":"Change the material to <i class=\"blocks-sprite blocks-sprite-tnt_explosive\"></i> here."
+                    "text": "Change the material to <i class=\"blocks-sprite blocks-sprite-tnt_explosive\"></i> here."
                 },
                 "beacon": {
                     "target": {
