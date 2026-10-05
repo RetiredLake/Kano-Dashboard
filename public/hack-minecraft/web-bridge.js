@@ -69,7 +69,9 @@
   }
   function setFrame(x, y, width, height) {
     var app = host();
-    if (app) app.style.cssText = 'position:fixed;z-index:2;left:' + x + 'px;top:' + y + 'px;width:' + width + 'px;height:' + height + 'px;';
+    // Polymer attaches backdrops to body, while dialogs stay inside the app.
+    // Keep both in the same stacking context so the backdrop stays below dialogs.
+    if (app) app.style.cssText = 'position:absolute;z-index:auto;left:' + x + 'px;top:' + y + 'px;width:' + width + 'px;height:' + height + 'px;';
     return Promise.resolve();
   }
   core.AppWindow = {

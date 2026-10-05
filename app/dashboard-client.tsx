@@ -150,7 +150,7 @@ export default function DashboardClient() {
                   {app.icon === "code" ? (
                     <img src="/dashboard/kano-code-logo.png" alt="" />
                   ) : app.icon === "hack" ? (
-                    <img src="/hack-minecraft/icon.svg" alt="" />
+                    <img src="/dashboard/hack-minecraft-logo.png" alt="" />
                   ) : app.icon === "minecraft" ? (
                     <img src="/dashboard/hack-minecraft-logo.png" alt="" />
                   ) : (
