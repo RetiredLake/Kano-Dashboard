@@ -9,17 +9,28 @@
     // The short Sites route gets copies of old workspace caches, never deletes
     // or overwrites either profile. Progress itself already uses a stable key.
     if (location.pathname === '/make-minecraft/minecraft/' || location.pathname === '/make-minecraft/minecraft/index.html') {
-        var oldBase = location.origin + '/make-minecraft/original-ui/make-minecraft/minecraft/index.html';
+        var oldBases = [
+            location.origin + '/make-minecraft/original-ui/make-minecraft/minecraft/',
+            location.origin + '/make-minecraft/original-ui/make-minecraft/minecraft/index.html',
+            location.origin + '/make-minecraft/minecraft/',
+            location.origin + '/make-minecraft/minecraft/index.html'
+        ];
         var newBase = location.origin + location.pathname;
         for (var cached = 1; cached <= 14; cached++) {
             var suffix = '#project' + cached;
-            if (localStorage.getItem(newBase + suffix) === null && localStorage.getItem(oldBase + suffix) !== null) {
-                localStorage.setItem(newBase + suffix, localStorage.getItem(oldBase + suffix));
+            oldBases.some(function (oldBase) {
+                if (localStorage.getItem(newBase + suffix) === null && localStorage.getItem(oldBase + suffix) !== null) {
+                    localStorage.setItem(newBase + suffix, localStorage.getItem(oldBase + suffix));
+                }
+                return localStorage.getItem(newBase + suffix) !== null;
+            });
+        }
+        oldBases.some(function (oldBase) {
+            if (localStorage.getItem(newBase + '#playground') === null && localStorage.getItem(oldBase + '#playground') !== null) {
+                localStorage.setItem(newBase + '#playground', localStorage.getItem(oldBase + '#playground'));
             }
-        }
-        if (localStorage.getItem(newBase + '#playground') === null && localStorage.getItem(oldBase + '#playground') !== null) {
-            localStorage.setItem(newBase + '#playground', localStorage.getItem(oldBase + '#playground'));
-        }
+            return localStorage.getItem(newBase + '#playground') !== null;
+        });
     }
     var gameFrame, gameStage;
     var filePrefix = 'kano.make-minecraft.original-web.file:';
@@ -61,6 +72,9 @@
             try {
                 ready = game.Module && game.Module.calledRun && game.KanoMCPI &&
                     game.KanoMCPI.rawCommand('player.getPos()', game.Module).trim().split(',').length === 3;
+                if (ready && game.Module._webResumeForMake) {
+                    ready = !!game.Module._webResumeForMake();
+                }
             } catch (error) { ready = false; }
             if (!ready && Date.now() < deadline) { setTimeout(runWhenReady, 250); return; }
             var promise = ready ? game.KanoLessons.run(saved('mc_script.py') || '', {
