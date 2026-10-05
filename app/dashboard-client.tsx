@@ -23,7 +23,7 @@ type LauncherApp = {
   id: string;
   name: string;
   href: string;
-  icon: "code" | "art" | "minecraft" | "hack";
+  icon: "code" | "art" | "minecraft" | "hack" | "projects";
 };
 
 const launcherPages: { id: string; apps: LauncherApp[] }[] = [
@@ -32,6 +32,7 @@ const launcherPages: { id: string; apps: LauncherApp[] }[] = [
     apps: [
       { id: "code", name: "Kano Code", href: "/code/", icon: "code" },
       { id: "art", name: "Make Art", href: "/art/", icon: "art" },
+      { id: "projects", name: "Projects", href: "http://os-redirect.kano.me/os-projects", icon: "projects" },
   { id: "minecraft", name: "Make Minecraft", href: "/make-minecraft/minecraft/", icon: "minecraft" },
       { id: "hack", name: "Hack Minecraft", href: "/hack-minecraft/", icon: "hack" },
     ],
@@ -152,7 +153,9 @@ export default function DashboardClient() {
                   ) : app.icon === "hack" ? (
                     <img src="/dashboard/hack-minecraft-logo.png" alt="" />
                   ) : app.icon === "minecraft" ? (
-                    <img src="/dashboard/hack-minecraft-logo.png" alt="" />
+                    <img src="/dashboard/make-minecraft-logo.png" alt="" />
+                  ) : app.icon === "projects" ? (
+                    <img src="/dashboard/projects-logo.png" alt="" />
                   ) : (
                     <img src="/dashboard/make-art-logo.png" alt="" />
                   )}

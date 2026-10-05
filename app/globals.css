@@ -186,7 +186,9 @@ button:focus-visible, a:focus-visible {
 .app-icon-code img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-icon-art { background: #343434; }
 .app-icon-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.app-icon-minecraft { background: #7252af; }
+.app-icon-minecraft { background: #8dcc3f; }
+.app-icon-projects { background: #f8584b; }
+.app-icon-projects img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-icon-minecraft img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .app-tile-minecraft { grid-column: 1; grid-row: 2; }
 .app-tile-hack { grid-column: 2; grid-row: 2; }
