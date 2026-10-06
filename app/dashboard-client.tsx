@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Grid2X2, RotateCcw, Settings } from "lucide-react";
+import { useRef, useState } from "react";
+import { Download, Upload, Grid2X2, RotateCcw, Settings } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,6 +18,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+import { saveData, loadData } from "@/lib/data-backup";
 
 type LauncherApp = {
   id: string;
@@ -115,6 +117,14 @@ async function resetExperience() {
 }
 
 export default function DashboardClient() {
+  const fileInput = useRef<HTMLInputElement>(null);
+  const [dataBusy, setDataBusy] = useState(false);
+  const [dataError, setDataError] = useState("");
+  async function runDataAction(action: () => Promise<void>) {
+    setDataBusy(true); setDataError("");
+    try { await action(); } catch (error) { setDataError(error instanceof Error ? error.message : "Could not transfer saved data."); }
+    finally { setDataBusy(false); }
+  }
   const [pageIndex, setPageIndex] = useState(0);
   const [resetOpen, setResetOpen] = useState(false);
   const currentPageIndex = Math.min(pageIndex, launcherPages.length - 1);
@@ -196,7 +206,15 @@ export default function DashboardClient() {
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" side="top" sideOffset={8} className="settings-popover">
-            <DropdownMenuItem onSelect={() => setResetOpen(true)}>
+            <DropdownMenuItem disabled={dataBusy} onSelect={() => void runDataAction(saveData)}>
+              <Download size={16} aria-hidden="true" />
+              Save Data
+            </DropdownMenuItem>
+            <DropdownMenuItem disabled={dataBusy} onSelect={() => fileInput.current?.click()}>
+              <Upload size={16} aria-hidden="true" />
+              Load Data
+            </DropdownMenuItem>
+            <DropdownMenuItem disabled={dataBusy} onSelect={() => setResetOpen(true)}>
               <RotateCcw size={16} aria-hidden="true" />
               Reset Experience
             </DropdownMenuItem>
@@ -204,6 +222,16 @@ export default function DashboardClient() {
         </DropdownMenu>
       </footer>
 
+      <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={(event) => {
+        const file = event.target.files?.[0]; event.target.value = "";
+        if (file) void runDataAction(async () => { await loadData(file); window.location.assign("/"); });
+      }} />
+      <AlertDialog open={!!dataError} onOpenChange={(open) => { if (!open) setDataError(""); }}>
+        <AlertDialogContent>
+          <AlertDialogHeader><AlertDialogTitle>Saved Data</AlertDialogTitle><AlertDialogDescription>{dataError}</AlertDialogDescription></AlertDialogHeader>
+          <AlertDialogFooter><AlertDialogAction onClick={() => setDataError("")}>OK</AlertDialogAction></AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
       <AlertDialog open={resetOpen} onOpenChange={setResetOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
