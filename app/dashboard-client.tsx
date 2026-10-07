@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Download, Upload, Grid2X2, RotateCcw, Settings } from "lucide-react";
+import { Download, Upload, RotateCcw } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -143,6 +143,10 @@ export default function DashboardClient() {
         </div>
       </header>
 
+      <span className="notification-indicator" role="img" aria-label="No notifications" title="No notifications">
+        <span className="notification-icon" aria-hidden="true" />
+      </span>
+
       <div className="dashboard-content">
         <section className="dashboard-zone story-zone" aria-labelledby="story-heading">
           <h1 id="story-heading" className="zone-title">Story Mode</h1>
@@ -194,7 +198,11 @@ export default function DashboardClient() {
               aria-current={index === currentPageIndex ? "page" : undefined}
               onClick={() => setPageIndex(index)}
             >
-              <Grid2X2 size={18} strokeWidth={2.4} aria-hidden="true" />
+              <span className="os-page-indicator" aria-hidden="true">
+                {Array.from({ length: 9 }, (_, slot) => (
+                  <span key={slot} className={slot < page.apps.length ? "is-filled" : undefined} />
+                ))}
+              </span>
             </button>
           ))}
         </nav>
@@ -202,7 +210,7 @@ export default function DashboardClient() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button type="button" className="settings-button" aria-label="Settings" title="Settings">
-              <Settings size={21} strokeWidth={2.6} aria-hidden="true" />
+              <span className="os-settings-icon" aria-hidden="true" />
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" side="top" sideOffset={8} className="settings-popover">

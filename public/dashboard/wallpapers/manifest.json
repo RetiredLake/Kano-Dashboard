@@ -1,0 +1,133 @@
+{
+  "source": "Kano-OS-4.3.3-Wallpapers.tar",
+  "assets": [
+    {
+      "file": "wallpapers/jungle-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/jungle-16-9.png",
+      "bytes": 56831,
+      "sha256": "c8a03c3e5f2310ad8215dfebe316edd3020044a26dc44c45ec9ce1d6920e1a75"
+    },
+    {
+      "file": "wallpapers/kanux-background-pink-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-pink-16-9.png",
+      "bytes": 74399,
+      "sha256": "d867bc7326c12c750ab517c01fd0d84fe7a758f0c8a6c6846f3d6b31b64477e3"
+    },
+    {
+      "file": "wallpapers/dojo-background-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/dojo-background-16-9.png",
+      "bytes": 21596,
+      "sha256": "f68ef94b6cec4fa134e633e4f28cb0d0cd1d89688d64dbf38167c3f65d407fda"
+    },
+    {
+      "file": "wallpapers/kanux-background-blue-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-blue-16-9.png",
+      "bytes": 80098,
+      "sha256": "86dc71b17e838e3b3323f3e363b1392b3a82ed1a4d1ee467cbc569193abe3a96"
+    },
+    {
+      "file": "wallpapers/dojo-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/dojo-16-9.png",
+      "bytes": 21309,
+      "sha256": "e11855e27f773ba5f01cecd5ded9b5eb62840d393c60a91e6ac539b61bcc09be"
+    },
+    {
+      "file": "wallpapers/kanux-background-purple-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-purple-16-9.png",
+      "bytes": 83291,
+      "sha256": "e228303f6a48600d56710fc8cda7b149eb1aaf38e741b381d463f374795e038b"
+    },
+    {
+      "file": "wallpapers/kanux-background-cyan-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-cyan-16-9.png",
+      "bytes": 81985,
+      "sha256": "8c2fbbd6c6b1d04a5076563aa9863b0e29ff1b7e00f5f698ff1fc08258426b7f"
+    },
+    {
+      "file": "wallpapers/concert_hall-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/concert_hall-16-9.png",
+      "bytes": 34002,
+      "sha256": "e47d0d0bcbe007a63a9643b822a78d0930bd1c193ae4691385a97ee722279ce1"
+    },
+    {
+      "file": "wallpapers/kanux-background-bluecrosses-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-bluecrosses-16-9.png",
+      "bytes": 18583,
+      "sha256": "40140a56ccb4ec3492c54b6accc57f68d0f55771130ba3a8dd61058e2ca08a04"
+    },
+    {
+      "file": "wallpapers/space-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/space-16-9.png",
+      "bytes": 40446,
+      "sha256": "528c5abc5ae3237abcc5401bd9c6c01ff4f14835fcb5360c6b3d9f8d90506115"
+    },
+    {
+      "file": "wallpapers/kanux-background-orange-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-orange-16-9.png",
+      "bytes": 77159,
+      "sha256": "4e999c62dfee864b431dd276e6405c8bb06a59086fd494d7bfa4e4a3a9338000"
+    },
+    {
+      "file": "wallpapers/items-background-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/items-background-16-9.png",
+      "bytes": 33883,
+      "sha256": "c6a1264ba60a5758d8f55a84039c435f88ce051337ab668c0f6d5132e27dc7c9"
+    },
+    {
+      "file": "wallpapers/kanux-background-dark-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-dark-16-9.png",
+      "bytes": 50255,
+      "sha256": "2e5563b70ad5f4a32311bcbd5d5740130c1efe75f78d38a140d6bc93c8832317"
+    },
+    {
+      "file": "wallpapers/backdrops-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/backdrops-16-9.png",
+      "bytes": 165882,
+      "sha256": "ac2ccde9a12ae5550fb36210470bd3f138be72d4dde97a580a1171f2a1bd58b6"
+    },
+    {
+      "file": "wallpapers/kanux-background-green-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-green-16-9.png",
+      "bytes": 86230,
+      "sha256": "dbf48128953f1e1d1c859feaa5877025e263ea5d21407d17f576d56efda09ef9"
+    },
+    {
+      "file": "wallpapers/clouds-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/clouds-16-9.png",
+      "bytes": 120319,
+      "sha256": "064e5c68cfd20377c4e3a3cfcc20d5e80ea4ddf2d244c8621854214b931f2d12"
+    },
+    {
+      "file": "wallpapers/video_set-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/video_set-16-9.png",
+      "bytes": 44845,
+      "sha256": "b392929483827596b5dd2a3b5c641338801885d0d18957a9b5167c7bf8c22c71"
+    },
+    {
+      "file": "wallpapers/kanux-background-red-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/kanux-background-red-16-9.png",
+      "bytes": 78858,
+      "sha256": "976dde8c03fe3a3508e46c4f6228ca8f9f974e4b639d550027307dda49ff496e"
+    },
+    {
+      "file": "wallpapers/minecraft-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/minecraft-16-9.png",
+      "bytes": 30720,
+      "sha256": "c485a6e3704b9ad48b6e66cb669ad1ec269570e0fa38c0481bd20d786a95130e"
+    },
+    {
+      "file": "wallpapers/arcade_hall-16-9.png",
+      "url": "/dashboard/wallpapers/wallpapers/arcade_hall-16-9.png",
+      "bytes": 42852,
+      "sha256": "82b4660214ee8de3fac6c229a48192cab0d250328ffe80749cddc5c8c7233f33"
+    },
+    {
+      "file": "../wallpaper.png",
+      "url": "/dashboard/wallpaper.png",
+      "bytes": 31773,
+      "sha256": "101d12759cbf34b772cf932a71d8222ffd29470fcb28435f8dbde56d0c2928fb",
+      "reusesExistingAsset": true
+    }
+  ],
+  "selection": "Native 16:9 Kano desktop wallpapers and original dashboard wallpaper only; excludes LXDE, lower-resolution variants and duplicate aliases."
+}

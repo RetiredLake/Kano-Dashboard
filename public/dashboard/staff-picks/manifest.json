@@ -1,0 +1,123 @@
+{
+  "source": "Kano OS 4.3.3 Hopper; original covers copied byte-for-byte",
+  "liveEndpoint": "https://dlt.os.kes.kano.me/",
+  "currentDefaults": [
+    {
+      "id": "5cd5835432dd0f15550e5086",
+      "cover": "https://s3-eu-west-1.amazonaws.com/world.kano.me/share-items/covers/5cd5835432dd0f15550e5086.png",
+      "title": "Sparkle Rainbow",
+      "description": "",
+      "username": "holographicleah",
+      "app": "kano-draw",
+      "openUrl": "https://world.kano.me/creation/sparkle-rainbow",
+      "fallbackUrl": "https://world.kano.me/creation/sparkle-rainbow",
+      "osCoverPath": "/usr/share/kesdltc/images/5cd5835432dd0f15550e5086.png",
+      "coverUrl": "/dashboard/staff-picks/5cd5835432dd0f15550e5086.png"
+    },
+    {
+      "id": "5c9ce4fc62a4bf0ff1700b77",
+      "cover": "https://s3-eu-west-1.amazonaws.com/world.kano.me/share-items/covers/5c9ce4fc62a4bf0ff1700b77.gif",
+      "title": "Paints.",
+      "description": "",
+      "username": "mikegreer",
+      "app": "make-apps",
+      "openUrl": "https://world.kano.me/creation/paints_5",
+      "fallbackUrl": "https://world.kano.me/creation/paints_5",
+      "osCoverPath": "/usr/share/kesdltc/images/5c9ce4fc62a4bf0ff1700b77.png",
+      "coverUrl": "/dashboard/staff-picks/5c9ce4fc62a4bf0ff1700b77.png"
+    },
+    {
+      "id": "5c507ffdd8f37a1015b52eac",
+      "cover": "https://s3-eu-west-1.amazonaws.com/world.kano.me/share-items/covers/5c507ffdd8f37a1015b52eac.png",
+      "title": "Neon Space Raiders",
+      "description": "Starting with the basic spaceship shape from the Make Art challenge, I cloned, staggered and added colours to make a trio of Neon Space Raiders. To create some depth, I added a dimmed circular repeating pattern underneath. As a final touch, each Space Raider got a set of laser canons that shoots different shapes and colours. Feel to free to remix, please credit \"TyrantLizardRex\" :D",
+      "username": "TyrantLizardRex",
+      "app": "kano-draw",
+      "openUrl": "https://world.kano.me/creation/neon-space-raiders",
+      "fallbackUrl": "https://world.kano.me/creation/neon-space-raiders",
+      "osCoverPath": "/usr/share/kesdltc/images/5c507ffdd8f37a1015b52eac.png",
+      "coverUrl": "/dashboard/staff-picks/5c507ffdd8f37a1015b52eac.png"
+    },
+    {
+      "id": "5d0103cdebe30b0fe7096c1f",
+      "cover": "https://s3-eu-west-1.amazonaws.com/world.kano.me/share-items/covers/5d0103cdebe30b0fe7096c1f.png",
+      "title": "Fractal Tree",
+      "description": "Tree made using an L-system",
+      "username": "hicks",
+      "app": "kano-draw",
+      "openUrl": "https://world.kano.me/creation/fractal-tree_47",
+      "fallbackUrl": "https://world.kano.me/creation/fractal-tree_47",
+      "osCoverPath": "/usr/share/kesdltc/images/5d0103cdebe30b0fe7096c1f.png",
+      "coverUrl": "/dashboard/staff-picks/5d0103cdebe30b0fe7096c1f.png"
+    }
+  ],
+  "legacyMakeArtDefaults": [
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/5729d34c1ac433ba3e0be584.png",
+      "date_created": "04 May 2016",
+      "description": "I use this emoji all the time and I really like creating it!",
+      "id": "5729d34c1ac433ba3e0be584",
+      "title": "Laughing Emoji Face",
+      "username": "Sadness",
+      "coverUrl": "/dashboard/staff-picks/5729d34c1ac433ba3e0be584.png"
+    },
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/5714ae1ad96b1d8f2cfea718.png",
+      "date_created": "18 April 2016",
+      "description": "",
+      "id": "5714ae1ad96b1d8f2cfea718",
+      "title": "Giraffe",
+      "username": "annekebeatrix",
+      "coverUrl": "/dashboard/staff-picks/5714ae1ad96b1d8f2cfea718.png"
+    },
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/570e478e8073ac0914b2c97d.png",
+      "date_created": "13 April 2016",
+      "description": "",
+      "title": "snowy day",
+      "id": "570e478e8073ac0914b2c97d",
+      "username": "aurynlm",
+      "coverUrl": "/dashboard/staff-picks/570e478e8073ac0914b2c97d.png"
+    },
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/570acd3549bcac0e14d6d231.png",
+      "date_created": "10 April 2016",
+      "description": "NORMALLY this would be impossible but not in coding : )",
+      "title": "flame through the water",
+      "id": "570acd3549bcac0e14d6d231",
+      "username": "eben",
+      "coverUrl": "/dashboard/staff-picks/570acd3549bcac0e14d6d231.png"
+    },
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/56976a3ad0dd0ed469e66f69.png",
+      "date_created": "14 January 2016",
+      "description": "An interactive sky mood animation\n\nOpen in playground to change the day mood.",
+      "title": "Day-after-Day",
+      "id": "56976a3ad0dd0ed469e66f69",
+      "username": "alexxboo",
+      "coverUrl": "/dashboard/staff-picks/56976a3ad0dd0ed469e66f69.png"
+    },
+    {
+      "app": "kano-draw",
+      "comments": [],
+      "cover": "/usr/share/kano-dashboard/default_shares/5642aeb595257e0a00fb070a.png",
+      "date_created": "11 November 2015",
+      "description": "",
+      "title": "Spring",
+      "id": "5642aeb595257e0a00fb070a",
+      "username": "TheMaxim3458",
+      "coverUrl": "/dashboard/staff-picks/5642aeb595257e0a00fb070a.png"
+    }
+  ],
+  "note": "Cover images and metadata only; original editable project attachments are not bundled. No network connector is implemented."
+}

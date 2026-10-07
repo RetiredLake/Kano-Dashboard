@@ -47,3 +47,7 @@ next-env.d.ts
 /artifacts/
 /src/art/node_modules/
 /src/code/node_modules/
+
+# Generated Python bytecode is not application source.
+__pycache__/
+*.py[cod]

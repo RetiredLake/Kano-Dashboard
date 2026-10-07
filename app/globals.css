@@ -105,6 +105,34 @@ button:focus-visible, a:focus-visible {
 .profile-copy strong { font-size: clamp(10px, .92vw, 16px); font-weight: 700; line-height: 1.1; }
 .profile-copy span { color: #426b80; font-size: clamp(8px, .7vw, 12px); line-height: 1.15; }
 
+.notification-indicator {
+  position: absolute;
+  top: 9.5%;
+  right: 8.8%;
+  width: clamp(30px, 4.6vw, 64px);
+  height: clamp(30px, 4.6vw, 64px);
+  display: grid;
+  place-items: center;
+}
+
+.notification-icon, .os-settings-icon {
+  display: block;
+  background: #455054;
+  mask: var(--os-icon) center / contain no-repeat;
+}
+
+.notification-icon {
+  --os-icon: url('/dashboard/icons/alerts_empty.png');
+  width: 80%;
+  height: 80%;
+}
+
+.os-settings-icon {
+  --os-icon: url('/dashboard/icons/settings.png');
+  width: 26px;
+  height: 26px;
+}
+
 .dashboard-content {
   position: absolute;
   top: 23.5%;
@@ -274,13 +302,22 @@ button:focus-visible, a:focus-visible {
 }
 
 .page-button {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   padding: 0;
-  box-shadow: 0 1px 2px rgb(35 76 94 / 10%);
+  border: 2px solid #455054;
+  border-radius: 5px;
+  background: transparent;
+  color: #455054;
+  opacity: .5;
 }
 
-.page-button.is-current { background: rgb(255 255 255 / 70%); }
+.page-button.is-current, .page-button:hover { background: transparent; opacity: 1; }
+
+/* The OS draws this control in Kano/Apps/app_grid_control.qml; it has no bitmap. */
+.os-page-indicator { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; width: 24px; height: 24px; }
+.os-page-indicator > span { border: 1px solid currentColor; border-radius: 3px; }
+.os-page-indicator > .is-filled { background: currentColor; }
 .settings-button {
   position: absolute;
   right: 13.5%;
@@ -291,7 +328,7 @@ button:focus-visible, a:focus-visible {
   border-color: transparent;
 }
 
-.settings-button:hover, .page-button:hover { background: rgb(255 255 255 / 75%); }
+.settings-button:hover { background: rgb(255 255 255 / 75%); }
 
 .settings-popover {
   min-width: 188px;
@@ -339,6 +376,7 @@ button:focus-visible, a:focus-visible {
 
 @media (max-width: 520px) {
   .dashboard-header { top: 5.5%; left: 7%; }
+  .notification-indicator { top: 5.5%; right: 7%; }
   .dashboard-content {
     top: 16%;
     right: 7%;
@@ -365,6 +403,7 @@ button:focus-visible, a:focus-visible {
 
 @media (max-height: 430px) and (min-width: 521px) {
   .dashboard-header { top: 6%; }
+  .notification-indicator { top: 6%; }
   .dashboard-content { top: 20%; bottom: 12%; }
   .zone-title { margin-bottom: 6px; }
   .app-icon { width: clamp(38px, 6vw, 64px); }

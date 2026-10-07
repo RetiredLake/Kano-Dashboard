@@ -1,0 +1,885 @@
+{
+  "os": "Kano OS 4.3.3 Hopper Stretch",
+  "assets": [
+    {
+      "file": "dashboard.json",
+      "bytes": 113,
+      "sha256": "e8721cb14bbf7ee30b1d59a083c434f7daf370c95d7d2f8bd0ecd57cc58d2787"
+    },
+    {
+      "file": "wardrobe_splash.png",
+      "bytes": 126062,
+      "sha256": "5a75390b701ee89695f7e7bf3754953db0dd68b055ca267db75889c5926234d9"
+    },
+    {
+      "file": "internet_splash.png",
+      "bytes": 28961,
+      "sha256": "e39ec85b16bd149df0398542f5edd2353fea12b6e02d05d2d1a988d82cb573a8"
+    },
+    {
+      "file": "default_shares/default_shares.json",
+      "bytes": 2183,
+      "sha256": "4b1fabb58aa59fe574869ad30c0a5179156b408b1d9ba364794208c1d1ff13ee"
+    },
+    {
+      "file": "default_shares/570acd3549bcac0e14d6d231.png",
+      "bytes": 94157,
+      "sha256": "9c664f433e0f6d2d44b0d15255dd6f2821d233243204a3b3ca19743e1ef47a0a"
+    },
+    {
+      "file": "default_shares/56976a3ad0dd0ed469e66f69.png",
+      "bytes": 13581,
+      "sha256": "5f1652cb4078bdfa31238cd5d0cc78ffd6a698c5d52c63f2fb95f68a28aefd4d"
+    },
+    {
+      "file": "default_shares/5714ae1ad96b1d8f2cfea718.png",
+      "bytes": 7748,
+      "sha256": "040bde5cfac4c35d772d65eb4ec620db955ce3fd5e8acdd0c631fc135063bd45"
+    },
+    {
+      "file": "default_shares/5729d34c1ac433ba3e0be584.png",
+      "bytes": 9563,
+      "sha256": "59ead3e112146c717abb873c6a29d898243fbaa47969f0580bcf0a40eebb4b30"
+    },
+    {
+      "file": "default_shares/5642aeb595257e0a00fb070a.png",
+      "bytes": 39198,
+      "sha256": "039cb4dcf35201cca921fb894e58927defc6cbb881f7841dc860d4b7cb3d352a"
+    },
+    {
+      "file": "default_shares/570e478e8073ac0914b2c97d.png",
+      "bytes": 13465,
+      "sha256": "aa3f83757370343ad0ff9c79dbc527453aa9a25038279d6f1294e491be8a9e47"
+    },
+    {
+      "file": "i18n/kano_dashboard_en_US.qm",
+      "bytes": 23,
+      "sha256": "307cef95dd5b36ff215055d427e1885b7fc3650c9224cf76d63056545996ff60"
+    },
+    {
+      "file": "i18n/kano_dashboard_fr_FR.qm",
+      "bytes": 23,
+      "sha256": "7b218a09051d3ca3d82f812ee8db3d2f12f1592095887c2da11a04577caa215c"
+    },
+    {
+      "file": "i18n/kano_dashboard_es_AR.qm",
+      "bytes": 23,
+      "sha256": "307cef95dd5b36ff215055d427e1885b7fc3650c9224cf76d63056545996ff60"
+    },
+    {
+      "file": "sounds/move-cursor.wav",
+      "bytes": 197506,
+      "sha256": "8fcdbdab5c1929b2b7c2141ff6aa49d055b89fabf2116258923d813f90ce1d67"
+    },
+    {
+      "file": "sounds/kano_open_app.wav",
+      "bytes": 535330,
+      "sha256": "b9fb17e51072fc7ea076375333533ad779e444004d083f39d9f7e18b5c76039e"
+    },
+    {
+      "file": "sounds/click.wav",
+      "bytes": 55266,
+      "sha256": "949c2ece2ff5ee19734a69a26fba8e9f66854fa0e5025d93dce3dcf3db2c316e"
+    },
+    {
+      "file": "KanoDashboard/qmldir",
+      "bytes": 87,
+      "sha256": "19f32389ad3c777319b829f6a013234d04e32440566959906708882be14dd025"
+    },
+    {
+      "file": "KanoDashboard/wallpaper.png",
+      "bytes": 31773,
+      "sha256": "101d12759cbf34b772cf932a71d8222ffd29470fcb28435f8dbde56d0c2928fb"
+    },
+    {
+      "file": "KanoDashboard/wallpaper.qml",
+      "bytes": 1152,
+      "sha256": "44ad3ac9e06e9cac08692410535af2b66e7e2d0f84f6f55001fa04d38139b84a"
+    },
+    {
+      "file": "KanoDashboard/lightdm-waitscreen.png",
+      "bytes": 12323,
+      "sha256": "fee7bde1adf3756f20c897f77f29167f39f0780892d1abe77e1e0525c98d0a03"
+    },
+    {
+      "file": "KanoDashboard/dashboard.qml",
+      "bytes": 9310,
+      "sha256": "edaf3859faecbc8e19834e9892ec7f19043a600d6feff42835c7a3f91b6a38f4"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/qmldir",
+      "bytes": 101,
+      "sha256": "8136381b9e85785197c7c75a5ccbb6cbd7d27a2f20a76018c50d68b69a43e45d"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/shutdown.png",
+      "bytes": 9878,
+      "sha256": "e79731e8837f957d9032edaa4b97375d6a2b463ca76d3952ac5134d529a8cb83"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/boot_warning.qml",
+      "bytes": 4565,
+      "sha256": "1b673b126e92445175f0742bf668ea953e1631d83002154993dfc81e843ab742"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/boot_warning_ckc.qml",
+      "bytes": 4558,
+      "sha256": "5ed13e677b3cdc3179c245be21c9073cbac226578449302964a9fbe4fadc0b37"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/shutdown-animation-v2.gif",
+      "bytes": 235952,
+      "sha256": "7f20182cf6155e636d2f965e1371b2160e99b0a731566f2a14407a38a332ae0a"
+    },
+    {
+      "file": "KanoDashboard/Views/qmldir",
+      "bytes": 58,
+      "sha256": "a41491eef87b2fefa055ee26c1ef907c4d766fd0d7bdedd47c5ea13b379e821e"
+    },
+    {
+      "file": "KanoDashboard/Views/view_loader.qml",
+      "bytes": 1286,
+      "sha256": "898fa4d8a14de3d5446ce82fac0c291e76cde83bc751c2e78a7ef40620a8ddb1"
+    },
+    {
+      "file": "KanoDashboard/FeedbackWidget/qmldir",
+      "bytes": 71,
+      "sha256": "348c68779f6f3fc8a8001b97c9cc2f9e415d8433d2b70b5cbf13ab66cdcdf6cd"
+    },
+    {
+      "file": "KanoDashboard/FeedbackWidget/feedback_widget.qml",
+      "bytes": 16241,
+      "sha256": "fbebf6a8b7b48e31272951a3352a76a8f18c5b12ad05aa2d0a7783c42f441e62"
+    },
+    {
+      "file": "KanoDashboard/Widgets/qmldir",
+      "bytes": 60,
+      "sha256": "a47f9f2f0ead9e7c3a41621456a78b402363e171119aae68abd208fc9392e3b6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/home.png",
+      "bytes": 854,
+      "sha256": "eb245d9477f78459a5241e89dd3982ed177fa5e33ea25a1131eb13cf44f3ce9e"
+    },
+    {
+      "file": "KanoDashboard/Widgets/home_button.qml",
+      "bytes": 423,
+      "sha256": "4fd03777297e63561de2ec1e79b2d3f4f37e01bc71e01396cdaec178154beae0"
+    },
+    {
+      "file": "KanoDashboard/BackgroundUpdates/qmldir",
+      "bytes": 77,
+      "sha256": "a253302ffbc3a3353452ced375809a8be5d09af8d25c0b63d0de931f3cdf3a1f"
+    },
+    {
+      "file": "KanoDashboard/BackgroundUpdates/background_updates.qml",
+      "bytes": 5679,
+      "sha256": "0453a004742b3a2f988a0af0c785b085e6d5ae61a692fed50665ac0318485d4a"
+    },
+    {
+      "file": "KanoDashboard/Popups/qmldir",
+      "bytes": 65,
+      "sha256": "974335c1d5fab9b1f31e75cdcbac761cc3d066c4b02078ada6976d5fc17a8064"
+    },
+    {
+      "file": "KanoDashboard/Popups/popup_template.qml",
+      "bytes": 1652,
+      "sha256": "caeae67ff1b97c154e0fe6e4b1c94a15f3fa22ca7aaa8c0a29212c24a17eb8dc"
+    },
+    {
+      "file": "KanoDashboard/Views/Profile/qmldir",
+      "bytes": 80,
+      "sha256": "4adde26696e05f46ed002544d4a7bc053de7bb90292344f4357da14610a5b16a"
+    },
+    {
+      "file": "KanoDashboard/Views/Profile/profile.qml",
+      "bytes": 551,
+      "sha256": "89774824f3686a02ee4ba827001bda13e2ab900479049fa37a71f971cda7edc8"
+    },
+    {
+      "file": "KanoDashboard/Views/Profile/content.qml",
+      "bytes": 344,
+      "sha256": "e4a7ea799c6388fe8775896b3d1ac11c05b6e4d7580ceaa4a73d139825fcff25"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/qmldir",
+      "bytes": 96,
+      "sha256": "b5a7a566ac714720746d9d8a16da021fd49e90a7f68796031f83d490f80268c5"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/home.png",
+      "bytes": 854,
+      "sha256": "eb245d9477f78459a5241e89dd3982ed177fa5e33ea25a1131eb13cf44f3ce9e"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/home.qml",
+      "bytes": 494,
+      "sha256": "14ab46239c11112a91ae551cf92ca21b88da6011396caaa215c7848f69c4568b"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/content.qml",
+      "bytes": 1347,
+      "sha256": "2ca0a8a2bb31bf617c9da9618d4ad62b0b95f1afc3481f7d139190085815ef52"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/footer.qml",
+      "bytes": 568,
+      "sha256": "b35400f6289d025d5dfed670458f83a6e89e091ed6fdccf17474fa15310a50ff"
+    },
+    {
+      "file": "KanoDashboard/Views/Common/qmldir",
+      "bytes": 129,
+      "sha256": "51764dd6227490725065bfe5acb036ab6de380cdfe8a7374f5a7588b11e0e30f"
+    },
+    {
+      "file": "KanoDashboard/Views/Common/widget_group.qml",
+      "bytes": 990,
+      "sha256": "7f11d61da793c4382cc36956ff17a781c4877e65f02acb18fa27653612022392"
+    },
+    {
+      "file": "KanoDashboard/Views/Common/view.qml",
+      "bytes": 1209,
+      "sha256": "c8c85680dcc5bd2b348ea5d6ed89fbb848a3ddb47e83e04e36618fa881fea0e0"
+    },
+    {
+      "file": "KanoDashboard/Views/Common/header.qml",
+      "bytes": 1415,
+      "sha256": "d7b67c88494cdaa669f16bf1b68f5d9e1ac30d2de8c7337464f3716636537d26"
+    },
+    {
+      "file": "KanoDashboard/Views/Common/footer.qml",
+      "bytes": 2134,
+      "sha256": "878f40802dcc3693886e1e01e5959818c06150c7ec6e433b0607b130a12c3005"
+    },
+    {
+      "file": "KanoDashboard/Widgets/UserProgress/qmldir",
+      "bytes": 99,
+      "sha256": "19557cf7631636a66d42f6cd579a2f37fbb573cb8e64db612aedb929780411b8"
+    },
+    {
+      "file": "KanoDashboard/Widgets/UserProgress/avatar.qml",
+      "bytes": 2151,
+      "sha256": "6981117be04380629e48d7b102129b6c8993bdb00d680c3c718304eb00142d6c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/UserProgress/user_progress.qml",
+      "bytes": 2267,
+      "sha256": "eb77c87a94beae96fb7052842501d0429dceb31b21bb8020b78a2abb6433ca29"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/qmldir",
+      "bytes": 254,
+      "sha256": "563d1b1039bf034a412e9210bb0c355cf48dfaf08324e2efd399130d7daab4af"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/youtube.qml",
+      "bytes": 447,
+      "sha256": "9c8beb36c089d4e61d9b42a8de8a00ccc9e43b526927b009a56be09c75401f81"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/creative_mode.qml",
+      "bytes": 1913,
+      "sha256": "bee29bef42c4411a8b5f2d73299e7bd708f2f93f6874f6491e6bab17d66e8b66"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/settings.qml",
+      "bytes": 316,
+      "sha256": "2e5400beb49251ada388e5dcd8923606dc9b8c97d194356d3a8d8a0810947b61"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/profile.png",
+      "bytes": 5219,
+      "sha256": "851a442c1c498b7b7a3fbc3dcbc835df67d718f43d817fb00b31e774e9115cd4"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/internet.qml",
+      "bytes": 451,
+      "sha256": "ce47ffeba9e515a6b67d4748fbe87f5d0c3d9262d3f5fa1b83cc4af37f49dc6a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/computer_mode.png",
+      "bytes": 4368,
+      "sha256": "5705f40964205ffe05df5cb5d1e72956f29135fcc46c143a324a2c8dfda7e018"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/computer_mode.qml",
+      "bytes": 342,
+      "sha256": "4bcb0f7c4ee81cefcaa35755f25f3d678e9c60a2f7e9ea1cf19da89f067ca113"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/profile.qml",
+      "bytes": 445,
+      "sha256": "61daa0e996d143ef367fa5ba408b44fc51796fea5574474bfec15ba34e3c5b3a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/settings.png",
+      "bytes": 19816,
+      "sha256": "8420b85e0aa1c69778fe1cc017ce99b350ddc98fe56e646a2e027bc5989f4518"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Onboarding/triangle.qml",
+      "bytes": 925,
+      "sha256": "61504310808abdb0f7065f2f19390b6d9bda5697891c4de4c9bb63c4f4f5745c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Onboarding/qmldir",
+      "bytes": 145,
+      "sha256": "4839d124d6b6dc93bc1bcb934ec2ba4bc8ab88521299286c3e08b4c8177da2bd"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Onboarding/hole_mask.qml",
+      "bytes": 1429,
+      "sha256": "d14b958192669005a24db884dc0b264768db8fc77cd6577995105dc9e7358201"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Onboarding/highlight.qml",
+      "bytes": 3061,
+      "sha256": "25cfe4acfb0015fec26df38e433bf31b7824e843551fee1c04b7a0614919942d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Onboarding/pointer.qml",
+      "bytes": 1530,
+      "sha256": "863a68bd3204b4a7b40b1486871a486d1d86af85a7088bdfded88522d92a8ef7"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Shapes/triangle.qml",
+      "bytes": 894,
+      "sha256": "7390a26a57be7bb0cafca37d83a5112ee66bd3af40d56c8a783563d906fb57f2"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Shapes/qmldir",
+      "bytes": 62,
+      "sha256": "0e179c31adeb7020f910c256a3ccf257f4922a94a60b1cc410fe14626a71e8e8"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/qmldir",
+      "bytes": 212,
+      "sha256": "1694d05434f624f37a4254109ad43bf2479f1856de2810435730477b0c2812e7"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/scroll_style.qml",
+      "bytes": 534,
+      "sha256": "7fd58f622c8c70506141fa440c32b591d8bd006ab83e1866212bb3ab0aa30a9f"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/resolution.qml",
+      "bytes": 282,
+      "sha256": "cf38cf89719d4577926917836e51a765bbfd846043b0e00bfd775c994a2e5877"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/scroll_groove.qml",
+      "bytes": 151,
+      "sha256": "4947c77d5ef2f6725770f14fb0c217d51d78a4493733450ed2ec7b5f08a8706a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/slider_style.qml",
+      "bytes": 193,
+      "sha256": "6f179b2491d6203cf26f3ebab372e961f3891743427f72f7422a37b7cb32d4c3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Styles/scroll_handle.qml",
+      "bytes": 160,
+      "sha256": "f8ab015626a9485094a3d67da2c9fd71fe2e0bbb1f27f80d658f97876c9f2e31"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Colours/qmldir",
+      "bytes": 71,
+      "sha256": "4386267e474b785eebae58f934d952dc8c6a0529c1f73021e2bbbda4e34f4656"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Colours/palette.qml",
+      "bytes": 682,
+      "sha256": "9184a1e367fd482e50fd52c5542c0d4bd50b186a132652a944d9612e9d26b14b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/qmldir",
+      "bytes": 279,
+      "sha256": "54b0a705da0f8e508c89575fe154428225afb813d3b0c716f579b5869fe00474"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/notification_list.qml",
+      "bytes": 2317,
+      "sha256": "e767a61df6a0dd7f38870db247a7345076cd19d6a73c6d569762f33b74b13d36"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/default_notification.png",
+      "bytes": 22130,
+      "sha256": "500ccd23b884ba0b4f0e13bf02a0fb27db0a9df725215d24712d2f971eabd2e6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts.png",
+      "bytes": 887,
+      "sha256": "d9311f658aaa16e7d49d1a2f38de55055b0ba4ff4e516f7041229731c30f65bb"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/notification_watcher.qml",
+      "bytes": 61,
+      "sha256": "7c6c717a49e6d9aa9cae677530cb99b8b91204e8d9249d4d0688e83e7fd3d036"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts_close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/notification.qml",
+      "bytes": 2441,
+      "sha256": "9dba7b3a8830feac348210bf373135d05987fc6c9b89d48c3c9a217f638ad151"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/notifications_indicator.qml",
+      "bytes": 3441,
+      "sha256": "da467cda13cd9d1252a874ec6d9cbdecc029bae30e9363bef0c056f1f49ba87c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts_empty.png",
+      "bytes": 1056,
+      "sha256": "7d55f5ee34d882cea780ccbe9293f1ee8fe3c8831a653ce3afd62838262453e9"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/notification_badge.qml",
+      "bytes": 186,
+      "sha256": "32a9605b2d47ddb66c7aadbf2a71f7c648b6dc5a4506aa4c1fb1789845492d05"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/qmldir",
+      "bytes": 139,
+      "sha256": "d65b2854368168f27ec2a552181d191a06e56fdd0e320ff1077982439f1f7e63"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/shutdown.png",
+      "bytes": 16897,
+      "sha256": "03bef4087994a81cb590df528ad116a11bb48d1632833185b60dea1a9a436dfe"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/power.png",
+      "bytes": 17256,
+      "sha256": "113fd819f5dd6a484247c1122b01648dfcb6371aa68de878cb21d3615c8de98a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/power_button.qml",
+      "bytes": 919,
+      "sha256": "df0f3c64b9ece6a2ff46eb13e6048c740dccf15ac0bc81959db41a87676f28e1"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/logout.png",
+      "bytes": 16066,
+      "sha256": "7f605eedf2b8abe6c0bdc715be78730ce587b75b4487ac331e81a06af05e4fc3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/reboot.png",
+      "bytes": 17013,
+      "sha256": "4497c6f9ae33c4176f672fbdeda78bb4ce5449cfbf8f05f594087b922009b353"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/power_menu_item.qml",
+      "bytes": 1653,
+      "sha256": "48b81df31fd061d73b29baea97284892121305fb80cc3a1b20fa2f6107039bcc"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/power_menu.qml",
+      "bytes": 1628,
+      "sha256": "f6cc47c5dda0a7f1fe51ff8d624ca2217d11b2495f79a9cf5d0798e8a55ce618"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/qmldir",
+      "bytes": 132,
+      "sha256": "7401797d9dc235535180442b5287f720c7ef81f5ca6c9224386ee4bf48327566"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/h1.qml",
+      "bytes": 198,
+      "sha256": "38bc9189043dcc880d6107d9c26f4b27e630df75e060b07c28a39b402dd0dc07"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/h4.qml",
+      "bytes": 196,
+      "sha256": "ddccb9571b95b808c33db9d69dd175bd2967fdc8a3851adbc020e8c2e0a1be4d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/h2.qml",
+      "bytes": 146,
+      "sha256": "2c0f76a5e027cb6f2be97b001c97432774b79055384b486951e86e7349e89847"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/kano_text.qml",
+      "bytes": 705,
+      "sha256": "f969ea7afa8bf7de1faf472c4a6d9bf6f2b8ccb661865d2ef1aeb25538f796cd"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/h3.qml",
+      "bytes": 198,
+      "sha256": "6a41bb4209f505164457240a8b79d4fcb8df7839ed1dc6ecc71fc0254a9b5e0a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Fonts/h5.qml",
+      "bytes": 176,
+      "sha256": "2a32aa50e0700e7423c7dc42f75ffeab77f211632591d685d570b82be0ed8c78"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/qmldir",
+      "bytes": 136,
+      "sha256": "a03d4775f742591e4ceacb86d4d27e3d8b7c411ab9bc3e9489a06c6599dfb289"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/Tile.qml",
+      "bytes": 503,
+      "sha256": "e6b815d88bcfebfcca8e3f093b53f8b99675c0308237fd1975f85a1ffb6a607e"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/judoka.png",
+      "bytes": 3716,
+      "sha256": "e8481070214b58ecdf954928c4f540a598a4bb1f167a59942bd5ae73d9fceae4"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/TileGrid.qml",
+      "bytes": 1992,
+      "sha256": "393ac6a391fae0255615dd09dfa7a6be8fc6aebe169b92bc6b10d069cebeb272"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/TileCard.qml",
+      "bytes": 2829,
+      "sha256": "a80122621486a833f9988c61931e1840cb9c61b8ae4ccac9b2ec4b358f36ed1e"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/TileLabel.qml",
+      "bytes": 1587,
+      "sha256": "fad2bd281e53d94012bb01dfdda411b3117620a8c643cbd2d1f02426cef4a203"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/alert_view.qml",
+      "bytes": 267,
+      "sha256": "b383220cd88a360ad9d25fa69a5c1f69dc2632c170694eb3522ce30e95baa126"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/qmldir",
+      "bytes": 482,
+      "sha256": "df2d2cae6ad587ee06b03b7a7a1d325cff22741ac481bc3d2f7c216e8b1c6a1d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/no_internet.png",
+      "bytes": 6118,
+      "sha256": "f85b7cafb119c2b62b9a278268e9f2ce58b0a7d5869be1f2515ccf4edcbfaa5c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/periodic_action.qml",
+      "bytes": 992,
+      "sha256": "4c72c2ceb9df3720b0613a902fe5096df113dcc6856f3df52e1dfaa2755d0c4f"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/message_card.qml",
+      "bytes": 1598,
+      "sha256": "6b7499580c7cbcca2e20785a8a35258be226c1cfc05668b3808317b8dc221ac2"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/live_tiles.qml",
+      "bytes": 2905,
+      "sha256": "11ea0c7cd59628ce03d0ee31f243bf21b074313922549953fd4e62c3e37cde13"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/major_update_notification.qml",
+      "bytes": 1700,
+      "sha256": "e425b5f39a99d2d8a51cc9b3477aec41c64ab72d9e5896b858e3397645c9dd49"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/no_profile.qml",
+      "bytes": 1130,
+      "sha256": "23359e35a9527da72bf23e1d370b8216a9d74f9f7f81cebd692d2cf10967778e"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/alert_card.qml",
+      "bytes": 2653,
+      "sha256": "34066b60662e4f5d295a441390f1452237ad899e28a88fe5634c45ff94f153ae"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/notifications.qml",
+      "bytes": 2656,
+      "sha256": "df80adb4f4003605acee68e4ae7bdc797680727c9a85f32724aa7199b4aa4c5f"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/verify_account.png",
+      "bytes": 5866,
+      "sha256": "7110dac68f52f4c1183d4617a47ed6974f694df8c3c1bcb03e54a9ba5d37c638"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/story_update.png",
+      "bytes": 10306,
+      "sha256": "8beb04eb49214eaf2c2a658ebb299a28ce3aac7b22f100d58f18c9a02f5ea2d0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/download.png",
+      "bytes": 16126,
+      "sha256": "089a925b786debf9e708947d59f59bf3c934217136af79415d725a20fcfef003"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/system_update.png",
+      "bytes": 4215,
+      "sha256": "ba1b8448c7962bafc33d640e493b69849f3476569c78ac6d3978784a995529be"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/update_notifications.qml",
+      "bytes": 912,
+      "sha256": "16c41c494b49c98968d08145438d19fbbb641fb3393662bd9a0731101d1e232b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/update_available.png",
+      "bytes": 5683,
+      "sha256": "6242028b456224742c28f089da5fdc08dd62e1b812fbf4572c073c4f18066f3b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/create_account.png",
+      "bytes": 8372,
+      "sha256": "6f59bad4eac09f710bc6c7dd48bba1ffce40edc73b67103c11cee3e259818161"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/not_verified.qml",
+      "bytes": 2428,
+      "sha256": "76ebfcecf5e3b96a9e3789dcf5262d484cc78ff8bc5e5964327423711f44e6a0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/right_arrow.png",
+      "bytes": 325,
+      "sha256": "6dd58777033ff5d852807ca4df1374b03ef8a8537ee56f522a90eb1a15af6a63"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/no_internet.qml",
+      "bytes": 855,
+      "sha256": "2c16ab5551c6e2b76d0ddb31202b6547a8e6897546ed737862848c1be25eceef"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/update_notification.qml",
+      "bytes": 1142,
+      "sha256": "63f38f0d961e2b5d0e418cf02ffc65f843da3beb56593e0646d64943e98e154b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/account_login.png",
+      "bytes": 12644,
+      "sha256": "ed2c756a2faed96e20b1ae389a7c833f43a5b3333536db1f87f11e5bc4daef4d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/audio_menu.qml",
+      "bytes": 1987,
+      "sha256": "dfe144afadd6d6a7d9ac347d30b6b4db6221429c6505d0dfcf66d4a3182372f6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/audio_status.qml",
+      "bytes": 1699,
+      "sha256": "8766a0775a7c9a69709a50b87e3494581e8d1d2b7b182d401e96b7aabd398a6c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/time.qml",
+      "bytes": 804,
+      "sha256": "88edc56cea269ac580842f5dd02a3b974f945cdb3491db7f963a4630427e3b98"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/qmldir",
+      "bytes": 180,
+      "sha256": "b0d422485b0bf185f3f6a8030f39eb3b515907cc6676b17f050f9eae8cc69cd2"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/no_internet.png",
+      "bytes": 18466,
+      "sha256": "5b70fb19386139c07feffcf4631945c615066243f63e65c0e95e7166f2284a8b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_high_signal.png",
+      "bytes": 16462,
+      "sha256": "9c863ad7ec0c4c70d067f9e757ad8912af1a7eb6871e87f1c65ef15e5e991a08"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/high_signal.png",
+      "bytes": 16191,
+      "sha256": "d8c03d18706afc82e28fb68d1af98f07b2e6a877ce6d07387f094e98b5c35ab0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_volume.png",
+      "bytes": 15804,
+      "sha256": "facbdfe8407d8d78ae9e81cb5d4987ee107529fc62ff573436cd9bc7701369fb"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_low_signal.png",
+      "bytes": 16439,
+      "sha256": "f47dca89183837466284ecf3c780fdf61e0e174a30ce4cb85f2dc40903b40bc6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/wifi_details.qml",
+      "bytes": 6528,
+      "sha256": "b22a5654c1ddb6ffc717a7e222490280e10f9214877c7b234d1b10e6fe16c034"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/low_volume.png",
+      "bytes": 15541,
+      "sha256": "ad2cc3b9fd9b0527365719af35a5b938c33b1804a505982e0dd1efeb3639f7fe"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/wifi_status.qml",
+      "bytes": 3840,
+      "sha256": "8d7d033bf51a3cbcce7c624f3511709f70cfa952a771ed0b1f555f77cacc5e3c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/muted.png",
+      "bytes": 16318,
+      "sha256": "f78f72db7edf866909381c076f08e670d20ecf070d088f3e1be9a76b93182021"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/internet.png",
+      "bytes": 16191,
+      "sha256": "d8c03d18706afc82e28fb68d1af98f07b2e6a877ce6d07387f094e98b5c35ab0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/low_signal.png",
+      "bytes": 16417,
+      "sha256": "8763751ba06b0d7c96fa0bc52b0244b17664d7f9b0d5e22d217fe6c1a876ea96"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/high_volume.png",
+      "bytes": 16190,
+      "sha256": "e7fcaaba5bd77a251ad8e16e8ac2d90464c8c64d1ff87add63492375133de44c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/qmldir",
+      "bytes": 68,
+      "sha256": "1378aba40255bd39cfc03ecdd3b6ea0f7d0d1da67dda77d85649c828fe4b5892"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/story_mode.qml",
+      "bytes": 1499,
+      "sha256": "bf37479699f54f13f983fc5096b8bb2a06f1cb5bedfd538920a2ceafe5e3cd7a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/story.png",
+      "bytes": 3687,
+      "sha256": "50b0f955cd6c5f6c0e90c06756c03b986b71bf264c34aa56408cb68656cb047d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/story-mode.png",
+      "bytes": 2474,
+      "sha256": "8f3b021724f0f3830d74d6dda41c1ba796817de673ecc219fee5d0c039296e2c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/continue.png",
+      "bytes": 840,
+      "sha256": "c3087025c3ba92ea0b58f676943d3a76e5f584dde20c950b06721c9d99425f19"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/qmldir",
+      "bytes": 639,
+      "sha256": "7cb06358d7ad9d07c941e271322c3668e8be90bfe8742c542de9fff18e0736bc"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/footer_widget.qml",
+      "bytes": 507,
+      "sha256": "d11be7d49230a6a0073f5535aaf20f658d2087cf05cf1631fa15a04d9d7ff053"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/status_widget.qml",
+      "bytes": 972,
+      "sha256": "1ad0dac9b2fea55c3b2425f8969d69ceeb108a9bdfcd991c1af000931a768d42"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/widget_title.qml",
+      "bytes": 1180,
+      "sha256": "84d870af4eeed10a8ff1773f61d2fb45806723130b16e016b1d4eb4313a4b9ba"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/switch_mode_process.qml",
+      "bytes": 802,
+      "sha256": "dd8e70f19cd9457996c8f5d6dd6df7d28c90be72cde55d9ba1f361fa4c20389d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/button_widget.qml",
+      "bytes": 1547,
+      "sha256": "f91bbde45d50e96f58809142844821c9741a91cf7445b4aedc5dea8a607f8467"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/pane.qml",
+      "bytes": 3266,
+      "sha256": "f2a9bd1478463c4c48c76e16af2c72a34332f4ce27617ff73d5bb018f8768ec1"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/content_widget.qml",
+      "bytes": 403,
+      "sha256": "961bd16b272ddc30dfed5488beba02514eb4a4bdf1afc24d7fee05c7d5fc4326"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/process_launcher.qml",
+      "bytes": 521,
+      "sha256": "dad9917bac79a44aedc13d61afec8fe407895cc2a9896d09dd69e199561cda15"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/lock.png",
+      "bytes": 16001,
+      "sha256": "0bb84080c76682e7238ef321a772a7bb6cf4557c4b321fe5cdf1fea5139ec3b3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/image_widget.qml",
+      "bytes": 1318,
+      "sha256": "fa5a0f5815bdfac3be6776a53b7b5a755ebcc7b901ed4e36bebd68f8e7b88e7f"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/raw_process.qml",
+      "bytes": 188,
+      "sha256": "1431b8ae2e7867ff2040a1e88cda1b3a87499be194a04197886d1253fe9d4e25"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/open_view_process.qml",
+      "bytes": 630,
+      "sha256": "40f3900bc63b128d6245a69ee012700529b3186f6ba716f6112a432b579ed1ec"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/round_button.qml",
+      "bytes": 390,
+      "sha256": "9ceedca67df5c71b80e368dcefada6bfd8698839ff5f3e43a0345a379f85b039"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/widget_template.qml",
+      "bytes": 5126,
+      "sha256": "eae4313269bc8fccc9e8b7c1e36e0ba90efca21c0da96d7562ff895dfc6b87a3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/square_button.qml",
+      "bytes": 98,
+      "sha256": "25e18f9999d8b37aa9ca60b80e46d0e2dc4863c24b64b8e5914dfcfa3702d3f7"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/link_button.qml",
+      "bytes": 627,
+      "sha256": "e5dac207e9eda8728dd06731d3f1b54bbda6bb260de6192dd1c9a66e57880a21"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/menu_widget.qml",
+      "bytes": 2762,
+      "sha256": "38779a0a014adbf70e8c7d0afcbefd4e7240902d031849578cb45f554d4b166d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/item_template.qml",
+      "bytes": 546,
+      "sha256": "d524402afc0904c69cf4619e896431128f975fcdd18c2ee7d1ad9f01cfaf58f6"
+    },
+    {
+      "file": "KanoDashboard/Popups/SpeakerWarning/qmldir",
+      "bytes": 82,
+      "sha256": "4a6c30f33de2fa63c282d10d91abd6cdc1745dfb77e44014a440df20dba8bd79"
+    },
+    {
+      "file": "KanoDashboard/Popups/SpeakerWarning/speaker_warning.qml",
+      "bytes": 2896,
+      "sha256": "07a48c5bcf52ca1708fe3278e68b779d1e6831657776b075c8956603a71f1126"
+    },
+    {
+      "file": "KanoDashboard/Popups/SpeakerWarning/speaker.png",
+      "bytes": 3529,
+      "sha256": "e77320a5226283d1db3217310a2d784e9a1c3d85fab8243a880339d364ba60bf"
+    }
+  ]
+}
