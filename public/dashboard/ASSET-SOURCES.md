@@ -16,3 +16,5 @@ Original OS asset extraction update:
 - staff-picks/: four current Mercury KESDLTC fallback covers from /usr/share/kesdltc/images and six legacy Make Art covers plus original default_shares.json from /usr/share/kano-dashboard/default_shares. manifest.json retains creator credits and exposes local cover URLs; no online connector exists.
 
 All added PNGs are byte-for-byte original assets. Inventory, behavior, attribution and deployment size findings are in docs/KANO-OS-DASHBOARD-REPORT.md. Original package notices are retained in docs/os-evidence/dashboard-copyright (PNG assets: Kano Computing Ltd., all rights reserved; QML/code: GPL-2+).
+
+Future-use original icon archive: `/dashboard/archives/Kano-OS-4.3.3-Dashboard-Icons.tar.gz` contains 43 original non-wallpaper images/animations under their OS-relative KanoDashboard paths, including power menu and warning symbols. Its manifest records original SHA-256 hashes; original notices are included. No additional controls are activated by this archive.

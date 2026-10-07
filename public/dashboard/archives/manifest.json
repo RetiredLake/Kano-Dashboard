@@ -1,0 +1,224 @@
+{
+  "source": "Official Kano OS 4.3.3 Hopper Stretch; original byte-for-byte dashboard artwork",
+  "assetCount": 43,
+  "uncompressedBytes": 693165,
+  "archiveUrl": "/dashboard/archives/Kano-OS-4.3.3-Dashboard-Icons.tar.gz",
+  "note": "Includes every non-wallpaper dashboard image, including power, reboot, logout, close, bell states, network/audio status and warning artwork. No new dashboard controls are implemented. Existing wallpaper and Staff Picks assets are stored separately.",
+  "assets": [
+    {
+      "file": "KanoDashboard/BootWarning/shutdown-animation-v2.gif",
+      "bytes": 235952,
+      "sha256": "7f20182cf6155e636d2f965e1371b2160e99b0a731566f2a14407a38a332ae0a"
+    },
+    {
+      "file": "KanoDashboard/BootWarning/shutdown.png",
+      "bytes": 9878,
+      "sha256": "e79731e8837f957d9032edaa4b97375d6a2b463ca76d3952ac5134d529a8cb83"
+    },
+    {
+      "file": "KanoDashboard/Popups/SpeakerWarning/speaker.png",
+      "bytes": 3529,
+      "sha256": "e77320a5226283d1db3217310a2d784e9a1c3d85fab8243a880339d364ba60bf"
+    },
+    {
+      "file": "KanoDashboard/Views/Home/home.png",
+      "bytes": 854,
+      "sha256": "eb245d9477f78459a5241e89dd3982ed177fa5e33ea25a1131eb13cf44f3ce9e"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/computer_mode.png",
+      "bytes": 4368,
+      "sha256": "5705f40964205ffe05df5cb5d1e72956f29135fcc46c143a324a2c8dfda7e018"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/profile.png",
+      "bytes": 5219,
+      "sha256": "851a442c1c498b7b7a3fbc3dcbc835df67d718f43d817fb00b31e774e9115cd4"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Apps/settings.png",
+      "bytes": 19816,
+      "sha256": "8420b85e0aa1c69778fe1cc017ce99b350ddc98fe56e646a2e027bc5989f4518"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/account_login.png",
+      "bytes": 12644,
+      "sha256": "ed2c756a2faed96e20b1ae389a7c833f43a5b3333536db1f87f11e5bc4daef4d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/create_account.png",
+      "bytes": 8372,
+      "sha256": "6f59bad4eac09f710bc6c7dd48bba1ffce40edc73b67103c11cee3e259818161"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/download.png",
+      "bytes": 16126,
+      "sha256": "089a925b786debf9e708947d59f59bf3c934217136af79415d725a20fcfef003"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/no_internet.png",
+      "bytes": 6118,
+      "sha256": "f85b7cafb119c2b62b9a278268e9f2ce58b0a7d5869be1f2515ccf4edcbfaa5c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/right_arrow.png",
+      "bytes": 325,
+      "sha256": "6dd58777033ff5d852807ca4df1374b03ef8a8537ee56f522a90eb1a15af6a63"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/story_update.png",
+      "bytes": 10306,
+      "sha256": "8beb04eb49214eaf2c2a658ebb299a28ce3aac7b22f100d58f18c9a02f5ea2d0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/system_update.png",
+      "bytes": 4215,
+      "sha256": "ba1b8448c7962bafc33d640e493b69849f3476569c78ac6d3978784a995529be"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/update_available.png",
+      "bytes": 5683,
+      "sha256": "6242028b456224742c28f089da5fdc08dd62e1b812fbf4572c073c4f18066f3b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LatestView/verify_account.png",
+      "bytes": 5866,
+      "sha256": "7110dac68f52f4c1183d4617a47ed6974f694df8c3c1bcb03e54a9ba5d37c638"
+    },
+    {
+      "file": "KanoDashboard/Widgets/LiveTile/judoka.png",
+      "bytes": 3716,
+      "sha256": "e8481070214b58ecdf954928c4f540a598a4bb1f167a59942bd5ae73d9fceae4"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts.png",
+      "bytes": 887,
+      "sha256": "d9311f658aaa16e7d49d1a2f38de55055b0ba4ff4e516f7041229731c30f65bb"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts_close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/alerts_empty.png",
+      "bytes": 1056,
+      "sha256": "7d55f5ee34d882cea780ccbe9293f1ee8fe3c8831a653ce3afd62838262453e9"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Notifications/default_notification.png",
+      "bytes": 22130,
+      "sha256": "500ccd23b884ba0b4f0e13bf02a0fb27db0a9df725215d24712d2f971eabd2e6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/logout.png",
+      "bytes": 16066,
+      "sha256": "7f605eedf2b8abe6c0bdc715be78730ce587b75b4487ac331e81a06af05e4fc3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/power.png",
+      "bytes": 17256,
+      "sha256": "113fd819f5dd6a484247c1122b01648dfcb6371aa68de878cb21d3615c8de98a"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/reboot.png",
+      "bytes": 17013,
+      "sha256": "4497c6f9ae33c4176f672fbdeda78bb4ce5449cfbf8f05f594087b922009b353"
+    },
+    {
+      "file": "KanoDashboard/Widgets/PowerMenu/shutdown.png",
+      "bytes": 16897,
+      "sha256": "03bef4087994a81cb590df528ad116a11bb48d1632833185b60dea1a9a436dfe"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/high_signal.png",
+      "bytes": 16191,
+      "sha256": "d8c03d18706afc82e28fb68d1af98f07b2e6a877ce6d07387f094e98b5c35ab0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/high_volume.png",
+      "bytes": 16190,
+      "sha256": "e7fcaaba5bd77a251ad8e16e8ac2d90464c8c64d1ff87add63492375133de44c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/internet.png",
+      "bytes": 16191,
+      "sha256": "d8c03d18706afc82e28fb68d1af98f07b2e6a877ce6d07387f094e98b5c35ab0"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/low_signal.png",
+      "bytes": 16417,
+      "sha256": "8763751ba06b0d7c96fa0bc52b0244b17664d7f9b0d5e22d217fe6c1a876ea96"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/low_volume.png",
+      "bytes": 15541,
+      "sha256": "ad2cc3b9fd9b0527365719af35a5b938c33b1804a505982e0dd1efeb3639f7fe"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_high_signal.png",
+      "bytes": 16462,
+      "sha256": "9c863ad7ec0c4c70d067f9e757ad8912af1a7eb6871e87f1c65ef15e5e991a08"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_low_signal.png",
+      "bytes": 16439,
+      "sha256": "f47dca89183837466284ecf3c780fdf61e0e174a30ce4cb85f2dc40903b40bc6"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/medium_volume.png",
+      "bytes": 15804,
+      "sha256": "facbdfe8407d8d78ae9e81cb5d4987ee107529fc62ff573436cd9bc7701369fb"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/muted.png",
+      "bytes": 16318,
+      "sha256": "f78f72db7edf866909381c076f08e670d20ecf070d088f3e1be9a76b93182021"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Status/no_internet.png",
+      "bytes": 18466,
+      "sha256": "5b70fb19386139c07feffcf4631945c615066243f63e65c0e95e7166f2284a8b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/continue.png",
+      "bytes": 840,
+      "sha256": "c3087025c3ba92ea0b58f676943d3a76e5f584dde20c950b06721c9d99425f19"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/story-mode.png",
+      "bytes": 2474,
+      "sha256": "8f3b021724f0f3830d74d6dda41c1ba796817de673ecc219fee5d0c039296e2c"
+    },
+    {
+      "file": "KanoDashboard/Widgets/StoryMode/story.png",
+      "bytes": 3687,
+      "sha256": "50b0f955cd6c5f6c0e90c06756c03b986b71bf264c34aa56408cb68656cb047d"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/close.png",
+      "bytes": 16225,
+      "sha256": "a27cf0e480cba7036809b5cd9e787e5b74d993136a1094df73ddfa7ecba4dd6b"
+    },
+    {
+      "file": "KanoDashboard/Widgets/Templates/lock.png",
+      "bytes": 16001,
+      "sha256": "0bb84080c76682e7238ef321a772a7bb6cf4557c4b321fe5cdf1fea5139ec3b3"
+    },
+    {
+      "file": "KanoDashboard/Widgets/home.png",
+      "bytes": 854,
+      "sha256": "eb245d9477f78459a5241e89dd3982ed177fa5e33ea25a1131eb13cf44f3ce9e"
+    },
+    {
+      "file": "KanoDashboard/lightdm-waitscreen.png",
+      "bytes": 12323,
+      "sha256": "fee7bde1adf3756f20c897f77f29167f39f0780892d1abe77e1e0525c98d0a03"
+    }
+  ]
+}
