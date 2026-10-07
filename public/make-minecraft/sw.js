@@ -1,9 +1,9 @@
-const CACHE_NAME = 'minecraft-web-v1';
+const CACHE_NAME = 'minecraft-web-v2-shared';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
-    './index.js',
-    './index.wasm',
+    './original-ui/port/game/index.js',
+    './original-ui/port/game/index.wasm',
     './mc_platform.js',
     './manifest.json'
 ];

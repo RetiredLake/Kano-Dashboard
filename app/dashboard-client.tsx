@@ -19,6 +19,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import staffPicks from "../public/dashboard/staff-picks/manifest.json";
+
 import { saveData, loadData } from "@/lib/data-backup";
 
 type LauncherApp = {
@@ -141,11 +143,8 @@ export default function DashboardClient() {
             <span>Level 1</span>
           </div>
         </div>
+        <button type="button" className="notification-bell" aria-label="No notifications"><img src="/dashboard/icons/alerts_empty.png" alt="" /></button>
       </header>
-
-      <span className="notification-indicator" role="img" aria-label="No notifications" title="No notifications">
-        <span className="notification-icon" aria-hidden="true" />
-      </span>
 
       <div className="dashboard-content">
         <section className="dashboard-zone story-zone" aria-labelledby="story-heading">
@@ -179,10 +178,15 @@ export default function DashboardClient() {
           </div>
         </section>
 
-        <aside className="dashboard-zone account-zone" aria-live="polite">
-          <h2 className="zone-title">Kano World</h2>
-          <div className="account-panel">
-            <span className="login-disabled">Login is currently disabled</span>
+        <aside className="dashboard-zone staff-picks-zone" aria-labelledby="staff-picks-heading">
+          <h2 id="staff-picks-heading" className="zone-title">Staff Picks</h2>
+          <div className="staff-picks-grid">
+            {staffPicks.currentDefaults.map((pick) => (
+              <figure className="staff-pick" key={pick.id}>
+                <img src={pick.coverUrl} alt={pick.title} />
+                <figcaption><strong>{pick.title}</strong><span>{pick.username}</span></figcaption>
+              </figure>
+            ))}
           </div>
         </aside>
       </div>
@@ -198,11 +202,7 @@ export default function DashboardClient() {
               aria-current={index === currentPageIndex ? "page" : undefined}
               onClick={() => setPageIndex(index)}
             >
-              <span className="os-page-indicator" aria-hidden="true">
-                {Array.from({ length: 9 }, (_, slot) => (
-                  <span key={slot} className={slot < page.apps.length ? "is-filled" : undefined} />
-                ))}
-              </span>
+              <span className="original-page-grid" aria-hidden="true">{Array.from({ length: 9 }, (_, cell) => <span key={cell} />)}</span>
             </button>
           ))}
         </nav>
@@ -210,7 +210,7 @@ export default function DashboardClient() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button type="button" className="settings-button" aria-label="Settings" title="Settings">
-              <span className="os-settings-icon" aria-hidden="true" />
+              <img className="original-settings-icon" src="/dashboard/icons/settings.png" alt="" />
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" side="top" sideOffset={8} className="settings-popover">
